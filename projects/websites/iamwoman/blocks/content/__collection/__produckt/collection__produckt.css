@@ -1,0 +1,191 @@
+.collection__produckt {
+       width: 50%;
+       height: 100vh;
+       position: relative;
+       top: -10vh;
+       background-color: rgba(255,255,255, 0.42);
+}
+.collection__produckt:before {
+       content: "";
+       background-image: url(img/sld_bcg1.jpg);
+       background-position: right center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-color: #F3ECE4;
+       position: absolute;
+       top: 0;
+       right: 0;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+}
+.produckt__slider {
+       position: relative;
+       top: 10vh;
+       left: -15%;
+       width: 70%;
+       height: 80vh;
+       overflow: hidden;
+}
+.slider__item,
+.slider__img,
+.produckt__img {
+       width: 100%;
+       height: 100%;
+}
+.slider__item,
+.slider__img {
+       position: relative;
+}
+.produckt__descript {
+       position: absolute;
+       bottom: 10%;
+       left: 50%;
+       -webkit-transform: translate(-50%, 0);
+       transform: translate(-50%, 0);
+       width: 65%;
+       height: 15%;
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+       background-color: rgba(255,255,255, 0.8);
+       font-family: "Cormorant-SB", serif;
+       color: #91171D;
+}
+.produckt__name {
+       font-size: 1.5rem;
+}
+.produckt__elem-wrap {
+       position: relative;
+       width: 50%;
+       height: auto;
+       text-align: right;
+}
+.produckt__line {
+       position: absolute;
+       bottom: 0;
+       display: block;
+       width: 37%;
+       height: 1px;
+       background-color: #91171D;
+}
+.produckt__price {
+       font-size: 1.11rem;
+}
+.produckt__link {
+       position: absolute;
+       top: 82%;
+       right: 14.7%;
+       font-family: "Cormorant-l", serif;
+       font-size: 1.125rem;
+       color: #342B2B;
+}
+.slider__number {
+       position: relative;
+       top: 12%;
+       left: 15%;
+       width: 17%;
+       height: 9%;
+       color: #91171D;
+       text-align: center;
+}
+.slider__prev,
+.slider__next {
+       position: absolute;
+       font-family: "Cormorant-R", serif;
+       font-size: 2.25rem;
+}
+.slider__prev {
+       left: 0;
+}
+.slider__next {
+       right: 0;
+}
+.slider__current {
+       position: relative;
+       top: -20%;
+       font-family: "Cormorant-M", serif;
+       font-size: 2.25rem;
+}
+.slider__slash {
+       position: relative;
+       font-family: "Cormorant-M", serif;
+       font-size: 2.25rem;
+} 
+.slider__total {
+       font-family: "Cormorant-R", serif;
+       font-size: 1.5rem;
+       color: #342B2B;
+}
+.collection__pagination {
+       top: 40%;
+}
+/*Стили для экранов размерами до 500px включительно*/
+@media screen and (max-width: 450px) {
+       .collection__produckt {
+              width: 100%;
+       }
+       .collection__produckt:before {
+              background-position: 175% 30%;
+              background-size: auto 120%;
+       }
+       .produckt__slider {
+              left: calc(100% - 75%);
+       }
+}
+/*Стили для экранов размерами от 501px до 1023px включительно*/
+@media screen and (min-width: 501px) and (max-width: 1023px) {
+       .collection__produckt {
+              width: 40%;
+              height: 100vh;
+       }
+       .collection__produckt:before {
+              background-position: 85% 50%;
+       }
+       .produckt__slider {
+              left: -43%;
+              width: 128%;
+              height: 78vh;
+       }
+       .produckt__descript {
+              width: 80%;
+              height: 10%;
+       }
+       .produckt__link {
+              right: 7%;
+              font-size: 1rem;
+       }
+       .slider__number {
+              width: 28%;
+              left: 5%;
+       }
+       .slider__current,
+       .slider__slash {
+              top: 5%;
+              font-size: 1.75rem;
+       }
+       .slider__total {
+              font-size: 1.25rem;
+       }
+       .content__pagination {
+              display: none;
+       }
+}
+
+@media screen and (min-width: 1024px) {
+       .slider__prev,
+       .slider__next,
+       .produckt__link {
+       cursor: pointer;
+       }
+}

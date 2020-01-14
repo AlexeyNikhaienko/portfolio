@@ -1,0 +1,39 @@
+@font-face {
+       font-family: "PD-italic";
+       src: url("../fonts/PlayfairDisplay-Italic.ttf");
+}
+
+@font-face {
+       font-family: "PD-black";
+       src: url("../fonts/PlayfairDisplay-BlackItalic.ttf");
+}
+
+@font-face {
+       font-family: "PD-bold";
+       src: url("../fonts/PlayfairDisplay-BoldItalic.ttf");
+}
+
+@font-face {
+       font-family: "Mst-light";
+       src: url("../fonts/Montserrat-Light.ttf");
+}
+
+@font-face {
+       font-family: "Mst-reg";
+       src: url("../fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+       font-family: "Mst-sb";
+       src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+       font-family: "Mst-bold";
+       src: url("../fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+       font-family: "Hind";
+       src: url("../fonts/Hind-Light.ttf");
+}

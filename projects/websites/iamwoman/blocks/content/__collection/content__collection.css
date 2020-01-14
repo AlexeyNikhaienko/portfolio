@@ -1,0 +1,30 @@
+/*Import styles for block "Sale"*/
+@import url("__sale/collection__sale.css");
+
+/*Import styles for block "Content"*/
+@import url("__content/collection__content.css");
+
+/*Import styles for block "Produckt"*/
+@import url("__produckt/collection__produckt.css");
+
+/*Common styles for main blocks*/
+.content {
+       position: relative;
+       width: 100%;
+}
+/*styles for block "Collection"*/
+.collection {
+       min-height: 80vh; 
+       width: 100%;
+       position: relative;
+       top: 10vh;
+       left: 0;
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+}
+@media screen and (min-width: 501px) and (max-width: 1023px) {
+       .collection {
+              min-height: 78vh;
+       }
+}

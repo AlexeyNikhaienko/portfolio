@@ -1,0 +1,439 @@
+/*Общие стили для блока "Content"*/
+.main__content {
+       position: relative;
+       top: 17vh;
+       left: 0;
+}
+.content {
+       width: 100%;/*1920px*/
+}
+/*Стили для блока "Banner"*/
+.content__banner {
+       position: relative;
+}
+.banner {
+       width: 100%;/*1920px*/
+       height: 101.67vh;/*1098px*/
+       overflow: hidden;
+}
+.banner__border {
+       position: absolute;
+       top: 1.5%;/*17px*/
+       left: 0;
+}
+.border {
+       display: inline-block;
+       width: 6.7%;/*129px*/
+       height: 3px;
+       background-color: #222222;
+}
+/*Стили для блока "Heading"*/
+.banner__heading {
+       position: absolute;
+       top: 0;
+       left: 10%;/*190px*/
+}
+.heading {
+      max-width: 87%;
+      height: auto;
+}
+.heading__title {
+       margin-bottom: 0.75em;
+}
+.title {
+       font-family: "Mst-sb", sans-serif;
+       font-size: 1.5em;
+       text-transform: uppercase;
+       color: #222222;
+}
+.subtitle {
+       font-family: "Mst-reg", sans-serif;
+       font-size: 1em;
+       text-transform: uppercase;
+       color: #95CAC5;
+}
+/*Стили для блока "Numb"*/
+.banner__numb {
+       position: absolute;
+       top: 50%;
+       right: -10%;
+}
+.numb {
+       width: auto;
+       height: auto;
+       font-family: "Mst-reg", sans-serif;
+       font-size: 63em;
+       color: #EDEDED;
+       line-height: 0;
+}
+/*Стили для блоков "Bcg"*/
+.bcg {
+       width: 100%;/*1920px*/
+       height: 50%;/*549px*/
+}
+.bcg--color__grey {
+       background-color: #F1F1F1;
+}
+/*Стили для блока "Culture" и его элементов*/
+/*Общие стили*/
+.banner__culture {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       position: absolute;
+       top: 50%;
+       left: 0;
+       -webkit-transform: translate(0, -50%);
+       transform: translate(0, -50%);
+}
+.culture {
+       width: 100%;/*1920px*/
+       height: 70.32%;/*772px*/
+}
+/*Стили для блока "Contacts"*/
+.culture__contacts {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+}
+.contacts {
+       width: 7.6%;/*146.6px*/
+       height: 100%;/*772px*/
+}
+.contacts__wrap {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+       justify-content: space-between;
+       -webkit-transform: scale(-1);
+       transform: scale(-1);
+       -webkit-writing-mode: vertical-rl;
+       -ms-writing-mode: tb-rl;
+       writing-mode: vertical-rl;
+}
+.wrap {
+       width: auto;
+       height: auto;
+}
+.tel,
+.mail {
+       padding: 0.625em 0;
+}
+/*Стили для блока "Pictures" и его элементов*/
+.culture__pictures {
+       position: relative;
+}
+.pictures {
+       width: 84.8%;/*1626.8px*/
+       height: 100%;/*772px*/
+}
+.pictures__title-section {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       z-index: 5;
+       -webkit-transform: translate(-50%, -50%);
+       transform: translate(-50%, -50%);
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+}
+.title-section {
+       max-width: 100%;/*max=1626.8px*/
+       height: auto;
+       font-family: "PD-black", serif;
+       font-size: 3.5em;
+       color: white;
+       text-transform: uppercase;
+       white-space: nowrap;
+}
+.element--left {
+       padding-right: 31%;
+}
+.element--right {
+       padding-left: 31%;
+}
+.pictures__year {
+       position: absolute;
+       top: -8%;
+       left: 7%;
+}
+.year {
+       font-family: "Mst-bold", sans-serif;
+       font-size: 10em;
+       color: #EDEDED;
+}
+.pictures__button {
+       position: absolute;
+       top: 0;
+       right: 0;
+       white-space: nowrap;
+}
+.button {
+       width: auto;
+       height: auto;
+       padding: 0 1.2%;
+       border: none;
+       outline: none;
+       background-color: #83BBB6;
+       font-family: "Mst-reg", sans-serif;
+       font-size: 1em;
+       line-height: 2.25;
+       color: white;
+}
+.button__icon {
+       margin-right: 5%;
+}
+.pictures__images {
+       position: absolute;
+}
+.images {
+       width: 31.83%;/*534px*/
+       -webkit-box-shadow: 0 0 60px #C4C4C4;
+       box-shadow: 0 0 60px #C4C4C4;
+       background-color: #C4C4C4;
+}
+.images--left-top {
+       left: 0;
+       top: 5.7%;/*44px*/
+       z-index: 2;
+}
+.images--bottom {
+       left: 18.65%;
+       bottom: 0;
+       z-index: 1;
+}
+.images--top {
+       left: 44.64%;/*726.18px*/
+       top: 0;
+}
+.images--right-btm {
+       right: 0;
+       bottom: 5.7%;
+       z-index: 1;
+}
+/*Общие стили для маленьких и средних экранов*/
+@media screen and (max-width: 767px) {
+       .main__content {
+              top: 15vh;
+       }
+       /*Скрытие цифр*/
+       .banner__numb,
+       .pictures__year {
+              display: none;
+       }
+       .subtitle {
+              font-size: 0.75em;
+       }
+       .contacts {
+              width: 10%;
+       }
+       .tel,
+       .mail {
+              font-size: 0.75em;
+       }
+       .pictures {
+              width: 90%;
+       }
+       .button {
+              font-size: 0.75em;
+       }
+}
+/*Стили для маленьких экранов*/
+@media screen and (max-width: 489px) {
+       .banner {
+              height: 85vh;
+       }
+       .heading {
+              width: 87%;
+       }
+       .heading__title {
+              margin-bottom: 0.375em;
+       }
+       .title {
+              font-size: 1.125em;
+       }
+       .title-section {
+              font-size: 1.5em;
+       }
+       /*Изменение размеров картинок и их положения*/
+       .images {
+              width: auto;
+              max-height: 47%;
+              -webkit-box-shadow: 0 0 30px #C4C4C4;
+              box-shadow: 0 0 30px #C4C4C4;
+       }
+       .images--left-top {
+              top: 11%;
+       }
+       .images--bottom {
+              left: 5%;
+       }
+       .images--top {
+              top: 9%;
+              right: 5%;
+       }
+       .images--right-btm {
+              bottom: 8%;
+       }
+}
+/*Стили для средних экранов*/
+@media screen and (min-width: 490px) and (max-width: 767px) {
+       .banner {
+             height: 120vh;
+       }
+       .border {
+              width: 8%;
+       }
+       .heading__title {
+              margin-bottom: 0.5em;
+       }
+       .title {
+              font-size: 1.25em;
+       }
+       .title-section {
+              font-size: 2.25em;
+       }
+       .pictures__button {
+              z-index: 1;
+       }
+       .images {
+              -webkit-box-shadow: 0 0 40px #C4C4C4;
+              box-shadow: 0 0 40px #C4C4C4;
+       }
+}
+/*Стили для планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1025px) and (orientation: portrait) {
+       .banner {
+              height: 83vh;
+       }
+       .banner__numb,
+       .pictures__year {
+              display: none;
+       }
+       .contacts {
+              width: 10%;
+       }
+       .pictures {
+              width: 90%;
+       }
+       .images {
+              width: auto;
+              max-height: 55%;
+       }
+       .images--bottom {
+              left: 15%;
+       }
+       .images--top {
+              left: 32%;
+       }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (max-height: 450px) {
+       .banner {
+              height: 125vh;
+       }
+       .numb,
+       .year {
+            display: none;
+       }
+       .tel,
+       .mail {
+              font-size: 1em;
+       }
+       .contacts {
+              width: 10%;
+       }
+       .pictures {
+              width: 90%;
+       }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 451px) {
+       .banner {
+              height: 85vh;
+       }
+       .numb {
+              font-size: 50em;
+       }
+       .year {
+              font-size: 8.625em;
+       }
+}
+/*Общие стили для ноутбуков и ПК*/
+@media screen and (min-width: 1025px) {
+      .tel--transform:hover,
+      .mail--transform:hover {
+             -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+              width: 100%;
+              height: 50%;
+              text-align: center;
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+      }
+      .tel--transform:hover {
+              background-color: white;
+      }
+      .mail--transform:hover {
+              background-color: #F1F1F1;
+      }
+      .button:hover {
+              cursor: pointer;
+              background-color: #EDEDED;
+              color: #83BBB6;
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+      }
+}
+/*Стили для ПК и ноутбуков отдельных размеров экранов*/
+@media screen and (min-width: 1440px) and (max-width: 2048px) {
+       .numb {
+              font-size: 90em;
+       }
+       .images {
+              max-width: 32.83%;
+       }
+}
+/*Стили для ПК со средними экранами*/
+@media screen and (min-width: 2049px) {
+       .title {
+              font-size: 2em;
+       }
+       .subtitle {
+              font-size: 1.5em;
+       }
+       .numb {
+              font-size: 100em;
+       }
+       .images {
+              min-width: 32.83%;
+       }
+       .title-section {
+              font-size: 6em;
+       }
+       .year {
+              font-size: 15em;
+       }
+       .button {
+              font-size: 1.5em;
+              line-height: 3.375;
+       }
+}
+/*Стили для ПК с большими экранами*/
+@media screen and (min-width: 2560px) {
+       .numb {
+              font-size: 120em;
+       }
+       .year {
+              font-size: 20em;
+       }
+}

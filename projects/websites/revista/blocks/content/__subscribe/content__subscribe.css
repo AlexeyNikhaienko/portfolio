@@ -1,0 +1,183 @@
+.content__subscribe {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+       margin-top: 9%;
+}
+.subscribe {
+       width: 100%;
+       min-height: 33.7vh;/*364px*/
+       padding-top: 5.6%;/*60px*/
+       padding-bottom: 5.6%;/*60px*/
+}
+.subscribe--bcgimg {
+       background: url(img/bcg.jpg) no-repeat center center/cover;
+}
+.form {
+       min-width: 32.3%;/*620px*/
+       height: auto;/*min=151px*/
+}
+.legend {
+       width: 100%;
+       height: auto;
+       text-align: center;
+}
+.legend__name {
+       margin-bottom: 1.8%;
+}
+.name--size__s {
+       font-size: 1.5em;
+       color: #333333;
+}
+.subname--color__black {
+       color: #555555;
+}
+.form__field {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+       margin: 4% auto 0 auto;
+}
+.field {
+       width: 92.74%;/*520px*/
+       height: auto;/*55px*/
+}
+.email {
+       width: 88.7%;/*510px*/
+       height: 100%;
+       border: none;
+       outline: none;
+       font-family: "Mst-reg", sans-serif;
+       font-size: 1.125em;
+       color: #777777;
+       padding: 1.8% 0 1.8% 6%;
+}
+.email::-webkit-input-placeholder {
+       font-family: "Mst-reg", sans-serif;
+       font-size: 1.125em;
+       color: #777777;
+}
+.email:-ms-input-placeholder {
+       font-family: "Mst-reg", sans-serif;
+       font-size: 1.125em;
+       color: #777777;
+}
+.email::-ms-input-placeholder {
+       font-family: "Mst-reg", sans-serif;
+       font-size: 1.125em;
+       color: #777777;
+}
+.email::placeholder {
+       font-family: "Mst-reg", sans-serif;
+       font-size: 1.125em;
+       color: #777777;
+}
+.submit {
+       width: 11.3%;/*65px*/
+       height: 100%;/*55px*/
+       border: none;
+       outline: none;
+       background-color: #83BBB6;
+       padding: 1% 0;
+}
+.flaticon-mail {
+       font-size: 1.5em;
+       color: white;
+}
+/*Общие стили для маленьких и средних экранов*/
+@media screen and (max-width: 767px) {
+       .email {
+              width: 85%;
+              font-size: 0.875em;
+       }
+       .email::-webkit-input-placeholder {
+              font-size: 0.875em;
+       }
+       .email:-ms-input-placeholder {
+              font-size: 0.875em;
+       }
+       .email::-ms-input-placeholder {
+              font-size: 0.875em;
+       }
+       .email::placeholder {
+              font-size: 0.875em;
+       }
+       .submit {
+              width: 15%;
+       }
+       .flaticon-mail {
+              font-size: 1.25em;
+       }
+}
+/*Стили для маленьких экранов*/
+@media screen and (max-width: 489px) {
+       .subscribe--bcgimg {
+              background-position-x: 25%;
+       }
+       .form {
+              width: 95%;
+       }
+       .name--size__s {
+              font-size: 1.125em;
+       }
+}
+/*Стили для планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+       .subscribe--bcgimg {
+              background-position-x: 25%;
+       }
+}
+/*Стили для ноутбуков и ПК*/
+@media screen and (min-width: 1025px) {
+       .submit:hover {
+              cursor: pointer;
+              background-color: #333333;
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+       }
+}
+/*Стили для ПК со средними экранами*/
+@media screen and (min-width: 2049px) {
+       .name--size__s {
+              font-size: 2.5em;
+       }
+       .field {
+              width: 80%;
+       }
+       .email {
+              font-size: 1.5em;
+       }
+       .email::-webkit-input-placeholder {
+              font-size: 1.5em;
+       }
+       .email:-ms-input-placeholder {
+              font-size: 1.5em;
+       }
+       .email::-ms-input-placeholder {
+              font-size: 1.5em;
+       }
+       .email::placeholder {
+              font-size: 1.5em;
+       }
+       .flaticon-mail {
+              font-size: 2.5em;
+       }
+}
+/*Стили для ПК с большими экранами*/
+@media screen and (min-width: 2560px) {
+       .name--size__s {
+              font-size: 3em;
+       }
+       .flaticon-mail {
+              font-size: 3em;
+       }
+}

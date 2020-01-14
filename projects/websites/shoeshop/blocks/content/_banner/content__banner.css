@@ -1,0 +1,602 @@
+.content {
+  width: 100%;
+}
+/*Общие стили для блока "banner"*/
+.content__banner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 7.8vh;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  border: 2px solid blue;
+}
+/*Стили для основного фона "bcg"*/
+.banner__bcg {
+  position: absolute;
+  z-index: -1;
+}
+
+.bcg--left {
+  width: 70%;
+  height: 100%;
+  left: -10%;
+  top: 0;
+  background-color: #E9E9E9;
+  -webkit-transform: skewX(5deg);
+          transform: skewX(15deg);
+}
+
+.bcg--right {
+  width: 60%;
+  height: 100%;
+  right: -10%;
+  bottom: 0;
+  background-color: #82F4D3;
+  -webkit-transform: skewX(-5deg);
+          transform: skewX(15deg);
+}
+
+/*Стили для блока с описанием "par"*/
+.banner__par {
+  position: absolute;
+  left: 7.19%;/*115px*/
+  bottom: 6.15%;/*63px*/
+  z-index: 1;
+}
+
+.par {
+  min-width: 6.56%;/*105px*/
+  height: auto;
+  font-family: "Pop-lght", serif;
+  font-size: 1em;/*16px*/
+  line-height: 2;
+  color: #888888;
+  border: 1px solid yellow;
+}
+
+.par--rotate {
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+/*Стили для блока с эмблемой "inner"*/
+.banner__wrapper {
+  position: absolute;
+  left: 13%;/*214px*/
+  top: 16.41%;/*168px*/
+  z-index: 1;
+}
+
+.wrapper {
+  width: auto;
+  height: auto;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  /*max-width: 22%;*//*352px*/
+  /*max-height: 19.3%;/*198px*/
+  /*width: 22%;/*352px*/
+  /*height: 19.3%;*/
+  background: url(img/bcimg.jpg) top left/cover no-repeat;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.inner:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.label {
+  font-family: "Pop-bold", sans-serif;
+  font-size: 9.625em;/*154px*/
+  line-height: 0.8;
+}
+
+.label--color__army {
+  background-color: #E9E9E9;
+  mix-blend-mode: lighten;
+}
+
+/*Стили для блока с кнопкой "border"*/
+.banner__border {
+  position: absolute;
+  /*position: relative;*/
+  left: 17.81%;/*285px*/
+  bottom: -60%;
+  /*top: 38.09%;/*390px*/
+  /*right: -7%;*/
+  z-index: 1;
+}
+
+.border {
+  width: 18.125em;/*290px*/
+  height: 3.625em;/*58px*/
+}
+
+.border {
+  border: 0.125em solid #82F4D3;
+}
+
+.border__btn {
+  position: relative;
+  left: 0.625em;
+  bottom: 0.625em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background-color: #82F4D3;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn--size__b {
+  font-family: "Pop-bold", sans-serif;
+  font-size: 1.5em;
+  color: #000000;
+}
+
+/*Стили для слайдера и его элементов*/
+.slider-banner {
+  width: 100%;
+  height: 100%;
+  border: 2px solid yellow;
+}
+
+.slider-banner__slide {
+  position: absolute;
+}
+
+.slide {
+  width: auto;
+  height: auto;
+}
+
+.slide--bottom {
+  /*max-width: 47.44%;/*759px*/
+  /*max-height: 75%;*//*768px*/
+  left: 29.75%;/*476px*/
+  bottom: 6.15%;/*63px*/
+  border: 1px solid yellow;
+}
+
+.slide--top {
+  /*max-width: 52.53%;/*842px*/
+  /*max-height: 69.83%;*//*715px*/
+  left: 32.75%;/*476px*/
+  bottom: 20%;/*246px*/
+}
+
+/*.slide--fullscreen {
+  left: 0;
+  top: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}*/
+
+/*Стили для блока с социальными сетями "soc"*/
+.banner__soc {
+  position: absolute;
+  right: 3.45%;/*55px*/
+  bottom: 6.15%;/*63px*/
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+           flex-direction: column;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+  z-index: 1;
+}
+
+.soc {
+  width: auto; /*53px*/
+  height: auto;
+  max-height: 50%;
+  border: 2px solid blue;
+}
+
+.soc__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.soc__link:not(:last-of-type) {
+  margin-bottom: 8%;
+}
+
+.link-box {
+  width: 3.375em;/*54px*/
+  height: 3.375em;/*54px*/
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.icon--size__b {
+  font-size: 1.5em;/*24px*/
+  color: #ffffff;
+}
+
+/*Общие стили для мобильных телефонов с маленькими и средними экранами*/
+@media screen and (max-width: 767px) {
+/*Стили для блока с эмблемой "inner"*/
+  .banner__wrapper {
+    left: 5%;
+  }
+
+  .label {
+    font-size: 4.5em;/*72px*/
+  }
+
+/*Стили для блока с кнопкой "border"*/
+  .border {
+    width: 8.75em;/*140px*/
+    height: 1.75em;/*28px*/
+  }
+
+  .border__btn {
+    left: 0.5em;
+    bottom: 0.5em;
+  }
+
+  .btn--size__b {
+    font-size: 0.75em;/*12px*/
+  }
+
+/*Стили для блока с социальными сетями "soc"*/
+  .banner__soc {
+    right: 5%;
+  }
+
+  .link-box {
+    width: 1.75em;/*28px*/
+    height: 1.75em;/*28px*/
+  }
+
+  .icon--size__b {
+    font-size: 0.75em;/*12px*/
+  }
+}
+
+/*Стили для мобильных телефонов с маленькими экранами*/
+@media screen and (max-width: 489px) {
+ /*Стили для основного фона "bcg"*/
+  .bcg--left {
+    width: 200%;
+    left: -50%;
+  }
+
+  .bcg--right {
+    width: 80%;
+    right: -50%;
+  }
+
+/*Стили для блока с описанием "par"*/
+  .banner__par {
+   display: none;
+  }
+
+/*Стили для слайдера и его элементов*/
+  .slide--bottom,
+  .slide--top {
+    max-width: 100%;
+    left: 0;
+  }
+
+  .slide--top {
+    bottom: 24%;
+  }
+}
+
+/*Стили для мобильных телефонов со средним экраном*/
+@media screen and (min-width: 490px) and (max-width: 767px) {
+  .banner {
+    height: 150vh;
+  }
+
+/*Стили для блока с описанием "par"*/
+  .banner__par {
+    left: 5%;
+  }
+
+  .par {
+    font-size: 0.5em;/*8px*/
+  }
+
+/*Стили для слайдера и его элементов*/
+  .slide--bottom,
+  .slide--top {
+    max-width: 66%;
+    left: 23%;
+  }
+}
+
+/*Стили для мобильных телефонов с большими экранами*/
+@media screen and (min-width: 768px) and (max-height: 450px) {
+  .banner {
+    height: 150vh;
+  }
+
+/*Стили для блока с описанием "par"*/
+  .banner__par {
+    left: 5%;
+  }
+
+  .par {
+    font-size: 0.75em;
+  }
+
+/*Стили для блока с эмблемой "inner"*/
+  .banner__wrapper {
+    left: 5%;
+  }
+
+  .label {
+    /*font-size: 4.75em;*/
+    font-size: 6em;/*90px*/
+  }
+
+/*Стили для блока с кнопкой "border"*/
+  .banner__border {
+    bottom: -70%;
+  }
+
+  .border {
+    width: 12.5em;/*200px*/
+    height: 2.5em;/*40px*/
+  }
+
+  .btn--size__b {
+    font-size: 1em;/*16px*/
+  }
+
+/*Стили для слайдера и его элементов*/
+  .slide--bottom,
+  .slide--top {
+    max-width: 60%;
+    left: 23%;
+  }
+
+/*Стили для блока с социальными сетями "soc"*/
+  .banner__soc {
+    right: 5%;
+  }
+
+  .link-box {
+    width: 2.25em;/*36px*/
+    height: 2.25em;/*36px*/
+  }
+
+  .icon--size__b {
+    font-size: 1em;/*16px*/
+  }
+}
+
+/*Стили для планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+/*Стили для основного фона "bcg"*/
+  .bcg--left {
+    width: 200%;
+    left: -50%;
+  }
+
+  .bcg--right {
+    width: 80%;
+    right: -50%;
+  }
+
+/*Стили для блока с описанием "par"*/
+  .banner__par {
+    display: none;
+  }
+
+/*Стили для блока с эмблемой "inner"*/
+  .banner__wrapper {
+    left: 5%;
+    top: 10%;
+  }
+
+  .label {
+    font-size: 8em;/*128px*/
+  }
+
+/*Стили для блока с кнопкой "border"*/
+  .border {
+    width: 15.125em;/*242px*/
+    height: 3em;/*48px*/
+  }
+
+  .btn--size__b {
+    font-size: 1.25em;
+  }
+
+/*Стили для слайдера и его элементов*/
+  .slide--bottom,
+  .slide--top {
+    width: 90%;
+    left: 5%;
+  }
+
+/*Стили для блока с социальными сетями "soc"*/
+  .banner__soc {
+    right: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 451px) and (orientation: landscape) {
+/*Стили для блока с описанием "par"*/
+  .banner__par {
+    left: 5%;
+  }
+
+/*Стили для блока с эмблемой "inner"*/
+  .banner__wrapper {
+    left: 5%;
+  }
+
+  .label {
+    font-size: 8em;/*128px*/
+  }
+
+/*Стили для блока с кнопкой "border"*/
+  .border {
+    width: 15.125em;/*242px*/
+    height: 3em;/*48px*/
+  }
+
+  .btn--size__b {
+    font-size: 1.25em;
+  }
+
+/*Стили для слайдера и его элементов*/
+  .slide--bottom,
+  .slide--top {
+    width: 63%;
+    left: 25%;
+  }
+
+  /*Стили для блока с социальными сетями "soc"*/
+  .banner__soc {
+    right: 5%;
+  }
+}
+
+/*Общие стили для ноутбуков и ПК*/
+@media screen and (min-width: 1025px) {
+  .btn--size__b:hover {
+    color: #ffffff;
+  }
+
+  .link-box:hover {
+    background-color: #ffffff;
+  }
+
+  .link-box:hover > .icon--size__b {
+    color: #82F4D3;
+  }
+}
+
+/*Стили для ноутбуков и ПК*/
+@media screen and (min-width: 1025px) and (max-height: 960px) {
+/*Стили для слайдера и его элементов*/
+  .slide--bottom {
+    max-width: 41.44%;/*663px*/
+  }
+
+  .slide--top {
+    max-width: 48.53%;/*776.5px*/
+  }
+}
+
+/*Общие стили для ПК с большими экранами*/
+@media screen and (min-width: 2048px) {
+/*Стили для блока с описанием "par"*/
+  .par {
+    font-size: 1.25em;/*20px*/
+  }
+
+/*Стили для блока с эмблемой "inner"*/
+  .label {
+    font-size: 11.5em;/*184px*/
+  }
+
+/*Стили для блока с кнопкой "border"*/
+  .border {
+    width: 21.75em;/*348px*/
+    height: 4.375em;/*70px*/
+  }
+
+  .btn--size__b {
+    font-size: 1.875em;/*30px*/
+  }
+
+/*Стили для слайдера и его элементов*/
+  .slide--bottom {
+    min-width: 47.44%;
+  }
+
+  .slide--top {
+    min-width: 52.53%;
+  }
+
+/*Стили для блока с социальными сетями "soc"*/
+  .link-box {
+    width: 4em;/*64px*/
+    height: 4em;/*64px*/
+  }
+  
+  .icon--size__b {
+    font-size: 1.875em;/*30px*/
+  }
+}
+
+@media screen and (min-width: 2560px) {
+/*Стили для блока с описанием "par"*/
+  .par {
+    font-size: 1.75em;/*28px*/
+  }
+/*С
+тили для блока с эмблемой "inner"*/
+  .label {
+    font-size: 15.5em;/*248px*/
+  }
+
+/*Стили для блока с кнопкой "border"*/
+  .border {
+    width: 29em;/*464px*/
+    height: 5.875em;/*94px*/
+  }
+
+  .btn--size__b {
+    font-size: 2.5em;/*40px*/
+  }
+  
+/*Стили для блока с социальными сетями "soc"*/
+  .link-box {
+    width: 5.25em;/*84px*/
+    height: 5.25em;/*84px*/
+  }
+
+  .icon--size__b {
+    font-size: 2.5em;/*40px*/
+  }
+}

@@ -1,0 +1,223 @@
+/*Общие стили для блока "testimonial"*/
+.content__testimonial {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 7.8vh;
+}
+
+.testimonial {
+  width: 100%;/*1600px*/
+  height: auto;
+  /*height: 41.31vh;/*423px*/
+  padding-top: 4.5%;/*46px*/
+  padding-bottom: 4.5%;/*46px*/
+  background-color: #F8F8F8;
+  border: 2px solid lightseagreen;
+}
+
+/*Создание стрелок навигации для слайдера*/
+.testimonial__arrow {
+  position: relative;
+}
+
+.arrow {
+  width: 7.13%;/*114px*/
+  height: 4.51%;/*19px*/
+}
+
+.arrow--left {
+  border-bottom: 1px solid #B3B3B3;
+}
+
+.barb {
+  width: 31.26%;/*36px*/
+  height: 1px;
+  background-color: #B3B3B3;
+}
+
+.barb--up {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: rotate(-30deg);
+      transform: rotate(-30deg);
+  -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+}
+
+.arrow--right {
+  border-top: 1px solid #B3B3B3;
+}
+
+.barb--down {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(-30deg);
+      transform: rotate(-30deg);
+  -webkit-transform-origin: 100% 0;
+      transform-origin: 100% 0;
+}
+
+/*Стили для слайдера*/
+/*.testimonial__slider {
+  position: relative;
+}*/
+
+.slider {
+  width: auto;
+  /*min-width: 53.44%;/*855px*/
+  max-width: 65%;/*min-width 855px*/
+  /*max-width: 75%;*/
+  height: auto;
+  max-height: 80%;
+  border: 2px solid red
+}
+
+.slider__quote {
+  /*position: absolute;*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.quote {
+  width: 100%;/*855px*/
+  /*min-height: 100%;/*233px*/
+  height: auto;
+  max-height: 100%;
+  text-align: center;
+  border: 2px solid blue;
+}
+
+.quote__heading,
+.blockquote__par {
+  margin-bottom: 4%;
+}
+
+.author {
+  min-width: 15.21%;/*130px*/
+  height: auto;
+  font-family: "Pop-reg", sans-serif;
+  border: 1px solid green;
+}
+
+.respondent {
+  font-size: 1.125em;
+  line-height: 1.25em;
+  color: #666666;
+  padding-bottom: 8%;
+  border: 1px solid yellow;
+}
+
+.profession {
+  font-size: 0.875em;
+  line-height: 1.3125em;
+  color: #51CDA9;
+  border: 1px solid yellow;
+}
+
+/*Общие стили для мобильных телефонов с маленькими и средними экранами*/
+@media screen and (max-width: 767px) {
+/*Стили для слайдера*/
+  .respondent {
+    font-size: 0.625em;/*10px*/
+  }
+
+  .profession {
+    font-size: 0.5em;/*8px*/
+  }
+}
+
+/*Стили для мобильных телефонов с маленькими экранами*/
+@media screen and (max-width: 489px) {
+  /*Стили для слайдера*/
+  .slider {
+    max-width: 75%;
+  }
+}
+
+/*Стили для мобильных телефонов с большими экранами*/
+@media screen and (min-width: 768px) and (max-height: 450px) {
+/*Стили для слайдера*/
+  .respondent {
+    font-size: 0.875em;/*14px*/
+  }
+
+  .profession {
+    font-size: 0.75em;/*12px*/
+  }
+}
+
+/*Стили для планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+/*Стили для слайдера*/
+  .respondent {
+    font-size: 1em;/*16px*/
+  }
+
+  .profession {
+    font-size: 0.875em;/*14px*/
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 451px) and (orientation: landscape) {
+/*Стили для слайдера*/
+  .respondent {
+    font-size: 1em;/*16px*/
+  }
+
+  .profession {
+    font-size: 0.875em;/*14px*/
+  }
+}
+
+/*Общие стили для ноутбуков и ПК*/
+@media screen and (min-width: 1025px) {
+/*Создание стрелок навигации для слайдера при наведении курсора мыши*/
+  .arrow:hover {
+    border-color: #82F4D3;
+    cursor: pointer;
+  }
+
+  .arrow:hover > .barb {
+    background-color: #82F4D3;
+  }
+}
+
+/*Общие стили для ПК с большими экранами*/
+@media screen and (min-width: 2048px) {
+  /*Стили для слайдера*/
+  .respondent {
+    font-size: 1.375em;/*22px*/
+  }
+
+  .profession {
+    font-size: 1.25em;/*20px*/
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  /*Стили для слайдера*/
+  .respondent {
+    font-size: 2em;/*32px*/
+  }
+
+  .profession {
+    font-size: 1.75em;/*28px*/
+  }
+}

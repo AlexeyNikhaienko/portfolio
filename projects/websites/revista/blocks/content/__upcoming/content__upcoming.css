@@ -1,0 +1,302 @@
+.content__upcoming {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+       margin-top: 13.26%;/*143px*/
+}
+.upcoming {
+       width: 100%;
+       height: 83.33vh;/*900px*/
+       background-color: #F1F1F1;
+       border: 2px solid blue;
+}
+.upcoming__box {
+       position: relative;
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+}
+.box {
+       width: 72.33%;/*1389px*/
+       height: 66.33%;/*597px*/
+       background-color: white;
+}
+.box__container {
+       position: relative;
+}
+.container {
+       width: 50%;
+       height: auto;
+       border: 2px solid red;
+}
+.numb--size__s {
+       position: absolute;
+       z-index: 0;
+       left: 7%;
+       bottom: 60%;
+       font-family: "PD-italic", serif;
+       font-size: 28em;
+}
+.container__inner {
+       position: relative;
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+       justify-content: space-between;
+       margin: 0 auto;
+}
+.inner {
+       width: 73%;
+       height: 100%;
+       border: 2px solid blue;
+}
+.inner__name {
+       margin-bottom: 5%;
+}
+.inner__subname {
+       margin-bottom: 5%;
+}
+.subname--size__b {
+       font-size: 1.375em;
+       color: #222222;
+}
+.box__holder {
+       position: absolute;
+       right: -6.5%;
+}
+.holder {
+       width: 57.3%;
+       height: 75.04%;
+       border: 2px solid black;
+}
+.pic {
+       width: 100%;
+       height: 100%;
+}
+.holder__control {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       -webkit-transform: translate(-50%, -50%);
+       transform: translate(-50%, -50%);
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+}
+.control {
+       width: 8.29%;
+       height: 14.73%;
+       background-color: white;
+       color: #222222;
+       border-radius: 50%;
+}
+/*Общие стили для маленьких и средних экранов*/
+@media screen and (max-width: 767px) {
+       .upcoming {
+              height: auto;
+       }
+       .upcoming__box {
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-pack: space-evenly;
+              -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+              margin: 7% 0;
+       }
+       .box {
+              width: 84.8%;
+              height: 90%;
+       }
+       .container {
+              width: 100%;
+              height: auto;
+       }
+       .numb--size__s {
+              display: none;
+       }
+       .container__inner {
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              margin-top: 4%;
+       }
+       .inner {
+              width: 90%;
+       }
+       .subname--size__b {
+              text-align: center;
+       }
+       .box__holder {
+              position: relative;
+              right: 0;
+              margin: 4% 0;
+       }
+       .holder {
+              width: 90%;
+              height: 50%;
+       }
+       .control {
+              width: 15%;
+              height: 22.1%;
+       }
+}
+/*Стили для маленьких экранов*/
+@media screen and (max-width: 489px) {
+       .subname--size__b {
+              font-size: 1.25em;
+       }
+}
+/*Стили для средних экранов*/
+@media screen and (min-width: 490px) and (max-width: 767px) {
+       .upcoming {
+              max-height: 200vh;
+       }
+       .subname--size__b,
+       .play {
+              font-size: 1.5em;
+       }
+       .paragraph--size__b {
+              font-size: 1.125em;
+       }
+}
+/*Стили для планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+       .upcoming {
+              height: auto;
+       }
+       .upcoming__box {
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+              -webkit-box-pack: space-evenly;
+              -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+              margin: 7% 0;
+       }
+       .box {
+              width: 84.8%;
+              height: 90%;
+       }
+       .container {
+              width: 100%;
+              height: auto;
+       }
+       .numb--size__s {
+              display: none;
+       }
+       .container__inner {
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              margin-top: 4%;
+       }
+       .inner {
+              width: 90%;
+       }
+       .subname--size__b {
+              font-size: 1.5em;
+              text-align: center;
+       }
+       .paragraph--size__b {
+              font-size: 1.125em;
+       }
+       .box__holder {
+              position: relative;
+              right: 0;
+              margin: 4% 0;
+       }
+       .holder {
+              width: 90%;
+              height: 50%;
+       }
+       .control {
+              width: 12%;
+              height: 17%;
+       }
+       .play {
+              font-size: 1.5em;
+       }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (max-height: 450px) {
+       .upcoming {
+              height: 120vh;
+       }
+       .box {
+              width: 90%;
+              height: 90%;
+       }
+       .container {
+              width: 45%;
+              height: auto;
+              max-height: 70%;
+       }
+       .inner {
+              width: 85%;
+       }
+       .box__holder {
+              right: -4%;
+       }
+       .holder {
+              width: 60%;
+       }
+}
+/*Общие стили для ноутбуков и ПК*/
+@media screen and (min-width: 1025px) {
+       .control:hover {
+              cursor: pointer;
+              background-color: #222222;
+              color: white;
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+       }
+}
+/*Стили для ПК со средними экранами*/
+@media screen and (min-width: 1920px) {
+       .numb--size__s {
+              bottom: 52%;
+              font-size: 35em;
+       }
+       .inner {
+              width: 60%;
+       }
+}
+/*Стили для ПК с большими экранами*/
+@media screen and (min-width: 2560px) {
+       .numb--size__s {
+              bottom: 50%;
+              font-size: 45em;
+       }
+       .inner {
+              width: 85%;
+       }
+       .subname--size__b {
+              font-size: 3em;
+       }
+       .play {
+              font-size: 2.25em;
+       }
+}

@@ -1,0 +1,36 @@
+/*Семейство шрифтов Poppins*/
+@font-face {
+       font-family: "Pop-lght";
+       src: url("../fonts/Poppins-Light.ttf");
+}
+@font-face {
+       font-family: "Pop-reg";
+       src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+       font-family: "Pop-med";
+       src: url("../fonts/Poppins-Medium.ttf");
+}
+@font-face {
+       font-family: "Pop-bold";
+       src: url("../fonts/Poppins-Bold.ttf");
+}
+/*Семейство шрифтов Roboto*/
+@font-face {
+       font-family: "rbt-reg";
+       src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+       font-family: "rbt-bold";
+       src: url("../fonts/Roboto-Bold.ttf");
+}
+/*Семейство шрифтов Ubuntu*/
+@font-face {
+       font-family: "ubtn-med";
+       src: url("../fonts/Ubuntu-Medium.ttf");
+}
+/*Семейство шрифтов Cormorant*/
+@font-face {
+       font-family: "cg-med";
+       src: url("../fonts/CormorantGaramond-Medium.ttf");
+}

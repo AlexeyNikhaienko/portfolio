@@ -1,0 +1,30 @@
+/*Импорт шрифтов*/
+@import url("common_files/css/_fonts.css");
+
+/*Импорт стилей для блока "Header"*/
+@import url("blocks/header/header.css");
+
+/*Импорт стилей для блока "Content"
+1) импорт стилей для блока "Banner"*/
+@import url("blocks/content/__banner/content__banner.css");
+/*2) импорт стилей для блока "Popular"*/
+@import url("blocks/content/__popular/content__popular.css");
+/*3) импорт стилей для блока "Subscribe"*/
+@import url("blocks/content/__subscribe/content__subscribe.css");
+/*4) импорт стилей для блока "News"*/
+@import url("blocks/content/__news/content__news.css");
+/*5) импорт стилей для блока "Upcoming"*/
+@import url("blocks/content/__upcoming/content__upcoming.css");
+
+/*Импорт стилей для блока "Footer"*/
+@import url("blocks/footer/footer.css");
+
+* {
+       margin: 0;
+       padding: 0;
+       -webkit-box-sizing: border-box;
+       box-sizing: border-box;
+}
+body {
+       font-size: 16px;
+}

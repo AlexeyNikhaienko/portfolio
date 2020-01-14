@@ -1,0 +1,49 @@
+/*Подключение шрифтов*/
+@import url("common_files/css/_fonts.css");
+
+/*Подключение стилей для блока "header"*/
+@import url("blocks/header/header.css");
+
+/*Подключение стилей для блока "content"*/
+/*1) блок "banner"*/
+@import url("blocks/content/_banner/content__banner.css");
+/*2) блок "about"*/
+@import url("blocks/content/_about/content__about.css");
+/*3) блок "popular"*/
+@import url("blocks/content/_popular/content__popular.css");
+/*4) блок "collection"*/
+@import url("blocks/content/_collection/content__collection.css");
+/*5) блок "testimonial"*/
+@import url("blocks/content/_testimonial/content__testimonial.css");
+/*6) блок "blog"*/
+@import url("blocks/content/_blog/content__blog.css");
+
+/*Подключение стилей для блока "footer"*/
+@import url("blocks/footer/footer.css");
+
+/*Общие стили*/
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+body,
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow-x: hidden;
+}

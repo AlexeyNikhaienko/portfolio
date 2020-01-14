@@ -1,0 +1,34 @@
+@font-face {
+       font-family: "Cormorant-l";
+       src: url("../fonts/Cormorant-Light.ttf");
+}
+
+@font-face {
+       font-family: "Cormorant-R";
+       src: url("../fonts/Cormorant-Regular.ttf");
+}
+
+@font-face {
+       font-family: "Cormorant-M";
+       src: url("../fonts/Cormorant-Medium.ttf");
+}
+
+@font-face {
+       font-family: "Cormorant-SB";
+       src: url("../fonts/Cormorant-SemiBold.ttf");
+}
+
+@font-face {
+       font-family: "OS-R";
+       src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+       font-family: "OS-SB";
+       src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+       font-family: "Roboto-M";
+       src: url("../fonts/Roboto-Medium.ttf");
+}

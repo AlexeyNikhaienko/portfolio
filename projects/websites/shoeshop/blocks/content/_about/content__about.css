@@ -1,0 +1,340 @@
+/*Общие стили для блока "about"*/
+.content__about {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 7.8vh;
+}
+
+.about {
+  width: 80.43%;/*1287px*/
+  height: 57.32vh;/*587px*/
+  border: 2px solid red;
+}
+
+/*Стили для блока с картинкой "box"*/
+.about__box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box {
+  width: 53.54%;/*689px*/
+  height: 100%;/*587px*/
+  background-color: #EEEDED;
+  -webkit-box-shadow: 0 0 0.5em #EEEDED;
+    box-shadow: 0 0 0.5em#EEEDED;
+  border: 0.375em solid #FFFFFF;
+}
+
+.image {
+  /*height: 87.73%;/*515px*/
+  width: auto;
+  height: auto;
+  max-width: 74.17%;/*511px*/
+}
+
+/*Стили для блока с описанием "descript"*/
+.about__descript {
+  position: relative;
+  /*left: 49%;*/
+  z-index: 1;
+}
+
+.descript {
+  /*width: 51%;/*651px*/
+  width: auto;
+  height: auto;
+  /*min-height: 31.14%;/*218px*/
+  border: 1px solid green;
+}
+
+.descript__heading {
+  margin-bottom: 4%;/*25px*/
+}
+
+.heading {
+  /*width: auto;*/
+  /*width: 100%;*/
+  font-family: "cg-med", serif;
+  font-size: 2.8125em;/*45px*/
+  line-height: 1;
+  color: #000000;
+  /*white-space: nowrap;*/
+  border: 1px solid green;
+}
+
+/*Стили для кнопки*/
+.descript__border-btn {
+  position: relative;
+  left: calc(100% - 9.75em);/*10px*/
+  bottom: 0.625em;/*10px*/
+  margin-top: 4%;/*25px*/
+}
+
+.border-btn {
+  width: 9.125em;/*22.43%=146px;*/
+  height: 3em;/*21.56%=47px;*/
+  border: 1px solid #82F4D3;
+}
+
+.border-btn__btn {
+  position: relative;
+  left: 0.625em;/*10px*/
+  top: 0.625em;/*10px*/
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn--size__s {
+  font-family: "Pop-reg", serif;
+  font-size: 1em;/*16px*/
+  color: #000000;
+}
+
+/*Общие стили для мобильных телефонов и планшетов*/
+@media screen and (max-width: 1024px) {
+/*Общие стили для блока "about"*/
+  .about {
+    width: 90%;
+  }
+}
+
+/*Общие стили для мобильных телефонов с маленькими и средними экранами*/
+@media screen and (max-width: 767px) {
+/*Стили для блока с описанием "descript"*/
+  .heading {
+    font-size: 1.5em;/*24px*/
+  }
+
+  .par {
+    font-size: 0.5em;/*8px*/
+  }
+/*Стили для кнопки*/
+  .descript__border-btn {
+    left: calc(100% - 5.625em);
+    bottom: 0.25em;
+  }
+
+  .border-btn {
+    width: 5.375em;/*86px;*/
+    height: 1.75em;/*28px;*/
+  }
+
+  .border-btn__btn {
+    left: 0.5em;/*8px*/
+    top: 0.5em;/*8px*/
+  }
+
+  .btn--size__s {
+    font-size: 0.625em;/*10px*/
+  }
+}
+
+/*Стили для мобильных телефонов с маленькими экранами*/
+@media screen and (max-width: 489px) {
+/*Общие стили для блока "about"*/
+  .about {
+    height: 70vh;
+  }
+
+/*Стили для блока с картинкой "box"*/
+  .box {
+    width: 100%;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+/*Стили для блока с описанием "descript"*/
+  .about__descript {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    right: 1%;
+  }
+
+  .descript {
+    width: 98%;
+  }
+}
+
+/*Стили для мобильных телефонов со средними экранами и большими экранами*/
+@media screen and (min-width: 490px) and (max-height: 450px) {
+  /*Общие стили для блока "about"*/
+  .about {
+    height: 80vh;
+  }
+
+/*Стили для блока с описанием "descript"*/
+  .descript {
+    max-width: 65%;
+  }
+}
+
+/*Стили для мобильных телефонов с большими экранами*/
+@media screen and (min-width: 768px) and (max-height: 450px) {
+/*Стили для блока с описанием "descript"*/
+  .heading {
+    font-size: 2.125em;/*34px*/
+  }
+
+/*Стили для кнопки*/
+  .descript__border-btn {
+    left: calc(100% - 7.1875em);
+    bottom: 0.3125em;
+  }
+
+  .border-btn {
+    width: 6.875em;/*110px;*/
+    height: 2.25em;/*36px;*/
+  }
+
+  .btn--size__s {
+    font-size: 0.75em;
+  }
+}
+
+/*Стили для планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+/*Общие стили для блока "about"*/
+  .about {
+    height: 45vh;
+  }
+
+/*Стили для блока с описанием "descript"*/
+  .descript {
+    max-width: 65%;
+  }
+
+  .heading {
+    font-size: 2.375em;/*38px*/
+  }
+
+  .par {
+    font-size: 0.875em;/*14px*/
+  }
+
+/*Стили для кнопки*/
+  .descript__border-btn {
+    left: calc(100% - 8.25em);
+  }
+
+  .border-btn {
+    width: 7.625em;/*122px;*/
+    height: 2.5em;/*40px;*/
+  }
+
+  .btn--size__s {
+    font-size: 0.875em;/*14px*/
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 451px) and (orientation: landscape) {
+  /*Стили для блока с описанием "descript"*/
+  .heading {
+    font-size: 2.375em;/*38px*/
+  }
+
+  .par {
+    font-size: 0.875em;/*14px*/
+  }
+
+/*Стили для кнопки*/
+  .descript__border-btn {
+    left: calc(100% - 8.25em);
+  }
+
+  .border-btn {
+    width: 7.625em;/*122px;*/
+    height: 2.5em;/*40px;*/
+  }
+
+  .btn--size__s {
+    font-size: 0.875em;/*14px*/
+  }
+}
+
+/*Общие стили для ноутбуков и ПК*/
+@media screen and (min-width: 1025px) {
+  .descript {
+    max-width: 51%;/*651px*/
+  }
+
+  .btn--size__s:hover {
+    color: #ffffff;
+  }
+}
+
+/*Общие стили для ПК с большими экранами*/
+@media screen and (min-width: 2048px) {
+  /*Стили для блока с картинкой "box"*/
+  .image {
+    min-width: 74.17%;/*511px*/
+  }
+
+  /*Стили для блока с описанием "descript"*/
+  .heading {
+    font-size: 3.375em;/*54px*/
+  }
+
+  /*Стили для кнопки*/
+  .descript__border-btn {
+    left: calc(100% - 11.625em);
+  }
+
+  .border-btn {
+    width: 11em;/*176px;*/
+    height: 3.625em;/*58px;*/
+  }
+
+  .btn--size__s {
+    font-size: 1.25em;/*24px*/
+  }
+}
+
+@media screen and (min-width: 2560px) {
+/*Стили для блока с описанием "descript"*/
+  .heading {
+    font-size: 4.5em;/*72px*/
+  }
+  
+/*Стили для кнопки*/
+  .descript__border-btn {
+    left: calc(100% - 15.375em);
+  }
+
+  .border-btn {
+    width: 14.75em;/*236px;*/
+    height: 4.875em;/*58px;*/
+  }
+
+  .btn--size__s {
+    font-size: 1.75em;/*28px*/
+  }
+}

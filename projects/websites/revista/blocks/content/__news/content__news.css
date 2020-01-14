@@ -1,0 +1,250 @@
+.content__news {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+       justify-content: space-between;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+       margin: 0 auto;
+}
+.news {
+       width: 64%;/*1229px*/
+       height: 67.78vh;/*732px*/
+}
+.vertical-line--size {
+       height: 12.16%;/*89px*/
+}
+.news__articles {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+       justify-content: space-between;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+}
+.articles {
+       width: 100%;
+       height: 66.67%;/*488px*/
+}
+.articles__inform {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column;
+}
+.inform {
+       width: 29.86%;/*367px;*/
+       height: 100%;/*488px;*/
+       border-radius: 10px;
+       border-color: transparent;
+       overflow: hidden;
+       background-color: #F1F1F1;
+}
+.illustration {
+       width: 100%;
+       height: 59.84%;/*292px*/
+}
+.preview {
+       width: 100%;
+       height: 40.16%;/*196px*/
+}
+.preview__summary {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       -webkit-box-pack: space-evenly;
+       -ms-flex-pack: space-evenly;
+       justify-content: space-evenly;
+       margin: 0 auto;
+}
+.summary {
+       width: 80%;
+       height: 100%;
+}
+.descript--lwcs {
+       text-transform: none;
+       color: #222222;
+}
+.paragraph {
+       font-family: "Hind", sans-serif;
+       font-size: 1em;
+       color: #777777;
+}
+.link--width {
+       width: auto;
+       max-width: 45%;
+       height: auto;
+       line-height: 1.5;
+       white-space: nowrap;
+}
+.further {
+       font-size: 1em;
+       color: #222222;
+}
+.further--margin {
+       margin-left: 10%;
+}
+/*Стили для маленьких экранов*/
+@media screen and (max-width: 489px) {
+       .news {
+              width: 100%;
+              height: 100vh;
+       }
+       .vertical-line--size {
+              height: 5.5%;
+       }
+       .news__articles {
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+              flex-direction: column;
+       }
+       .articles {
+              height: 80%;
+       }
+       .articles__inform {
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+              flex-direction: row;
+       }
+       .inform {
+              width: 100%;
+              height: 33%
+       }
+       .illustration {
+              width: 55.84%;
+              height: 100%;
+       }
+       .preview {
+              width: 44.16%;
+              height: 100%;
+       }
+       .summary {
+              width: 96%;
+       }
+       .descript--lwcs {
+              text-align: center;
+              font-size: 1em;
+       }
+       .paragraph {
+              font-size: 0.875em;
+       }
+       .link--width {
+              -ms-flex-item-align: end;
+              align-self: flex-end;
+       }
+       .further {
+              font-size: 0.75em;
+       }
+}
+/*Стили для средних экранов*/
+@media screen and (min-width: 490px) and (max-width: 767px) {
+       .news {
+              width: 90%;
+              height: 120vh;
+       }
+       .vertical-line--size {
+              height: 10%;
+       }
+       .inform {
+              width: 32%;
+       }
+       .summary {
+              width: 84%;
+       }
+       .paragraph {
+              font-size: 0.75em;
+       }
+       .further {
+              font-size: 0.75em;
+       }
+}
+/*Стили для планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+       .news {
+              width: 90%;
+              height: 52vh;
+       }
+       .vertical-line--size {
+              height: 10%;
+       }
+       .inform {
+              width: 32%;
+       }
+       .summary {
+              width: 84%;
+       }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (max-height: 450px) {
+       .news {
+              width: 90%;
+              height: 120vh;
+       }
+       .summary {
+              width: 88%;
+       }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 451px) and (orientation: landscape) {
+       .news {
+              width: 90%;
+              height: 85vh;
+       }
+}
+/*Стили для ноутбуков и ПК*/
+@media screen and (min-width: 1025px) {
+       .articles__inform:hover {
+              -webkit-transform: scale(1.2);
+              transform: scale(1.1);
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+       }
+       .link--width:hover {
+              padding: 0 5%;
+              border-radius: 5px;
+              background-color: #222222;
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+       }
+       .link--width:hover > .further {
+              color: white;
+       } 
+}
+/*Стили для ПК со средними экранами*/
+@media screen and (min-width: 2049px) {
+       .news {
+              height: 80vh;
+       }
+       .inform {
+              width: 32%;
+       }
+       .summary {
+              width: 86%;
+       }
+       .paragraph {
+              font-size: 1.875em;
+       }
+}
+/*Стили для ПК с большими экранами*/
+@media screen and (min-width: 2560px) {
+       .paragraph {
+              font-size: 2.25em;
+       }
+}
