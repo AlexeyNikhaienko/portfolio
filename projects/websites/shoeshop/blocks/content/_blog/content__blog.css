@@ -11,7 +11,7 @@
 
 /*Выравнивание заголовка по центру блока*/
 .blog__heading {
-  margin-bottom: 2.5%;/*30px;*/
+  margin-bottom: 3%;/*30px;*/
   text-align: center;
 }
 
@@ -262,41 +262,23 @@
 /*Общие стили для блока "blog"*/
   .blog {
     width: 90%;
-    height: auto;
-    /*height: 160vh;*/
-    /*min-height: 74.61vh;*/
-  }
-
-/*Стиди для блока с заголовком "blog__heading"*/
-  .blog__heading {
-    margin-bottom: 3%;
   }
 
   /*Стили для бока-обёртки и его содержимого*/
   .blog__contain {
-    /*-webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;*/
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    /*-webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;*/
   }
 
   .contain {
-    /*height: calc(100% - 1.5em - 3%);*/
-    height: auto;
     max-height: 100%;
   }
 
   /*Стили для блока-обёртки "holder" и его содержимого*/
   .holder{
     width: 100%;
-    min-height: 70vh;
   }
 
   /*Стили для слайдера*/
@@ -308,17 +290,12 @@
   /*Стили для блока-обёртки "owner" и его содержимого*/
   .owner {
     width: 100%;
-    /*height: 50%;*/
-    height: auto;
-    max-height: 50%;
   }
 
   /*Стили для блока с описанием "offer"*/
   .owner__offer {
-    position: relative;
     left: 0;
-    top: 0;
-    margin-bottom: 8.83%;
+    margin-top: 0;
   }
 
   .offer {
@@ -332,17 +309,14 @@
 
   /*Стили для кнопки*/
   .owner__border-btn {
-    position: relative;
     left: calc(100% - 2.6% - 5.375em);
-    right: 0;
-    bottom: 0;
-    margin-bottom: 8.83%;
+    margin-bottom: 10%;
   }
 
   /*Стили для блока с обозначением слайдов*/
   .owner__pagination {
-    position: relative;
-    margin-bottom: 8.83%;
+    left: 0;
+    margin-bottom: 10%;
   }
 
   .pagination {
@@ -377,13 +351,6 @@
   /*Общие стили для блока "blog"*/
   .blog {
     width: 90%;
-    /*height: 120vh;*/
-    height: auto;
-  }
-
-  /*Стиди для блока с заголовком "blog__heading"*/
-  .blog__heading {
-    margin-bottom: 3%;
   }
 
   /*Стили для бока-обёртки "contain" и его содержимого*/
@@ -395,47 +362,40 @@
   }
 
   .contain {
-    /*height: calc(100% - 1.5em - 3%);*/
-    height: auto;
     max-height: 100%;
   }
 
   /*Стили для блока-обёртки "holder" и его содержимого*/
   .holder {
     width: 100%;
-    min-height: 70vh;/***********/
-    /*height: auto;*/
   }
 
 /*Стили для фигур, расположенных по углам слайдера*/
-  .sqare--size__s{
+  .sqare--size__s {
     width: 25.28%;
   }
 
   .holder__sqare--right {
+    left: calc(100% - 25.28%);
     margin-top: 28.45%;
   }
 
   /*Стили для слайдера*/
   .slider-blog {
-    width: 74.5%;
+    width: 80%;
     border-width: 0.17em;
   }
 
   /*Стили для блока-обёртки "owner" и его содержимого*/
   .owner {
     width: 100%;
-    /*height: 50%;*/
-    height: auto;
-    max-height: 50%;
   }
 
   /*Стили для блока с описанием "offer"*/
   .owner__offer {
     position: relative;
     left: 0;
-    top: 0;
-    /*margin-bottom: 8.83%;*/
+    margin-top: 0;
     margin-bottom: 5%;
   }
 
@@ -450,25 +410,14 @@
 
   /*Стили для кнопки*/
   .owner__border-btn {
-    position: relative;
     left: calc(100% - 2.6% - 5.375em);
-    right: 0;
-    bottom: 0;
-    /*margin-bottom: 8.83%;*/
     margin-bottom: 5%;
   }
 
   /*Стили для блока с обозначением слайдов*/
   .owner__pagination {
-    position: relative;
-    left: calc(100% - 69.63%);
-    /*margin-bottom: 8.83%;*/
     margin-bottom: 5%;
   }
-
-  /*.pagination {
-    width: 100%;
-  }*/
 
   /*Блок с фигурами, обозначающими слайды*/
   .first,
@@ -498,55 +447,16 @@
   /*Общие стили для блока "blog"*/
   .blog {
     width: 90%;
-    /*min-height: 120vh;*/
-    height: auto;
-    /*height: 100vh;*/
   }
-
-  /*Стиди для блока с заголовком "blog__heading"*/
-  .blog__heading {
-    margin-bottom: 3%;
-  }
-
-  /*Стили для бока-обёртки "contain" и его содержимого*/
-  .contain {
-    height: auto;
-    max-height: 100%;
-  }
-
-  /*Стили для фигур, расположенных по углам слайдера*/
-  .holder__sqare--right {
-    margin-top: 28.45%;
-  }
-
-  /*Стили для блока-обёртки "holder" и его содержимого*/
-  /*.holder {
-    min-height: 70vh;
-  }*/
 
   /*Стили для слайдера*/
   .slider-blog {
     border-width: 0.25em;
   }
 
-  /*Стили для блока-обёртки "owner" и его содержимого*/
-  .contain__owner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  }
-
   /*Стили для блока с описанием "offer"*/
   .owner__offer {
-    position: relative;
     left: 0;
-    /*top: 6.93%;*/
-    margin-top: 6.93%;
-    margin-bottom: 8.3%;
   }
 
   .offer {
@@ -555,22 +465,13 @@
 
   .section-title {
     font-size: 1em;
+    padding-bottom: 2.5%;
   }
 
   /*Стили для кнопки*/
   .owner__border-btn {
-    position: relative;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    bottom: 0;
-    margin-bottom: 8.3%;
-  }
-
-  /*Стили для блока с обозначением слайдов*/
-  .owner__pagination {
-    position: relative;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    left: calc(100% - 6.875em - 2.6%);
+    margin-bottom: 15%;
   }
 
   /*Блок с фигурами, обозначающими слайды*/
@@ -601,12 +502,6 @@
   /*Общие стили для блока "blog"*/
   .blog {
     width: 90%;
-    height: auto;
-  }
-
-  /*Стиди для блока с заголовком "blog__heading"*/
-  .blog__heading {
-    margin-bottom: 3%;
   }
 
   /*Стили для бока-обёртки и его содержимого*/
@@ -618,14 +513,17 @@
   }
 
   .contain {
-    height: auto;
     max-height: 100%;
   }
 
   /*Стили для блока-обёртки "holder" и его содержимого*/
   .holder {
     width: 100%;
-    min-height: 70vh;
+  }
+
+  /*Стили для фигур, расположенных по углам слайдера*/
+  .holder__sqare--right {
+    left: calc(100% - 25.28%);
   }
 
   .sqare--size__s {
@@ -634,32 +532,19 @@
 
   /*Стили для слайдера*/
   .slider-blog {
-    width: 74.5%;
+    width: 75%;
+    border-width: 0.25em;
   }
 
   /*Стили для блока-обёртки "owner" и его содержимого*/
-  .contain__owner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  }
-
   .owner {
     width: 100%;
-    /*height: 50%;*/
-    height: auto;
-    max-height: 50%;
   }
 
   /*Стили для блока с описанием "offer"*/
   .owner__offer {
-    position: relative;
     left: 0;
-    top: 0;
+    margin-top: 0;
     margin-bottom: 5%;
   }
 
@@ -667,19 +552,19 @@
     width: 100%;
   }
 
+  .section-title {
+    padding-bottom: 2.5%;
+  }
+
   /*Стили для кнопки*/
   .owner__border-btn {
-    position: relative;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    left: calc(100% - 7.625em - 2.6%);
     margin-bottom: 5%;
   }
 
   /*Стили для блока с обозначением слайдов*/
   .owner__pagination {
-    position: relative;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    margin-bottom: 5%;
   }
 }
 
@@ -687,7 +572,27 @@
   /*Общие стили для блока "blog"*/
   .blog {
     width: 90%;
-    /*height: auto;*/
+  }
+
+  /*Стили для слайдера*/
+  .slider-blog {
+    border-width: 0.25em;
+  }
+
+  /*Стили для блока с описанием "offer"*/
+  .offer {
+    width: 100%;
+  }
+
+  .section-title {
+    padding-bottom: 2.5%;
+  }
+
+
+  /*Стили для кнопки*/
+  .owner__border-btn {
+    left: calc(100% - 7.625em - 2.6%);
+    margin-bottom: 30%;
   }
 }
 
