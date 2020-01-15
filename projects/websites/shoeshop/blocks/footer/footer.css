@@ -486,7 +486,7 @@
   .email::-ms-input-placeholder {
     font-size: 0.875em;
   }
-  
+
   .email::placeholder {
     font-size: 0.875em;
   }
@@ -508,5 +508,67 @@
 
   .btn--size__s {
     cursor: pointer;
+  }
+}
+
+/*Общие стили для ПК с большими экранами*/
+@media screen and (min-width: 2048px) {
+  /*Изменение высоты текста для блоков "footer", "contacts", "social"*/
+  .link--color__gray,
+  .legend,
+  .icon--size__s {
+    font-size: 1.25em;
+  }
+
+  /*Стили для блока с меню контактами и подпиской "contacts"*/
+  .email {
+    height: 3.625em;
+    -webkit-box-shadow: 0 0 1em#888888;
+            box-shadow: 0 0 1.25em#888888;
+  }
+
+  /*Стили для текста в окне e-mail*/
+  .email::-webkit-input-placeholder {
+    font-size: 1.25em;
+  }
+
+  .email:-ms-input-placeholder {
+    font-size: 1.25em;
+  }
+
+  .email::-ms-input-placeholder {
+    font-size: 1.25em;
+  }
+
+  .email::placeholder {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  /*Изменение высоты текста для блоков "footer", "contacts", "social"*/
+  .link--color__gray,
+  .legend,
+  .icon--size__s {
+    font-size: 1.75em;
+  }
+
+  /*Изменение высоты поля ввода email*/
+  .email {
+    height: 4.875em;
+  }
+
+  /*Стили для текста в окне e-mail*/
+  .email::-webkit-input-placeholder {
+    font-size: 1.75em;
+  }
+  .email:-ms-input-placeholder {
+    font-size: 1.75em;
+  }
+  .email::-ms-input-placeholder {
+    font-size: 1.75em;
+  }
+  .email::placeholder {
+    font-size: 1.75em;
   }
 }
