@@ -13,7 +13,7 @@
 .footer {
   width: 73.125%;/*1170px*/
   height: auto;/*min-height 250px=24.41vh*/
-  padding: 3% 0;
+  padding: 4% 0;
   border: 0;
   border-top: 1px solid #DBDBDB;
   border-bottom: 1px solid #DBDBDB;
@@ -34,7 +34,6 @@
 .menu-extra {
   width: auto;
   height: auto;
-  /*height: 100%;*/
   border: 2px solid red;
 }
 
@@ -59,9 +58,7 @@
 
 .contacts {
   min-width: 43.06%;/*457px*/
-  /*min-height: 60%;/*150px*/
-  height: auto;
-  /*height: 60%;*/
+  height: auto;/*min-height=150px*/
   border: 2px solid yellow;
 }
 
@@ -86,7 +83,6 @@
 }
 
 .post {
-  /*width: 100%;/*457px*/
   width: auto;
   height: auto;
   border: 1px solid red;
@@ -163,14 +159,9 @@
   bottom: -15%;/*22px*/
 }
 
-/*Стили для мобильных телефонов с маленькими экранами*/
-@media screen and (max-width: 489px) {
+/*Общие стили для мобильных телефонов и планшетов*/
+@media screen and (max-width: 1024px) {
   /*Общие стили юдля блока footer*/
-  .info__footer {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
   .footer {
     width: 90%;
   }
@@ -178,94 +169,15 @@
   /*Скрытие блока с эмблемой сайта "logo"*/
   .footer__logo {
     display: none;
-  }
-
-/*Стили для блока с меню "footer"*/
-  .footer__menu-extra {
-    margin-bottom: 4%;
-  }
-
-  .menu-extra {
-    width: 40%;
-    text-align: center;
-  }
-
-  .link--color__gray {
-    font-size: 0.625em;
-  }
-
-  /*Стили для блока с меню контактами и подпиской "contacts"*/
-  .contacts {
-    width: 100%;
-  }
-
-  .contacts__legend {
-    -ms-flex-item-align: center;
-        align-self: center;
-  }
-
-  .legend {
-    font-size: 0.625em;
-  }
-
-  .contacts__post {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 4% 0;
-  }
-
-  .email {
-    height: 1.75em;
-  }
-
-  /*Стили для текста в окне e-mail*/
-  .email::-webkit-input-placeholder {
-    font-size: 0.625em;
-  }
-
-  .email:-ms-input-placeholder {
-    font-size: 0.625em;
-  }
-
-  .email::-ms-input-placeholder {
-    font-size: 0.625em;
-  }
-
-  .email::placeholder {
-    font-size: 0.625em;
-  }
-
-  /*Стили для блока с соц. сетями "social"*/
-  .footer__social {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-  }
-
-  .icon--size__s {
-    font-size: 0.625em;
-  }
-
-  .footer__par {
-    bottom: -7%;/*22px*/
   }
 }
 
-/*Стили для мобильных телефонов со средними экранами*/
-@media screen and (min-width: 490px) and (max-width: 767px) {
-  /*Общие стили юдля блока footer*/
+/*Общие стили для мобильных телефонов с маленькими и средними экранами*/
+@media screen and (max-width: 767px) {
+/*Общие стили юдля блока footer*/
   .info__footer {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
-  .footer {
-    width: 90%;
-  }
-
-  /*Скрытие блока с эмблемой сайта "logo"*/
-  .footer__logo {
-    display: none;
+      flex-wrap: wrap;
   }
 
   /*Стили для блока с меню "footer"*/
@@ -307,7 +219,7 @@
     height: 1.75em;
   }
 
-  /*Стили для текста в окне e-mail*/
+/*Стили для текста в окне e-mail*/
   .email::-webkit-input-placeholder {
     font-size: 0.625em;
   }
@@ -341,16 +253,6 @@
 
 /*Стили для мобильных телефонов с большими экранами*/
 @media screen and (min-width: 768px) and (max-height: 450px) {
-  /*Общие стили юдля блока footer*/
-  .footer {
-    width: 90%;
-  }
-
-  /*Скрытие блока с эмблемой сайта "logo"*/
-  .footer__logo {
-    display: none;
-  }
-
   /*Стили для блока с меню "footer"*/
   .link--color__gray {
     font-size: 0.75em;
@@ -404,16 +306,6 @@
 
 /*Стили для планшетов*/
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  /*Общие стили юдля блока footer*/
-  .footer {
-    width: 90%;
-  }
-
-  /*Скрытие блока с эмблемой сайта "logo"*/
-  .footer__logo {
-    display: none;
-  }
-
   /*Стили для блока с меню "footer"*/
   .link--color__gray {
     font-size: 0.875em;
@@ -455,9 +347,11 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 451px) and (orientation: landscape) {
-  /*Общие стили юдля блока footer*/
-  .footer {
-    width: 90%;
+  /*Показ блока с эмблемой сайта "logo"*/
+  .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   /*Стили для блока с меню "footer"*/
