@@ -75,7 +75,7 @@
 }
 
 .contacts {
-  min-width: 39.06%;/*457px*/
+  min-width: 43.06%;/*457px*/
   /*min-height: 60%;/*150px*/
   height: auto;
   max-height: 60%;
@@ -98,9 +98,9 @@
           justify-content: space-between;*/
 }
 
-.post__email {
+/*.post__email {
   margin-right: 2%;
-}
+}*/
 
 .post {
   /*width: 100%;/*457px*/
@@ -232,6 +232,10 @@
     margin: 4% 0;
   }
 
+  .post__email {
+    margin-right: 2%;
+  }
+
   .email {
     height: 1.75em;
   }
@@ -294,7 +298,7 @@
     width: 40%;
     text-align: center;
   }
-  
+
   .link--color__gray {
     font-size: 0.625em;
   }
@@ -320,6 +324,10 @@
     margin: 4% 0;
   }
 
+  .post__email {
+    margin-right: 2%;
+  }
+
   .email {
     height: 1.75em;
   }
@@ -328,12 +336,15 @@
   .email::-webkit-input-placeholder {
     font-size: 0.625em;
   }
+
   .email:-ms-input-placeholder {
     font-size: 0.625em;
   }
+
   .email::-ms-input-placeholder {
     font-size: 0.625em;
   }
+
   .email::placeholder {
     font-size: 0.625em;
   }
@@ -350,6 +361,69 @@
 
   .footer__par {
     bottom: -7%;/*22px*/
+  }
+}
+
+/*Стили для мобильных телефонов с большими экранами*/
+@media screen and (min-width: 768px) and (max-height: 450px) {
+  /*Общие стили юдля блока footer*/ 
+  .footer {
+    width: 90%;
+  }
+
+  /*Скрытие блока с эмблемой сайта "logo"*/
+  .footer__logo {
+    display: none;
+  }
+
+  /*Стили для блока с меню "footer"*/
+  .link--color__gray {
+    font-size: 0.75em;
+  }
+
+  /*Стили для блока с меню контактами и подпиской "contacts"*/
+  .contacts {
+    min-width: 50%;
+  }
+
+  .legend {
+    font-size: 0.75em;
+  }
+
+  .contacts__post {
+    -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  }
+
+  .email {
+    height: 2.25em;
+  }
+
+  /*Стили для текста в окне e-mail*/
+  .email::-webkit-input-placeholder {
+    font-size: 0.75em;
+  }
+
+  .email:-ms-input-placeholder {
+    font-size: 0.75em;
+  }
+
+  .email::-ms-input-placeholder {
+    font-size: 0.75em;
+  }
+  
+  .email::placeholder {
+    font-size: 0.75em;
+  }
+
+  /*Стили для блока с соц. сетями "social"*/
+  .icon--size__s {
+    font-size: 0.75em;
+  }
+
+  .footer__par {
+    bottom: -12%;
   }
 }
 
