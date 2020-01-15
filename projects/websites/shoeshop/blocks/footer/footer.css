@@ -12,18 +12,16 @@
 
 .footer {
   width: 73.125%;/*1170px*/
-  min-height: 24.41vh;/*250px*/
-  padding: 4% 0;
+  height: auto;/*min-height 250px=24.41vh*/
+  padding: 3% 0;
   border: 0;
   border-top: 1px solid #DBDBDB;
   border-bottom: 1px solid #DBDBDB;
-  /*border: 2px solid red;*/
+  border: 2px solid red;
 }
 
 /*Стили для блока с эмблемой сайта "logo"*/
 .footer__logo {
-  /*position: relative;
-  top: 20%;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,27 +30,14 @@
           align-items: center;
 }
 
-/*.footer__list {
-  position: relative;
-  top: 20%;
-}*/
-
-/*.list {
-  width: auto;*/
-  /*max-width: 10.68%;/*125px*/
-  /*height: 60%;/*150px*/
-  /*border: 1px solid blue;
-}*/
-
-/*.item {
-  font-family: "Pop-reg", sans-serif;
-  font-size: 1em;
-  line-height: 1.43;
-  list-style: none;
-  border: 1px solid green;
-}*/
-
 /*Стили для блока с меню "footer"*/
+.menu-extra {
+  width: auto;
+  height: auto;
+  /*height: 100%;*/
+  border: 2px solid red;
+}
+
 .link--color__gray {
   font-size: 1em;
   color: #888888;
@@ -60,8 +45,6 @@
 
 /*Стили для блока с меню контактами и подпиской "contacts"*/
 .footer__contacts {
-  /*position: relative;
-  top: 20%;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,8 +61,8 @@
   min-width: 43.06%;/*457px*/
   /*min-height: 60%;/*150px*/
   height: auto;
-  max-height: 60%;
-  border: 1px solid yellow;
+  /*height: 60%;*/
+  border: 2px solid yellow;
 }
 
 .legend {
@@ -93,14 +76,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*-webkit-box-pack: justify;
+  -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;*/
+          justify-content: space-between;
 }
 
-/*.post__email {
+.post__email {
   margin-right: 2%;
-}*/
+}
 
 .post {
   /*width: 100%;/*457px*/
@@ -232,10 +215,6 @@
     margin: 4% 0;
   }
 
-  .post__email {
-    margin-right: 2%;
-  }
-
   .email {
     height: 1.75em;
   }
@@ -324,10 +303,6 @@
     margin: 4% 0;
   }
 
-  .post__email {
-    margin-right: 2%;
-  }
-
   .email {
     height: 1.75em;
   }
@@ -366,7 +341,7 @@
 
 /*Стили для мобильных телефонов с большими экранами*/
 @media screen and (min-width: 768px) and (max-height: 450px) {
-  /*Общие стили юдля блока footer*/ 
+  /*Общие стили юдля блока footer*/
   .footer {
     width: 90%;
   }
@@ -424,6 +399,101 @@
 
   .footer__par {
     bottom: -12%;
+  }
+}
+
+/*Стили для планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /*Общие стили юдля блока footer*/
+  .footer {
+    width: 90%;
+  }
+
+  /*Скрытие блока с эмблемой сайта "logo"*/
+  .footer__logo {
+    display: none;
+  }
+
+  /*Стили для блока с меню "footer"*/
+  .link--color__gray {
+    font-size: 0.875em;
+  }
+
+  /*Стили для блока с меню контактами и подпиской "contacts"*/
+  .legend {
+    font-size: 0.875em;
+  }
+
+  .email {
+    height: 2.5em;
+  }
+
+  /*Стили для текста в окне e-mail*/
+  .email::-webkit-input-placeholder {
+    font-size: 0.875em;
+  }
+  .email:-ms-input-placeholder {
+    font-size: 0.875em;
+  }
+
+  .email::-ms-input-placeholder {
+    font-size: 0.875em;
+  }
+
+  .email::placeholder {
+    font-size: 0.875em;
+  }
+
+  /*Стили для блока с соц. сетями "social"*/
+  .icon--size__s {
+    font-size: 0.875em;
+  }
+
+  .footer__par {
+    bottom: -12%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (min-height: 451px) and (orientation: landscape) {
+  /*Общие стили юдля блока footer*/
+  .footer {
+    width: 90%;
+  }
+
+  /*Стили для блока с меню "footer"*/
+  .link--color__gray {
+    font-size: 0.875em;
+  }
+
+  /*Стили для блока с меню контактами и подпиской "contacts"*/
+  .legend {
+    font-size: 0.875em;
+  }
+
+  .email {
+    height: 2.5em;
+  }
+
+  /*Стили для текста в окне e-mail*/
+  .email::-webkit-input-placeholder {
+    font-size: 0.875em;
+  }
+
+  .email:-ms-input-placeholder {
+    font-size: 0.875em;
+  }
+
+  .email::-ms-input-placeholder {
+    font-size: 0.875em;
+  }
+  
+  .email::placeholder {
+    font-size: 0.875em;
+  }
+
+  /*Стили для блока с соц. сетями "social"*/
+  .icon--size__s {
+    font-size: 0.875em;
   }
 }
 
