@@ -5,13 +5,10 @@
   top: 6%;/*62px*/
   border: 2px solid red;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
       justify-content: space-between;
   -webkit-box-align: center;
-    -ms-flex-align: center;
       align-items: center;
 }
 
@@ -23,10 +20,8 @@
 /*Стили для блока с эмблемой сайта "logo"*/
 .header__logo {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-    -ms-flex-align: center;
       align-items: center;
 }
 
@@ -52,12 +47,9 @@
 /*Стили для блока с переключателями слайдов "pag"*/
 .header__pag {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center;
 }
 
@@ -111,8 +103,13 @@
   top: 100%;
 }
 
+.header__menu-main.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
 .menu-main {
-  width: 35%;
+  width: 100%;
   height: auto;
   background-color: #ffffff;
 }
@@ -182,6 +179,10 @@
   }
 
 /*Стили для блока меню "menu-main"*/
+  .desktop {
+    display: none;
+  }
+  
   .menu-main {
     width: 50%;
   }
@@ -238,6 +239,10 @@
   .circle:hover,
   .menu .item:hover {
     cursor: pointer;
+  }
+
+  .menu .item:hover > .link {
+    color: #888888;
   }
 
   .burg-menu:hover {
@@ -304,6 +309,10 @@
     font-family: "Pop-bold", sans-serif;
     font-size: 1em;
     color: #000000;
+  }
+
+  .menu .item--pe:hover:before {
+    color: #888888;
   }
 }
 
