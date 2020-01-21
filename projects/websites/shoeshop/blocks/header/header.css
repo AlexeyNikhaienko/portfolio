@@ -108,20 +108,6 @@
           transform: translateX(0);
 }
 
-.menu-main {
-  width: 100%;
-  height: auto;
-  background-color: #ffffff;
-}
-
-.menu,
-.item,
-.list,
-.catalog {
-  width: 100%;
-  height: auto;
-}
-
 .item {
   font-family: "Pop-reg", sans-serif;
   line-height: 1.43;
@@ -129,13 +115,10 @@
   border: 1px solid green;
 }
 
-.item--visible {
-  font-size: 1.25em;
-}
-
 .item--padding {
   padding: 3% 10%;
   text-align: right;
+  font-size: 1.25em;
 }
 
 .link {
@@ -147,11 +130,6 @@
 
 .link-head {
   font-family: "Pop-bold", sans-serif;
-}
-
-.list--hid,
-.catalog {
-  display: none;
 }
 
 /*Общие стили для мобильных телефонов и планшетов*/
@@ -182,23 +160,55 @@
   .desktop {
     display: none;
   }
-  
-  .menu-main {
-    width: 50%;
+
+  .menu-main,
+  .mobile,
+  .list-mobile,
+  .list--hid,
+  .catalog-mobile {
+    width: 100%;
+    min-height: 55vh;
+    background-color: #ffffff;
   }
 
-  .item--visible {
-    font-size: 1em;
+  .menu__list,
+  .menu__catalog {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+    -webkit-transition: -webkit-transform 0.75s ease-in-out;
+    transition: -webkit-transform 0.75s ease-in-out;
+    transition: transform 0.75s ease-in-out;
+    transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
   }
 
   .item--padding {
+    font-size: 1em;
     text-align: left;
   }
 
-  .item--padding:after {
-    content: "+";
+  .item--pe__next,
+  .item--pe__prev {
+    font-family: "Pop-bold", sans-serif;
+  }
+
+  .item--pe__prev {
+    text-align: center;
+    background-color: rgba(136,136,136,0.2);
+  }
+
+  .item--pe__next:after {
+    content: "\276D";
     position: absolute;
     right: 10%;
+  }
+
+  .item--pe__prev:before {
+    content: "\276C";
+    position: absolute;
+    left: 10%;
   }
 }
 
@@ -239,6 +249,30 @@
   .circle:hover,
   .menu .item:hover {
     cursor: pointer;
+  }
+
+  /*Стили для блока "menu"*/
+  .mobile {
+    display: none;
+  }
+
+  .menu-main {
+    width: 35%;
+    height: auto;
+    background-color: #ffffff;
+  }
+
+  .menu,
+  .item,
+  .list,
+  .catalog {
+    width: 100%;
+    height: auto;
+  }
+
+  .list--hid,
+  .catalog {
+    display: none;
   }
 
   .menu .item:hover > .link {
