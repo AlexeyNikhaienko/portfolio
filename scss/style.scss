@@ -1,0 +1,16 @@
+//Подключение шрифтов
+@import "../common/css/fonts";
+
+//Подключение стилей для блока "table"
+@import "blocks/table";
+
+//Общие стили для страницы
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}

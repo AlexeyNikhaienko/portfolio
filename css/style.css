@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*Семейство шрифтов Jura*/
+@font-face {
+  font-family: "Jura-Regular";
+  src: url("../fonts/Jura-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Jura-Bold";
+  src: url("../fonts/Jura-Bold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
+/*# sourceMappingURL=style.css.map */
