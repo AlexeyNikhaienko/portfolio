@@ -1,0 +1,36 @@
+//Переменные
+$color-black: #000;
+$color-gray: rgba(180,180,180,0.5);
+$color-blue: rgba(0,183,255,0.5);
+
+//Миксин:
+// для заголовка таблицы
+@mixin tab-title {
+  font-family: "Jura-Regular", sans-serif;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+//для шапки таблицы
+@mixin tab-heading {
+  font-family: "Jura-Bold", sans-serif;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+//для контента таблицы
+@mixin tab-content {
+  font-family: "Jura-Regular", sans-serif;
+  color: $color-black;
+}
+
+//Общие стили для страницы
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+}
