@@ -4,52 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="common_files/css/normalize.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Главная страница</title>
 </head>
 <body>
-  <table class="table">
-    <caption class="title">Примеры моих работ</caption>
-    <thead class="head">
-      <tr class="row">
-        <th class="heading">Название/ ссылка</th>
-        <th class="heading">Краткое описание</th>
-        <th class="heading">Использованные технологии</th>
-      </tr>
-    </thead>
-    <tbody class="body">
-      <tr class="row">
-        <th colspan="3">Одностраничные сайты</th>
-      </tr>
-      <tr class="row">
-        <td class="column">
-          <a href="projects/websites/iamwoman/index.html" class="link">I'm A Woman</a>
-        </td>
-        <td class="column">
-          <p class="description">Интернет-магазин брендовой женской одежды</p>
-        </td>
-        <td class="column">HTML, CSS, Java Script</td>
-      </tr>
-      <tr class="row">
-        <td class="column">
-          <a href="projects/websites/revista/index.html" class="link">Revista</a>
-        </td>
-        <td class="column">
-          <p class="description">Сайт о тенденциях в поп-культуре</p>
-        </td>
-        <td class="column">HTML, CSS</td>
-      </tr>
-      <tr class="row">
-        <td class="column">
-          <a href="projects/websites/shoeshop/index.html" class="link">ShoeShop</a>
-        </td>
-        <td class="column">
-          <p class="description">Интернет-магазин спортивной обуви</p>
-        </td>
-        <td class="column">HTML, CSS, Java Script</td>
-      </tr>
-    </tbody>
-  </table>
+  <main class="content">
+    <table class="content__table table">
+      <caption class="table__title title">Примеры моих работ</caption>
+      <thead class="head">
+        <tr class="row">
+          <th class="heading">Название/ ссылка</th>
+          <th class="heading">Краткое описание</th>
+          <th class="heading">Использованные технологии</th>
+        </tr>
+      </thead>
+      <tbody class="body">
+        <tr class="row">
+          <th colspan="3" class="heading">Одностраничные сайты</th>
+        </tr>
+        <tr class="row">
+          <td class="column column--align__left">
+            <a href="projects/websites/iamwoman/index.html" class="link" target="_blank" title="Перейти по ссылке">I'm A Woman</a>
+          </td>
+          <td class="column">
+            <p class="description">Интернет-магазин брендовой женской одежды</p>
+          </td>
+          <td class="column">HTML, CSS, Java Script</td>
+        </tr>
+        <tr class="row">
+          <td class="column column--align__left">
+            <a href="projects/websites/revista/index.html" class="link" target="_blank" title="Перейти по ссылке">Revista</a>
+          </td>
+          <td class="column">
+            <p class="description">Сайт о тенденциях в современной поп-культуре</p>
+          </td>
+          <td class="column">HTML, CSS</td>
+        </tr>
+        <tr class="row">
+          <td class="column column--align__left">
+            <a href="projects/websites/shoeshop/index.html" class="link" target="_blank" title="Перейти по ссылке">ShoeShop</a>
+          </td>
+          <td class="column">
+            <p class="description">Интернет-магазин спортивной обуви</p>
+          </td>
+          <td class="column">HTML, CSS, Java Script</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="footer"></footer>
 </body>
 </html>

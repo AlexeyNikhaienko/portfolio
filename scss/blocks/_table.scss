@@ -1,0 +1,178 @@
+//Общие стили для таблицы
+.content__table {
+  margin: 5% auto;
+}
+
+.table {
+  width: 90%;
+  height: auto;
+  border-collapse: collapse;
+
+  //Стили для заголовка таблицы
+  & .table__title {
+    margin-bottom: 1%;
+  }
+
+  & .title {
+    @include tab-title;
+  }
+
+  //Стили для шапки таблицы
+  & .head {
+    width: 100%;
+    height: auto;
+    border: 0;
+    border-top: 1px solid $color-black;
+    border-bottom: 1px solid $color-black;
+    background-color: $color-blue;
+
+    & .row {
+      border-bottom: 0;
+    }
+  }
+}
+
+//Общие стили для строк
+.row {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid $color-black;
+  text-align: center;
+
+  & .heading {
+    @include tab-heading;
+    padding: 1% 3%;
+    border: 0;
+    background-color: $color-gray;
+
+    &:not(:last-of-type) {
+      border-right: 1px solid $color-black;
+    }
+  }
+
+  & .column {
+    @include tab-content;
+    padding: 1% 3%;
+
+    &:not(:last-of-type) {
+      border-right: 1px solid $color-black;
+    }
+    
+    //Стили для строк со ссылкой на сайт
+    &--align__left {
+      text-align: left;
+    }
+
+    & .link {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+
+//Стили для мобильных телефонов с маленьким экраном
+@media screen and (max-width: 600px) {
+  //Общие стили для таблицы
+  .table {
+    width: 100%;
+
+    //Стили для заголовка таблицы
+    & .title {
+      font-size: 1em;
+    }
+  }
+
+  //Стили для подзаголовков и контента
+  .heading,
+  .column {
+    font-size: 0.75em;
+  }
+}
+
+//Стили для мобильных телефонов со средним и большим экраном,
+//а так же для планшетов
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  //Общие стили для таблицы
+  .table {
+    width: 100%;
+
+    //Стили для заголовка таблицы
+    & .title {
+      font-size: 1.25em;
+    }
+  }
+
+  //Стили для подзаголовков и контента
+  .heading,
+  .column {
+    font-size: 1em;
+  }
+}
+
+//Общие стили для ноутбуков и ПК
+@media screen and (min-width: 1025px) {
+  //Стили для ячейки со ссылкой при наведении на неё курсора мыши
+  .column--align__left:hover {
+    background-color: $color-gray;
+
+    & .link {
+      text-decoration: underline;
+    }
+  }
+}
+
+//Стили для ПК с маленькими экраном
+@media screen and (max-width: 1599px) {
+  ///Стили для заголовка таблицы
+  .title {
+    font-size: 1.5em;
+  }
+
+  //Стили для подзаголовков и контента
+  .heading,
+  .column {
+    font-size: 1.125em;
+  }
+}
+
+//Стили для ПК со средним экраном
+@media screen and (min-width: 1600px) and (max-width: 2047px) {
+  //Стили для заголовка таблицы
+  .title {
+    font-size: 1.75em;
+  }
+
+  //Стили для подзаголовков и контента
+  .heading,
+  .column {
+    font-size: 1.25em;
+  }
+}
+
+//Стили для ПК с большим экраном
+@media screen and (min-width: 2048px) and (max-width: 2559px) {
+  //Стили для заголовка таблицы
+  .title {
+    font-size: 2em;
+  }
+
+  //Стили для подзаголовков и контента
+  .heading,
+  .column {
+    font-size: 1.5em;
+  }
+}
+
+//Стили для ПК с разрешением экрана от 2560px
+@media screen and (min-width: 2560px) {
+  //Стили для заголовка таблицы
+  .title {
+    font-size: 2.25em;
+  }
+
+  //Стили для подзаголовков и контента
+  .heading,
+  .column {
+    font-size: 1.75em;
+  }
+}
