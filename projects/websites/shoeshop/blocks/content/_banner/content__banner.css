@@ -232,6 +232,16 @@
 
 /*Общие стили для мобильных телефонов с маленькими и средними экранами*/
 @media screen and (max-width: 767px) {
+   /*Стили для основного фона "bcg"*/
+   .bcg--left {
+    width: 200%;
+    left: -50%;
+  }
+
+  .bcg--right {
+    width: 80%;
+    right: -50%;
+  }
 /*Стили для блока с эмблемой "inner"*/
   .banner__wrapper {
     left: 5%;
@@ -273,17 +283,6 @@
 
 /*Стили для мобильных телефонов с маленькими экранами*/
 @media screen and (max-width: 489px) {
- /*Стили для основного фона "bcg"*/
-  .bcg--left {
-    width: 200%;
-    left: -50%;
-  }
-
-  .bcg--right {
-    width: 80%;
-    right: -50%;
-  }
-
 /*Стили для блока с описанием "par"*/
   .banner__par {
    display: none;
@@ -306,7 +305,7 @@
   .banner {
     height: 150vh;
   }
-
+  
 /*Стили для блока с описанием "par"*/
   .banner__par {
     left: 5%;

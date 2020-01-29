@@ -1,15 +1,20 @@
+/*Общие стили для блоков "header", "logo", "pag"*/
+.navigation__header,
+.header__logo,
+.header__pag {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+      align-items: center;
+}
+
 /*Общие стили для блока "header"*/
 .navigation__header {
   position: absolute;
   z-index: 5;
   top: 6%;/*62px*/
-  border: 2px solid red;
-  display: -webkit-box;
-  display: flex;
   -webkit-box-pack: justify;
       justify-content: space-between;
-  -webkit-box-align: center;
-      align-items: center;
 }
 
 .header {
@@ -18,17 +23,9 @@
 }
 
 /*Стили для блока с эмблемой сайта "logo"*/
-.header__logo {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-      align-items: center;
-}
-
 .logo {
   width: auto;/*min 177px*/
   height: 19.55%;/*35px*/
-  border: 1px solid blue;
 }
 
 .title {
@@ -46,11 +43,7 @@
 
 /*Стили для блока с переключателями слайдов "pag"*/
 .header__pag {
-  display: -webkit-box;
-  display: flex;
   justify-content: space-around;
-  -webkit-box-align: center;
-          align-items: center;
 }
 
 .pag__circle {
@@ -60,7 +53,6 @@
 .pag {
   width: 10.09%;/*118px*/
   height: 30.73%;/*55px*/
-  border: 1px solid blue;
 }
 
 .circle {
@@ -77,6 +69,7 @@
   border-radius: 50%;
   background-color: #000000; 
 }
+
 /*Добавление самой эмблемы меню при помощи псевдоэлемента*/
 .burg-menu:after {
   position: absolute;
@@ -108,17 +101,17 @@
           transform: translateX(0);
 }
 
-.item {
-  font-family: "Pop-reg", sans-serif;
-  line-height: 1.43;
-  list-style: none;
-  border: 1px solid green;
+.menu,
+.item,
+.list,
+.list--hid,
+.catalog {
+  width: 100%;
 }
 
-.item--padding {
-  padding: 3% 10%;
-  text-align: right;
-  font-size: 1.25em;
+.item {
+  font-family: "Pop-reg", sans-serif;
+  list-style: none;
 }
 
 .link {
@@ -166,9 +159,14 @@
   .list-mobile,
   .list--hid,
   .catalog-mobile {
-    width: 100%;
-    min-height: 55vh;
+    /*width: 100%;
+    min-height: 55vh;*/
     background-color: #ffffff;
+  }
+
+  .menu-main {
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .menu__list,
@@ -185,6 +183,7 @@
   }
 
   .item--padding {
+    padding: 3% 10%;
     font-size: 1em;
     text-align: left;
   }
@@ -214,18 +213,50 @@
 
 /*Общие стили для мобильных телефонов с маленькими и со средними экранами*/
 @media screen and (max-width: 767px) {
-/*Стили для блока с эмблемой сайта "logo"*/
+  /*Стили для блока с эмблемой сайта "logo"*/
   .emblem {
     display: none;
   }
-
+  
   .title {
     padding: 7% 0;
   }
-
-/*Стили для блока с переключателями слайдов "pag"*/
+  
+  /*Стили для блока с переключателями слайдов "pag"*/
   .pag {
     width: 30%;
+  }
+}
+
+/*Стили для мобильных телефонов с маленькими экранами*/
+@media screen and (max-width: 489px) {
+  /*Стили для блока меню "menu-main"*/
+  .menu-main {
+    width: 100%;
+    height: auto;
+  }
+
+  .mobile,
+  .list-mobile,
+  .list--hid,
+  .catalog-mobile {
+    height: 55vh;
+  }
+}
+
+/*Стили для мобильных телефонов со средними экранами*/
+@media screen and (min-width: 490px) and (max-width: 767px) {
+  /*Стили для блока меню "menu-main"*/
+  .menu-main {
+    width: 50%;
+    height: auto;
+  }
+
+  .mobile,
+  .list-mobile,
+  .list--hid,
+  .catalog-mobile {
+    height: 100vh;
   }
 }
 
@@ -240,6 +271,19 @@
 /*Стили для блока с переключателями слайдов "pag"*/
   .pag {
     min-width: 15%;
+  }
+
+  /*Стили для блока меню "menu-main"*/
+  .menu-main {
+    width: 50%;
+    height: auto;
+  }
+
+  .mobile,
+  .list-mobile,
+  .list--hid,
+  .catalog-mobile {
+    height: 50vh;
   }
 }
 
@@ -266,8 +310,14 @@
   .item,
   .list,
   .catalog {
-    width: 100%;
     height: auto;
+  }
+
+
+  .item--padding {
+    padding: 5% 10%;
+    text-align: right;
+    font-size: 1.25em;
   }
 
   .list--hid,
