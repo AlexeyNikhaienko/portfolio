@@ -1,25 +1,25 @@
+/*Общие стили для блока "testimonial", для слайдера*/
+.content__testimonial,
+.slider__quote {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
 /*Общие стили для блока "testimonial"*/
 .content__testimonial {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
   margin-bottom: 7.8vh;
 }
 
 .testimonial {
   width: 100%;/*1600px*/
   height: auto;
-  /*height: 41.31vh;/*423px*/
   padding-top: 4.5%;/*46px*/
   padding-bottom: 4.5%;/*46px*/
   background-color: #F8F8F8;
-  border: 2px solid lightseagreen;
 }
 
 /*Создание стрелок навигации для слайдера*/
@@ -39,6 +39,8 @@
 .barb {
   width: 31.26%;/*36px*/
   height: 1px;
+  -webkit-transform: rotate(-30deg);
+      transform: rotate(-30deg);
   background-color: #B3B3B3;
 }
 
@@ -46,8 +48,6 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  -webkit-transform: rotate(-30deg);
-      transform: rotate(-30deg);
   -webkit-transform-origin: 0 0;
       transform-origin: 0 0;
 }
@@ -60,48 +60,29 @@
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-transform: rotate(-30deg);
-      transform: rotate(-30deg);
   -webkit-transform-origin: 100% 0;
       transform-origin: 100% 0;
 }
 
 /*Стили для слайдера*/
-/*.testimonial__slider {
-  position: relative;
-}*/
-
 .slider {
   width: auto;
-  /*min-width: 53.44%;/*855px*/
   max-width: 65%;/*min-width 855px*/
-  /*max-width: 75%;*/
   height: auto;
   max-height: 80%;
-  border: 2px solid red
 }
 
 .slider__quote {
-  /*position: absolute;*/
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .quote {
   width: 100%;/*855px*/
-  /*min-height: 100%;/*233px*/
   height: auto;
   max-height: 100%;
   text-align: center;
-  border: 2px solid blue;
 }
 
 .quote__heading,
@@ -113,7 +94,6 @@
   min-width: 15.21%;/*130px*/
   height: auto;
   font-family: "Pop-reg", sans-serif;
-  border: 1px solid green;
 }
 
 .respondent {
@@ -121,14 +101,12 @@
   line-height: 1.25em;
   color: #666666;
   padding-bottom: 8%;
-  border: 1px solid yellow;
 }
 
 .profession {
   font-size: 0.875em;
   line-height: 1.3125em;
   color: #51CDA9;
-  border: 1px solid yellow;
 }
 
 /*Общие стили для мобильных телефонов с маленькими и средними экранами*/

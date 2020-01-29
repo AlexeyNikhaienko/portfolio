@@ -1,22 +1,24 @@
+/*Общие стили для блоков "about", "box", для кнопки*/
+.content__about,
+.about__box,
+.border-btn__btn {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
 /*Общие стили для блока "about"*/
 .content__about {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: 7.8vh;
 }
 
 .about {
   width: 80.43%;/*1287px*/
   height: 57.32vh;/*587px*/
-  border: 2px solid red;
 }
 
 /*Стили для блока с картинкой "box"*/
@@ -24,28 +26,19 @@
   position: absolute;
   left: 0;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .box {
   width: 53.54%;/*689px*/
   height: 100%;/*587px*/
   background-color: #EEEDED;
-  -webkit-box-shadow: 0 0 0.5em #EEEDED;
-    box-shadow: 0 0 0.5em#EEEDED;
+  box-shadow: 0 0 0.5em#EEEDED;
   border: 0.375em solid #FFFFFF;
 }
 
 .image {
-  /*height: 87.73%;/*515px*/
   width: auto;
   height: auto;
   max-width: 74.17%;/*511px*/
@@ -54,16 +47,12 @@
 /*Стили для блока с описанием "descript"*/
 .about__descript {
   position: relative;
-  /*left: 49%;*/
   z-index: 1;
 }
 
 .descript {
-  /*width: 51%;/*651px*/
   width: auto;
   height: auto;
-  /*min-height: 31.14%;/*218px*/
-  border: 1px solid green;
 }
 
 .descript__heading {
@@ -71,14 +60,10 @@
 }
 
 .heading {
-  /*width: auto;*/
-  /*width: 100%;*/
   font-family: "cg-med", serif;
   font-size: 2.8125em;/*45px*/
   line-height: 1;
   color: #000000;
-  /*white-space: nowrap;*/
-  border: 1px solid green;
 }
 
 /*Стили для кнопки*/
@@ -100,15 +85,8 @@
   left: 0.625em;/*10px*/
   top: 0.625em;/*10px*/
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .btn--size__s {
@@ -135,6 +113,7 @@
   .par {
     font-size: 0.5em;/*8px*/
   }
+
 /*Стили для кнопки*/
   .descript__border-btn {
     left: calc(100% - 5.625em);
@@ -174,8 +153,7 @@
 
 /*Стили для блока с описанием "descript"*/
   .about__descript {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
     right: 1%;
   }
 
@@ -259,6 +237,10 @@
   /*Стили для блока с описанием "descript"*/
   .heading {
     font-size: 2.375em;/*38px*/
+  }
+
+  .descript {
+    width: 50%
   }
 
   .par {

@@ -17,7 +17,6 @@
 /*Стили для блока-обёртки "contain" и его содержимого*/
 .blog__contain {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -98,8 +97,7 @@
   width: 66.20%;/*472px*/
   height: 69.28%;/*460px*/
   border: 0.375em solid #ffffff;
-  -webkit-box-shadow: 0 0 0.5em #888888;
-          box-shadow: 0 0 0.5em #888888;
+  box-shadow: 0 0 0.5em #888888;
   overflow: hidden;
 }
 
@@ -150,19 +148,21 @@
   margin-bottom: 40%;
 }
 
+/*Общие стили для блока с обозначением слайдов; блока с фигурами, обозначающими слайды*/
+.owner__pagination,
+.pagination__shapes {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
 /*Стили для блока с обозначением слайдов*/
 .owner__pagination {
   position: relative;
   left: calc(100% - 69.63%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .pagination {
@@ -171,18 +171,6 @@
 }
 
 /*Блок с фигурами, обозначающими слайды*/
-.pagination__shapes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .shapes {
   width: 55.56%;/*200px*/
   height: 100%;
@@ -262,7 +250,6 @@
   .blog__contain {
     -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
-            -ms-flex-direction: column-reverse;
                 flex-direction: column-reverse;
   }
 
@@ -441,7 +428,6 @@
   .blog__contain {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
 

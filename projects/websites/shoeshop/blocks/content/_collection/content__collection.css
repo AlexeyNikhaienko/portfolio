@@ -1,13 +1,10 @@
 /*Общие стили для блока "collection"*/
 .content__collection {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
           align-items: center;
   margin-bottom: 7.8vh;
 }
@@ -15,7 +12,6 @@
 .collection {
   width: 80.43%;/*1287px*/
   height: 61.23vh;/*627px*/
-  border: 2px solid red;
 }
 
 /*Общие стили для блока с описанием коллекции "descript"*/
@@ -23,17 +19,11 @@
   position: relative;
   z-index: 2;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
           flex-direction: column;
- /* -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;*/
   -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
           align-items: baseline;
 }
 
@@ -49,7 +39,6 @@
 .container {
   width: 45.53%;/*586px*/
   height: 100%;/*627px*/
-  border: 2px solid green;
 }
 
 .container__img {
@@ -61,8 +50,7 @@
   width: 82.43%;/*483px*/
   height: 83.41%;/*523px*/
   border: 0.375em solid #ffffff;
-  -webkit-box-shadow: 0 0 0.5em #EEEDED;
-    box-shadow: 0 0 0.5em #EEEDED;
+  box-shadow: 0 0 0.5em #EEEDED;
   background-color: #FDE7ED;
 }
 
@@ -103,8 +91,7 @@
 
 /*Общие стили для блока с описанием коллекции "descript"*/
   .collection__descript {
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    align-self: flex-end;
     left: 1%;
     background-color: rgba(255, 255, 255, 0.65);
   }
