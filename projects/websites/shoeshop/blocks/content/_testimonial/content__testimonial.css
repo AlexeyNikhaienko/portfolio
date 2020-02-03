@@ -1,6 +1,6 @@
 /*Общие стили для блока "testimonial", для слайдера*/
 .content__testimonial,
-.slider__quote {
+.slider__quote.quote {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -29,7 +29,7 @@
 
 .arrow {
   width: 7.13%;/*114px*/
-  height: 4.51%;/*19px*/
+  height: 1.25em;
 }
 
 .arrow--left {
@@ -72,13 +72,14 @@
   max-height: 80%;
 }
 
-.slider__quote {
+.slider__quote.quote {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
 }
 
 .quote {
+  display: none;
   width: 100%;/*855px*/
   height: auto;
   max-height: 100%;
@@ -111,21 +112,23 @@
 
 /*Общие стили для мобильных телефонов с маленькими и средними экранами*/
 @media screen and (max-width: 767px) {
-/*Стили для слайдера*/
+  /*Создание стрелок навигации для слайдера*/
+  .testimonial__arrow {
+    display: none;
+  }
+
+  /*Стили для слайдера*/
+  .slider {
+    max-width: 90%;
+  }
+
+  /*Стили для слайдера*/
   .respondent {
     font-size: 0.625em;/*10px*/
   }
 
   .profession {
     font-size: 0.5em;/*8px*/
-  }
-}
-
-/*Стили для мобильных телефонов с маленькими экранами*/
-@media screen and (max-width: 489px) {
-  /*Стили для слайдера*/
-  .slider {
-    max-width: 75%;
   }
 }
 
