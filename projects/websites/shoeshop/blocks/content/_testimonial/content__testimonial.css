@@ -112,16 +112,6 @@
 
 /*Общие стили для мобильных телефонов с маленькими и средними экранами*/
 @media screen and (max-width: 767px) {
-  /*Создание стрелок навигации для слайдера*/
-  .testimonial__arrow {
-    display: none;
-  }
-
-  /*Стили для слайдера*/
-  .slider {
-    max-width: 90%;
-  }
-
   /*Стили для слайдера*/
   .respondent {
     font-size: 0.625em;/*10px*/
@@ -129,6 +119,19 @@
 
   .profession {
     font-size: 0.5em;/*8px*/
+  }
+}
+
+/*Стили для мобильных телефонов с маленькими экранами*/
+@media screen and (max-width: 489px) {
+  /*Стили для слайдера*/
+  .slider {
+    max-width: 90%;
+  }
+
+/*Стили для стрелок навигации слайдера*/
+  .testimonial__arrow {
+    display: none;
   }
 }
 
