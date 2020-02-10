@@ -315,27 +315,6 @@
   }
 }
 
-/*Общие стили для мобильных телефонов с большими экранами и планшетов*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-   /*Стили для слайдера*/
-   .slider-blog {
-    border-width: 0.25em;
-  }
-
-  /*Стили для блока с описанием "offer"*/
-  .owner__offer {
-    left: 0;
-  }
-
-  .offer {
-    width: 100%;
-  }
-
-  .section-title {
-    padding-bottom: 2.5%;
-  }
-}
-
 /*Стили для мобильных телефонов с маленькими экранами*/
 @media screen and (max-width: 489px) {
   /*Стили для кнопки*/
@@ -384,6 +363,27 @@
   /*Стили для блока с обозначением слайдов*/
   .owner__pagination {
     margin-bottom: 5%;
+  }
+}
+
+/*Общие стили для мобильных телефонов с большими экранами и планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+   /*Стили для слайдера*/
+   .slider-blog {
+    border-width: 0.25em;
+  }
+
+  /*Стили для блока с описанием "offer"*/
+  .owner__offer {
+    left: 0;
+  }
+
+  .offer {
+    width: 100%;
+  }
+
+  .section-title {
+    padding-bottom: 2.5%;
   }
 }
 
