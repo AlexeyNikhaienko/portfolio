@@ -2,7 +2,6 @@
 //при кликании за пределами блока либо на кнопку-бургер
 let menuMain = document.querySelector(".header__menu-main");//Родительский блок для всего меню
 let menuBurg = document.querySelector(".burg-menu");//Кнопка с эмблемой меню
-//let circle = document.querySelectorAll(".pag .circle");//Создание массива из элементов управления слайдером
 
 //Объявление переменных для блока кода, ответственного за открытие/закрытие вкладок под-меню
 let menuMainItems = document.querySelectorAll(".mobile .item-nav");//Элементы основного меню
@@ -19,7 +18,7 @@ closeSubMenu();
 //Если этого класса нет, то он добавляется к элементу
 let toggleMenu = function toggleMenu() {
   menuMain.classList.toggle("active");
-};
+}
 
 //На кнопку с эмблемой меню устанавливается обработчик события
 menuBurg.addEventListener("click", function(e) {
@@ -48,7 +47,7 @@ document.addEventListener("click", function(e) {
   //Наконец, выполняется проверка всех выше приведённых условий
   if (!menu && !hamburger && menuMainActive) {
     toggleMenu();
-  };
+  }
 });
 
 //Код для открытия/закрытия вкладок под-меню
@@ -59,15 +58,15 @@ function openSubMenu() {
     menuMainItems[i].addEventListener ("click", function () {
       menuSub[i].style.transform = "translateX(0)";
     });
-  };
+  }
 
   for (let i = 0; i < itemSubNav.length; i++) {
     //Открываются вкладки для под-меню "New" при кликании на его элементы
     itemSubNav[i].addEventListener ("click", function () {
       catalog[i].style.transform = "translateX(0)";
     });
-  };
-};
+  }
+}
 
 //Функция, которая закрывает вкладки при нажатии на соответствующие элементы основного меню/под-меню
 function closeSubMenu() {
@@ -80,37 +79,15 @@ function closeSubMenu() {
       itemCloseMenu[i].addEventListener ("click", function () {
         for (let k = 1; k < menuSub.length; k++) {
           menuSub[k].style.transform = "translateX(100%)";
-        };
+        }
       });
     } else {//Закрывает элементы под-меню, расположенные на вкладке "New"
       itemCloseMenu[i].addEventListener ("click", function () {
         //Цикл перебирает элементы с классом "Сatalog" (new for men, new for women, new for kids)
         for (let k = 0; k < catalog.length; k++) {
           catalog[k].style.transform = "translateX(100%)";
-        };
+        }
       });
-    };
-  };
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*function curCircle() {
-  for (let i = 0; i < circle.length; i++) {
-    circle[i].addEventListener("click", function() {
-      circle[i - 1].classList.remove("burg-menu");
-      circle[i].classList.add("burg-menu");
-    });
-  };
-};*/
+    }
+  }
+}
