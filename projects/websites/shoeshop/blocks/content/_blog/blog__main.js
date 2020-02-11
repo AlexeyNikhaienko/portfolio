@@ -8,19 +8,20 @@ const nextBtnBlog = document.querySelector(".control .right");
 //а также об общем количестве слайдов
 const totalBlogSlide = document.querySelector(".slides .total").textContent = "0" + blogSlideArray.length;
 let curBlogSlide = document.querySelector(".slides .current");
+
 //Переменная, которая будет хранить значения текущего индекса слайда
 let curIndexBlogSlide = 0;
 
 //Объявление переменных, котрые участвуют в работе автоматического показа слайдов
-const blogIntervalTime = 5000;//Через сколько времени (мс) показывается новый слайд
+const blogIntervalTime = 6000;//Через сколько времени (мс) показывается новый слайд
 let blogInterval;//Переменная-таймер
 
 //Определение функции, которая скрывает/показывает слайд
 function showBlogSlides() {
   for (let i = 0; i < blogSlideArray.length; i++) {
-    blogSlideArray[i].style.display = "none";
+    blogSlideArray[i].classList.remove("pic--visible");
   }
-  blogSlideArray[curIndexBlogSlide].style.display = "block";
+  blogSlideArray[curIndexBlogSlide].classList.add("pic--visible");
   //Переменная показывает номер текущего слайда
   curBlogSlide.textContent = "0" + (curIndexBlogSlide + 1) + " /";
 }
@@ -62,7 +63,7 @@ nextBtnBlog.addEventListener("click", function() {
 });
 
 //Автослайдер
-//blogInterval = setInterval(nextBlogSlide, blogIntervalTime);
+blogInterval = setInterval(nextBlogSlide, blogIntervalTime);
 
 //Слайдер для touch-событий
 const blogTouchSlider = function(element) {
@@ -79,17 +80,6 @@ const blogTouchSlider = function(element) {
   let elapsedTime = 0;
 
   surface.addEventListener("touchstart", function(e) {
-    //Чтобы стрелки навигации работали на мобильных телефонах, планшетах
-    //Содержит ли стрелка навигации один из указанных классов
-    if (e.target.classList.contains("control")) {
-      //Проверка, какая именено стрелка нажимается - левая или правая
-        if (e.target.classList.contains("left")) {
-          prevBlogSlide();
-        } else if (e.target.classList.contains("right")) {
-          nextBlogSlide();
-        }
-    }
-
     //Переменная для хранения pageX, pageY
     let touchObj = e.changedTouches[0];
     startX = touchObj.pageX;

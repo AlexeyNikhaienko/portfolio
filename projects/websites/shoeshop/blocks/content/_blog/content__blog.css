@@ -111,6 +111,13 @@
   height: 100%;
   -o-object-fit: fill;
      object-fit: cover;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.pic.pic--visible {
+  opacity: 1;
 }
 
 /*Стили для блока-обёртки "owner" и его содержимого*/
@@ -177,27 +184,25 @@
   white-space: nowrap;
 }
 
-.first,
-.second,
-.third {
+.dot {
   width: 0.875em;
   height: 0.875em;
   border-radius: 50%;
 }
 
-.first {
+.dot-first {
   background-color: #000000;
 }
 
-.second {
+.dot-second {
   background-color: #82F4D3;
 }
 
-.third {
+.dot-third {
   background-color: #E1E1E1;
 }
 
-.cur {
+.dot-cur {
   width: 1.75em;
   height: 1.75em;
   border: 0.375em solid #82F4D3;
@@ -293,14 +298,12 @@
   }
 
   /*Блок с фигурами, обозначающими слайды*/
-  .first,
-  .second,
-  .third {
+  .dot {
     width: 0.5em;
     height: 0.5em;
   }
 
-  .cur {
+  .dot-cur {
     width: 1.125em;
     height: 1.125em;
   }
@@ -400,14 +403,12 @@
   }
 
   /*Блок с фигурами, обозначающими слайды*/
-  .first,
-  .second,
-  .third {
+  .dot {
     width: 0.6em;
     height: 0.6em;
   }
 
-  .cur {
+  .dot-cur {
     width: 1.25em;
     height: 1.25em;
   }
@@ -487,6 +488,10 @@
 
 /*Общие стили для ноутбуков и ПК*/
 @media screen and (min-width: 1025px) {
+  .dot:hover {
+    cursor: pointer;
+  }
+
   .left:hover,
   .right:hover {
     color: #82F4D3;
@@ -512,14 +517,12 @@
   }
 
   /*Блок с фигурами, обозначающими слайды*/
-  .first,
-  .second,
-  .third {
+  .dot {
     width: 1em;
     height: 1em;
   }
 
-  .cur {
+  .dot-cur {
     width: 2em;
     height: 2em;
     border-width: 0.5em;
@@ -556,14 +559,12 @@
   }
 
   /*Блок с фигурами, обозначающими слайды*/
-  .first,
-  .second,
-  .third {
+  .dot {
     width: 1.4em;
     height: 1.4em;
   }
 
-  .cur {
+  .dot-cur {
     width: 2.8em;
     height: 2.8em;
     border-width: 0.7em;
