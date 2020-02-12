@@ -1,5 +1,6 @@
 .content {
   width: 100%;
+  overflow: hidden;
 }
 
 /*Общие стили для блока "banner"*/
@@ -107,6 +108,8 @@
 .label--color__army {
   background-color: #E9E9E9;
   mix-blend-mode: lighten;
+  -webkit-transition: background-color 0.7s ease-in-out;
+  transition: background-color 0.7s ease-in-out;
 }
 
 /*Стили для блока с кнопкой "border"*/
@@ -161,6 +164,10 @@
 }
 
 /*Стили для слайдера и его элементов*/
+.banner__slider-banner {
+  position: relative;
+}
+
 .slider-banner {
   width: 100%;
   height: 100%;
@@ -173,6 +180,13 @@
 .slide {
   width: auto;
   height: auto;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.slide.slide--visible {
+  opacity: 1;
 }
 
 .slide--bottom {
@@ -185,12 +199,10 @@
   bottom: 20%;/*246px*/
 }
 
-/*.slide--fullscreen {
+.slide--fullscreen {
   left: 0;
   top: 0;
-  -o-object-fit: contain;
-     object-fit: contain;
-}*/
+}
 
 /*Стили для блока с социальными сетями "soc"*/
 .banner__soc {
@@ -283,7 +295,12 @@
 
 /*Стили для мобильных телефонов с маленькими экранами*/
 @media screen and (max-width: 489px) {
-/*Стили для блока с описанием "par"*/
+  /*Стили для блока с эмблемой "inner"*/
+  .banner__wrapper {
+    top: 22%;
+  }
+
+  /*Стили для блока с описанием "par"*/
   .banner__par {
    display: none;
   }
@@ -298,6 +315,11 @@
   .slide--top {
     bottom: 24%;
   }
+
+  .slide--fullscreen {
+    left: -30%;
+    height: 100%;
+  }
 }
 
 /*Стили для мобильных телефонов со средним экраном*/
@@ -305,7 +327,7 @@
   .banner {
     height: 150vh;
   }
-  
+
 /*Стили для блока с описанием "par"*/
   .banner__par {
     left: 5%;
@@ -320,6 +342,12 @@
   .slide--top {
     max-width: 66%;
     left: 23%;
+  }
+
+  .slide--fullscreen {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -344,7 +372,6 @@
   }
 
   .label {
-    /*font-size: 4.75em;*/
     font-size: 6em;/*90px*/
   }
 
@@ -367,6 +394,11 @@
   .slide--top {
     max-width: 60%;
     left: 23%;
+  }
+
+  .slide--fullscreen {
+    min-width: 100%;
+    height: 100%;
   }
 
 /*Стили для блока с социальными сетями "soc"*/
@@ -405,7 +437,6 @@
 /*Стили для блока с эмблемой "inner"*/
   .banner__wrapper {
     left: 5%;
-    top: 10%;
   }
 
   .label {
@@ -427,6 +458,11 @@
   .slide--top {
     width: 90%;
     left: 5%;
+  }
+
+  .slide--fullscreen {
+    left: -18%;
+    height: 100%;
   }
 
 /*Стили для блока с социальными сетями "soc"*/
@@ -467,6 +503,11 @@
     left: 25%;
   }
 
+  .slide--fullscreen {
+    min-width: 100%;
+    height: 100%;
+  }
+
   /*Стили для блока с социальными сетями "soc"*/
   .banner__soc {
     right: 5%;
@@ -477,6 +518,11 @@
 @media screen and (min-width: 1025px) {
   .btn--size__b:hover {
     color: #ffffff;
+  }
+
+  .slide--fullscreen {
+    min-width: 100%;
+    min-height: 100%;
   }
 
   .link-box:hover {
