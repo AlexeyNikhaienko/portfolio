@@ -72,7 +72,7 @@
 /*Стили для блока с эмблемой "inner"*/
 .banner__wrapper {
   position: absolute;
-  left: 13%;/*214px*/
+  left: 10%;/*214px*/
   top: 16.41%;/*168px*/
   z-index: 1;
 }
