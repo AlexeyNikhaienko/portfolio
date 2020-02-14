@@ -1,7 +1,7 @@
 //Инициализация переменных для блока кода, отвечающего за скрытие основного меню
 //при кликании за пределами блока либо на кнопку-бургер
+let navHeader = document.querySelector(".pag");
 let menuMain = document.querySelector(".header__menu-main");//Родительский блок для всего меню
-let menuBurg = document.querySelector(".burg-menu");//Кнопка с эмблемой меню
 
 //Объявление переменных для блока кода, ответственного за открытие/закрытие вкладок под-меню
 let menuMainItems = document.querySelectorAll(".mobile .item-nav");//Элементы основного меню
@@ -21,11 +21,12 @@ let toggleMenu = function toggleMenu() {
 }
 
 //На кнопку с эмблемой меню устанавливается обработчик события
-menuBurg.addEventListener("click", function(e) {
-  //Для отображения/ скрытия основного меню
-  e.stopPropagation();
-
-  toggleMenu();
+navHeader.addEventListener("click", function(event) {
+  if (event.target.classList.contains("circle") && event.target.classList.contains("burg-menu")) {
+    //Для отображения/ скрытия основного меню
+    event.stopPropagation();
+    toggleMenu();
+  }
 });
 
 //Для отслеживания клика глобально, т.е. в любом месте страницы,
@@ -40,7 +41,7 @@ document.addEventListener("click", function(e) {
   let menu = target == menuMain || menuMain.contains(target);
 
   //Аналогично, только для кнопки вызова меню
-  let hamburger = target == menuBurg;
+  let hamburger = target == target.classList.contains("burg-menu");
 
   let menuMainActive = menuMain.classList.contains("active");
 
