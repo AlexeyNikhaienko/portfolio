@@ -18,7 +18,7 @@
 }
 
 .header {
-  width: 73.125%;/*1170px*/
+  width: 80%;/*1280px*/
   height: auto;
 }
 
@@ -34,7 +34,7 @@
   line-height: 1.25;
   color: #61E9C2;
   white-space: nowrap;
-  padding-left: 8%;
+  padding: 7% 8%;
 }
 
 .title--color__black {
@@ -63,7 +63,7 @@
 }
 
 /*Стили для эмблемы меню, которая будет перемещаться при переключении слайдов*/
-.burg-menu {
+.circle.burg-menu {
   width: 3.375em;/*54px*/
   height: 3.375em;/*54px*/
   border-radius: 50%;
@@ -71,7 +71,7 @@
 }
 
 /*Добавление самой эмблемы меню при помощи псевдоэлемента*/
-.burg-menu:after {
+.circle.burg-menu:after {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -159,8 +159,6 @@
   .list-mobile,
   .list--hid,
   .catalog-mobile {
-    /*width: 100%;
-    min-height: 55vh;*/
     background-color: #ffffff;
   }
 
@@ -217,15 +215,26 @@
   .emblem {
     display: none;
   }
-  
+
   .title {
     padding: 7% 0;
   }
-  
+
   /*Стили для блока с переключателями слайдов "pag"*/
   .pag {
     width: 30%;
   }
+
+  /*Стили для эмблемы меню, которая будет перемещаться при переключении слайдов*/
+.circle.burg-menu {
+  width: 2.25em;/*36px*/
+  height: 2.25em;/*36px*/
+}
+
+/*Добавление самой эмблемы меню при помощи псевдоэлемента*/
+.circle.burg-menu:after {
+  font-size: 1em;/*12px*/
+}
 }
 
 /*Стили для мобильных телефонов с маленькими экранами*/
@@ -312,7 +321,6 @@
   .catalog {
     height: auto;
   }
-
 
   .item--padding {
     padding: 5% 10%;

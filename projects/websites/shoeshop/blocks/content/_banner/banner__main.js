@@ -1,7 +1,7 @@
 //Объявление переменных, содержащих массив с элементами
 //const bannerSlide = document.querySelector(".slider-banner");
 const bannerSlideArray = document.querySelectorAll(".banner .slide");
-const navBanner = document.querySelectorAll(".header .circle");
+const toggleNavHeader = document.querySelectorAll(".header .circle");
 
 //Переменная, которая будет хранить значения текущего индекса слайда
 let curIndexBannerSlide = 0;
@@ -13,10 +13,10 @@ let bannerInterval;//Переменная-таймер
 function showBannerSlides() {
   for (let i = 0; i < bannerSlideArray.length; i++) {
     bannerSlideArray[i].classList.remove("slide--visible");
-    for (let j = 0; j < navBanner.length; j++) {
-      navBanner[j].classList.remove("burg-menu");
+    for (let j = 0; j < toggleNavHeader.length; j++) {
+      toggleNavHeader[j].classList.remove("burg-menu");
     }
-    navBanner[curIndexBannerSlide].classList.add("burg-menu");
+    toggleNavHeader[curIndexBannerSlide].classList.add("burg-menu");
     document.querySelector(".burg-menu").style.transition = "all 0.7s ease-in-out";
   }
   bannerSlideArray[curIndexBannerSlide].classList.add("slide--visible");
