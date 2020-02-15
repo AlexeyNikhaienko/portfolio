@@ -1,17 +1,10 @@
 //Инициализация переменных для блока кода, отвечающего за скрытие основного меню
 //при кликании за пределами блока либо на кнопку-бургер
-let navHeader = document.querySelector(".pag");
-let menuMain = document.querySelector(".header__menu-main");//Родительский блок для всего меню
+const navHeader = document.querySelector(".pag");
+const menuMain = document.querySelector(".header__menu-main");//Родительский блок для всего меню
 
-//Объявление переменных для блока кода, ответственного за открытие/закрытие вкладок под-меню
-let menuMainItems = document.querySelectorAll(".mobile .item-nav");//Элементы основного меню
-let itemSubNav = document.querySelectorAll(".mobile .item-subnav");//Элементы вкладки "New"
-let menuSub = document.querySelectorAll(".mobile .list--hid");//Меню для вкладок "New...Brands"
-let catalog = document.querySelectorAll(".mobile .catalog-mobile");//Меню для вкладок "New for men..."
-let itemCloseMenu = document.querySelectorAll(".mobile .item--pe__prev");//Элементы, которые закрывают вкладки
-//Объявление функций, которые открывают/закрывают вкладки под-меню
-openSubMenu();
-closeSubMenu();
+//Запуск функции, которая открывает/закрывает вкладки под-меню
+showSubMenu();
 
 //Код для закрытия основного меню при нажатии за пределами блока меню либо на кнопку с эмблемой меню
 //Функция, которая выполняет проверку на наличие указанного класса у элемента.
@@ -21,10 +14,10 @@ let toggleMenu = function toggleMenu() {
 }
 
 //На кнопку с эмблемой меню устанавливается обработчик события
-navHeader.addEventListener("click", function(event) {
-  if (event.target.classList.contains("circle") && event.target.classList.contains("burg-menu")) {
+navHeader.addEventListener("click", function(e) {
+  if (e.target.classList.contains("circle") && e.target.classList.contains("burg-menu")) {
     //Для отображения/ скрытия основного меню
-    event.stopPropagation();
+    e.stopPropagation();
     toggleMenu();
   }
 });
@@ -51,44 +44,54 @@ document.addEventListener("click", function(e) {
   }
 });
 
-//Код для открытия/закрытия вкладок под-меню
-//Функция, которая открывает под-меню при нажатии на соответствующие элементы основного меню
-function openSubMenu() {
-  //Открываются меню для вкладок "New...Brands" при нажатии на соответствующий элемент из основного меню
-  for (let i = 0; i < menuMainItems.length; i++) {
-    menuMainItems[i].addEventListener ("click", function () {
-      menuSub[i].style.transform = "translateX(0)";
-    });
-  }
+function showSubMenu() {
+  //Объявление переменных для блока кода, ответственного за открытие/закрытие вкладок под-меню
+  const menuMainItems = document.querySelectorAll(".mobile .item-nav");//Элементы основного меню
+  const itemSubNav = document.querySelectorAll(".mobile .item-subnav");//Элементы вкладки "New"
+  const menuSub = document.querySelectorAll(".mobile .list--hid");//Меню для вкладок "New...Brands"
+  const catalog = document.querySelectorAll(".mobile .catalog-mobile");//Меню для вкладок "New for men..."
+  const itemCloseMenu = document.querySelectorAll(".mobile .item--pe__prev");//Элементы, которые закрывают вкладки
 
-  for (let i = 0; i < itemSubNav.length; i++) {
-    //Открываются вкладки для под-меню "New" при кликании на его элементы
-    itemSubNav[i].addEventListener ("click", function () {
-      catalog[i].style.transform = "translateX(0)";
-    });
-  }
-}
+  //Код для открытия/закрытия вкладок под-меню
+  //Функция, которая открывает под-меню при нажатии на соответствующие элементы основного меню
+  function openSubMenu() {
+    //Открываются меню для вкладок "New...Brands" при нажатии на соответствующий элемент из основного меню
+    for (let i = 0; i < menuMainItems.length; i++) {
+      menuMainItems[i].addEventListener("click", function() {
+        menuSub[i].setAttribute("style", "transform: translateX(0)");
+      });
+    }
 
-//Функция, которая закрывает вкладки при нажатии на соответствующие элементы основного меню/под-меню
-function closeSubMenu() {
-  for (let i = 0; i < itemCloseMenu.length; i++) {
-    if (i < 1) {//Т.к. первый элемент должен закрывать саму вкладку "New"
-      itemCloseMenu[i].addEventListener ("click", function () {
-        menuSub[i].style.transform = "translateX(100%)";
-      });
-    } else if (i > 3) {//Т.к. начиная с 4 элемента массива происходит закрытие вкладок "Men...Brands"
-      itemCloseMenu[i].addEventListener ("click", function () {
-        for (let k = 1; k < menuSub.length; k++) {
-          menuSub[k].style.transform = "translateX(100%)";
-        }
-      });
-    } else {//Закрывает элементы под-меню, расположенные на вкладке "New"
-      itemCloseMenu[i].addEventListener ("click", function () {
-        //Цикл перебирает элементы с классом "Сatalog" (new for men, new for women, new for kids)
-        for (let k = 0; k < catalog.length; k++) {
-          catalog[k].style.transform = "translateX(100%)";
-        }
+    for (let j = 0; j < itemSubNav.length; j++) {
+      //Открываются вкладки для под-меню "New" при кликании на его элементы
+      itemSubNav[j].addEventListener("click", function() {
+        catalog[j].setAttribute("style", "transform: translateX(0)");
       });
     }
   }
+  openSubMenu();
+
+  function closeSubMenu() {
+    for (let i = 0; i < itemCloseMenu.length; i++) {
+      if (i < 1) {//Т.к. первый элемент должен закрывать саму вкладку "New"
+        itemCloseMenu[i].addEventListener("click", function() {
+          menuSub[i].removeAttribute("style", "transform");
+        });
+      } else if (i > 3) {//Т.к. начиная с 4 элемента массива происходит закрытие вкладок "Men...Brands"
+        itemCloseMenu[i].addEventListener("click", function() {
+          for (let k = 1; k < menuSub.length; k++) {
+            menuSub[k].removeAttribute("style", "transform");
+          }
+        });
+      } else {//Закрывает элементы под-меню, расположенные на вкладке "New"
+        itemCloseMenu[i].addEventListener("click", function() {
+          //Цикл перебирает элементы с классом "Сatalog" (new for men, new for women, new for kids)
+          for (let k = 0; k < catalog.length; k++) {
+            catalog[k].removeAttribute("style", "transform");
+          }
+        });
+      }
+    }
+  }
+  closeSubMenu();
 }
