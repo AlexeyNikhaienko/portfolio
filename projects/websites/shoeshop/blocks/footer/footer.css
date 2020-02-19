@@ -45,6 +45,10 @@
   height: auto;
 }
 
+.item--padding__bottom:not(:last-of-type) {
+  padding-bottom: 5%;
+}
+
 .link--color__gray {
   font-size: 1em;
   color: #888888;
