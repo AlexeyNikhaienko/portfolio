@@ -8,6 +8,7 @@
   width: 80.43%;/*1287px*/
   height: 54.5vh;/*558px*/
   overflow-x: hidden;
+  border: 2px solid blue;
 }
 
 /*Стили для блока-обёртки с товаром "wrap"*/
@@ -42,8 +43,13 @@
 }
 
 /*Стили для блока с карточками товара "product"*/
+/*.popular__product:not(:last-of-type) {
+  margin-right: 2.5%;
+}*/
+
 .product {
-  width: 21.37%;/*275px*/
+  /*width: auto;
+  max-width: 21.37%;/*275px*/
   height: 100%;/*437px*/
 }
 
@@ -67,6 +73,7 @@
 
 .picture {
   width: auto;
+  max-width: 90%;
   height: auto;
 }
 
