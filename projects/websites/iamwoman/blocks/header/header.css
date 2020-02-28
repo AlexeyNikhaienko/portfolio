@@ -1,95 +1,117 @@
-/*Styles for the visible part of the menu (стили для видимой части меню, расположенного в шапке сайта)*/
-.header {
-       width: 100%;
-       height: 10%;
-       position: absolute;
+/*Общие стили для навигации, расположенной в шапке сайта)*/
+.navigation__header {
+       position: fixed;
        top: 0;
        left: 0;
        z-index: 1;
 }
-.header__menu--display {
+
+.header {
+       width: 100%;/*min 320px*/
+       height: auto;/*34px*/
+       padding: 1.8% 4.8%;/*top 9px, left 16px*/
+       border: 2px solid red;
+}
+/*Общие стили для блока с иконками, "бургером"*/
+.header__nav {
        position: relative;
        display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
+              display: flex;
        -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-       justify-content: space-between;
+              justify-content: space-between;
        -webkit-box-align: center;
-       -ms-flex-align: center;
-       align-items: center;
-       width: 100%;
-       height: 100%;
+              align-items: center;
 }
-.menu__burg {
-       position: absolute;
-       left: 3%;
-       -webkit-transform: translate(-50%, 0);
-       transform: translate(-50%, 0);
+
+.nav {
+       width: 100%;
+       height: auto;
+       border: 1px solid blue;
+}
+
+/*Стили для "бургера" меню*/
+.nav__burg {
        display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
+              display: flex;
        -webkit-box-orient: vertical;
        -webkit-box-direction: normal;
-       -ms-flex-direction: column;
-       flex-direction: column;
-       width: 33px;
-       border: none;
+              flex-direction: column;
 }
-.burg__line {
-       height: 2px;
-       width: 100%;
-       margin-bottom: 7px;
-       background-color: white;
+
+.burg {
+       width: 2rem;/*32px*/
+       height: 100%;/*16px*/
+       border: 1px solid black;
 }
-.burg__line--short--right {
-       -ms-flex-item-align: end;
+
+.line {
+       height: 0.125rem;
+       width: 100%;/*33px*/
+       margin-bottom: 0.3125rem;
+       /*background-color: white;*/
+       background-color: red;
+}
+
+.line--short__right {
        align-self: flex-end;
-       width: 18px;
+       width: 54.55%;
 }
-.burg__line--short--left {
-       -ms-flex-item-align: start;
+
+.ine--short__left {
        align-self: flex-start;
-       width: 18px;
+       width: 54.55%;
        margin-bottom: 0;
 }
-.collection__logo {
-       position: absolute;
-       left: 28%;
-       top: 20%;
-       -webkit-transform: translate(-50%, 0);
-       transform: translate(-50%, 0);
+
+/*Стили для блока с логотипом*/
+.logo {
        height: auto;
        font-family: "Roboto-M", sans-serif;
        text-align: center;
        color: #342B2B;
 }
-.logo__heading {
-       font-size: 1.5rem;
-}
-.logo__descript {
-       font-size: 0.75rem;
-}
-.menu-icon {
-       position: absolute;
-       right: 15.6%;
-       width: 20.2%;
-       height: 100%;
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-        justify-content: space-between;
-       -webkit-box-align: center;
-       -ms-flex-align: center;
-       align-items: center;
+
+.logo--hide {
+       display: none;
 }
 
-@media screen and (max-width: 450px) {
-       .menu__burg {
-              left: 10%;
+.title {
+       font-size: 1.25rem;/*20px*/
+       line-height: 1.1;
+}
+
+.subtitle {
+       font-size: 0.625rem;/*10px*/
+       line-height: 1.1;
+}
+
+/*Стили для блока с иконками*/
+.nav__wrap {
+       display: -webkit-box;
+              display: flex;
+       -webkit-box-pack: justify;
+              justify-content: space-between;
+       -webkit-box-align: center;
+              align-items: center;
+}
+
+.wrap {
+       width: 32.81%;/*105px*/
+       height: 100%;/*16px*/
+       border: 1px solid green;
+}
+
+.icon {
+       width: auto;
+       height: 100%;
+}
+
+/*@media screen and (max-width: 450px) {*/
+/*Стили для блока с логотипом*/
+       /*.logo--hide {
+              display: none;
        }
+
        .menu-icon {
               width: 32.8%;
               right: 5%;
@@ -123,4 +145,4 @@
        .menu-icon {
               cursor: pointer;
        }
-}
+}*/

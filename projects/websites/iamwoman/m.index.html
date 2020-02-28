@@ -5,30 +5,29 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta http-equiv="X-UA-Compatible" content="ie=edge">
        <link rel="stylesheet" href="common__files/css/normalize.css">
-      <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="style.css">
        <title>I'm woman</title>
 </head>
 <body>
 <!--Общий блок меню в шапке сайта-->
-       <header class="header">
-<!--Наивгация с иконками для меню-->
-              <nav class="header__menu--display">
-                     <div class="menu__burg">
-                            <span class="burg__line"></span>
-                            <span class="burg__line burg__line--short--right"></span>
-                            <span class="burg__line burg__line--short--left"></span>
+       <header class="navigation__header header">
+<!--Навигация с иконками для меню-->
+              <nav class="header__nav nav">
+                     <div class="nav__burg burg">
+                            <span class="line"></span>
+                            <span class="line line--short__right"></span>
+                            <span class="line ine--short__left"></span>
                      </div>
-                     <div class="collection__logo hide">
-                            <p class="logo__heading">I AM WOMAN</p>
-                            <p class="logo__descript">MOSCOW</p>
+                     <div class="logo logo--hide">
+                            <p class="title">I AM WOMAN</p>
+                            <p class="subtitle">MOSCOW</p>
                      </div>
-                     <div class="menu-icon">
-                            <a class="menu__link search" href="#"><img src="blocks/header/img/head-img1.png" alt="Поиск"></a>
-                            <a class="menu__link user" href="#"><img src="blocks/header/img/head-img2.png" alt="Личный кабинет"></a>
-                            <a class="menu__link shop" href="#"><img src="blocks/header/img/head-img3.png" alt="Корзина"></a>
+                     <div class="nav__wrap wrap">
+                            <img class="icon search" src="blocks/header/img/head-img1.png" alt="Поиск">
+                            <img class="icon user" src="blocks/header/img/head-img2.png" alt="Личный кабинет">
+                            <img class="icon shop" src="blocks/header/img/head-img3.png" alt="Корзина">
                      </div>
               </nav>
-       </header>
 <!--Меню, которое появляется при нажатии на "burg". По умолчанию скрыто-->
               <nav class="menu">
                      <div class="menu--hide">
@@ -76,8 +75,9 @@
                             </div>
                      </div>
               </nav>
+       </header>
 
-              <main class="content">
+              <!--<main class="content">
                      <div class="collection" id="collection__id">
                             <aside class="collection__sale hide">
                                    <div class="sale__cnt">
@@ -100,13 +100,13 @@
                                           <span class="soc-nwk__line"></span>
                                           <span><a class="soc-nwk__link" href="#">Vkontakte</a></span>
                                    </nav>
-                            </div>
+                            </div>-->
                             <!--Обёртка для контента-->
-                            <div class="collection__produckt">
+                            <!--<div class="collection__produckt">-->
                                    <!--Обёртка для слайдера-->
-                                   <div class="produckt__slider">
+                                   <!--<div class="produckt__slider">-->
                                    <!--"slider__item" обёртка для каждой картинки с продукцией-->
-                                          <div class="slider__item">
+                                          <!--<div class="slider__item">
                                                  <figure class="slider__img">
                                                         <img class="produckt__img" src="blocks/content/__collection/__produckt/img/prod-img1.jpg" alt="Хлопковое платье в полоску">
                                                         <figcaption class="produckt__descript hide">
@@ -170,13 +170,13 @@
                                           <input type="radio" class="tabs__item" name="tab" id="blouse" >
                                           <label class="tabs__title" for="blouse">Блузы и топы</label>
                                           <input type="radio" class="tabs__item" name="tab" id="skirts" >
-                                          <label class="tabs__title" for="skirts">Брюки и юбки</label>
+                                          <label class="tabs__title" for="skirts">Брюки и юбки</label>-->
                                    <!--Общая обёртка для всех слайдеров со всех вкладок-->
-                                   <div class="new__tabs-content">
+                                   <!--<div class="new__tabs-content">-->
                                           <!--Общая обёртка для слайдеров, расположенных на вкладке "Платья"-->
-                                         <div class="new__slider-wrap new__slider-dress">
+                                         <!--<div class="new__slider-wrap new__slider-dress">-->
                                           <!--Обёртка для отдельного слайдера-->
-                                                <div class="new__slider-produckt slider-produckt__dress">
+                                                <!--<div class="new__slider-produckt slider-produckt__dress">
                                                         <figure class="new__slider-item">
                                                                <img class="new__slider-img" src="blocks/content/__new/img/new-img1.jpg" alt="Платье-боди">
                                                                <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
@@ -230,9 +230,9 @@
                                                                <span class="new__slider-next">&#62;</span>
                                                         </div>
                                                  </div>
-                                          </div>
+                                          </div>-->
                                           <!--Общая обёртка для слайдеров, расположенных на вкладке "Блузы и топы"-->
-                                          <div class="new__slider-wrap new__slider-blouse">
+                                          <!--<div class="new__slider-wrap new__slider-blouse">
                                                  <div class="new__slider-produckt slider-produckt__blouse">
                                                         <figure class="new__slider-item">
                                                                <img class="new__slider-img" src="blocks/content/__new/img/new-img4.jpg" alt="Платье-боди">
@@ -287,9 +287,9 @@
                                                                <span class="new__slider-next">&#62;</span>
                                                         </div>
                                                  </div>
-                                          </div>
+                                          </div>-->
                                           <!--Общая обёртка для слайдеров, расположенных на вкладке "Брюки и юбки"-->
-                                          <div class="new__slider-wrap new__slider-skirts">
+                                          <!--<div class="new__slider-wrap new__slider-skirts">
                                                  <div class="new__slider-produckt slider-produckt__skirts">
                                                         <figure class="new__slider-item">
                                                                <img class="new__slider-img" src="blocks/content/__new/img/new-img7.jpg" alt="Платье-боди">
@@ -573,10 +573,10 @@
                             <p class="footer__cprt"><span>&copy;</span>2008–2018 I AM WOMEN</p>
                      </div>
               </div>
-       </footer>
-       <script src="blocks/menu--hide/menu.js" defer></script>
+       </footer>-->
+       <!--<script src="blocks/menu--hide/menu.js" defer></script>
        <script src="blocks/content/__collection/__produckt/produckt__slider.js" defer></script>
-       <script src="blocks/content/__blog/blog__slider.js" defer></script>
+       <script src="blocks/content/__blog/blog__slider.js" defer></script>-->
       <!--<script src="blocks/content/__new/new__slider.js" defer></script>-->
 </body>
 </html>
