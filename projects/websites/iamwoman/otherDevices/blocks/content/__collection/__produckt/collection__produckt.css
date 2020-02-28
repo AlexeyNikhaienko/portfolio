@@ -7,7 +7,7 @@
 }
 .collection__produckt:before {
        content: "";
-       background-image: url(img/sld_bcg1.jpg);
+       background-image: url(img/prod-bcg1.jpg);
        background-position: right center;
        background-size: cover;
        background-repeat: no-repeat;
@@ -46,17 +46,13 @@
        width: 65%;
        height: 15%;
        display: -webkit-box;
-       display: -ms-flexbox;
        display: flex;
        -webkit-box-orient: vertical;
        -webkit-box-direction: normal;
-       -ms-flex-direction: column;
        flex-direction: column;
        -webkit-box-pack: center;
-       -ms-flex-pack: center;
        justify-content: center;
        -webkit-box-align: center;
-       -ms-flex-align: center;
        align-items: center;
        background-color: rgba(255,255,255, 0.8);
        font-family: "Cormorant-SB", serif;

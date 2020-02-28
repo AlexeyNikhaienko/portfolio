@@ -13,7 +13,7 @@
        transform: translate(-50%, -50%);
        width: 81.94%;
        height: 64.29%;
-       background: url(img/img.jpg) no-repeat center center/cover;
+       background: url(img/subscr-bc.jpg) no-repeat center center/cover;
 }
 .subscribe__form {
        position: relative;
@@ -24,17 +24,13 @@
        width: 74.24%;
        height: 79.16%;
        display: -webkit-box;
-       display: -ms-flexbox;
        display: flex;
        -webkit-box-orient: vertical;
        -webkit-box-direction: normal;
-       -ms-flex-direction: column;
        flex-direction: column;
        -webkit-box-pack: space-evenly;
-       -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
        -webkit-box-align: center;
-       -ms-flex-align: center;
        align-items: center;
        background-color: rgba(239,234,231, 0.8);
 }
@@ -70,6 +66,13 @@
        text-align: center;
 }
 ::-ms-input-placeholder {
+       font-family: "Cormorant-l", serif;
+       font-size: 1rem;
+       line-height: 1.2;
+       color: #342B2B;
+       text-align: center;
+}
+::-moz-placeholder {
        font-family: "Cormorant-l", serif;
        font-size: 1rem;
        line-height: 1.2;
@@ -117,7 +120,6 @@
               width: 90%;
               height: 90%;
               -webkit-box-pack: center;
-              -ms-flex-pack: center;
               justify-content: center;
        }
        .desctop--hide {
@@ -140,6 +142,10 @@
               line-height: 1.1;
        }
        ::-ms-input-placeholder {
+              font-size: 0.875rem;
+              line-height: 1.1;
+       }
+       ::-moz-placeholder {
               font-size: 0.875rem;
               line-height: 1.1;
        }
