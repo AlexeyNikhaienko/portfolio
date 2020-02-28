@@ -10,9 +10,7 @@ let sliderWidth = 0;//ширина обёртки для слайдов
 let marginRight = popularBlockWidth * 0.025;//правый внешний отступ слайда (marginRight)(согласно макету равен 2,5%)
 let items = 4;//колличество одновременно выводимых слайдов (согласно макета)
 let widthSlide = (popularBlockWidth - (popularBlockWidth * 0.025 * (items - 1))) / items;//ширина отдельного слайда
-//console.log(widthSlide);
 
-//console.log(popularBlockWidth);
 //Цикл для установки всех необходимых метрик для слайдера
 for (let i = 0; i < popSlidesArray.length; i++) {
   //назначение для слайдов внених отступов
@@ -31,9 +29,6 @@ for (let i = 0; i < popSlidesArray.length; i++) {
 
 //назначение ширины обёртки для слайдов
 popSlider.style.width = sliderWidth + "px";
-/*console.log(popSlider.style.width);
-console.log("sliderWidth = " + sliderWidth);
-console.log(slidesWidthArr);*/
 
 //функция для смещения слайдов влево
 function shiftSliderToLeft() {
@@ -42,12 +37,9 @@ function shiftSliderToLeft() {
     shiftToLeft += slidesWidthArr[curIndex];
     popSlider.style.left = -shiftToLeft + "px";
   } else {
-    popSlider.style.left = -(sliderWidth - popularBlockWidth) + "px";
-    shiftToLeft = 0;
-    curIndex = -1;
+    popSlider.style.right = 0;
   }
   curIndex++;
-  console.log(curIndex, substr, shiftToLeft, popSlider.style.left);
 }
 shiftSliderToLeft();
 
@@ -55,7 +47,7 @@ shiftSliderToLeft();
 function autoSlider() {
   setInterval(shiftSliderToLeft, 1500);
 }
-//autoSlider();
+autoSlider();
 
 
 
