@@ -1,5 +1,5 @@
 /*Import fonts*/
-@import url("common__files/css/_fonts.css");
+@import url("../common__files/css/_fonts.css");
 
 /*Import styles for block "Header"*/
 @import url("blocks/header/header.css");
@@ -29,7 +29,6 @@
 * {
        margin: 0;
        padding: 0;
-       -webkit-box-sizing: border-box;
        box-sizing: border-box;
 }
 body {
