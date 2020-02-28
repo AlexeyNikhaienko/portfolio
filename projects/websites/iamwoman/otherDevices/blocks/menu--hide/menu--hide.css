@@ -1,0 +1,144 @@
+/*Styles for the invisible part of the menu (стили для меню, которе д.б. скрыто)*/
+.menu {
+       position: fixed;
+       top: 0;
+       left: -100%;
+       z-index: 2;
+       width: 100%;
+       height: 100vh;
+       -webkit-transition: 1s ease-out;
+       transition: 1s ease-out;
+}
+.menu--hide {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: column;
+       flex-direction: column;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+       position: relative;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(255, 255, 255, 0.7);
+}
+.menu--hide:before {
+       content: "";
+       background: url(img/menu_bcg.jpg) no-repeat center center/cover;
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       z-index: -1;
+}
+.menu__btn--close {
+       position: absolute;
+       top: 4%;
+       right: 4.7%;
+       width: 22px; /*6.7%*/
+       height: 23px; /*4.7%*/
+       z-index: 1;
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+}
+.menu__btn--close .btn__line {
+       display: block;
+       position: absolute;
+       left: -18.5%;
+       width: 140%;
+       height: 2px;
+       background-color: #342B2B;
+}
+.btn__line--rtt__lft {
+       -webkit-transform: rotate(135deg);
+       transform: rotate(135deg);
+}
+.btn__line--rtt__rgt {
+       -webkit-transform: rotate(-135deg);
+       transform: rotate(-135deg);
+       top: 40%;
+}
+/*Элементы каталога*/
+.menu__list-wrap {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: horizontal;
+       -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+       flex-direction: row;
+       -ms-flex-wrap: nowrap;
+       flex-wrap: nowrap;
+       -webkit-box-pack: justify;
+       -ms-flex-pack: justify;
+       justify-content: space-between;
+       -webkit-box-align: baseline;
+       -ms-flex-align: baseline;
+       align-items: baseline;
+       min-height: 50%;
+       width: 80%;
+       font-family: "Cormorant-R", serif;
+       font-size: 1.25rem;
+}
+.menu__list {
+       min-height: 70%;
+       width: auto;
+       list-style: none;
+}
+.menu__heading {
+       width: 80%;
+       font-family: "Cormorant-SB", serif;
+       font-size: 2rem;
+       margin-bottom: 2rem;
+       color: #342B2B;
+}
+.menu__item {
+       margin-bottom: 1.18rem;
+}
+.menu__link {
+       text-decoration: none;
+       color: #342B2B;
+}
+
+@media screen and (max-width: 450px) {
+       /*Элементы каталога*/
+       .menu__list-wrap {
+              font-size: 1rem;
+       }
+       .menu__heading {
+              font-size: 1.5rem;
+              margin-bottom: 1.5rem;
+       }
+       .menu__item {
+              margin-bottom: 0.75rem;
+       }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1023px) {
+       .item--hide {
+              display: none;
+       }
+}
+
+@media screen and (min-width: 1024px) {
+       .menu__btn--close {
+              cursor: pointer;
+       }
+       .menu__link {
+              cursor: pointer;
+       }
+}
