@@ -43,13 +43,7 @@
 }
 
 /*Стили для блока с карточками товара "product"*/
-/*.popular__product:not(:last-of-type) {
-  margin-right: 2.5%;
-}*/
-
 .product {
-  /*width: auto;
-  max-width: 21.37%;/*275px*/
   height: 100%;/*437px*/
 }
 
@@ -82,6 +76,13 @@
   width: 100%;/*250px*/
   min-height: 16.25%;/*71px*/
   white-space: nowrap;
+}
+
+.name__par {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .par--color__dark {
