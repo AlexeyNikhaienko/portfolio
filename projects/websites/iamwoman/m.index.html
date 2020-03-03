@@ -397,21 +397,21 @@
                                    <a class="blog__link" href="#">Перейти в блог</a>
                                    <span class="blog__line"></span>
                             </div>
-                     </section>
-                     <div class="subscribe" id="subscribe">
-                            <div class="subscribe-wrap">
-                                   <form class="subscribe__form" action="/subscribe" method="POST">
-                                          <p class="subscribe__descript hide">Подпишись на новости I AM WOMEN и получи скидку 5% на следующую покупку</p>
-                                          <p class="subscribe__descript desctop--hide">Подпишись на новости<br>I AM WOMEN<br>и получи скидку 5% на следующую покупку</p>
-                                          <input class="subscribe__email" type="email" name="emailaddress" placeholder="Ваш E-mail">
-                                          <input class="subscribe__btn" type="submit" value="Подписаться">
-                                          <p class="subscribe__info">Подписываясь на новости, Вы даёте согласие на обработку персональных данных</p>
-                                   </form>
-                            </div>
-                     </div>
-              </main>
+                     </section>-->
 
-      <footer class="footer" id="footer">
+              <div class="content__subscribe subscribe">
+                     <form class="form" id="user" action="/subscribe" method="POST">
+                            <p class="form__legend legend">Подпишись на новости<br> I AM WOMEN<br> и получи скидку 5% на следующую покупку</p>
+                            <input class="form__email email" type="email" name="emailaddress" placeholder="Ваш E-mail">
+                            <button class="form__button button" type="submit" form="user">
+                                   <span class="submit">Подписаться</span>
+                            </button>
+                            <p class="info">Подписываясь на новости, Вы даёте согласие на обработку персональных данных</p>
+                     </form>
+              </div>
+       </main>
+
+      <!--<footer class="footer" id="footer">
               <nav class="footer__menu-wrap hide">
                      <ul class="footer__menu-list">
                             <li class="footer__list-item"><a class="footer__menu-link" href="#">Каталог</a></li>
