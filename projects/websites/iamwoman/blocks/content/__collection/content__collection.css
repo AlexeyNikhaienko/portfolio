@@ -1,30 +1,105 @@
-/*Import styles for block "Sale"*/
-@import url("__sale/collection__sale.css");
-
-/*Import styles for block "Content"*/
-@import url("__content/collection__content.css");
-
-/*Import styles for block "Produckt"*/
-@import url("__produckt/collection__produckt.css");
-
-/*Common styles for main blocks*/
-.content {
+/*Общие стили для блока "collection"*/
+.content__collection {
        position: relative;
-       width: 100%;
-}
-/*styles for block "Collection"*/
-.collection {
-       min-height: 80vh; 
-       width: 100%;
-       position: relative;
-       top: 10vh;
-       left: 0;
        display: -webkit-box;
-       display: -ms-flexbox;
        display: flex;
+       -webkit-box-pack: end;
+               justify-content: flex-end;
 }
-@media screen and (min-width: 501px) and (max-width: 1023px) {
-       .collection {
-              min-height: 78vh;
-       }
+
+.collection {
+       width: 100%;
+       min-height: 100vh;
+       height: 1px;
+       padding: 10.2% 4.8%;/*50px 16px*/
+       /*padding: 0 4.8%;*/
+       background-image: url(img/prod-img1.jpg);
+       background-color: #F3ECE4;
+       background-position: 130% 50%;
+       /*background-size: cover;*/
+       background-size: 150% 110%;
+       background-repeat: no-repeat;
+       border: 2px solid blue;
+}
+
+.collection:after {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(112,112,112, 0.42);
+}
+
+/*Стили для блока с названием коллекции*/
+.collection__title {
+       position: absolute;
+       top: 50%;
+       left: 4.8%;/*16px*/
+       -webkit-transform: translateY(-50%);
+               transform: translateY(-50%);
+       z-index: 2;
+}
+
+.title {
+       width: auto;
+       max-width: 48.13%;/*154px*/
+       height: auto;
+       border: 1px solid green;
+}
+
+.title__head {
+       margin-bottom: 13.91%;/*16px*/
+}
+
+.contain {
+       width: 74.68%;/*115px*/
+       height: auto;
+}
+
+.link--color__red {
+       font-size: 0.875rem;/*16px*/
+       color: #91171D;
+}
+
+.contain__decoration {
+       margin-top: 4%;/*6px*/
+}
+
+.decoration {
+       display: block;
+       width: 85%;/*105px*/
+       height: 0.0625rem;/*1px*/
+       background-color: #91171D;
+}
+
+/*Стили для слайдера*/
+.collection__produckt {
+       position: relative;
+       z-index: 1;
+       display: -webkit-box;
+              display: flex;
+       overflow: hidden;
+}
+
+.produckt {
+       width: auto;
+       max-width: 68.44%;/*219px*/
+       /*max-width: 219px;*/
+       height: auto;
+       /*max-height: 79.4%;/*389px*/
+       border: 1px solid red;
+}
+
+.produckt__img {
+       position: relative;
+       left: -50%;
+}
+
+.img {
+       width: auto;
+       height: auto;
+       max-height: 100%;
 }

@@ -14,13 +14,13 @@
 <!--Навигация с иконками для меню-->
               <nav class="header__nav nav">
                      <div class="nav__burg burg">
-                            <span class="line"></span>
-                            <span class="line line--short__right"></span>
-                            <span class="line ine--short__left"></span>
+                            <span class="burg__line line"></span>
+                            <span class="burg__line line line--short__right"></span>
+                            <span class="burg__line line ine--short__left"></span>
                      </div>
                      <div class="logo logo--hide">
-                            <p class="title">I AM WOMAN</p>
-                            <p class="subtitle">MOSCOW</p>
+                            <p class="name">I AM WOMAN</p>
+                            <p class="subname">MOSCOW</p>
                      </div>
                      <div class="nav__wrap wrap">
                             <img class="icon search" src="blocks/header/img/head-img1.png" alt="Поиск">
@@ -29,79 +29,56 @@
                      </div>
               </nav>
 <!--Меню, которое появляется при нажатии на "burg". По умолчанию скрыто-->
-              <nav class="menu">
-                     <div class="menu--hide">
-                            <div class="menu__btn--close">
-                                   <span class="btn__line btn__line--rtt__lft"></span>
-                                   <span class="btn__line btn__line--rtt__rgt"></span>
+              <nav class="header__menu-main menu-main">
+                     <div class="menu-main__wrapper wrapper">
+                            <div class="wrapper__btn btn">
+                                   <span class="btn__stripe stripe stripe--rtt__lft"></span>
+                                   <span class="btn__stripe stripe stripe--rtt__rgt"></span>
                             </div>
-                            <h2 class="menu__heading">Каталог</h2>
-                            <div class="menu__list-wrap">
-                                   <ul class="menu__list">
-                                          <li class="menu__item"><a class="menu__link" href="#">Пальто</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Жилеты и жакеты</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Костюмы</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Трикотаж</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Платья</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Блузы и топы</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Футболки</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Юбки и брюки</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Аксессуары</a></li>
+                            <h2 class="wrapper__head head head--color__grey">Каталог</h2>
+                            <div class="wrapper__box box">
+                                   <ul class="list">
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Пальто</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Жилеты и жакеты</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Костюмы</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Трикотаж</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Платья</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Блузы и топы</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Футболки</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Юбки и брюки</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Аксессуары</a></li>
                                    </ul>
-                                   <ul class="menu__list">
-                                          <li class="menu__item"><a class="menu__link" href="#">О бренде</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Оферта</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Возврат</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
-                                          <li class="menu__item menu__item--hide item--hide"><a class="menu__link" href="#">Sale</a></li>
-                                          <li class="menu__item menu__item--hide item--hide"><a class="menu__link" href="#">New</a></li>
-                                   </ul>
-                                   <ul class="menu__list hide">
-                                          <li class="menu__item"><a class="menu__link" href="#">Sale</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">New</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Looks</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Streetsyle</a></li>
-                                          <li class="menu__item hide menu__item--hide"><a class="menu__link" href="#">Найти на сайте</a></li>
-                                          <li class="menu__item hide menu__item--hide"><a class="menu__link" href="#">Войти в личный кабинет</a></li>
-                                   </ul>
-                                   <ul class="menu__list hide item--hide">
-                                          <li class="menu__item"><a class="menu__link" href="#">Найти на сайте</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Войти в личный кабинет</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                                   <ul class="list">
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">О бренде</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Оферта</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Оплата и доставка</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Возврат</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Контакты</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Отзывы</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">New</a></li>
+                                          <li class="list__item item"><a class="link link--color__grey" href="#">Sale</a></li>
                                    </ul>
                             </div>
                      </div>
               </nav>
        </header>
 
-              <!--<main class="content">
-                     <div class="collection" id="collection__id">
-                            <aside class="collection__sale hide">
-                                   <div class="sale__cnt">
-                                          <span class="cnt__item cnt__text">Распродажа SS’18</span>
-                                          <span class="cnt__item cnt__line"></span>
-                                   </div>
-                            </aside>
-                            <div class="collection__content">
-                                   <div class="collection__descript">
-                                          <h2 class="collection__title">Новая круизная коллекция ‘19</h2>
-                                          <div class="collection__link-wrap">
-                                                 <a class="collection__link" href="#">Перейти в каталог</a>
-                                                 <span class="collection__line"></span>
-                                          </div>
-                                   </div>
-                                   <nav class="collection__soc-nwk hide">
-                                          <span><a class="soc-nwk__link" href="#">Facebook</a></span>
-                                          <span class="soc-nwk__line"></span>
-                                          <span><a class="soc-nwk__link" href="#">YouTube</a></span>
-                                          <span class="soc-nwk__line"></span>
-                                          <span><a class="soc-nwk__link" href="#">Vkontakte</a></span>
-                                   </nav>
-                            </div>-->
-                            <!--Обёртка для контента-->
+       <main class="main__content">
+              <div class="content__collection collection">
+                     <div class="collection__title title">
+                            <h2 class="title__head head">Новая круизная коллекция ‘19</h2>
+                            <div class="contain">
+                                   <a class="link link--color__red" href="#">Перейти в каталог</a>
+                                   <span class="contain__decoration decoration"></span>
+                            </div>
+                     </div>
+<!--Обёртка для слайдера-->
+                     <div class="collection__produckt produckt">
+                            <img class="produckt__img img" src="blocks/content/__collection/img/prod-img1.jpg" alt="Хлопковое платье в полоску">
+                            <img class="produckt__img img" src="blocks/content/__collection/img/prod-img2.jpg" alt="Спортивный желтый костюм">
+                            <img class="produckt__img img" src="blocks/content/__collection/img/prod-img3.jpg" alt="Платье-халат со стразами">
+                     </div>
+              </div>
                             <!--<div class="collection__produckt">-->
                                    <!--Обёртка для слайдера-->
                                    <!--<div class="produckt__slider">-->
@@ -143,25 +120,9 @@
                                                  </figure>
                                           </div>
                                    </div>
-                                   <p class="slider__number hide">
-                                          <span class="slider__prev">&lt;</span>
-                                          <span class="slider__current"></span>
-                                          <span class="slider__slash">/</span>
-                                          <sub class="slider__total">3</sub>
-                                          <span class="slider__next">&gt;</span>
-                                   </p>
                             </div>
-                            <a class="produckt__link hide" href="#">Смотреть все</a>
-                            <nav class="content__pagination collection__pagination hide">
-                                   <span class="pagination__link--current">01</span>
-                                   <span class="pagination__link--line"></span>
-                                   <a href="#new__id" class="pagination__link--other">02</a>
-                                   <a href="#about__id" class="pagination__link--other">03</a>
-                                   <a href="#blog__id" class="pagination__link--other">04</a>
-                                   <a href="#subscribe" class="pagination__link--other">05</a>
-                                   <a href="#footer" class="pagination__link--other">06</a>
-                            </nav>
                      </div>
+
                      <section class="new">
                             <h2 class="new__title" id="new__id">Новое поступление</h2>
                             <div class="new__produckt-wrap">
@@ -574,8 +535,8 @@
                      </div>
               </div>
        </footer>-->
-       <!--<script src="blocks/menu--hide/menu.js" defer></script>
-       <script src="blocks/content/__collection/__produckt/produckt__slider.js" defer></script>
+       <script src="blocks/header/header.js" defer></script>
+       <!--<script src="blocks/content/__collection/__produckt/produckt__slider.js" defer></script>
        <script src="blocks/content/__blog/blog__slider.js" defer></script>-->
       <!--<script src="blocks/content/__new/new__slider.js" defer></script>-->
 </body>
