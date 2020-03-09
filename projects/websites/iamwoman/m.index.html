@@ -11,7 +11,7 @@
 <body>
 <!--Общий блок меню в шапке сайта-->
        <header class="navigation__header header">
-<!--Навигация с иконками для меню-->
+       <!--Навигация с иконками для меню-->
               <nav class="header__nav nav">
                      <div class="nav__burg burg">
                             <span class="burg__line line"></span>
@@ -28,7 +28,7 @@
                             <img class="icon shop" src="blocks/header/img/head-img3.png" alt="Корзина">
                      </div>
               </nav>
-<!--Меню, которое появляется при нажатии на "burg". По умолчанию скрыто-->
+       <!--Меню, которое появляется при нажатии на "burg". По умолчанию скрыто-->
               <nav class="header__menu-main menu-main">
                      <div class="menu-main__wrapper wrapper">
                             <div class="wrapper__btn btn">
@@ -63,16 +63,18 @@
               </nav>
        </header>
 
+<!--Общий блок, который содержит весь контент (за исключением подвала)-->
        <main class="main__content">
+       <!--Блок с коллекцией товара, распродажей-->
               <div class="content__collection collection">
                      <div class="collection__title title">
                             <h2 class="title__head head head--color__grey">Новая круизная коллекция ‘19</h2>
                             <div class="contain">
                                    <a class="link link--color__red" href="#">Перейти в каталог</a>
-                                   <span class="contain__decoration decoration"></span>
+                                   <span class="contain__decoration decoration decoration--short"></span>
                             </div>
                      </div>
-<!--Обёртка для слайдера-->
+              <!--Обёртка для слайдера-->
                      <div class="collection__produckt produckt">
                             <img class="produckt__img img" src="blocks/content/__collection/img/prod-img1.jpg" alt="Хлопковое платье в полоску">
                             <img class="produckt__img img" src="blocks/content/__collection/img/prod-img2.jpg" alt="Спортивный желтый костюм">
@@ -80,205 +82,407 @@
                      </div>
               </div>
 
-                     <!--<section class="new">
-                            <h2 class="new__title" id="new__id">Новое поступление</h2>
-                            <div class="new__produckt-wrap">
-                                         <input type="radio" class="tabs__item" name="tab" id="dress" checked>
-                                          <label class="tabs__title" for="dress">Платья</label>
-                                          <input type="radio" class="tabs__item" name="tab" id="blouse" >
-                                          <label class="tabs__title" for="blouse">Блузы и топы</label>
-                                          <input type="radio" class="tabs__item" name="tab" id="skirts" >
-                                          <label class="tabs__title" for="skirts">Брюки и юбки</label>-->
-                                   <!--Общая обёртка для всех слайдеров со всех вкладок-->
-                                   <!--<div class="new__tabs-content">-->
-                                          <!--Общая обёртка для слайдеров, расположенных на вкладке "Платья"-->
-                                         <!--<div class="new__slider-wrap new__slider-dress">-->
-                                          <!--Обёртка для отдельного слайдера-->
-                                                <!--<div class="new__slider-produckt slider-produckt__dress">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img1.jpg" alt="Платье-боди">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Платье - боди</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">11 700</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__dress">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img2.jpg.jpg" alt="Этническое платье">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Этническое платье</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">7 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__dress">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img3.jpg" alt="Шелковое платье с принтом">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Шелковое платье с принтом</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">4 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                          </div>-->
-                                          <!--Общая обёртка для слайдеров, расположенных на вкладке "Блузы и топы"-->
-                                          <!--<div class="new__slider-wrap new__slider-blouse">
-                                                 <div class="new__slider-produckt slider-produckt__blouse">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img4.jpg" alt="Платье-боди">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Платье - боди</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">11 700</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__blouse">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img5.jpg" alt="Этническое платье">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Этническое платье</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">7 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__blouse">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img6.jpg" alt="Шелковое платье с принтом">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Шелковое платье с принтом</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">4 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                          </div>-->
-                                          <!--Общая обёртка для слайдеров, расположенных на вкладке "Брюки и юбки"-->
-                                          <!--<div class="new__slider-wrap new__slider-skirts">
-                                                 <div class="new__slider-produckt slider-produckt__skirts">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img7.jpg" alt="Платье-боди">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Платье - боди</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">11 700</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__skirts">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img8.jpg" alt="Этническое платье">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Этническое платье</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">7 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__skirts">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img9.jpg" alt="Шелковое платье с принтом">
-                                                                <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Шелковое платье с принтом</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">4 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
+       <!--Блок с новинками-->
+              <section class="content__new new">
+                     <h2 class="head head--color__red">Новое поступление</h2>
+                     <span class="new__control control left">&#x276C;</span>
+                     <span class="new__control control right">&#x276D;</span>
+                     <div class="new__holder holder">
+                            <input type="radio" class="input" name="tab" id="dress" checked>
+                            <label class="headline" for="dress">Платья</label>
+                            <input type="radio" class="input" name="tab" id="blouse" >
+                            <label class="headline" for="blouse">Блузы и топы</label>
+                            <input type="radio" class="input" name="tab" id="skirts" >
+                            <label class="headline" for="skirts">Брюки и юбки</label>
+
+              <!--Общая обёртка для слайдеров, расположенных на вкладке "Платья"-->
+                            <div class="holder__tabs tabs dress">
+              <!--Обёртка для отдельного слайдера (аналогично для других вкладок)-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img1.jpg" alt="Платье-боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Платье - боди</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">11 700 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img4.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Шелковое платье с принтом</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">4 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img5.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Этническое платье</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">7 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>-->
+              <!--Элементы управления слайдером (аналогично для других вкладок)-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
                                           </div>
-                                          <span class="new__mobile-slider new__mobile-slider__prev">&lang;</span>
-                                          <span class="new__mobile-slider new__mobile-slider__next">&rang;</span>
+                                   </div>
+
+              <!--Обёртка для отдельного слайдера (аналогично для других вкладок)-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img2.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Этническое платье</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">7 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img4.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Шелковое платье с принтом</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">4 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img5.jpg" alt="Платье - боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Платье - боди</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">11 700 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>-->
+              <!--Элементы управления слайдером (аналогично для других вкладок)-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
+                                          </div>
+                                   </div>
+
+              <!--Обёртка для отдельного слайдера (аналогично для других вкладок)-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img3.jpg" alt="Платье-боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                 <figcaption class="caption">
+                                                        <h3 class="heading">Шелковое платье с принтом</h3>
+                                                        <div class="container">
+                                                               <span class="shape"></span>
+                                                               <span class="price">4 800 рублей</span>
+                                                        </div>
+                                                 </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img4.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                 <figcaption class="caption">
+                                                        <h3 class="heading">Платье - боди</h3>
+                                                        <div class="container">
+                                                               <span class="shape"></span>
+                                                               <span class="price">11 700 рублей</span>
+                                                        </div>
+                                                 </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img5.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                          <figcaption class="caption">
+                                          <h3 class="heading">Этническое платье</h3>
+                                          <div class="container">
+                                                 <span class="shape"></span>
+                                                 <span class="price">7 800 рублей</span>
+                                          </div>
+                                   </figcaption>
+                            </figure>-->
+              <!--Элементы управления слайдером (аналогично для других вкладок)-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
+                                          </div>
                                    </div>
                             </div>
-                            <a class="new__link" href="#">Смотреть все</a>
-                            <nav class="content__pagination hide">
-                                   <span class="pagination__link--current">02</span>
-                                   <span class="pagination__link--line"></span>
-                                   <a href="#collection__id" class="pagination__link--other">01</a>
-                                   <a href="#about__id" class="pagination__link--other">03</a>
-                                   <a href="#blog__id" class="pagination__link--other">04</a>
-                                   <a href="#subscribe" class="pagination__link--other">05</a>
-                                   <a href="#footer" class="pagination__link--other">06</a>
-                            </nav>
-                     </section>-->
+              <!--Общая обёртка для слайдеров, расположенных на вкладке "Блузы и топы"-->
+                            <div class="holder__tabs tabs blouse">
+                     <!--Первый слайдер-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img7.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Этническое платье</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">7 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img8.jpg" alt="Платье-боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Платье-боди</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">11 700 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img9.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Шелковое платье с принтом</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">4 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
+                                          </div>
+                                   </div>
+                     <!--Второй слайдер-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img8.jpg" alt="Платье-боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Платье-боди</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">11 700 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img9.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Шелковое платье с принтом</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">4 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img7.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Этническое платье</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">7 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
+                                          </div>
+                                   </div>
+                     <!--Третий слайдер-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img9.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Шелковое платье с принтом</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">4 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img8.jpg" alt="Платье-боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Платье-боди</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">11 700 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img7.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Этническое платье</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">7 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
+                                          </div>
+                                   </div>
+                            </div>
+              <!--Общая обёртка для слайдеров, расположенных на вкладке "Брюки и юбки"-->
+                            <div class="holder__tabs tabs skirts">
+                     <!--Первый слайдер-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img6.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Шелковое платье с принтом</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">4 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img7.jpg" alt="Платье - боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Платье - боди</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">11 700 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img9.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Этническое платье</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">7 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
+                                          </div>
+                                   </div>
+                     <!--Второй слайдер-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img7.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Шелковое платье с принтом</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">4 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img9.jpg" alt="Платье - боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Платье - боди</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">11 700 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img6.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Этническое платье</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">7 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
+                                          </div>
+                                   </div>
+                     <!--Третий слайдер-->
+                                   <div class="tabs__carousel carousel">
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img9.jpg" alt="Шелковое платье с принтом">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Шелковое платье с принтом</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">4 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <!--<figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img6.jpg" alt="Платье - боди">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Платье - боди</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">11 700 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>
+                                          <figure class="carousel__slide slide">
+                                                 <img class="picture" src="./blocks/content/__new/img/new-img7.jpg" alt="Этническое платье">
+                                                 <img class="slide__like like" src="./blocks/content/__new/img/new-like.png" alt="like">
+                                                <figcaption class="caption">
+                                                       <h3 class="heading">Этническое платье</h3>
+                                                       <div class="container">
+                                                              <span class="shape"></span>
+                                                              <span class="price">7 800 рублей</span>
+                                                       </div>
+                                                </figcaption>
+                                          </figure>-->
+                                          <div class="carousel__switch switch">
+                                                 <span class="prev">&#60;</span>
+                                                 <span class="partition">&#8739;</span>
+                                                 <span class="next">&#62;</span>
+                                          </div>
+                                   </div>
+                            </div>
+                     </div>
+                     <a class="link-more" href="#">Смотреть все</a>
+              </section>
 
+       <!--Блок с информацией о бренде-->
               <section class="content__about about">
                      <h2 class="about__head head head--color__red">О бренде</h2>
                      <div class="about__history history">
@@ -288,12 +492,13 @@
                      </div>
               </section>
 
+       <!--Блок с общей информацией для покупателя-->
               <section class="content__blog blog">
                      <h2 class="blog__head head head--color__red">Блог</h2>
                      <div class="blog__slider slider">
                             <figure class="element">
                                    <a href="#" class="link hashtag">#лучшее</a>
-                                   <img src="blocks/content/__blog/img/blog-img1.jpg" class="element__caption caption" alt="Лучший выбор">
+                                   <img src="blocks/content/__blog/img/blog-img1.jpg" class="element__pic pic" alt="Лучший выбор">
                                    <figcaption class="descript">
                                           <h3 class="descript__subheading subheading">Лучший выбор: костюмы’18</h3>
                                           <p class="par">Проще говоря, выбирайте более светлые и более темные оттенки одного цвета, в конкретном случае — родственные фиолетовому. Такой образ может легко вписаться в рамки повседневной жизни</p>
@@ -301,7 +506,7 @@
                             </figure>
                             <figure class="element">
                                    <a href="#" class="link hashtag">#новости</a>
-                                   <img src="blocks/content/__blog/img/blog-img2.jpg" class="element__caption caption" alt="Аксессуары">
+                                   <img src="blocks/content/__blog/img/blog-img2.jpg" class="element__pic pic" alt="Аксессуары">
                                    <figcaption class="descript">
                                           <h3 class="descript__subheading subheading">Аксессуары осень - зима ‘18</h3>
                                           <p class="par">Аксессуары являются важнейшей частью для создания целостного образа. Правильно подобранные украшения помогут сделать лук более гармоничным и стильным, ну а неправильно — испортят</p>
@@ -309,7 +514,7 @@
                             </figure>
                             <figure class="element">
                                    <a href="#" class="link hashtag">#советы</a>
-                                   <img src="blocks/content/__blog/img/blog-img3.jpg" class="element__caption caption" alt="Советы">
+                                   <img src="blocks/content/__blog/img/blog-img3.jpg" class="element__pic pic" alt="Советы">
                                    <figcaption class="descript">
                                           <h3 class="descript__subheading subheading">3 отличных образа для офиса</h3>
                                           <p class="par">Кому-то нравится строгий стиль в одежде, а кому-то приходится его придерживаться из-за офисного дресс-кода. Так или иначе, не стоит превращать деловой стиль в скучный и консервативный</p>
@@ -317,7 +522,7 @@
                             </figure>
                             <figure class="element">
                                    <a href="#" class="link hashtag">#тенденции</a>
-                                   <img src="blocks/content/__blog/img/blog-img4.jpg" class="element__caption caption" alt="Тенденции">
+                                   <img src="blocks/content/__blog/img/blog-img4.jpg" class="element__pic pic" alt="Тенденции">
                                    <figcaption class="descript">
                                           <h3 class="descript__subheading subheading">С чем носить ультрафиолет?</h3>
                                           <p class="par">Уже не первый сезон монохромные образы являются одной из главных тенденций. Дизайнеры и стилисты призывают подбирать вещи в рамках одного сектора цветового круга</p>
@@ -325,7 +530,7 @@
                             </figure>
                             <figure class="element">
                                    <a href="#" class="link hashtag">#лучшее</a>
-                                   <img src="blocks/content/__blog/img/blog-img1.jpg" class="element__caption caption" alt="Лучший выбор">
+                                   <img src="blocks/content/__blog/img/blog-img1.jpg" class="element__pic pic" alt="Лучший выбор">
                                    <figcaption class="descript">
                                           <h3 class="descript__subheading subheading">Лучший выбор: костюмы’18</h3>
                                           <p class="par">Проще говоря, выбирайте более светлые и более темные оттенки одного цвета, в конкретном случае — родственные фиолетовому. Такой образ может легко вписаться в рамки повседневной жизни</p>
@@ -333,7 +538,7 @@
                             </figure>
                             <figure class="element">
                                    <a href="#" class="link hashtag">#новости</a>
-                                   <img src="blocks/content/__blog/img/blog-img2.jpg" class="element__caption caption" alt="Аксессуары">
+                                   <img src="blocks/content/__blog/img/blog-img2.jpg" class="element__pic pic" alt="Аксессуары">
                                    <figcaption class="descript">
                                           <h3 class="descript__subheading subheading">Аксессуары осень - зима ‘18</h3>
                                           <p class="par">Аксессуары являются важнейшей частью для создания целостного образа. Правильно подобранные украшения помогут сделать лук более гармоничным и стильным, ну а неправильно — испортят</p>
@@ -349,10 +554,11 @@
                      </div>
                      <div class="blog__contain contain">
                             <a class="link link--color__red" href="#">Перейти в блог</a>
-                            <span class="decoration"></span>
+                            <span class="contain__decoration decoration decoration--short"></span>
                      </div>
               </section>
 
+       <!--Блок подписки на рассылку-->
               <div class="content__subscribe subscribe">
                      <form class="form" id="user" action="/subscribe" method="POST">
                             <p class="form__legend legend">Подпишись на новости<br> I AM WOMEN<br> и получи скидку 5% на следующую покупку</p>
@@ -365,6 +571,7 @@
               </div>
        </main>
 
+<!--Подвал с дополнительной информацией для покупателя-->
        <footer class="content__footer footer">
               <div class="footer__owner owner">
                      <ul class="owner__list list">
@@ -380,8 +587,8 @@
               </div>
               <p class="footer__copyright copyright">&copy; 2008–2019 I AM WOMEN</p>
        </footer>
-       
-       <!--Подключение скриптов-->
+
+<!--Подключение скриптов-->
        <script src="blocks/header/header.js" defer></script>
        <!--<script src="blocks/content/__collection/__produckt/produckt__slider.js" defer></script>
        <script src="blocks/content/__blog/blog__slider.js" defer></script>-->

@@ -1,240 +1,218 @@
-/*Стили для блока "New"*/
+/*Общие стили для блока "New"*/
+.content__new {
+       position: relative;
+       margin: 15.4% auto 0;/*60px*/
+}
+
 .new {
-       position: relative;
-       width: 100%;
-       min-height: 100%;
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-       -ms-flex-direction: column;
-       flex-direction: column;
-       -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-        justify-content: space-between;
-       -webkit-box-align: center;
-       -ms-flex-align: center;
-       align-items: center;
-       margin-top: 11%;
-       /*border: 2px solid red;*/
+       width: 90.4%;/*288px*/
+       height: auto;/*min-height = 530px*/
+       padding: 0 3.82%;/*0 11px*/
+       text-align: center;
+       border: 2px solid red;
 }
-.new__title {
-       font-family: "Cormorant-SB", serif;
-       font-size: 3rem;
+
+/*Стили для элементов блока*/
+/*Заголовок*/
+.head--color__red {
+       text-align: center;
        color: #91171D;
-       text-align: center;
-       margin-bottom: 1.7%;
 }
-.new__produckt-wrap {
-       width: 88%;
-       height: 85%;
-       text-align: center;
-       /*border: 2px solid blue;*/
+
+/*Стили для блока с управлением слайдером*/
+.new__control {
+       position: absolute;
+       top: 50%;
+       -webkit-transform: translateY(-50%);
+               transform: translateY(-50%);
+       z-index: 1;
 }
-.tabs__item {
+
+.left {
+       left: 0;
+}
+
+.right {
+       right: 0;
+}
+
+.control {
+       font-family: "Cormorant-M", serif;
+       font-size: 1.75rem;/*28px*/
+       color: #352F2F;
+       /*color: red;*/
+}
+
+/*Стили для блока-обёртки*/
+.new__holder {
+       margin: 10.42% 0 6.02%;/*30px 0 16px*/
+}
+
+.holder {
+       width: 100%;/*266px*/
+       height: auto;
+       text-align: center;
+       border: 1px solid blue;
+}
+
+/*Стили для названий вкладок*/
+.input {
        display: none;
 }
-.tabs__item:checked + .tabs__title {
-       border-bottom: 1px solid #342B2B;
+
+/*Добавляется подчёркивание у названия текущей вкладки*/
+.input:checked + .headline {
+       border-bottom: 0.0625rem solid #342B2B;
 }
-.tabs__title {
-       display: inline-block;
-       margin-bottom: 5.5%;
+
+/*Показывает контент выбранной вкладки*/
+.input[id="dress"]:checked ~ .dress,
+.input[id="blouse"]:checked ~ .blouse,
+.input[id="skirts"]:checked ~ .skirts {
+       display: -webkit-box;
+       display: flex;
+       -webkit-box-pack: justify;
+               justify-content: space-between;
+}
+
+.headline {
        font-family: "Cormorant-SB", serif;
-       font-size: 1.125rem;
+       font-size: 0.875rem;
+       line-height: 1.12;
        color: #342B2B;
 }
-.tabs__title:not(:last-of-type) {
-       margin-right: 3.7%;
+
+.headline:not(:last-of-type) {
+       margin-right: 6.77%;/*18px*/
 }
-.tabs__item[id="dress"]:checked ~ .new__tabs-content .new__slider-dress,
-.tabs__item[id="blouse"]:checked ~ .new__tabs-content .new__slider-blouse,
-.tabs__item[id="skirts"]:checked ~ .new__tabs-content .new__slider-skirts {
+
+/*Стили для самих вкладок*/
+.holder__tabs {
+       display: none;/*Скрытие вкладок*/ 
+       margin-top: 6.02%;/*16px*/
+}
+
+.tabs {
+       /*width установлено ч/з JS*/
+       width: auto;
+       height: auto;
+       /*border: 1px solid green;*/
+}
+
+/*Стили для слайдеров внутри вкладок*/
+.tabs__carousel {
        display: -webkit-box;
-       display: -ms-flexbox;
        display: flex;
+       -webkit-box-pack: justify;
+               justify-content: space-between;
 }
-.new__tabs-content {
-       width: 100%;
-       height: 90%;
+
+.carousel {
+       /*width установлено ч/з JS*/
+       width: auto;
+       height: auto;
+       /*border: 1px solid yellow;*/
 }
-.new__slider-wrap {
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-pack: space-evenly;
-       -ms-flex-pack: space-evenly;
-       justify-content: space-evenly;
-       width: 100%;
-       height: 100%;
-       display: none;
-}
-.new__mobile-slider {
-       display: none;
-}
-.new__slider-produckt {
+
+.carousel__slide {
        position: relative;
-       width: 25%;
-       height: 100%;
 }
-.new__slider-item {
-       position: relative;
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-       -ms-flex-direction: column;
-       flex-direction: column;
-       width: 100%;
-       height: 100%;
+
+/*Стили для слайдеров внутри слайдеров*/
+.slide {
+       /*width установлено ч/з JS*/
+       width: auto;/*min 266px*/
+       height: auto;
+       border: 1px solid red;
 }
-.new__slider-img {
-       width: 100%;
-       height: 83.7%;
+
+/*Слайды*/
+.picture {
+       width: auto;
+       height: auto;
+       max-width: 100%;/*266px*/
+       border: 1px solid black;
 }
-.new__img-like {
+
+/*Кнопка "лайк"*/
+.slide__like {
        position: absolute;
-       top: 3%;
-       right: 7%;
-       height: 3.75%;
-       cursor: pointer;
+       right: 3.76%;/*10px*/
+       top: 2.35%;/*10px*/
 }
-.new__slider-toggle {
-       position: absolute;
-       bottom: 17%;
-       left: 5%;
-       width: 15%;
-       height: 7%;
-       font-family: "Cormorant-R", serif;
-       font-size: 1.25rem;
+
+.like {
+       width: 7.14%;/*19px*/
+       height: 4.57%;/*17px*/
+}
+
+
+/*Стили для блока с названием и ценой товара*/
+.caption {
+       width: 100%;/*266px*/
+       height: auto;
+       padding: 3.76% 0;/*10px*/
+       font-family: "Cormorant-M", serif;
+       line-height: 1.12;
        color: #342B2B;
        text-align: center;
+       border: 1px solid red;
 }
-.new__slider-descript {
+
+/*Название товара*/
+.heading {
+       font-size: 1.125rem;
+}
+
+/*Блок с ценой*/
+.container {
+       display: inline;
+       border: 1px solid green;
+}
+
+/*Блок с линией (расположен перед ценой)*/
+.shape {
+       display: inline-block;
+       width: 2rem;/*30px*/
+       height: 0.0625rem;
+       background-color: #342B2B;
+}
+
+/*Цена товара*/
+.price {
+       padding-left: 2%;
+       font-size: 0.875rem;
+}
+
+/*Стили для блока-обёртики с ценой*/
+.container {
        width: 100%;
        height: auto;
-       font-family: "Cormorant-M", serif;
-       color: #342B2B;
        text-align: center;
-       margin: auto;
 }
-.new__slider-title {
-       font-size: 1.5rem;
+
+/*Стили для блока с управлением слайдерами*/
+.carousel__switch {
+       position: absolute;
+       left: 8%;/*10px*/
+       bottom: 20%;
 }
-.new__price-wrap {
-       width: 95%;
-       height: 40%;
-       margin: auto;
-}
-.new__slider-line {
-       display: inline-block;
-       position: relative;
-       right: 2%;
-       width: 22.67%;
-       height: 30%;
-       border-top: 1px solid #342B2B;
-}
-.new__slider-price {
+
+.switch {
+       width: auto;
+       height: auto;
+       font-family: "Cormorant-M", serif;
        font-size: 1.25rem;
-}
-.new__link {
-       font-family: "Cormorant-l", serif;
-       font-size: 1.125rem;
+       line-height: 1.12;
        color: #342B2B;
-       margin-top: 2%;
+       border: 2px solid red;
 }
 
-@media screen and (max-width: 450px) {
-       .new {
-              height: 100vh;/*557.5px;*/
-       }
-       .new__title {
-              font-size: 1.5rem;
-       }
-       .new__produckt-wrap {
-              width: 100%;
-              height: 82.53%;/*460.1px;*/
-       }
-       .tabs__title {
-              font-size: 0.875rem;
-       }
-       .new__tabs-content {
-             height: 92.45%;/*425.3px;*/
-       }
-       .new__slider-wrap {
-              position: relative;
-       }
-       .new__mobile-slider {
-              display: block;
-              font-size: 2rem;
-              color: #342B2B;
-              position: absolute;
-              top: 40%;
-       }
-       .new__mobile-slider__prev {
-              left: 5%;
-       }
-       .new__mobile-slider__next {
-              right: 5%;
-       }
-       .new__slider-produckt {
-              /*position: absolute;*/
-              width: 76.25%;/*244px;*/
-              height: 100%;/*425.3px;*/
-       }
-      /* .new__slider-item {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-       }*/
-       .new__slider-title {
-              font-size: 1.125rem;
-       }
-       .new__slider-price,
-       .new__link {
-              font-size: 0.875rem;
-       }
-       .new__link {
-              margin: 0;
-       }
-}
-
-@media screen and (min-width: 501px) and (max-width: 1023px) {
-       .new {
-              height: 88vh;
-       }
-       .new__title {
-              font-size: 2.25rem;
-       }
-       .new__produckt-wrap {
-              width: 95%;
-              height: 76%;
-       }
-       .tabs__title {
-              font-size: 1rem;
-       }
-       .new__slider-wrap {
-              -webkit-box-pack: justify;
-              -ms-flex-pack: justify;
-              justify-content: space-between;
-       }
-       .new__slider-produckt {
-              width: 32%;
-       }
-       .new__slider-price {
-              font-size: 1rem;
-       }
-       .new__link {
-              font-size: 0.875rem;
-       }
-}
-
-@media screen and (min-width: 1024px) {
-       .tabs__title,
-       .new__slider-prev,
-       .new__slider-next {
-              cursor: pointer;
-       }
+/*Стили для блока со ссылкой на весь каталог*/
+.link-more {
+       font-family: "Cormorant-l", serif;
+       font-size: 0.875rem;
+       line-height: 1.12;
+       color: #342B2B;
+       border: 1px solid yellow;
 }
