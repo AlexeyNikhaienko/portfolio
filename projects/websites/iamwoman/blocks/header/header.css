@@ -3,15 +3,16 @@
        position: fixed;
        top: 0;
        left: 0;
-       z-index: 1;
+       z-index: 10;
 }
 
 .header {
        width: 100%;/*min 320px*/
-       height: auto;/*34px*/
-       padding: 1.8% 4.8%;/*top 9px, left 16px*/
-       border: 2px solid red;
+       height: auto;
+       padding: 2.82% 4.8%;/*top 9px, left 16px*/
+       /*border: 2px solid red;*/
 }
+
 /*Общие стили для блока с иконками, "бургером"*/
 .header__nav {
        position: relative;
@@ -26,11 +27,12 @@
 .nav {
        width: 100%;
        height: auto;
-       border: 1px solid blue;
+       /*border: 1px solid blue;*/
 }
 
 /*Стили для "бургера" меню*/
-.nav__burg {
+.nav__burg,
+.nav-toggle__burg {
        display: -webkit-box;
               display: flex;
        -webkit-box-orient: vertical;
@@ -41,15 +43,16 @@
 .burg {
        width: 2rem;/*32px*/
        height: 100%;/*16px*/
-       border: 1px solid black;
+}
+
+.burg__line:not(:last-of-type) {
+       margin-bottom: 0.3125rem;
 }
 
 .line {
-       height: 0.125rem;
        width: 100%;/*33px*/
-       margin-bottom: 0.3125rem;
-       /*background-color: white;*/
-       background-color: red;
+       height: 0.125rem;
+       background-color: white;
 }
 
 .line--short__right {
@@ -60,7 +63,6 @@
 .ine--short__left {
        align-self: flex-start;
        width: 54.55%;
-       margin-bottom: 0;
 }
 
 /*Стили для блока с логотипом*/
@@ -71,16 +73,12 @@
        color: #342B2B;
 }
 
-.logo--hide {
-       display: none;
-}
-
-.title {
+.name {
        font-size: 1.25rem;/*20px*/
        line-height: 1.1;
 }
 
-.subtitle {
+.subname {
        font-size: 0.625rem;/*10px*/
        line-height: 1.1;
 }
@@ -98,7 +96,7 @@
 .wrap {
        width: 32.81%;/*105px*/
        height: 100%;/*16px*/
-       border: 1px solid green;
+       /*border: 1px solid green;*/
 }
 
 .icon {
@@ -106,43 +104,156 @@
        height: 100%;
 }
 
-/*@media screen and (max-width: 450px) {*/
-/*Стили для блока с логотипом*/
-       /*.logo--hide {
+/*Общие стили для блока с меню (изначально скрыто)*/
+.header__menu-main {
+       position: absolute;
+       top: 0;
+       left: -100%;
+       z-index: 10;
+       -webkit-transition: all 0.7s ease-out;
+       transition: all 0.7s ease-out;
+}
+
+.menu-main {
+       width: 100%;/*320px*/
+       height: 100vh;/*490px*/
+       overflow-y: auto;
+       background: url(img/menu_bcg.jpg) no-repeat center center/cover;
+       border: 2px solid green;
+}
+
+/*Общие стили для блока-обёртки*/
+.inner {
+       width: 100%;/*320px*/
+       min-height: 100%;/*490px*/
+       padding: 6.25% 4.8% 10.42%;/*t 20px l/r 16px b 30px*/
+       background-color: rgba(255, 255, 255, 0.7);
+}
+
+/*Стили для блока-обёртки с кнопками*/
+.inner__nav-toggle {
+       position: relative;
+       margin-bottom: 10.42%;
+}
+
+.nav-toggle {
+       width: 100%;/*288px*/
+       height: auto;
+       border: 2px solid yellow;
+}
+
+/*Стили для кнопки, которая закрывает меню*/
+.nav-toggle__btn {
+       position: absolute;
+       right: 0;
+       top: 0;
+       display: -webkit-box;
+              display: flex;
+       -webkit-box-pack: center;
+              justify-content: center;
+       -webkit-box-align: center;
+              align-items: center;
+}
+
+.btn {
+       width: 1.375rem; /*22px*/
+       height: 1.4375rem; /*23px*/
+}
+
+.btn__stripe {
+       position: absolute;
+       left: -18.5%;
+}
+
+.stripe {
+       width: 140%;
+       height: 0.125rem;/*2px*/
+       background-color: #342B2B;
+}
+
+/*Поворот линий кнопки*/
+.stripe--rtt__lft {
+       -webkit-transform: rotate(135deg);
+       transform: rotate(135deg);
+}
+
+.stripe--rtt__rgt {
+       -webkit-transform: rotate(-135deg);
+       transform: rotate(-135deg);
+       top: 40%;
+}
+
+/*Элементы каталога*/
+/*Заголовок*/
+.inner__head {
+       margin-bottom: 5.5%;/*16px*/
+}
+
+.head {
+       width: 100%;
+       height: auto;
+       font-family: "Cormorant-SB", serif;
+       font-size: 1.5rem;/*24px*/
+       line-height: 1.1;
+       border: 1px solid red;
+}
+
+.head--color__grey {
+       color: #342B2B;
+}
+
+/*Список меню*/
+/*Стили для блока-обёртки*/
+.inner__box {
+       display: -webkit-box;
+       display: flex;
+       -webkit-box-pack: justify;
+               justify-content: space-between;
+       -webkit-box-align: baseline;
+               align-items: baseline;
+}
+
+.box {
+       width: 100%;
+       height: auto;
+       max-height: 100%;
+       border: 1px solid blue;
+}
+
+/*Стили для блоков с элементами списка*/
+.list {
+       width: auto;
+       height: auto;
+       list-style: none;
+       /*border: 1px solid green;*/
+}
+
+.item {
+       width: 100%;
+       height: auto;
+       border: 1px solid red;
+}
+
+.item:not(:last-of-type) {
+       padding-bottom: 1rem;/*16px*/
+}
+
+.link {
+       font-family: "Cormorant-R", serif;
+       line-height: 1.125;
+       text-decoration: none;
+       white-space: nowrap;
+}
+
+.link--color__grey {
+       font-size: 1rem;/*16px*/
+       color: #342B2B;
+}
+
+/*Стили для отзывчивости*/
+@media screen and (orientation: portrait) {
+       /*Стили для блока с логотипом*/
+       .logo--hide {
               display: none;
        }
-
-       .menu-icon {
-              width: 32.8%;
-              right: 5%;
-       }
 }
-
-@media screen and (min-width: 501px) and (max-width: 1023px) {
-       .header {
-              height: 11%;
-       }
-       .collection__logo {
-              left: 30%;
-              top: 30%;
-       }
-       .logo__heading {
-              font-size: 1.25rem;
-       }
-       .logo__descript {
-              font-size: 0.625rem;
-       }
-       .menu-icon {
-              width: 30%;
-              right: 6%;
-       }
-}
-
-@media screen and (min-width: 1024px) {
-       .menu__burg {
-              cursor: pointer;
-       }
-       .menu-icon {
-              cursor: pointer;
-       }
-}*/
