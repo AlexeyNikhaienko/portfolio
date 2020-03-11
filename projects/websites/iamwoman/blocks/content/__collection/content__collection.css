@@ -5,19 +5,15 @@
        display: flex;
        -webkit-box-pack: end;
                justify-content: flex-end;
+       -webkit-box-align: center;
+               align-items: center;
 }
 
 .collection {
        width: 100%;
-       min-height: 100vh;
-       height: 1px;
-       padding: 10.2% 4.8%;/*50px 16px*/
-       /*padding: 0 4.8%;*/
+       height: auto;
        background-image: url(img/prod-img1.jpg);
        background-color: #F3ECE4;
-       background-position: 130% 50%;
-       /*background-size: cover;*/
-       background-size: 150% 110%;
        background-repeat: no-repeat;
        border: 2px solid blue;
 }
@@ -27,7 +23,6 @@
        position: absolute;
        top: 0;
        left: 0;
-       z-index: 0;
        width: 100%;
        height: 100%;
        background-color: rgba(112,112,112, 0.42);
@@ -36,10 +31,6 @@
 /*Стили для блока с названием коллекции*/
 .collection__title {
        position: absolute;
-       top: 50%;
-       left: 4.8%;/*16px*/
-       -webkit-transform: translateY(-50%);
-               transform: translateY(-50%);
        z-index: 2;
 }
 
@@ -50,12 +41,24 @@
        border: 1px solid green;
 }
 
-.title__head {
-       margin-bottom: 13.91%;/*16px*/
+/*Заголовок*/
+.head {
+       width: 100%;/*256px*/
+       height: auto;
+       font-family: "Cormorant-SB", serif;
+       font-size: 1.5rem;/*24px*/
+       line-height: 1.12;
+       border: 1px solid red;
 }
 
+.head--color__grey {
+       color: #342B2B;
+}
+
+/*Стили для блока со ссылкой на каталог*/
 .contain {
-       width: 74.68%;/*115px*/
+       display: inline-block;
+       width: auto;/*115px*/
        height: auto;
 }
 
@@ -64,14 +67,13 @@
        color: #91171D;
 }
 
-.contain__decoration {
-       margin-top: 4%;/*6px*/
-}
-
 .decoration {
        display: block;
-       width: 85%;/*105px*/
        height: 0.0625rem;/*1px*/
+}
+
+.decoration--short {
+       width: 90%;/*105px*/
        background-color: #91171D;
 }
 
@@ -79,27 +81,132 @@
 .collection__produckt {
        position: relative;
        z-index: 1;
-       display: -webkit-box;
-              display: flex;
        overflow: hidden;
 }
 
 .produckt {
        width: auto;
        max-width: 68.44%;/*219px*/
-       /*max-width: 219px;*/
        height: auto;
-       /*max-height: 79.4%;/*389px*/
        border: 1px solid red;
 }
 
-.produckt__img {
+/*Стили для блока-обёртки*/
+.produckt__wrapper {
        position: relative;
-       left: -50%;
+       display: -webkit-box;
+       display: flex;
+       left: 0;
+       -webkit-transition: all 0.7s ease-in-out;
+       transition: all 0.7s ease-in-out;
 }
 
+.wrapper {
+       width: auto;
+       height: 100%;
+}
+
+/*Стили для слайдов*/
 .img {
+       /*width установлено ч/з JS*/
        width: auto;
        height: auto;
-       max-height: 100%;
+}
+
+/*Стили для отзывчивости*/
+/*При вертикальном расположении устройства*/
+@media screen and (orientation: portrait) {
+       /*Общие стили для блока "collection"*/
+       .collection {
+              height: 100vh;
+              padding: 15.625% 4.8%;/*50px 16px*/
+              background-position: 130% 50%;
+              background-size: 150% 110%;
+       }
+
+       /*Стили для блока с названием коллекции*/
+       .collection__title {
+              left: 4.8%;/*16px*/
+       }
+
+       /*Заголовок*/
+       .title__head {
+              margin-bottom: 13.91%;/*16px*/
+       }
+
+       /*Стили для блока со ссылкой на каталог*/
+       .contain__decoration {
+              margin-top: 3.48%;/*4px*/
+       }
+
+       /*Стили для слайдера*/
+       .produckt {
+              height: 79.4vh;/*389px*/
+       }
+
+       .wrapper__img {
+              position: relative;
+       }
+
+       .img {
+              max-height: 100%;
+       }
+}
+
+@media screen and (orientation: portrait) and (max-height: 799px) {
+       /*Стили для слайдера*/
+       .wrapper__img {
+              left: -50%;
+       }
+}
+
+@media screen and (orientation: portrait) and (min-height: 800px) {
+       /*Стили для слайдера*/
+       .wrapper__img {
+              left: -80%;
+       }
+}
+
+/*При горизонтальном расположении устройства*/
+@media screen and (orientation: landscape) {
+       /*Общие стили для блока "collection"*/
+       .collection {
+              padding: 11.72% 6.51%;/*90px 50px*/
+              background-position: -170% 50%;
+              background-size: contain
+       }
+
+       /*Стили для блока с названием коллекции*/
+       .collection__title {
+              left: 6.51%;/*50px*/
+       }
+
+       /*Заголовок*/
+       .title__head {
+              margin-bottom: 6.66%;/*26px*/
+       }
+
+       /*Стили для блока со ссылкой на каталог*/
+       .contain__decoration {
+              margin-top: 2.96%;/*4px*/
+       }
+
+       /*Стили для слайдера*/
+       .img {
+              max-width: 100%;
+       }
+}
+
+/*При ширине экрана от 768 px*/
+@media screen and (min-width: 768px) {
+       /*Стили для блока с названием коллекции*/
+       /*Заголовок*/
+       .head {
+              font-size: 2.25rem;/*24px*/
+       }
+
+        /*Стили для блока со ссылкой на каталог*/
+        .link--color__red {
+              font-size: 1rem;/*16px*/
+       }
 }

@@ -30,7 +30,7 @@
               </nav>
        <!--Меню, которое появляется при нажатии на "burg". По умолчанию скрыто-->
               <nav class="header__menu-main menu-main">
-                     <div class="inner">
+                     <div class="menu-main__inner inner">
                             <div class="inner__nav-toggle nav-toggle">
                                    <div class="nav-toggle__burg burg">
                                           <span class="burg__line line"></span>
@@ -42,7 +42,7 @@
                                           <span class="btn__stripe stripe stripe--rtt__rgt"></span>
                                    </div>
                             </div>
-                            <h2 class="inner__head head head--color__grey">Каталог</h2>
+                            <h2 class="inner__catalog catalog">Каталог</h2>
                             <div class="inner__box box">
                                    <ul class="list">
                                           <li class="item"><a class="link link--color__grey" href="#">Пальто</a></li>
@@ -71,11 +71,11 @@
        </header>
 
 <!--Общий блок, который содержит весь контент (за исключением подвала)-->
-       <main class="main__content">
+       <main class="content">
        <!--Блок с коллекцией товара, распродажей-->
               <div class="content__collection collection">
                      <div class="collection__title title">
-                            <h2 class="title__head head head--color__grey">Новая круизная коллекция ‘19</h2>
+                            <h2 class="title__head head head--color__grey">Новая<br> круизная<br> коллекция ‘19</h2>
                             <div class="contain">
                                    <a class="link link--color__red" href="#">Перейти в каталог</a>
                                    <span class="contain__decoration decoration decoration--short"></span>
@@ -83,9 +83,11 @@
                      </div>
               <!--Обёртка для слайдера-->
                      <div class="collection__produckt produckt">
-                            <img class="produckt__img img" src="blocks/content/__collection/img/prod-img1.jpg" alt="Хлопковое платье в полоску">
-                            <img class="produckt__img img" src="blocks/content/__collection/img/prod-img2.jpg" alt="Спортивный желтый костюм">
-                            <img class="produckt__img img" src="blocks/content/__collection/img/prod-img3.jpg" alt="Платье-халат со стразами">
+                            <div class="produckt__wrapper wrapper">
+                                   <img class="wrapper__img img" src="blocks/content/__collection/img/prod-img1.jpg" alt="Хлопковое платье в полоску">
+                                   <img class="wrapper__img img" src="blocks/content/__collection/img/prod-img2.jpg" alt="Спортивный желтый костюм">
+                                   <img class="wrapper__img img" src="blocks/content/__collection/img/prod-img3.jpg" alt="Платье-халат со стразами">
+                            </div>
                      </div>
               </div>
 
