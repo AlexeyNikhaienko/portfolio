@@ -9,8 +9,7 @@
 .header {
        width: 100%;/*min 320px*/
        height: auto;
-       padding: 2.82% 4.8%;/*top 9px, left 16px*/
-       /*border: 2px solid red;*/
+       background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*Общие стили для блока с иконками, "бургером"*/
@@ -27,7 +26,6 @@
 .nav {
        width: 100%;
        height: auto;
-       /*border: 1px solid blue;*/
 }
 
 /*Стили для "бургера" меню*/
@@ -65,24 +63,6 @@
        width: 54.55%;
 }
 
-/*Стили для блока с логотипом*/
-.logo {
-       height: auto;
-       font-family: "Roboto-M", sans-serif;
-       text-align: center;
-       color: #342B2B;
-}
-
-.name {
-       font-size: 1.25rem;/*20px*/
-       line-height: 1.1;
-}
-
-.subname {
-       font-size: 0.625rem;/*10px*/
-       line-height: 1.1;
-}
-
 /*Стили для блока с иконками*/
 .nav__wrap {
        display: -webkit-box;
@@ -96,7 +76,6 @@
 .wrap {
        width: 32.81%;/*105px*/
        height: 100%;/*16px*/
-       /*border: 1px solid green;*/
 }
 
 .icon {
@@ -119,34 +98,47 @@
        height: 100vh;/*490px*/
        overflow-y: auto;
        background: url(img/menu_bcg.jpg) no-repeat center center/cover;
-       border: 2px solid green;
 }
 
 /*Общие стили для блока-обёртки*/
+.menu-main__inner {
+       position: relative;
+       display: -webkit-box;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+               flex-direction: column;
+       -webkit-box-pack: center;
+               justify-content: center;
+       -webkit-box-align: center;
+               align-items: center;
+}
+
 .inner {
-       width: 100%;/*320px*/
+       width: 100%;/*288px*/
        min-height: 100%;/*490px*/
-       padding: 6.25% 4.8% 10.42%;/*t 20px l/r 16px b 30px*/
        background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*Стили для блока-обёртки с кнопками*/
 .inner__nav-toggle {
-       position: relative;
-       margin-bottom: 10.42%;
+       position: absolute;
+       display: -webkit-box;
+       display: flex;
+       -webkit-box-pack: justify;
+               justify-content: space-between;
+       -webkit-box-align: center;
+               align-items: center;
 }
 
 .nav-toggle {
-       width: 100%;/*288px*/
+       width: 90%;/*288px*/
        height: auto;
-       border: 2px solid yellow;
 }
 
 /*Стили для кнопки, которая закрывает меню*/
 .nav-toggle__btn {
-       position: absolute;
-       right: 0;
-       top: 0;
+       position: relative;
        display: -webkit-box;
               display: flex;
        -webkit-box-pack: center;
@@ -185,21 +177,12 @@
 
 /*Элементы каталога*/
 /*Заголовок*/
-.inner__head {
-       margin-bottom: 5.5%;/*16px*/
-}
-
-.head {
-       width: 100%;
+.catalog {
        height: auto;
        font-family: "Cormorant-SB", serif;
-       font-size: 1.5rem;/*24px*/
-       line-height: 1.1;
-       border: 1px solid red;
-}
-
-.head--color__grey {
+       font-size: 1.25rem;/*20px*/
        color: #342B2B;
+       line-height: 1.12;
 }
 
 /*Список меню*/
@@ -214,10 +197,8 @@
 }
 
 .box {
-       width: 100%;
        height: auto;
        max-height: 100%;
-       border: 1px solid blue;
 }
 
 /*Стили для блоков с элементами списка*/
@@ -225,13 +206,11 @@
        width: auto;
        height: auto;
        list-style: none;
-       /*border: 1px solid green;*/
 }
 
 .item {
        width: 100%;
        height: auto;
-       border: 1px solid red;
 }
 
 .item:not(:last-of-type) {
@@ -240,7 +219,7 @@
 
 .link {
        font-family: "Cormorant-R", serif;
-       line-height: 1.125;
+       line-height: 1.12;
        text-decoration: none;
        white-space: nowrap;
 }
@@ -252,8 +231,109 @@
 
 /*Стили для отзывчивости*/
 @media screen and (orientation: portrait) {
+       /*Общие стили для блока с иконками, "бургером"*/
+       .header__nav {
+              margin: 2.81% 0;/*t/b 9px*/
+       }
+
+       /*Общие стили для навигации, расположенной в шапке сайта)*/
+       .header {
+              padding: 0 4.8%;/*l/r 16px*/
+       }
+       
        /*Стили для блока с логотипом*/
        .logo--hide {
               display: none;
+       }
+
+       /*Стили для блока-обёртки с кнопками*/
+       .inner__nav-toggle {
+              top: 6.25%;/*20px*/
+       }
+
+       /*Элементы каталога*/
+       /*Заголовок*/
+       .inner__catalog {
+              margin-top: 16.88%;/*90px*/
+              margin-bottom: 5.5%;/*16px*/
+      }
+
+       .catalog {
+              width: 80%;/*256px*/
+       }
+
+       /*Список меню*/
+       /*Стили для блока-обёртки*/
+       .box {
+              width: 80%;/*256px*/
+       }
+}
+
+@media screen and (orientation: landscape) {
+       /*Общие стили для блока с иконками, "бургером"*/
+       .header__nav {
+              margin: 1.84% 0;/*t/b 9px*/
+       }
+
+       /*Общие стили для навигации, расположенной в шапке сайта)*/
+       .header {
+              padding: 0 6.51%;/*l/r 50px*/
+       }
+
+       /*Стили для блока с логотипом*/
+       .logo {
+              height: auto;
+              font-family: "Roboto-M", sans-serif;
+              text-align: center;
+              color: #342B2B;
+       }
+
+       .name {
+              font-size: 1.25rem;/*20px*/
+              line-height: 1.12;
+       }
+
+       .subname {
+              font-size: 0.625rem;/*10px*/
+              line-height: 1.12;
+       }
+
+       /*Стили для блока-обёртки с кнопками*/
+       .inner__nav-toggle {
+              top: 5.2%;/*20px*/
+       }
+
+       /*Элементы каталога*/
+       /*Заголовок*/
+       .inner__catalog {
+              margin-top: 14.52%;/*90px*/
+              margin-bottom: 2.58%;/*16px*/
+       }
+
+       .catalog {
+              width: 73.88%;
+       }
+
+       /*Список меню*/
+       /*Стили для блока-обёртки*/
+       .inner__box {
+              margin-bottom: 3.27%;/*16px*/
+       }
+
+       .box {
+              width: 73.88%;/*256px*/
+       }
+}
+
+@media screen and (min-width: 768px) {
+       /*Элементы каталога*/
+       /*Заголовок*/
+       .catalog {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Стили для блоков с элементами списка*/
+       .link--color__grey {
+              font-size: 1.125rem;/*18px*/;
        }
 }
