@@ -5,15 +5,12 @@
        -webkit-box-orient: vertical;
        -webkit-box-direction: normal;
                flex-direction: column;
-       margin-top: 15.4%;/*60px*/
 }
 
 .footer {
        width: 100%;/*320px*/
        height: auto;/*240px*/
-       padding: 11.25% 0 11.25% 4.8%;/*27px 16px*/
        background-color: #ECE5E1;
-       border: 2px solid blue;
 }
 
 /*Стили для блока-обёртки*/
@@ -22,20 +19,14 @@
        display: flex;
        -webkit-box-align: baseline;
                align-items: baseline;
-       margin-bottom: 15.63%;/*50px*/
 }
 
 .owner {
        width: 100%;/*305px*/
        height: auto;
-       border: 2px solid red;
 }
 
 /*Стили для блоков с контактами*/
-.owner__list {
-       margin-right: 6.56%;/*20px*/
-}
-
 .item--color__grey {
        font-family: "Cormorant-R", serif;
        font-size: 1rem;
@@ -55,4 +46,62 @@
        font-size: 0.875rem;/*14px*/
        line-height: 1.12;
        color: #342B2B;
+}
+
+/*Стили для отзывчивости*/
+/*При вертикальном расположении устройства*/
+@media screen and (orientation: portrait) {
+       /*Общие стили для блока*/
+       .content__footer {
+              margin-top: 18.75%;/*60px*/
+       }
+
+       .footer {
+              padding: 11.25% 0 11.25% 4.8%;/*27px 16px*/
+       }
+
+       /*Стили для блока-обёртки*/
+       .footer__owner {
+              margin-bottom: 15.63%;/*50px*/
+       }
+
+       /*Стили для блоков с контактами*/
+       .owner__list {
+              margin-right: 6.56%;/*20px*/
+       }
+}
+
+/*При горизонтальном расположении устройства*/
+@media screen and (orientation: landscape) {
+       /*Общие стили для блока*/
+       .content__footer {
+              margin-top: 7.82%;/*60px*/
+       }
+
+       .footer {
+              padding: 3.52% 0 3.52% 6.51%;/*27px 50px*/
+       }
+
+       /*Стили для блока-обёртки*/
+       .footer__owner {
+              margin-bottom: 6.51%;/*50px*/
+       }
+
+       /*Стили для блоков с контактами*/
+       .owner__list {
+              margin-right: 3%;/*20px*/
+       }
+}
+
+/*При ширине экрана от 768 px*/
+@media screen and (min-width: 768px) {
+       /*Стили для блоков с контактами*/
+       .item--color__grey {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       /*Стили для копирайта*/
+       .copyright{
+              font-size: 1rem;/*16px*/
+       }
 }
