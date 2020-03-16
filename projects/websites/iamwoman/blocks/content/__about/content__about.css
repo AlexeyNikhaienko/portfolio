@@ -1,52 +1,30 @@
 /*Общие стили для блока "About"*/
-.content__about {
-       margin: 15.4% auto 0 auto;/*60px*/
-}
-
 .about {
-       width: 90.4%;/*288px*/
        height: auto;/*min-height = 530px*/
-       border: 2px solid red;
 }
 
 /*Стили для элементов блока*/
-/*Заголовок*/
-.about__head {
-       margin-bottom: 13.8%;/*40px*/
-}
-
-.head--color__red {
-       text-align: center;
-       color: #91171D;
-}
-
-/*Блок с историей коллекции*/
+/*Общие стили для блока-обёртки с историей коллекции*/
 .about__history {
        position: relative;
 }
 
 .history {
-       width: 100%;
+       width: 100%;/*288px*/
        height: auto;
-       padding: 6.6% 5.6%;/*28px 16px*/
-       background-color: rgba(255,255,255, 0.6);
-       text-align: center;
-       border: 1px solid blue;
 }
 
-.history:before {
-       content: "";
-       background: url(img/about-img1.jpg) center center/cover no-repeat;
+/*Общие стили для блока-обёртки, который содержит историю бренда*/
+.history__block {
        position: absolute;
        left: 0;
-       top: 0;
-       width: 100%;
-       height: 100%;
-       z-index: -1;
+       z-index: 1;
 }
 
-.history__par {
-       margin-bottom: 4.5%;/*20px*/
+.block {
+       width: 100%;/*288px*/
+       text-align: center;
+       background-color: rgba(255,255,255, 0.6);
 }
 
 .par {
@@ -54,6 +32,107 @@
        height: auto;
        font-family: "Cormorant-l", serif;
        font-size: 1rem;
-       line-height: 1.125;
+       line-height: 1.12;
        color: #342B2B;
+}
+
+/*Стили для отзывчивости*/
+/*При вертикальном расположении устройства*/
+@media screen and (orientation: portrait) {
+       /*Общие стили для блока "About"*/
+       .content__about {
+              margin: 18.75% auto 0;/*60px*/
+       }
+
+       .about {
+              width: 90.4%;/*288px*/
+       }
+
+       /*Стили для элементов блока*/
+       /*Заголовок*/
+       .about__head {
+              margin-bottom: 13.9%;/*40px*/
+       }
+
+       /*Общие стили для блока-обёртки, который содержит историю бренда*/
+       .history__block {
+              top: 0;
+              display: -webkit-box;
+                     display: flex;
+              -webkit-box-orient: vertical;
+                     -webkit-box-direction: normal;
+                            flex-direction: column;
+              -webkit-box-pack: center;
+                      justify-content: center;
+       }
+
+       .block {
+              height: 100%;
+              padding: 0 5.6%;/*28px 16px*/
+       }
+
+       .block__par {
+              margin-bottom: 9.38%;/*27px*/
+       }
+
+       /*Стили для фоновых изображений*/
+       .image--position__left {
+              width: 100%;
+              height: auto;
+              max-height: 100%;
+       }
+
+       .image--position__right {
+              display: none;
+       }
+}
+
+/*При горизонтальном расположении устройства*/
+@media screen and (orientation: landscape) {
+       /*Общие стили для блока "About"*/
+       .content__about {
+              margin: 7.82% auto 0;/*60px*/
+       }
+
+       .about {
+              width: 86.98%;/*668px*/
+       }
+
+       /*Стили для элементов блока*/
+       /*Заголовок*/
+       .about__head {
+              margin-bottom: 6%;/*40px*/
+       }
+
+       /*Стили для фоновых изображений*/
+       .history__image {
+              position: absolute;
+              right: 0;
+              bottom: 0;
+       }
+
+       .image {
+              width: auto;
+              max-width: 48.5%;
+              height: auto;
+       }
+
+       .image--position__left {
+              margin-bottom: 20%;
+       }
+
+       /*Общие стили для блока-обёртки, который содержит историю бренда*/
+       .history__block {
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%);
+       }
+
+       .block {
+              padding: 4.79% 3.6%;/*32px 27px*/
+       }
+
+       .block__par {
+              margin-bottom: 3.6%;/*27px*/
+       }
 }
