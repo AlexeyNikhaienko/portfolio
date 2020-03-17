@@ -12,10 +12,8 @@
 .collection {
        width: 100%;
        height: auto;
-       background-image: url(img/prod-img1.jpg);
        background-color: #F3ECE4;
        background-repeat: no-repeat;
-       border: 2px solid blue;
 }
 
 .collection:after {
@@ -38,7 +36,6 @@
        width: auto;
        max-width: 48.13%;/*154px*/
        height: auto;
-       border: 1px solid green;
 }
 
 /*Заголовок*/
@@ -48,7 +45,6 @@
        font-family: "Cormorant-SB", serif;
        font-size: 1.5rem;/*24px*/
        line-height: 1.12;
-       border: 1px solid red;
 }
 
 .head--color__grey {
@@ -88,29 +84,35 @@
        width: auto;
        max-width: 68.44%;/*219px*/
        height: auto;
-       border: 1px solid red;
 }
 
 /*Стили для блока-обёртки*/
 .produckt__wrapper {
        position: relative;
+       left: 0;
        display: -webkit-box;
        display: flex;
-       left: 0;
        -webkit-transition: all 0.7s ease-in-out;
        transition: all 0.7s ease-in-out;
 }
 
 .wrapper {
-       width: auto;
+       width: 100%;
        height: 100%;
 }
 
 /*Стили для слайдов*/
+.wrapper__img {
+       display: none;
+}
+
 .img {
-       /*width установлено ч/з JS*/
        width: auto;
        height: auto;
+}
+
+.img--current {
+       display: block;
 }
 
 /*Стили для отзывчивости*/
@@ -120,8 +122,8 @@
        .collection {
               height: 100vh;
               padding: 15.625% 4.8%;/*50px 16px*/
-              background-position: 130% 50%;
-              background-size: 150% 110%;
+              background-position: 90% 50%;
+              background-size: 200% 110%;
        }
 
        /*Стили для блока с названием коллекции*/
@@ -172,8 +174,8 @@
        /*Общие стили для блока "collection"*/
        .collection {
               padding: 11.72% 6.51%;/*90px 50px*/
-              background-position: -170% 50%;
-              background-size: contain
+              background-position: 100% 50%;
+              background-size: 130% 110%;
        }
 
        /*Стили для блока с названием коллекции*/

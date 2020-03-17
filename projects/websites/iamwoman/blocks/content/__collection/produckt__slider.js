@@ -1,54 +1,104 @@
-//Объявление переменых, которые содержат все слайды и кнопки управления
-let prodSlidesArray = document.querySelectorAll(".slider__item");
-let prodLeftArrow = document.querySelector(".slider__prev");
-let prodRightArrow = document.querySelector(".slider__next");
-
-//Объявление переменной, служащей для хранения индекса текущего слайда
+//Объявление переменых
+const collectionArea = document.querySelector(".collection .produckt");//для работы свайпа
+const sliderCollectionArr = document.querySelectorAll(".produckt__wrapper .img");//массив с изображениями
+//Переменная, которая будет хранить значения текущего индекса слайда
 let curIndexSlide = 0;
 
-//Чтобы показывался первый слайдер при запуске сайта + чтобы слайдер срабатывал при первом же клике на кнопку управления
-prodShowSlider();
-//setTimeout(prodShowSlider, 3000);
-//Переменная для хранения номера текущего слайдера, т.е. имеет вид 01, 02 и т.д.
-let counterSlide = 1;
-//Чтобы корректно показывался номер первого слайдера при запуске сайта
-showNumberSlide();
+//Автослайдер
+const collectionIntervalTime = 5000;//Через сколько времени (мс) показывается новый слайд
+let collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
 
-//Установка "слушателей" на кнопки навигации
-prodLeftArrow.addEventListener("click", function() {
-       if (curIndexSlide - 1 < 0) {
-              curIndexSlide = prodSlidesArray.length - 1;
-              counterSlide = prodSlidesArray.length;
-       } else {
-              curIndexSlide--;
-              counterSlide = curIndexSlide + 1;
+//Функция, которая показывает слайды,
+//а также устанвливает их как фоновое изображение для всего блока
+function showСollectionSlides() {
+       let bcg = document.querySelector(".collection");
+       for (let i = 0; i < sliderCollectionArr.length; i++) {
+              sliderCollectionArr[i].classList.remove("img--current");
        }
-       prodShowSlider();
-       showNumberSlide();
-});
-prodRightArrow.addEventListener("click", function() {
-       if (curIndexSlide + 1 > prodSlidesArray.length - 1) {
+       sliderCollectionArr[curIndexSlide].classList.add("img--current");
+       bcg.style.backgroundImage = `url(${sliderCollectionArr[curIndexSlide].getAttribute("src")})`;
+}
+
+showСollectionSlides();
+
+//Функции для показа предыдущего/следующего слайда
+function nextСollectionSlide() {
+       if (curIndexSlide === sliderCollectionArr.length - 1) {
               curIndexSlide = 0;
-              counterSlide = 1;
        } else {
               curIndexSlide++;
-              counterSlide = curIndexSlide + 1;
        }
-       prodShowSlider();
-       showNumberSlide();
-});
-
-//Функция, которая показывает слайды
-function prodShowSlider() {
-       //Цикл для скрытия ВСЕХ слайдов массива
-       for (let i = 0; i < prodSlidesArray.length; i++) {
-              prodSlidesArray[i].style.display = "none";
-       }
-       prodSlidesArray[curIndexSlide].style.display = "block";//Для отображения слайда с определённым индексом i
+       showСollectionSlides();
+       //сброс автослайдера, чтобы он корректно работал в случае пролистывания слайда пользователем
+       clearInterval(collectionInterval);
+       collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
 }
 
-//Функция для показа номера текущего слайда
-function showNumberSlide() {
-       let numberSlide = document.querySelector(".slider__current");
-       numberSlide.textContent = "0" + counterSlide;
+function prevСollectionSlide() {
+       if (curIndexSlide === 0) {
+              curIndexSlide = sliderCollectionArr.length - 1;
+       } else {
+              curIndexSlide--;
+       }
+       showСollectionSlides();
+       //сброс автослайдера, чтобы он корректно работал в случае пролистывания слайда пользователем
+       clearInterval(collectionInterval);
+       collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
 }
+
+//Слайдер для touch-событий
+const collectionTouchSlider = function(element) {
+       let surface = element;//переменная, в которой хранится область взаимодействий с пользователем
+       let startX = 0;//стартовая позиция по оси х для курсора
+       let startY = 0;
+       let distanceX = 0;//пройденная дистанция по оси х
+       let distanceY = 0;
+       let threshold = 100;//min дистанция, при котором сработает свайп
+       let restraint = 100;//ограничение действия по оси У, max расстояние
+       let allowedTime = 300;//min время, которое должен длиться свайп, чтобы он сработал
+
+       let startTime = 0;
+       let elapsedTime = 0;
+
+       surface.addEventListener("touchstart", function(e) {
+              //Переменная для хранения pageX, pageY
+              let touchObj = e.changedTouches[0];
+              startX = touchObj.pageX;
+              startY = touchObj.pageY;
+              startTime = new Date().getTime();
+              //Блокировка других событий
+              e.preventDefault();
+       });
+
+       surface.addEventListener("touchmove", function(e) {
+              //Блокировка других событий
+              e.preventDefault();
+       });
+
+       surface.addEventListener("touchend", function(e) {
+              //Переменная для хранения pageX, pageY
+              let touchObj = e.changedTouches[0];
+              distanceX = touchObj.pageX - startX;
+              distanceY = touchObj.pageY - startY;
+              //Разность по времени между тем, как пользователь нажал и отпустил
+              elapsedTime = new Date().getTime() - startTime;
+
+              //Проверка условий для свайпа
+              //Если наше время превышает время свайпа, то свайпа быть не должно
+              if (elapsedTime <= allowedTime) {
+                     //Для распознавания события как свайпа
+                     //Math.abs чтобы избежать ошибки при свайпе влево и вправо
+                     if (Math.abs(distanceX) >= threshold && Math.abs(distanceY) <= restraint) {
+                            if (distanceX > 0) {
+                                   prevСollectionSlide();
+                            } else {
+                                   nextСollectionSlide();
+                            }
+                     }
+              }
+              //Блокировка других событий
+              e.preventDefault();
+       });
+}
+
+collectionTouchSlider(collectionArea);
