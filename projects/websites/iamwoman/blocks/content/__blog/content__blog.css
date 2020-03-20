@@ -18,6 +18,9 @@
 
 /*Слайдер*/
 .blog__slider {
+       position: relative;
+       left: 0;
+       top: 0;
        display: -webkit-box;
               display: flex;
 }
@@ -31,10 +34,12 @@
 
 /*Стили для элементов слайдера*/
 .element {
-       width: 100%;/*266px*/
+       /*ширина установлена ч/з JS*/
+       /*width: 100%;/*266px*/
+       width: auto;
        height: auto;/*588px*/
        max-height: 100%;
-       border: 1px solid green;
+       border: 2px solid yellow;
 }
 
 /*Хэштэг*/
@@ -44,13 +49,14 @@
 }
 
 /*Стили для изображений*/
-.element__caption {
+.element__pic {
        margin-top: 4.1%;/*10px*/
 }
 
-.caption {
+.pic {
+       /*ширина установлена ч/з JS*/
        width: auto;
-       max-width: 266px;
+       /*max-width: 266px;*/
        height: auto;
 }
 
@@ -77,8 +83,9 @@
 
 /*Стили для блока с переключателем слайдера*/
 .blog__toggle {
-       margin-left: auto;
-       margin-right: auto;
+       /*position: relative;*/
+       margin: 7.52% auto 13.53%;/*t20px l/r auto b36px*/
+
 }
 
 .toggle {
@@ -88,10 +95,19 @@
 }
 
 /*Номер слайда*/
+.toggle__index {
+       position: relative;
+       top: 0.3125rem;/*5px*/
+}
+
 .index {
+       width: 24.15%;/*50px*/
+       height: auto;
        font-family: "Cormorant-R", serif;
        line-height: 1.12;
+       text-align: center;
        color: #342B2B;
+       border: 1px solid blue;
 }
 
 .cur {
@@ -99,7 +115,8 @@
 }
 
 .total {
-       font-size: 1rem;
+       vertical-align: sub;
+       font-size: 0.875rem;
 }
 
 /*Бегунок, полоса прокрутки*/
@@ -118,7 +135,7 @@
 /*Стили для Chrome, Opera, Safari*/
 .range::-webkit-slider-thumb {
        -webkit-appearance: none;
-       width: 37.68%;/*78px*/
+       width: 24.15%;/*50px*/
        height: 0.1875rem;/*3px*/
        background-color: #342B2B;
 }
@@ -132,7 +149,7 @@
 /*Стили для Firefox*/
 .range::-moz-range-thumb {
        -moz-appearance: none;
-       width: 37.68%;/*78px*/
+       width: 24.15%;/*50px*/
        height: 0.1875rem;/*3px*/
        background-color: #342B2B;
 }
@@ -145,7 +162,7 @@
 
 /*Стили для IE, Edge*/
 .range::-ms-thumb {
-       width: 37.68%;/*78px*/
+       width: 24.15%;/*50px*/
        height: 0.1875rem;/*3px*/
        background-color: #342B2B;
 }
@@ -174,6 +191,5 @@
        left: 50%;
        -webkit-transform: translateX(-50%);
                transform: translateX(-50%);
-       margin-top: 12.5%;/*36px*/
        border: 1px solid yellow;
 }
