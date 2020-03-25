@@ -55,6 +55,8 @@ function detectedWidthScreen() {
 
   //Вызов функции, которая устанавливает размеры слайдов
   setElementsSizes();
+  //Вызов функции, которая отвечает за работу бегунка
+  thumbSliderControl();
 }
 detectedWidthScreen();
 console.log(blogBlockWidth, items, marginRight);
