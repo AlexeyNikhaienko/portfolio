@@ -35,7 +35,6 @@
 /*Стили для элементов слайдера*/
 .element {
        /*ширина установлена ч/з JS*/
-       /*width: 100%;/*266px*/
        width: auto;
        height: auto;/*588px*/
        max-height: 100%;
@@ -56,7 +55,6 @@
 .pic {
        /*ширина установлена ч/з JS*/
        width: auto;
-       /*max-width: 266px;*/
        height: auto;
 }
 
