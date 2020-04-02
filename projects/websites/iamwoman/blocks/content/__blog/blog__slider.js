@@ -1,13 +1,130 @@
 const blogBlockArea = document.querySelector(".blog");//служит "полем" для свайпов
+const sliderBlogArr = document.querySelectorAll(".blog__slider .element");//массив со слайдами
+let blogBlockWidth;//ширина блока "blog"
+
+let items;//колличество одновременно выводимых слайдов (согласно макета)
+let marginRight;//правый внешний отступ слайда (marginRight)
+let curIndexBlogSlide = 0;//для хранения текущего индекса слайда
+let slidesWidthArr = [0];//массив с "ширина слайда + отступ"
+let sliderWidth = 0;//ширина обёртки для слайдов
+let widthSlide;//максимальная ширина отдельного слайда
+
+//window.addEventListener("resize", detectedWidthScreen);
+let resizeTimer;
+window.addEventListener("resize", function() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    return detectedWidthScreen();
+  }, 250);
+});
+
+function detectedWidthScreen() {
+  blogBlockWidth = blogBlockArea.offsetWidth;
+  let curBlogWidth = blogBlockWidth;
+  if (this.innerWidth <= 490) {
+    items = 1;
+    marginRight = 0;
+    //e.preventDefault();
+  } else if (this.innerWidth > 490) {
+    items = 2;
+    marginRight = curBlogWidth * 0.028;
+    //e.preventDefault();
+  }
+  setElementsSizes(curBlogWidth, items, marginRight);
+  console.log(curBlogWidth);
+}
+detectedWidthScreen();
+
+function setElementsSizes(parentWidth, numberItems, margin) {
+  //Массив с изображениями внутри слайдов
+  const blogImage = document.querySelectorAll(".pic");
+  widthSlide = (parentWidth - (margin * (numberItems - 1))) / numberItems;
+  for (let i = 0; i < sliderBlogArr.length; i++) {
+    for (let k = 0; k < blogImage.length; k++) {
+      blogImage[k].style.maxWidth = `${ widthSlide }px`;
+    }
+
+    if (i === sliderBlogArr.length - 1) {
+      margin = 0;
+      sliderBlogArr[i].style.marginRight = `${ margin }px`;
+    } else {
+      sliderBlogArr[i].style.marginRight = `${ margin }px`;
+    }
+
+    sliderBlogArr[i].style.width = `${ widthSlide }px`;
+    sliderBlogArr[i].style.marginRight = `${ margin }px`;
+  }
+  sliderWidth = ((sliderBlogArr[0].offsetWidth * sliderBlogArr.length) + (margin * (sliderBlogArr.length - 1)));
+  pushSlidesWidthInArr();
+}
+
+function pushSlidesWidthInArr() {
+  while (curIndexBlogSlide < sliderBlogArr.length) {
+    if (curIndexBlogSlide === sliderBlogArr.length - 1) {
+      marginRight = 0;
+    }
+    slidesWidthArr.push(sliderBlogArr[0].offsetWidth + marginRight);
+    curIndexBlogSlide++;
+  }
+  console.log(slidesWidthArr);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*const blogBlockArea = document.querySelector(".blog");//служит "полем" для свайпов
 const blogSlider = document.querySelector(".blog .slider");//обёртка для слайдов, которая сдвигается
 const sliderBlogArr = document.querySelectorAll(".blog__slider .element");//массив со слайдами
 let blogBlockWidth;//ширина блока "blog"
 
 let curIndexBlogSlide = 0;//для хранения текущего индекса слайда
-let shift = 0;//смещение для обёртки
 let slidesWidthArr = [0];//массив с "ширина слайда + отступ"
 let sliderWidth = 0;//ширина обёртки для слайдов
 let widthSlide;//максимальная ширина отдельного слайда
+
+let shift = 0;//смещение для обёртки blogSlider
+let substr = 0;//разница между ширинами blogBlockWidth и blogSlider (т.е. sliderWidth)
 
 let items;//колличество одновременно выводимых слайдов (согласно макета)
 let marginRight;//правый внешний отступ слайда (marginRight)
@@ -28,38 +145,21 @@ window.addEventListener("resize", detectedWidthScreen);
 //Функция определяет количество одновременно показываемых слайдов
 //в зависимости от текущей ширины экрана
 function detectedWidthScreen() {
-  //граница перехода между количеством отображаемых слайдов
-  let maxWidthScreen = [
-    window.matchMedia("(max-width: 490px)"),
-    window.matchMedia("(min-width: 491px)")
-  ];
-
-  //Функция сравнивает текущий размер экрана с условиями
-  //и передаёт заданные в условии  значения
-  function compareWidth(widthScreen) {
-    blogBlockWidth = blogBlockArea.offsetWidth;
-    if (maxWidthScreen[0].matches) {
-      items = 1;
-      marginRight = 0;//убрал отступы у всех слайдов при данной ширине экрана
-    } else if (maxWidthScreen[1].matches) {
-      items = 2;
-      marginRight = blogBlockWidth * 0.028;//0.028 (2.8%) согласно макета
-    }
+  blogBlockWidth = blogBlockArea.offsetWidth;
+  if (window.innerWidth <= 490) {
+    items = 1;
+    marginRight = 0;//убрал отступы у всех слайдов при данной ширине экрана
+  } else if (window.innerWidth > 490) {
+    items = 2;
+    marginRight = blogBlockWidth * 0.028;//0.028 (2.8%) согласно макета
   }
-
-  //цикл устанавливает слушатель на каждое значение media
-  for (let i = 0; i < maxWidthScreen.length; i++) {
-    compareWidth(maxWidthScreen[i]);
-    maxWidthScreen[i].addListener(compareWidth);
-  }
-
   //Вызов функции, которая устанавливает размеры слайдов
   setElementsSizes();
   //Вызов функции, которая отвечает за работу бегунка
   thumbSliderControl();
 }
 detectedWidthScreen();
-console.log(blogBlockWidth, items, marginRight);
+//console.log(blogBlockWidth, items, marginRight);
 
 //Функция устанавливает размеры элементов
 function setElementsSizes() {
@@ -70,9 +170,9 @@ function setElementsSizes() {
   //цикл проходит по массиву со слайдами и устанавливает для них размеры,
   //которые затем передаются в массив slidesWidthArr и в дальнейшем участвуют в расчётах
   for (let i = 0; i < sliderBlogArr.length; i++) {
-    if (i === sliderBlogArr.length - 1) {
-      marginRight = 0;//обнулил отступ у последнего слайда
-    }
+    //if (i === sliderBlogArr.length - 1) {
+      //marginRight = 0;//обнулил отступ у последнего слайда
+    //}
     slidesWidthArr.push(widthSlide + marginRight);//добавление в массив размеров слайдов
     sliderWidth += (widthSlide + marginRight);//определение общей ширины обёртки
 
@@ -84,10 +184,29 @@ function setElementsSizes() {
     for (let k = 0; k < blogImage.length; k++) {
       blogImage[k].style.maxWidth = sliderBlogArr[i].style.width;
     }
+
+    console.log(widthSlide, sliderWidth, slidesWidthArr);
   }
+  //slidesWidthArr[slidesWidthArr.length - 1] = (slidesWidthArr.length - 1) - marginRight;
 }
 //console.log(slidesWidthArr, sliderWidth, widthSlide, marginRight);
-console.log(slidesWidthArr, sliderWidth);
+//console.log(slidesWidthArr, sliderWidth);
+
+//Функции для смещения слайдера влево/вправо
+function shiftBlogSliderToLeft() {
+  substr = sliderWidth - blogBlockWidth - (shift + slidesWidthArr[curIndexBlogSlide]);
+  if (substr >=0) {
+    shift += slidesWidthArr[curIndexBlogSlide];
+    blogSlider.style.transform = `translateX(${ -shift }px)`;
+  }
+  curIndexBlogSlide++;
+  setElementsSizes();
+  console.log(shift);
+}
+function taimer() {
+  setInterval(shiftBlogSliderToLeft, 2000);
+}
+//taimer();
 
 //Управление бегунком
 rangeArea.addEventListener("input", thumbSliderControl);
@@ -106,8 +225,8 @@ function thumbSliderControl() {
     rangeStep = sizeRangeStep - errorShiftingindexArea;
   }
 
-  //rangeArea.value - строковый тип данных, поэтому его необходимо привести к числовому типу
+  //rangeArea.value - строковый тип данных, поэтому его необходимо привести к числовому типу явно
   //Number(rangeArea.value) - 1 чтобы было корректное значение при смещении (т.к. min для слайдера равно 1)
   indexArea.style.transform = `translateX(${(Number(rangeArea.value) - 1) * rangeStep}px)`;
   curNumberSlide.textContent = `0${rangeArea.value}/`;
-}
+}*/
