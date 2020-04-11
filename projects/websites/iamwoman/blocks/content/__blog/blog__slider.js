@@ -1,16 +1,35 @@
-const blogBlockArea = document.querySelector(".blog");//служит "полем" для свайпов
+//Объявление переменных, выбранных из HTML
+//const blogBlockArea = document.querySelector(".blog");
+const sliderWrap = document.querySelector(".blog .slider");//блок-обёртка над слайдером
 const sliderBlogArr = document.querySelectorAll(".blog__slider .element");//массив со слайдами
+
 let blogBlockWidth;//ширина блока "blog"
-
-let items;//колличество одновременно выводимых слайдов (согласно макета)
-let marginRight;//правый внешний отступ слайда (marginRight)
-let curIndexBlogSlide = 0;//для хранения текущего индекса слайда
-//let slidesWidthArr = [0];//массив с "ширина слайда + отступ"
 let sliderWidth = 0;//ширина обёртки для слайдов
-let widthSlide;//максимальная ширина отдельного слайда
-let slidesWidthArr;//массив с "ширина слайда + отступ"
+let items;//колличество одновременно выводимых слайдов (согласно макета)
 
-//Чтобы исключить загрузку нескольких событий (ширин экрана, которые приведены 
+let marginRight;//правый внешний отступ слайда (marginRight)
+let widthSlide;//максимальная ширина отдельного слайда
+//Объявление массива с элементами вида "ширина слайда + отступ". Изначально не содержит элементов,
+//т.к. при изменении размеров экрана (в т.ч. ориентации) JS будет добавлять ВСЕ ширины слайдов
+//в ОДИН (общий) массив
+let slidesWidthArr;
+
+let curIndexBlogSlide = 0;//для хранения текущего индекса слайда
+let shift = 0;//величина смещения блока-обёртки sliderWrap
+let substrWidth;//разница между ширинами блока-обёртки "sliderWrap" и родительским блоком "blogBlockArea"
+
+let blogLeft = document.querySelector(".blogLeft");
+let blogRight = document.querySelector(".blogRight");
+blogLeft.addEventListener("click", () => {
+  shiftSliderToLeft();
+});
+blogRight.addEventListener("click", () => {
+  //console.log("click right btn");
+  shiftSliderToRight();
+});
+
+
+//Чтобы исключить одновременную загрузку нескольких событий (ширин экрана, которые приведены 
 //в качестве пороговых значений в detectedWidthScreen())
 window.addEventListener("load", () =>{
   //Объявление переменной для таймера, по истечении времени которого выполняется перерисовка экрана
@@ -26,7 +45,8 @@ window.addEventListener("load", () =>{
 });
 
 function detectedWidthScreen() {
-  blogBlockWidth = blogBlockArea.offsetWidth;
+  //blogBlockWidth = blogBlockArea.offsetWidth;
+  blogBlockWidth = document.querySelector(".blog").offsetWidth;
   if (window.innerWidth <= 490) {
     items = 1;
     marginRight = 0;
@@ -35,6 +55,7 @@ function detectedWidthScreen() {
     marginRight = blogBlockWidth * 0.028;
   }
   setElementsSizes(blogBlockWidth, items, marginRight);
+  createArray();
 }
 detectedWidthScreen();
 
@@ -42,29 +63,127 @@ function setElementsSizes(parentWidth, numberItems, margin) {
   //Массив с изображениями внутри слайдов
   const blogImage = document.querySelectorAll(".pic");
   widthSlide = (parentWidth - (margin * (numberItems - 1))) / numberItems;
-  slidesWidthArr = [0];
 
   for (let i = 0; i < sliderBlogArr.length; i++) {
     for (let k = 0; k < blogImage.length; k++) {
       blogImage[k].style.maxWidth = `${ widthSlide }px`;
     }
-
-    if (i === sliderBlogArr.length - 1) {
-      margin = 0;
-      sliderBlogArr[i].style.marginRight = `${ margin }px`;
-    } else {
-      sliderBlogArr[i].style.marginRight = `${ margin }px`;
-    }
-
+    //Для каждого слайда в массиве устанавливаются одинаковые ширина и правый отступ
     sliderBlogArr[i].style.width = `${ widthSlide }px`;
-    sliderBlogArr[i].style.marginRight = `${ margin }px`;
-    slidesWidthArr.push(sliderBlogArr[i].offsetWidth + margin);
+    sliderBlogArr[i].style.marginRight = `${ margin }px`
   }
   sliderWidth = ((sliderBlogArr[0].offsetWidth * sliderBlogArr.length) + (margin * (sliderBlogArr.length - 1)));
+  //Ширина блока-обёртки "sliderBlogArr"
+  sliderWrap.style.minWidth = `${ sliderWidth }px`;
+  console.log(sliderWidth, blogBlockWidth);
+}
+
+//Функция по созданию массива с элементами типа "ширина слайда + отступ"
+function createArray() {
+  slidesWidthArr = [0];
+  for (let j = 0; j < sliderBlogArr.length; j++) {
+    if (j === sliderBlogArr.length - 1) {
+      marginRight = 0;
+    }
+    slidesWidthArr.push(sliderBlogArr[j].offsetWidth + marginRight);
+  }
   console.log(slidesWidthArr);
 }
 
+//Функция для смещения блока-обёртки "sliderWrap" влево
+function shiftSliderToLeft() {
+  let substr = sliderWidth - blogBlockWidth;
+  //shift + slidesWidthArr[curIndexBlogSlide] - для корректного вычисления значения "substrWidth",
+  //т.к. при работе слайдера происходит пролистывание последнего элемента в т.ч.
+  substrWidth = substr - (shift + slidesWidthArr[curIndexBlogSlide]);
 
+  //Проверка, можно ли выполнять сдвижку влево
+  if (substrWidth > 0 && substrWidth <= substr) {
+    shift += slidesWidthArr[curIndexBlogSlide];
+  } else if (substrWidth <= 0) {
+    shift = sliderWidth - blogBlockWidth;
+  }
+  curIndexBlogSlide++;
+  sliderWrap.style.transform = `translateX(-${ shift }px)`;
+  console.log(`LEFT: ${substrWidth}, ${shift}, ${curIndexBlogSlide}`);
+}
+shiftSliderToLeft();
+
+function shiftSliderToRight() {
+  //Проверка, можно ли выполнять сдвижку вправо
+  /*if (substrWidth !== substr) {
+    shift -= slidesWidthArr[curIndexBlogSlide];
+    curIndexBlogSlide--;
+  } else {
+    shift = 0;
+  }
+  sliderWrap.style.transform = `translateX(${ shift }px)`;*/
+  shift -= slidesWidthArr[curIndexBlogSlide];
+  curIndexBlogSlide--;
+  sliderWrap.style.transform = `translateX(-${ shift }px)`;
+  console.log(`toRight(${ substrWidth }, ${shift}, ${curIndexBlogSlide})`);
+}
+//shiftSliderToRight();
+
+//Слайдер для touch-событий
+const touchSlider = function(element) {
+  let surface = element;//переменная, в которой хранится область взаимодействий с пользователем
+  let startX = 0;//стартовая позиция по оси х для курсора
+  let startY = 0;
+  let distanceX = 0;//пройденная дистанция по оси х
+  let distanceY = 0;
+  let threshold = 100;//min дистанция, при котором сработает свайп
+  let restraint = 100;//ограничение действия по оси У, max расстояние
+  let allowedTime = 300;//min время, которое должен длиться свайп, чтобы он сработал
+
+  let startTime = 0;
+  let elapsedTime = 0;
+
+  surface.addEventListener("touchstart", (e) => {
+    //Переменная для хранения pageX, pageY
+    let touchObj = e.changedTouches[0];
+    startX = touchObj.pageX;
+    startY = touchObj.pageY;
+    startTime = new Date().getTime();
+    //Блокировка других событий
+    e.preventDefault();
+  });
+
+  surface.addEventListener("touchmove", (e) => {
+    //Блокировка других событий
+    e.preventDefault();
+  });
+
+  surface.addEventListener("touchend", (e) => {
+    //Переменная для хранения pageX, pageY
+    let touchObj = e.changedTouches[0];
+    distanceX = touchObj.pageX - startX;
+    distanceY = touchObj.pageY - startY;
+    //Разность по времени между тем, как пользователь нажал и отпустил
+    elapsedTime = new Date().getTime() - startTime;
+
+    //Проверка условий для свайпа
+    //Если наше время превышает время свайпа, то свайпа быть не должно
+    if (elapsedTime <= allowedTime) {
+      //Для распознавания события как свайпа
+      //Math.abs чтобы избежать ошибки при свайпе влево и вправо
+        if (Math.abs(distanceX) >= threshold && Math.abs(distanceY) <= restraint) {
+            if (distanceX > 0) {
+              if (curIndexBlogSlide > 1 && curIndexBlogSlide < slidesWidthArr.length) {
+                shiftSliderToRight();
+              }
+            } else {
+              if (curIndexBlogSlide > 0 && curIndexBlogSlide < slidesWidthArr.length - 1) {
+                shiftSliderToLeft();
+              }
+            }
+        }
+    }
+    //Блокировка других событий
+    e.preventDefault();
+  });
+}
+touchSlider(sliderWrap);
 
 
 
