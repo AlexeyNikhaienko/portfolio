@@ -4,19 +4,14 @@
 /*Import styles for block "Header"*/
 @import url("blocks/header/header.css");
 
-/*Import styles for block "Menu"*/
-@import url("blocks/menu--hide/menu--hide.css");
-
 /*Import styles for block "Content":
-1) for block "Pagination"*/
-@import url("blocks/content/__pagination/content__pagination.css");
-/*2) for block "Collection"*/
+/*1) for block "Collection"*/
 @import url("blocks/content/__collection/content__collection.css");
-/*3) for block "New"*/
+/*2) for block "New"*/
 @import url("blocks/content/__new/content__new.css");
-/*4) for block "About"*/
+/*3) for block "About"*/
 @import url("blocks/content/__about/content__about.css");
-/*5) for block "Blog"*/
+/*4) for block "Blog"*/
 @import url("blocks/content/__blog/content__blog.css");
 
 /*Import styles for block "Subscribe"*/
@@ -29,16 +24,9 @@
 * {
        margin: 0;
        padding: 0;
-       -webkit-box-sizing: border-box;
        box-sizing: border-box;
 }
-body {
-       overflow-x: hidden;
-       font-size: 16px;
-}
 
-@media screen and (max-width: 450px) {
-       .hide {
-              display: none;
-       }
+body {
+       font-size: 16px;
 }
