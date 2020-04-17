@@ -1,35 +1,27 @@
 /*Общие стили для блока*/
 .content__blog {
-       margin: 15.4% auto 0;/*60px*/
        overflow: hidden;
 }
 
 .blog {
-       width: 83.13%;/*266px*/
        height: auto;/*min-height = 735px*/
-       border: 2px solid red;
 }
 
 /*Стили для элементов блока*/
-/*Заголовок*/
-.blog__head {
-       margin-bottom: 4.17%;/*12px*/
-}
-
 /*Слайдер*/
 .blog__slider {
-       position: relative;
-       left: 0;
-       top: 0;
        display: -webkit-box;
               display: flex;
+       -webkit-transition: -webkit-transform 0.7s ease-in-out;
+       transition: -webkit-transform 0.7s ease-in-out;
+       transition: transform 0.7s ease-in-out;
+       transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
 }
 
 .slider {
        width: auto;/*ширина установлена ч/з JS*/
        height: auto;
        max-height: 80%;/*588px*/
-       border: 1px solid blue;
 }
 
 /*Стили для элементов слайдера*/
@@ -38,7 +30,6 @@
        width: auto;
        height: auto;/*588px*/
        max-height: 100%;
-       border: 2px solid yellow;
 }
 
 /*Хэштэг*/
@@ -48,10 +39,6 @@
 }
 
 /*Стили для изображений*/
-.element__pic {
-       margin-top: 4.1%;/*10px*/
-}
-
 .pic {
        /*ширина установлена ч/з JS*/
        width: auto;
@@ -65,10 +52,6 @@
        text-align: center;
 }
 
-.descript__subheading {
-       margin-bottom: 4.1%;/*10px*/
-}
-
 .subheading {
        width: 100%;
        height: auto;
@@ -80,16 +63,9 @@
 }
 
 /*Стили для блока с переключателем слайдера*/
-.blog__toggle {
-       /*position: relative;*/
-       margin: 7.52% auto 13.53%;/*t20px l/r auto b36px*/
-
-}
-
 .toggle {
        width: 77.82%;/*207px*/
        height: auto;
-       border: 1px solid yellow;
 }
 
 /*Номер слайда*/
@@ -105,7 +81,6 @@
        line-height: 1.12;
        text-align: center;
        color: #342B2B;
-       border: 1px solid blue;
 }
 
 .cur {
@@ -140,7 +115,7 @@
 
 .range::-webkit-slider-runnable-track {
        width: 100%;/*207px*/
-       height: 0.0625rem;/*1rem*/
+       height: 0.0625rem;/*1px*/
        background-color: #342B2B;
 }
 
@@ -189,5 +164,108 @@
        left: 50%;
        -webkit-transform: translateX(-50%);
                transform: translateX(-50%);
-       border: 1px solid yellow;
+}
+
+/*Стили для отзывчивости*/
+/*При вертикальном расположении устройства*/
+@media screen and (orientation: portrait) {
+       /*Общие стили для блока*/
+       .content__blog {
+              margin: 18.75% auto 0;/*60px*/
+       }
+
+       .blog {
+              width: 83.13%;/*266px*/
+       }
+
+       /*Стили для элементов блока*/
+       /*Заголовок*/
+       .blog__head {
+              margin-bottom: 4.51%;/*12px*/
+       }
+
+       /*Стили для элементов слайдера*/
+       /*Стили для изображений*/
+       .element__pic {
+              margin-top: 5.26%;/*14px*/
+       }
+
+       /*Стили для блока с описанием*/
+       .descript__subheading {
+              margin-bottom: 6.77%;/*18px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .blog__toggle {
+              margin: 5.26% auto 13.53%;/*t14px l/r auto b36px*/
+       }
+}
+
+/*При горизонтальном расположении устройства*/
+@media screen and (orientation: landscape) {
+       /*Общие стили для блока*/
+       .content__blog {
+              margin: 7.82% auto 0;/*60px*/
+       }
+
+       .blog {
+              width: 86.98%;/*668px*/
+       }
+
+       /*Стили для элементов блока*/
+       /*Заголовок*/
+       .blog__head {
+              margin-bottom: 3%;/*20px*/
+       }
+
+       /*Стили для элементов слайдера*/
+       /*Стили для изображений*/
+       .element__pic {
+              margin-top: 2.65%;/*14px*/
+       }
+
+       /*Стили для блока с описанием*/
+       .descript__subheading {
+              margin-bottom: 2.62%;/*18px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .blog__toggle {
+              margin: 2.1% auto 5.4%;/*t14px l/r auto b36px*/
+       }
+}
+
+@media screen and (min-width: 768px) {
+       /*Общие стили для блока*/
+       .content__blog {
+              position: relative;
+       }
+
+       /*Стили для элементов слайдера*/
+       /*Хэштэг*/
+       .hashtag {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Стили для блока с описанием*/
+       .subheading {
+              font-size: 1.5rem;
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .blog__toggle {
+              position: absolute;
+              top: -1.5%;
+              right: 0;
+              margin: 0;
+       }
+
+       .toggle {
+              width: 30.98%;/*207px*/
+       }
+
+       /*Стили блока блока со ссылкой*/
+       .blog__contain {
+              margin-top: 5.4%;/*36px*/
+       }
 }
