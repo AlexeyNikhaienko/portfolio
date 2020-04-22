@@ -106,6 +106,7 @@ function shiftSliderToLeft() {
   }
   curIndexBlogSlide++;
   sliderWrap.style.transform = `translateX(-${ shift }px)`;
+  bindRangeWithShift();
   //console.log(`LEFT: ${substrWidth}, ${shift}, ${curIndexBlogSlide}`);
 }
 shiftSliderToLeft();
@@ -120,6 +121,7 @@ function shiftSliderToRight() {
   }
   curIndexBlogSlide--;
   sliderWrap.style.transform = `translateX(-${ shift }px)`;
+  bindRangeWithShift();
   //console.log(`toRight(${ substrWidth }, ${shift}, ${curIndexBlogSlide})`);
 }
 
@@ -130,13 +132,35 @@ function thumbSliderControl() {
   //общее количество слайдов
   document.querySelector(".blog__toggle .total").textContent = `${sliderBlogArr.length}`;
   rangeArea.max = sliderBlogArr.length;//значение max для "бегунка"
+  if (this.value == this.min) {
+    shift = slidesWidthArr[0];
+  } else if (this.value == 2) {
+    shift = slidesWidthArr[0] + slidesWidthArr[1];
+  } else if (this.value == 3) {
+    shift = slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2];
+  } else if (this.value == 4) {
+    shift = slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2] + slidesWidthArr[3];
+  } else if (this.value == 5) {
+    shift = slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2] + slidesWidthArr[3] + slidesWidthArr[4];
+  } else if (this.value == this.max) {
+    if (window.innerWidth > 490) {
+      shift = slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2] + slidesWidthArr[3] + slidesWidthArr[4];
+    } else {
+      shift = slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2] + slidesWidthArr[3] + slidesWidthArr[4] + slidesWidthArr[5];
+    }
+  }
+  //curNumberSlide.textContent = `0${rangeArea.value}/`;//номер текущего сдайда
+  sliderWrap.style.transform = `translateX(-${ shift }px)`;
+  shiftTextAboveThumb();
+}
+
+//Функция для смещения текста над "бегунком"
+function shiftTextAboveThumb() {
   //переменная для обозначения шага смещения текста над бегунком
   let rangeStep;
   //разбивка полосы на равные участки (для определения величины шага)
-  //let sizeRangeStep = rangeArea.offsetWidth / (sliderBlogArr.length - 1);
   let sizeRangeStep = rangeArea.offsetWidth / (sliderBlogArr.length - rangeArea.min);
   //погрешность, которая возникает при одновременном смещении бегунка и текста над ним
-  //let errorShiftingIndexArea = indexArea.offsetWidth / (sliderBlogArr.length - 1);
   let errorShiftingIndexArea = indexArea.offsetWidth / (sliderBlogArr.length - rangeArea.min);
 
   //Условие для смещения текста над бегунком
@@ -148,7 +172,25 @@ function thumbSliderControl() {
 
   //rangeArea.value - rangeArea.min -- чтобы было корректное значение при смещении (т.к. min для слайдера равно 1)
   indexArea.style.transform = `translateX(${(rangeArea.value - rangeArea.min) * rangeStep}px)`;
-  curNumberSlide.textContent = `0${rangeArea.value}/`;
+  curNumberSlide.textContent = `0${rangeArea.value}/`;//номер текущего сдайда
+}
+
+//Функция связывает между собой действия для "бегунка" и shiftSliderToLeft()/ shiftSliderToRight()
+function bindRangeWithShift() {
+  if (shift === slidesWidthArr[0]) {
+    rangeArea.value = "1";
+  } else if (shift === slidesWidthArr[0] + slidesWidthArr[1]) {
+    rangeArea.value = "2";
+  } else if (shift === slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2]) {
+    rangeArea.value = "3";
+  } else if (shift === slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2] + slidesWidthArr[3]) {
+    rangeArea.value = "4";
+  } else if (shift === slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2] + slidesWidthArr[3] + slidesWidthArr[4]) {
+    rangeArea.value = "5";
+  } else if (shift === slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2] + slidesWidthArr[3] + slidesWidthArr[4] + slidesWidthArr[5]) {
+    rangeArea.value = rangeArea.max;
+  }
+  shiftTextAboveThumb();
 }
 
 //Слайдер для touch-событий
