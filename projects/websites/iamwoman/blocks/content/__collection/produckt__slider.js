@@ -1,5 +1,5 @@
 //Объявление переменых
-const collectionArea = document.querySelector(".collection .produckt");//для работы свайпа
+const collectionArea = document.querySelector(".collection");//для работы свайпа
 const sliderCollectionArr = document.querySelectorAll(".produckt__wrapper .img");//массив с изображениями
 //Переменная, которая будет хранить значения текущего индекса слайда
 let curIndexSlide = 0;
@@ -9,14 +9,13 @@ const collectionIntervalTime = 5000;//Через сколько времени (
 let collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
 
 //Функция, которая показывает слайды,
-//а также устанвливает их как фоновое изображение для всего блока
+//а также устанавливает их как фоновое изображение для всего блока
 function showСollectionSlides() {
-       let bcg = document.querySelector(".collection");
        for (let i = 0; i < sliderCollectionArr.length; i++) {
               sliderCollectionArr[i].classList.remove("img--current");
        }
        sliderCollectionArr[curIndexSlide].classList.add("img--current");
-       bcg.style.backgroundImage = `url(${sliderCollectionArr[curIndexSlide].getAttribute("src")})`;
+       collectionArea.style.backgroundImage = `url(${sliderCollectionArr[curIndexSlide].getAttribute("src")})`;
 }
 
 showСollectionSlides();
@@ -68,12 +67,12 @@ const collectionTouchSlider = function(element) {
               startTime = new Date().getTime();
               //Блокировка других событий
               e.preventDefault();
-       });
+       }, {passive: true});
 
        surface.addEventListener("touchmove", function(e) {
               //Блокировка других событий
               e.preventDefault();
-       });
+       }, {passive: true});
 
        surface.addEventListener("touchend", function(e) {
               //Переменная для хранения pageX, pageY
