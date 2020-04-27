@@ -215,12 +215,12 @@ const touchSlider = function(element) {
     startTime = new Date().getTime();
     //Блокировка других событий
     e.preventDefault();
-  });
+  }, {passive: true});
 
   surface.addEventListener("touchmove", (e) => {
     //Блокировка других событий
     e.preventDefault();
-  });
+  }, {passive: true});
 
   surface.addEventListener("touchend", (e) => {
     //Переменная для хранения pageX, pageY
