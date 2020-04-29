@@ -1,13 +1,10 @@
 /*Общие стили для блока "New"*/
 .content__new {
        position: relative;
-       margin: 15.4% auto 0;/*60px*/
 }
 
 .new {
-       width: 90.4%;/*288px*/
        height: auto;/*min-height = 530px*/
-       padding: 0 3.82%;/*0 11px*/
        text-align: center;
        border: 2px solid red;
 }
@@ -19,35 +16,7 @@
        color: #91171D;
 }
 
-/*Стили для блока с управлением слайдером*/
-.new__control {
-       position: absolute;
-       top: 50%;
-       -webkit-transform: translateY(-50%);
-               transform: translateY(-50%);
-       z-index: 1;
-}
-
-.left {
-       left: 0;
-}
-
-.right {
-       right: 0;
-}
-
-.control {
-       font-family: "Cormorant-M", serif;
-       font-size: 1.75rem;/*28px*/
-       color: #352F2F;
-       /*color: red;*/
-}
-
 /*Стили для блока-обёртки*/
-.new__holder {
-       margin: 10.42% 0 6.02%;/*30px 0 16px*/
-}
-
 .holder {
        width: 100%;/*266px*/
        height: auto;
@@ -77,7 +46,7 @@
 
 .headline {
        font-family: "Cormorant-SB", serif;
-       font-size: 0.875rem;
+       font-size: 0.875rem;/*14px*/
        line-height: 1.12;
        color: #342B2B;
 }
@@ -89,18 +58,40 @@
 /*Стили для самих вкладок*/
 .holder__tabs {
        display: none;/*Скрытие вкладок*/ 
-       margin-top: 6.02%;/*16px*/
 }
 
 .tabs {
-       /*width установлено ч/з JS*/
-       width: auto;
+       width: 100%;
        height: auto;
-       /*border: 1px solid green;*/
+       border: 1px solid green;
+}
+
+/*Стили для блока с управлением слайдером*/
+.tabs__control {
+       position: absolute;
+       top: 50%;
+       -webkit-transform: translateY(-50%);
+               transform: translateY(-50%);
+       z-index: 1;
+}
+
+.control {
+       font-family: "Cormorant-M", serif;
+       font-size: 1.75rem;/*28px*/
+       color: #352F2F;
+}
+
+.left {
+       left: 0;
+}
+
+.right {
+       right: 0;
 }
 
 /*Стили для слайдеров внутри вкладок*/
 .tabs__carousel {
+       position: relative;
        display: -webkit-box;
        display: flex;
        -webkit-box-pack: justify;
@@ -116,6 +107,7 @@
 
 .carousel__slide {
        position: relative;
+       display: none;
 }
 
 /*Стили для слайдеров внутри слайдеров*/
@@ -126,12 +118,15 @@
        border: 1px solid red;
 }
 
+.active {
+       display: block;
+}
+
 /*Слайды*/
 .picture {
        width: auto;
        height: auto;
        max-width: 100%;/*266px*/
-       border: 1px solid black;
 }
 
 /*Кнопка "лайк"*/
@@ -167,6 +162,7 @@
 /*Блок с ценой*/
 .container {
        display: inline;
+       text-align: center;
        border: 1px solid green;
 }
 
@@ -182,13 +178,6 @@
 .price {
        padding-left: 2%;
        font-size: 0.875rem;
-}
-
-/*Стили для блока-обёртики с ценой*/
-.container {
-       width: 100%;
-       height: auto;
-       text-align: center;
 }
 
 /*Стили для блока с управлением слайдерами*/
@@ -211,8 +200,72 @@
 /*Стили для блока со ссылкой на весь каталог*/
 .link-more {
        font-family: "Cormorant-l", serif;
-       font-size: 0.875rem;
+       font-size: 0.875rem;/*14px*/
        line-height: 1.12;
        color: #342B2B;
        border: 1px solid yellow;
+}
+
+/*Стили для отзывчивости*/
+/*При вертикальном расположении устройства*/
+@media screen and (orientation: portrait) {
+       /*Общие стили для блока "New"*/
+       .content__new {
+              margin: 18.75% auto 0;/*60px*/
+       }
+
+       .new {
+              width: 90.4%;/*288px*/
+              padding: 0 3.82%;/*0 11px*/
+       }
+
+       /*Стили для блока-обёртки*/
+       .new__holder {
+              margin: 5.56% 0;/*16px 0*/
+       }
+
+       /*Стили для самих вкладок*/
+       .holder__tabs {
+              margin-top: 5.2%;/*15px*/
+       }
+}
+
+/*При горизонтальном расположении устройства*/
+@media screen and (orientation: landscape) {
+       /*Общие стили для блока "New"*/
+       .content__new {
+              margin: 7.82% auto 0;/*60px*/
+       }
+
+       .new {
+              width: 86.98%;
+              padding: 0 3%;/*0 20px*/
+       }
+
+       /*Стили для блока-обёртки*/
+       .new__holder {
+              margin: 2.4% 0;/*16px 0*/
+       }
+
+       /*Стили для самих вкладок*/
+       .holder__tabs {
+              margin-top: 2.25%;/*15px*/
+       }
+}
+
+@media screen and (min-width: 768px) {
+       /*Стили для блока с управлением слайдером*/
+       .tabs__control {
+              display: none;
+       }
+
+       /*Стили для названий вкладок*/
+       .headline {
+              font-size: 1.5rem;/*16px*/
+       }
+
+       /*Стили для блока со ссылкой на весь каталог*/
+       .link-more {
+              font-size: 1rem;/*16px*/
+       }
 }

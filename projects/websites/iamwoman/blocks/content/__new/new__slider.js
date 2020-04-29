@@ -1,37 +1,103 @@
-//Объявление переменых, которые содержат все слайды и кнопки управления
-let newSlidesArray = document.querySelectorAll(".slider-produckt__dress");
-//let newSlidesBlouse = document.querySelectorAll(".slider-produckt__blouse");
-let newLeftArrow = document.querySelector(".new__mobile-slider__prev");
-let newRightArrow = document.querySelector(".new__mobile-slider__next");
+//Прототип объекта, который выполняет пролистывание слайдов/слайдеров в блоке
+class NewParentSlider {
+       //constructor(startIndex, element, subClass) {
+       constructor(props) {
+              //Свойства
+              this.startIndex = props.startIndex;//с какой картинки/слайдера начинается слайдшоу
+              this.currentIndex = this.startIndex;//индекс текущего элемента, по умолчанию this.startIndex
+              this.element = props.element;//с каким из слайдеров выполняется работа
+              this.childSlide = props.subClasses.childSlide;//класс дочернего слайда/слайдера
+              //this.slides = this.element.querySelectorAll(".carousel .slide");//массив со слайдами
+              this.slides = this.element.querySelectorAll(this.childSlide);//массив со слайдами
+              this.leftArrow = props.subClasses.leftArrow;
+              this.rightArrow = props.subClasses.rightArrow;
 
-//Объявление переменной, служащей для хранения индекса текущего слайда
-let newCurIndexSlide = 0;
-//Чтобы показывался первый слайдер при запуске сайта + чтобы слайдер срабатывал при первом же клике на кнопку управления
-newShowSlider();
+              //Привязка методов
+              this.setActiveSlide(); 
+              this.newSlide();
+              this.prevSlide();
+       }
 
-//Установка "слушателей" на кнопки навигации
-newLeftArrow.addEventListener("click", function() {
-       if (newCurIndexSlide - 1 < 0) {
-              newCurIndexSlide = newSlidesArray.length - 1;
-       } else {
-              newCurIndexSlide--;
+       //Функция устанавливает активный слайд
+       setActiveSlide() {
+              //Цикл проходится по каждому элементу массива и выполняет сравнение
+              //текущего индекса currentIndex с индексом текущего элемента
+              //и присваивает/ удаляет соответствующий класс
+              this.slides.forEach( (item, index) => {
+                     if (index === this.currentIndex) {
+                            item.classList.add("active");
+                     } else {
+                            item.classList.remove("active");
+                     }
+              });
        }
-       newShowSlider();
-});
-newRightArrow.addEventListener("click", function() {
-       if (newCurIndexSlide + 1 > newSlidesArray.length - 1) {
-              newCurIndexSlide = 0;
-       } else {
-              newCurIndexSlide++;
-       }
-       newShowSlider();
-});
 
-//Функция, которая показывает слайды
-function newShowSlider() {
-       //Цикл для скрытия ВСЕХ слайдов массива
-       for (let i = 0; i < newSlidesArray.length; i++) {
-              newSlidesArray[i].style.display = "none";
+       //Функции по переключению слайдов
+       newSlide() {
+              //let newNextBtn = this.element.querySelector(".carousel__switch .next");
+              let newNextBtn = this.element.querySelector(this.rightArrow);
+              newNextBtn.addEventListener("click", () => {
+                     if (this.currentIndex === this.slides.length - 1) {
+                            this.currentIndex = 0;
+                     } else {
+                            this.currentIndex++;
+                     }
+                     this.setActiveSlide();
+              });
        }
-       newSlidesArray[newCurIndexSlide].style.display = "block";//Для отображения слайда с определённым индексом i
+
+       prevSlide() {
+              //let newPrevBtn = this.element.querySelector(".carousel__switch .prev");
+              let newPrevBtn = this.element.querySelector(this.leftArrow);
+              newPrevBtn.addEventListener("click", () => {
+                     if (this.currentIndex === 0) {
+                            this.currentIndex = this.slides.length -1;
+                     } else {
+                            this.currentIndex--;
+                     }
+                     this.setActiveSlide();
+              });
+       }
 }
+
+//Массив со слайдерами из блока "carousel".
+//Для каждого элемента массива создаётся сущность, которой в качестве св-в передаётся всё необходимое
+let newSlider = document.querySelectorAll(".new .carousel");
+newSlider.forEach(item => {
+       new NewParentSlider({
+              startIndex: 0,
+              element: item,
+              subClasses: {
+                     childSlide: ".slide",
+                     leftArrow: ".prev",
+                     rightArrow: ".next"
+              }
+       });
+});
+
+// newSlider.forEach(item => {
+//        new NewParentSlider(0, item, ".slide");
+// });
+
+/*class NewInstanceSlider extends NewParentSlider {
+       constructor(startIndex, element, subElement) {
+              super(startIndex, element);
+              this.subElement = subElement;
+              this.likes = this.subElement.querySelectorAll(".slide .like");
+
+              this.likesCounter();
+       }
+
+       //Функция-счётчик лайков
+       likesCounter() {
+              let counter = 0;
+              return function() {
+                     return counter++;
+              }
+       }
+}*/
+
+//let likesBtn = document.querySelectorAll(".carousel .slide");
+// newSlider.forEach(item => {
+//        new NewInstanceSlider(0, item, likesBtn);
+// });
