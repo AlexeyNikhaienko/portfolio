@@ -6,7 +6,6 @@
 .new {
        height: auto;/*min-height = 530px*/
        text-align: center;
-       border: 2px solid red;
 }
 
 /*Стили для элементов блока*/
@@ -21,7 +20,6 @@
        width: 100%;/*266px*/
        height: auto;
        text-align: center;
-       border: 1px solid blue;
 }
 
 /*Стили для названий вкладок*/
@@ -41,7 +39,7 @@
        display: -webkit-box;
        display: flex;
        -webkit-box-pack: justify;
-               justify-content: space-between;
+              justify-content: space-between;
 }
 
 .headline {
@@ -63,7 +61,6 @@
 .tabs {
        width: 100%;
        height: auto;
-       border: 1px solid green;
 }
 
 /*Стили для блока с управлением слайдером*/
@@ -77,33 +74,16 @@
 
 .control {
        font-family: "Cormorant-M", serif;
-       font-size: 1.75rem;/*28px*/
        color: #352F2F;
-}
-
-.left {
-       left: 0;
-}
-
-.right {
-       right: 0;
 }
 
 /*Стили для слайдеров внутри вкладок*/
 .tabs__carousel {
        position: relative;
-       display: -webkit-box;
-       display: flex;
-       -webkit-box-pack: justify;
-               justify-content: space-between;
-}
-
-.tabs__carousel:not(:last-of-type) {
-       margin-right: 2.77%;/*20px*/
 }
 
 .carousel {
-       width: calc((100% - 5.54%) / 3);/*(обёртка - отступы) / число слайдов*/
+       width: auto;
        height: auto;
 }
 
@@ -114,11 +94,11 @@
 }
 
 .slide {
-       width: 100%;/*min 266px*/
+       width: 100%;/*min 288px*/
        height: auto;
 }
 
-.active {
+.slide-active {
        display: block;
 }
 
@@ -126,7 +106,7 @@
 .picture {
        width: auto;
        height: auto;
-       max-width: 100%;/*266px*/
+       max-width: 100%;/*288px*/
 }
 
 /*Вывод общего количества лайков*/
@@ -171,7 +151,7 @@
 
 /*Название товара*/
 .heading {
-       font-size: 1.125rem;
+       font-size: 1.125rem;/*18px*/
 }
 
 /*Блок с ценой*/
@@ -242,6 +222,19 @@
        .holder__tabs {
               margin-top: 5.2%;/*15px*/
        }
+
+       /*Стили для блока с управлением слайдером*/
+       .control {
+              font-size: 1.75rem;/*28px*/
+       }
+
+       .left {
+              left: 0;
+       }
+
+       .right {
+              right: 0;
+       }
 }
 
 /*При горизонтальном расположении устройства*/
@@ -265,6 +258,31 @@
        .holder__tabs {
               margin-top: 2.25%;/*15px*/
        }
+
+       /*Стили для блока с управлением слайдером*/
+       .control {
+              font-size: 2.25rem;/*28px*/
+       }
+
+       .left {
+              left: calc((100% - 350px) / 4);
+       }
+
+       .right {
+              right: calc((100% - 350px) / 4);
+       }
+}
+
+@media screen and (max-width: 767px) {
+       /*Стили для слайдеров внутри вкладок*/
+       .tabs__carousel {
+              display: none;
+       }
+
+       .tabs-active {
+              display: block;
+              margin: 0 auto;
+       }
 }
 
 @media screen and (min-width: 768px) {
@@ -274,14 +292,30 @@
               padding: 0;
        }
 
-       /*Стили для блока с управлением слайдером*/
+       /*Стили для названий вкладок*/
+       .headline {
+              font-size: 1.5rem;/*16px*/
+       }
+
+        /*Стили для блока с управлением слайдером*/
        .tabs__control {
               display: none;
        }
 
-       /*Стили для названий вкладок*/
-       .headline {
-              font-size: 1.5rem;/*16px*/
+       /*Стили для слайдеров внутри вкладок*/
+       .tabs__carousel {
+              display: -webkit-box;
+              display: flex;
+              -webkit-box-pack: justify;
+                      justify-content: space-between;
+       }
+
+       .tabs__carousel:not(:last-of-type) {
+              margin-right: 2.77%;/*20px*/
+       }
+
+       .carousel {
+              width: calc((100% - 5.54%) / 3);/*(обёртка - отступы) / число слайдов*/
        }
 
        /*Стили для блока со ссылкой на весь каталог*/
