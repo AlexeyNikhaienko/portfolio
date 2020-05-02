@@ -98,24 +98,24 @@
                justify-content: space-between;
 }
 
-.carousel {
-       /*width установлено ч/з JS*/
-       width: auto;
-       height: auto;
-       /*border: 1px solid yellow;*/
+.tabs__carousel:not(:last-of-type) {
+       margin-right: 2.77%;/*20px*/
 }
 
+.carousel {
+       width: calc((100% - 5.54%) / 3);/*(обёртка - отступы) / число слайдов*/
+       height: auto;
+}
+
+/*Стили для слайдеров внутри слайдеров*/
 .carousel__slide {
        position: relative;
        display: none;
 }
 
-/*Стили для слайдеров внутри слайдеров*/
 .slide {
-       /*width установлено ч/з JS*/
-       width: auto;/*min 266px*/
+       width: 100%;/*min 266px*/
        height: auto;
-       border: 1px solid red;
 }
 
 .active {
@@ -129,18 +129,34 @@
        max-width: 100%;/*266px*/
 }
 
-/*Кнопка "лайк"*/
-.slide__like {
+/*Вывод общего количества лайков*/
+/*Блок-обёртка для элементов*/
+.slide__counter {
        position: absolute;
        right: 3.76%;/*10px*/
        top: 2.35%;/*10px*/
 }
 
-.like {
-       width: 7.14%;/*19px*/
-       height: 4.57%;/*17px*/
+.counter {
+       width: auto;
+       height: auto;
+       text-align: center;
+       background-color: rgba(255,255,255,0.5);
 }
 
+/*Кнопка "лайк"*/
+.like {
+       width: 1.125rem;/*18px*/
+       height: 1.125rem;/*18px*/
+}
+
+/*Поле для вывода количества лайков*/
+.amount {
+       font-family: "Cormorant-M", serif;
+       font-size: 1.25rem;/*20px*/
+       line-height: 1;
+       color: #342B2B;
+}
 
 /*Стили для блока с названием и ценой товара*/
 .caption {
@@ -151,7 +167,6 @@
        line-height: 1.12;
        color: #342B2B;
        text-align: center;
-       border: 1px solid red;
 }
 
 /*Название товара*/
@@ -161,9 +176,10 @@
 
 /*Блок с ценой*/
 .container {
-       display: inline;
+       width: auto;
+       height: auto;
+       max-width: 100%;
        text-align: center;
-       border: 1px solid green;
 }
 
 /*Блок с линией (расположен перед ценой)*/
@@ -182,19 +198,18 @@
 
 /*Стили для блока с управлением слайдерами*/
 .carousel__switch {
+       display: inline;
        position: absolute;
-       left: 8%;/*10px*/
-       bottom: 20%;
+       left: 3.76%;/*10px*/
+       bottom: 18%;/*10px*/
 }
 
 .switch {
-       width: auto;
-       height: auto;
        font-family: "Cormorant-M", serif;
        font-size: 1.25rem;
-       line-height: 1.12;
+       line-height: 1;
        color: #342B2B;
-       border: 2px solid red;
+       background-color: rgba(255,255,255,0.5);
 }
 
 /*Стили для блока со ссылкой на весь каталог*/
@@ -203,7 +218,6 @@
        font-size: 0.875rem;/*14px*/
        line-height: 1.12;
        color: #342B2B;
-       border: 1px solid yellow;
 }
 
 /*Стили для отзывчивости*/
@@ -254,6 +268,12 @@
 }
 
 @media screen and (min-width: 768px) {
+       /*Общие стили для блока "New"*/
+       .new {
+              width: 95.05%;/*730px*/
+              padding: 0;
+       }
+
        /*Стили для блока с управлением слайдером*/
        .tabs__control {
               display: none;
