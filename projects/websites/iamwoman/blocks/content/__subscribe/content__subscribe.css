@@ -85,20 +85,9 @@
        margin-bottom: 2.43%;/*7px*/
 }
 
-.button {
+.button--size__m {
        width: auto;/*156px*/
        height: auto;/*36px*/
-       border: 0;
-       outline: 0;
-       border-radius: 0.125rem;/*2px*/
-       background-color: #91171D;
-}
-
-.submit {
-       font-family: "Cormorant-R", serif;
-       font-size: 1rem;/*16px*/
-       line-height: 1.12;
-       color: #fff;
 }
 
 /*Стили для блока с дополнительной информацией*/
@@ -148,7 +137,7 @@
               margin-bottom: 2.43%;/*7px*/
        }
 
-       .button {
+       .button--size__m  {
               padding: 4.2% 11.35%;/*10px 27px*/
        }
 }
@@ -180,7 +169,7 @@
        }
 
        /*Стили для кнопки отправки формы*/
-       .button {
+       .button--size__m  {
               padding: 1.57% 4.23%;/*10px 27px*/
        }
 }

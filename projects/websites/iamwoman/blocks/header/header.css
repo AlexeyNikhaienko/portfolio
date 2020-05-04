@@ -15,12 +15,9 @@
 /*Общие стили для блока с иконками, "бургером"*/
 .header__nav {
        position: relative;
-       display: -webkit-box;
               display: flex;
-       -webkit-box-pack: justify;
-              justify-content: space-between;
-       -webkit-box-align: center;
-              align-items: center;
+       justify-content: space-between;
+       align-items: center;
 }
 
 .nav {
@@ -31,11 +28,8 @@
 /*Стили для "бургера" меню*/
 .nav__burg,
 .nav-toggle__burg {
-       display: -webkit-box;
               display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-              flex-direction: column;
+       flex-direction: column;
 }
 
 .burg {
@@ -63,14 +57,29 @@
        width: 54.55%;
 }
 
+/*Стили для блока с логотипом*/
+.logo {
+       height: auto;
+       font-family: "Roboto-M", sans-serif;
+       text-align: center;
+       color: #342B2B;
+}
+
+.name {
+       font-size: 1.25rem;/*20px*/
+       line-height: 1.12;
+}
+
+.subname {
+       font-size: 0.625rem;/*10px*/
+       line-height: 1.12;
+}
+
 /*Стили для блока с иконками*/
 .nav__wrap {
-       display: -webkit-box;
-              display: flex;
-       -webkit-box-pack: justify;
-              justify-content: space-between;
-       -webkit-box-align: center;
-              align-items: center;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
 }
 
 .wrap {
@@ -89,7 +98,6 @@
        top: 0;
        left: -100%;
        z-index: 10;
-       -webkit-transition: all 0.7s ease-out;
        transition: all 0.7s ease-out;
 }
 
@@ -103,15 +111,10 @@
 /*Общие стили для блока-обёртки*/
 .menu-main__inner {
        position: relative;
-       display: -webkit-box;
        display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-               flex-direction: column;
-       -webkit-box-pack: center;
-               justify-content: center;
-       -webkit-box-align: center;
-               align-items: center;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
 }
 
 .inner {
@@ -123,12 +126,9 @@
 /*Стили для блока-обёртки с кнопками*/
 .inner__nav-toggle {
        position: absolute;
-       display: -webkit-box;
        display: flex;
-       -webkit-box-pack: justify;
-               justify-content: space-between;
-       -webkit-box-align: center;
-               align-items: center;
+       justify-content: space-between;
+       align-items: center;
 }
 
 .nav-toggle {
@@ -139,12 +139,9 @@
 /*Стили для кнопки, которая закрывает меню*/
 .nav-toggle__btn {
        position: relative;
-       display: -webkit-box;
               display: flex;
-       -webkit-box-pack: center;
-              justify-content: center;
-       -webkit-box-align: center;
-              align-items: center;
+       justify-content: center;
+       align-items: center;
 }
 
 .btn {
@@ -165,12 +162,10 @@
 
 /*Поворот линий кнопки*/
 .stripe--rtt__lft {
-       -webkit-transform: rotate(135deg);
        transform: rotate(135deg);
 }
 
 .stripe--rtt__rgt {
-       -webkit-transform: rotate(-135deg);
        transform: rotate(-135deg);
        top: 40%;
 }
@@ -188,12 +183,9 @@
 /*Список меню*/
 /*Стили для блока-обёртки*/
 .inner__box {
-       display: -webkit-box;
        display: flex;
-       -webkit-box-pack: justify;
-               justify-content: space-between;
-       -webkit-box-align: baseline;
-               align-items: baseline;
+       justify-content: space-between;
+       align-items: baseline;
 }
 
 .box {
@@ -278,24 +270,6 @@
        /*Общие стили для навигации, расположенной в шапке сайта)*/
        .header {
               padding: 0 6.51%;/*l/r 50px*/
-       }
-
-       /*Стили для блока с логотипом*/
-       .logo {
-              height: auto;
-              font-family: "Roboto-M", sans-serif;
-              text-align: center;
-              color: #342B2B;
-       }
-
-       .name {
-              font-size: 1.25rem;/*20px*/
-              line-height: 1.12;
-       }
-
-       .subname {
-              font-size: 0.625rem;/*10px*/
-              line-height: 1.12;
        }
 
        /*Стили для блока-обёртки с кнопками*/
