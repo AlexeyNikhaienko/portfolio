@@ -68,6 +68,22 @@
                             </div>
                      </div>
               </nav>
+              <div class="header__modal modal">
+                     <form class="modal__login-form login-form" action="/login" id="user" method="POST">
+                            <div class="login-form__logo logo">
+                                   <p class="name">I AM WOMAN</p>
+                                   <p class="subname">MOSCOW</p>
+                            </div>
+                            <span class="login-form__close-form close-form">&times;</span>
+                            <input class="login-form__field-form field-form" type="email" autocomplete="on" name="email" placeholder="Ваш E-mail или ID">
+                            <input class="field-form" type="password" autocomplete="on" name="password" placeholder="Пароль">
+                            <a class="login-form__remind remind" href="#">Забыли пароль?</a>
+                            <button class="login-form__button button button--size__l" type="submit" form="user">
+                                   <span class="submit">Войти</span>
+                            </button>
+                            <a class="login-form__link link link--color__grey" href="#">Зарегистрироваться</a>
+                     </form>
+              </div>
        </header>
 
 <!--Общий блок, который содержит весь контент (за исключением подвала)-->
@@ -660,10 +676,10 @@
 
        <!--Блок подписки на рассылку-->
               <div class="content__subscribe subscribe">
-                     <form class="form" id="user" action="/subscribe" method="POST">
+                     <form class="form" id="subscribe" action="/subscribe" method="POST">
                             <p class="form__legend legend">Подпишись на новости<br> I AM WOMEN<br> и получи скидку 5% на следующую покупку</p>
-                            <input class="form__email email" type="email" name="emailaddress" placeholder="Ваш E-mail"><br>
-                            <button class="form__button button" type="submit" form="user">
+                            <input class="form__email email" type="email" autocomplete="on" name="emailaddress" placeholder="Ваш E-mail"><br>
+                            <button class="form__button button button--size__m" type="submit" form="subscribe">
                                    <span class="submit">Подписаться</span>
                             </button>
                             <p class="info">Подписываясь на новости, Вы даёте согласие на обработку персональных данных</p>
@@ -690,6 +706,7 @@
 
 <!--Подключение скриптов-->
        <script src="blocks/header/header.js" defer></script>
+       <script src="blocks/header/loginForm.js" defer></script>
        <script src="blocks/content/__collection/produckt__slider.js" defer></script>
        <script src="blocks/content/__new/new__slider.js" defer></script>
        <script src="blocks/content/__blog/blog__slider.js" defer></script>

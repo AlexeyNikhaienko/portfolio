@@ -1,0 +1,164 @@
+/*Общие стили для блока-обёртки с регистрацией*/
+.header__modal {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  z-index: 12;
+  transition: all 0.7s ease-out;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+}
+
+/*Стили для блока формы регистрации*/
+.modal__login-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+/*Стили для кнопки, скрывающей форму регистрации*/
+.login-form__close-form {
+  position: absolute;
+  right: 5%;
+  top: 0%;
+}
+
+.close-form {
+  font-family: "Cormorant-SB", serif;
+  font-size: 3rem;
+  line-height: 1.12;
+  color: #342B2B;
+}
+
+/*Стили для полей ввода информации*/
+.field-form {
+  width: 100%;
+  height: auto;
+  border: 1px solid #342B2B;
+  border-radius: 0.125rem;
+  outline: 0;
+  font-family: "Cormorant-R", serif;
+  font-size: 1rem;/*16px*/
+  line-height: 1.12;
+  text-align: center;
+  color: #342B2B;
+  background-color: transparent;
+}
+
+/*Стили для блока "Забыл пароль"*/
+.login-form__remind {
+  align-self: start;
+}
+
+.remind {
+  font-family: "Cormorant-R", serif;
+  font-size: 0.75rem;/*10px*/
+  line-height: 1.12;
+  text-decoration: none;
+}
+
+/*Стили для кнопки отравки формы*/
+.button {
+  border: 0;
+  outline: 0;
+  border-radius: 0.125rem;/*2px*/
+  background-color: #91171D;
+}
+
+.button--size__l {
+  width: 100%;
+  height: auto;
+}
+
+.submit {
+  font-family: "Cormorant-R", serif;
+  font-size: 1rem;/*16px*/
+  line-height: 1.12;
+  color: #fff;
+}
+
+/*Стили для блока "Зарегистрироваться"*/
+.login-form__link {
+  align-self: start;
+}
+
+/*Стили для отзывчивости*/
+/*При вертикальном расположении устройства*/
+@media screen and (orientation: portrait) {
+  /*Стили для блока формы регистрации*/
+  .login-form {
+    padding: 0 10%;
+  }
+
+  /*Общие стили для блока с логотипом,
+  поля ввода адреса почты, кнопки отравки формы*/
+  .login-form__logo,
+  .login-form__field-form,
+  .login-form__button {
+    margin-bottom: 6.25%;
+  }
+
+  /*Стили для полей ввода информации*/
+  .field-form {
+    padding: 5% 0;
+  }
+
+  /*Стили для блока "Забыл пароль"*/
+  .login-form__remind {
+    margin: 3.13% 0 6.25% 0;
+  }
+
+  /*Стили для кнопки отравки формы*/
+  .button--size__l {
+    padding: 5% 0;
+  }
+}
+
+/*При горизонтальном расположении устройства*/
+@media screen and (orientation: landscape) {
+  /*Стили для блока формы регистрации*/
+  .login-form {
+    padding: 0 15%;
+  }
+
+  /*Общие стили для блока с логотипом,
+  поля ввода адреса почты, кнопки отравки формы*/
+  .login-form__logo,
+  .login-form__field-form,
+  .login-form__button {
+    margin-bottom: 3.125%;
+  }
+
+  /*Стили для полей ввода информации*/
+  .field-form {
+    padding: 3% 0;
+  }
+
+  /*Стили для блока "Забыл пароль"*/
+  .login-form__remind {
+    margin: 1.6% 0 3.125% 0;
+  }
+
+  /*Стили для кнопки отравки формы*/
+  .button--size__l {
+    padding: 3% 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /*Стили для блока "Забыл пароль"*/
+  .remind {
+    font-size: 0.875rem;/*10px*/
+  }
+}
