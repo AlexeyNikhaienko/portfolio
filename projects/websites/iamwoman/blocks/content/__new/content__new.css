@@ -36,10 +36,8 @@
 .input[id="dress"]:checked ~ .dress,
 .input[id="blouse"]:checked ~ .blouse,
 .input[id="skirts"]:checked ~ .skirts {
-       display: -webkit-box;
        display: flex;
-       -webkit-box-pack: justify;
-              justify-content: space-between;
+       justify-content: space-between;
 }
 
 .headline {
@@ -67,8 +65,7 @@
 .tabs__control {
        position: absolute;
        top: 50%;
-       -webkit-transform: translateY(-50%);
-               transform: translateY(-50%);
+       transform: translateY(-50%);
        z-index: 1;
 }
 
@@ -99,6 +96,8 @@
 }
 
 .slide-active {
+       -webkit-animation: current linear 0.7s;
+               animation: current linear 0.7s;
        display: block;
 }
 
@@ -198,6 +197,24 @@
        font-size: 0.875rem;/*14px*/
        line-height: 1.12;
        color: #342B2B;
+}
+
+@-webkit-keyframes current {
+       from {
+              opacity: 0;
+       }
+       to {
+              opacity: 1;
+       }
+}
+
+@keyframes current {
+       from {
+              opacity: 0;
+       }
+       to {
+              opacity: 1;
+       }
 }
 
 /*Стили для отзывчивости*/
@@ -304,10 +321,8 @@
 
        /*Стили для слайдеров внутри вкладок*/
        .tabs__carousel {
-              display: -webkit-box;
               display: flex;
-              -webkit-box-pack: justify;
-                      justify-content: space-between;
+              justify-content: space-between;
        }
 
        .tabs__carousel:not(:last-of-type) {
