@@ -1,12 +1,9 @@
 /*Общие стили для блока "collection"*/
 .content__collection {
        position: relative;
-       display: -webkit-box;
        display: flex;
-       -webkit-box-pack: end;
-               justify-content: flex-end;
-       -webkit-box-align: center;
-               align-items: center;
+       justify-content: flex-end;
+       align-items: center;
 }
 
 .collection {
@@ -90,9 +87,7 @@
 .produckt__wrapper {
        position: relative;
        left: 0;
-       display: -webkit-box;
        display: flex;
-       -webkit-transition: all 0.7s ease-in-out;
        transition: all 0.7s ease-in-out;
 }
 
@@ -112,6 +107,8 @@
 }
 
 .img--current {
+       -webkit-animation: current linear 0.7s;
+               animation: current linear 0.7s;
        display: block;
 }
 
