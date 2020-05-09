@@ -4,6 +4,7 @@
 /*Import styles for block "Header"*/
 @import url("blocks/header/header.css");
 @import url("blocks/header/loginForm.css");
+@import url("blocks/header/searcgField.css");
 
 /*Import styles for block "Content":
 /*1) for block "Collection"*/

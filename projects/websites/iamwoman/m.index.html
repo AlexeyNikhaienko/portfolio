@@ -68,6 +68,7 @@
                             </div>
                      </div>
               </nav>
+       <!--Форма регистрации на сайте, которая появляется при нажатии на "user"/ "shop". По умолчанию скрыта-->
               <div class="header__modal modal">
                      <form class="modal__login-form login-form" action="/login" id="user" method="POST">
                             <div class="login-form__logo logo">
@@ -83,6 +84,13 @@
                             </button>
                             <a class="login-form__link link link--color__grey" href="#">Зарегистрироваться</a>
                      </form>
+              </div>
+       <!--Поисковая строка, которая появляется при нажатии на "search". По умолчанию скрыта-->
+              <div class="header__search-field search-field">
+                     <span class="search-field__close-search close-search">&times;</span>
+                     <div class="search-field__input-field input-field">
+                            <input class="request" type="text" placeholder="Поиск">
+                     </div>
               </div>
        </header>
 
@@ -707,6 +715,7 @@
 <!--Подключение скриптов-->
        <script src="blocks/header/header.js" defer></script>
        <script src="blocks/header/loginForm.js" defer></script>
+       <script src="blocks/header/searchField.js" defer></script>
        <script src="blocks/content/__collection/produckt__slider.js" defer></script>
        <script src="blocks/content/__new/new__slider.js" defer></script>
        <script src="blocks/content/__blog/blog__slider.js" defer></script>
