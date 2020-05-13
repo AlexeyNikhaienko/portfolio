@@ -31,9 +31,12 @@
        width: 100%;
        height: auto;
        font-family: "Cormorant-l", serif;
-       font-size: 1rem;
        line-height: 1.12;
        color: #342B2B;
+}
+
+.par--size__m {
+       font-size: 1rem;
 }
 
 /*Стили для отзывчивости*/
@@ -57,13 +60,9 @@
        /*Общие стили для блока-обёртки, который содержит историю бренда*/
        .history__block {
               top: 0;
-              display: -webkit-box;
                      display: flex;
-              -webkit-box-orient: vertical;
-                     -webkit-box-direction: normal;
-                            flex-direction: column;
-              -webkit-box-pack: center;
-                      justify-content: center;
+              flex-direction: column;
+              justify-content: center;
        }
 
        .block {
@@ -124,8 +123,7 @@
        /*Общие стили для блока-обёртки, который содержит историю бренда*/
        .history__block {
               top: 50%;
-              -webkit-transform: translateY(-50%);
-                      transform: translateY(-50%);
+              transform: translateY(-50%);
        }
 
        .block {
