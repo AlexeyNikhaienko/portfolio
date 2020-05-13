@@ -57,6 +57,7 @@ const productsData = [
 const btnVisibleSearchForm = document.querySelector(".header .search");//Кнопка для показа блока поиска
 const btnHideSearchForm = document.querySelector(".header .close-search");//Кнопка для скрытия блока поиска
 const searchBlock = document.querySelector(".header .search-block");//Блок поиска в целом
+const inputFieldBlock = document.querySelector(".header .search-form");//блок с формой
 const request = document.querySelector(".header .request");//Поисковая строка
 
 //Установка обработчиков событий на кнопки; при нажатии на кнопки форма поиска появляется/ скрывается
@@ -68,6 +69,15 @@ btnVisibleSearchForm.addEventListener("click", () => {
 btnHideSearchForm.addEventListener("click", () => {
   //Очистка стилей для блока поиска
   searchBlock.removeAttribute("style", "transform");
+
+  //Очиста поиска
+  request.value = "";
+  if (inputFieldBlock.childElementCount > 1) {
+    inputFieldBlock.removeChild(inputFieldBlock.lastChild);
+  }
+  if (searchBlock.childElementCount > 2) {
+    searchBlock.removeChild(searchBlock.lastChild);
+  }
 });
 
 //Объявление переменной для таймера, по истечении времени которого выполняется поиск
@@ -80,7 +90,7 @@ request.addEventListener("input", e => {
   //Перевод запроса в нижний регистр с удалением пробелов до и после него
   let req = target.value.toLowerCase().trim();
 
-  const inputFieldBlock = document.querySelector(".header .search-form");//блок с формой
+  //const inputFieldBlock = document.querySelector(".header .search-form");//блок с формой
   const clearBtn = document.createElement("span");//кнопка очистки поля ввода
 
   //На кнопку "очистить" устанавливается событие по полной очистке поля поиска
@@ -177,7 +187,7 @@ function createResultBlock(desiredItem) {
 
         li.classList.add("list-output__item", "item");
         innerRef.classList.add("link", "link--color__grey");
-        span.classList.add("coincidence");
+        span.classList.add("price--size__m");
 
         innerRef.href = "#";
         innerRef.textContent = item.name;

@@ -157,8 +157,6 @@
 .container {
        width: auto;
        height: auto;
-       max-width: 100%;
-       text-align: center;
 }
 
 /*Блок с линией (расположен перед ценой)*/
@@ -170,7 +168,7 @@
 }
 
 /*Цена товара*/
-.price {
+.price--size__s {
        padding-left: 2%;
        font-size: 0.875rem;
 }
