@@ -1,187 +1,161 @@
+/*Общие стили для слайдера*/
 .collection__produckt {
-       width: 50%;
-       height: 100vh;
        position: relative;
-       top: -10vh;
-       background-color: rgba(255,255,255, 0.42);
-}
-.collection__produckt:before {
-       content: "";
-       background-image: url(img/prod-bcg1.jpg);
-       background-position: right center;
-       background-size: cover;
-       background-repeat: no-repeat;
-       background-color: #F3ECE4;
-       position: absolute;
-       top: 0;
-       right: 0;
-       width: 100%;
-       height: 100%;
-       z-index: -1;
-}
-.produckt__slider {
-       position: relative;
-       top: 10vh;
-       left: -15%;
-       width: 70%;
-       height: 80vh;
-       overflow: hidden;
-}
-.slider__item,
-.slider__img,
-.produckt__img {
-       width: 100%;
-       height: 100%;
-}
-.slider__item,
-.slider__img {
-       position: relative;
-}
-.produckt__descript {
-       position: absolute;
-       bottom: 10%;
-       left: 50%;
-       -webkit-transform: translate(-50%, 0);
-       transform: translate(-50%, 0);
-       width: 65%;
-       height: 15%;
-       display: -webkit-box;
-       display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-       flex-direction: column;
-       -webkit-box-pack: center;
-       justify-content: center;
-       -webkit-box-align: center;
-       align-items: center;
-       background-color: rgba(255,255,255, 0.8);
-       font-family: "Cormorant-SB", serif;
-       color: #91171D;
-}
-.produckt__name {
-       font-size: 1.5rem;
-}
-.produckt__elem-wrap {
-       position: relative;
-       width: 50%;
-       height: auto;
-       text-align: right;
-}
-.produckt__line {
-       position: absolute;
-       bottom: 0;
-       display: block;
-       width: 37%;
-       height: 1px;
-       background-color: #91171D;
-}
-.produckt__price {
-       font-size: 1.11rem;
-}
-.produckt__link {
-       position: absolute;
-       top: 82%;
-       right: 14.7%;
-       font-family: "Cormorant-l", serif;
-       font-size: 1.125rem;
-       color: #342B2B;
-}
-.slider__number {
-       position: relative;
-       top: 12%;
-       left: 15%;
-       width: 17%;
-       height: 9%;
-       color: #91171D;
-       text-align: center;
-}
-.slider__prev,
-.slider__next {
-       position: absolute;
-       font-family: "Cormorant-R", serif;
-       font-size: 2.25rem;
-}
-.slider__prev {
-       left: 0;
-}
-.slider__next {
-       right: 0;
-}
-.slider__current {
-       position: relative;
-       top: -20%;
-       font-family: "Cormorant-M", serif;
-       font-size: 2.25rem;
-}
-.slider__slash {
-       position: relative;
-       font-family: "Cormorant-M", serif;
-       font-size: 2.25rem;
-} 
-.slider__total {
-       font-family: "Cormorant-R", serif;
-       font-size: 1.5rem;
-       color: #342B2B;
-}
-.collection__pagination {
-       top: 40%;
-}
-/*Стили для экранов размерами до 500px включительно*/
-@media screen and (max-width: 450px) {
-       .collection__produckt {
-              width: 100%;
-       }
-       .collection__produckt:before {
-              background-position: 175% 30%;
-              background-size: auto 120%;
-       }
-       .produckt__slider {
-              left: calc(100% - 75%);
-       }
-}
-/*Стили для экранов размерами от 501px до 1023px включительно*/
-@media screen and (min-width: 501px) and (max-width: 1023px) {
-       .collection__produckt {
-              width: 40%;
-              height: 100vh;
-       }
-       .collection__produckt:before {
-              background-position: 85% 50%;
-       }
-       .produckt__slider {
-              left: -43%;
-              width: 128%;
-              height: 78vh;
-       }
-       .produckt__descript {
-              width: 80%;
-              height: 10%;
-       }
-       .produckt__link {
-              right: 7%;
-              font-size: 1rem;
-       }
-       .slider__number {
-              width: 28%;
-              left: 5%;
-       }
-       .slider__current,
-       .slider__slash {
-              top: 5%;
-              font-size: 1.75rem;
-       }
-       .slider__total {
-              font-size: 1.25rem;
-       }
-       .content__pagination {
-              display: none;
-       }
 }
 
-@media screen and (min-width: 1024px) {
-       .slider__prev,
-       .slider__next,
-       .produckt__link {
-       cursor: pointer;
-       }
+.produckt {
+       width: 50%;/*720px*/
+       height: 100%;/*840px = 100vh*/
+       background-color: #F3ECE4;
+       background-position: 50% 50%;
+       background-size: 100% 100%;
+       background-repeat: no-repeat;
+       border: 2px solid blue;
+}
+
+.produckt::after {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(236,229,225, 0.42);
+}
+
+/*Стили для блока-обёртки*/
+.produckt__wrapper {
+       position: relative;
+       left: -14.58%;/*105px*/
+       top: 9.52%;/*80px*/
+       z-index: 1;
+       display: flex;
+       transition: all 0.7s ease-in-out;
+}
+
+.wrapper {
+       width: auto;
+       max-width: 84.03%;/*605px*/
+       height: 80.95%;/*680px*/
+       border: 2px solid yellow;
+}
+
+/*Общие стили для слайдера*/
+.wrapper__prod {
+       position: relative;
+       display: none;
+}
+
+.prod {
+       width: 100%;
+       height: 100%;
+}
+
+.prod--current {
+       -webkit-animation: current linear 0.7s;
+               animation: current linear 0.7s;
+       display: block;
+}
+
+/*Стили для элементов слайдера*/
+/*Слайды*/
+.img {
+       width: 100%;
+       height: 100%;
+}
+
+/*Общие стили для блока с названием и ценой товара (на слайде)*/
+.prod__caption {
+       position: absolute;
+       left: 50%;
+       bottom: 13.22%;/*80px*/
+       transform: translateX(-50%);
+}
+
+.caption {
+       width: auto;
+       height: auto;
+       text-align: center;
+       border: 1px solid blue;
+}
+
+.caption--size__m {
+       padding: 3.31% 4.3%;/*t/b 20px 26px*/
+       font-family: "Cormorant-SB", serif;
+       color: #91171D;
+       background-color: rgba(236,229,225, 0.8);
+}
+
+/*Стили для блока с названием товара*/
+.heading--size__m {
+       font-size: 1.5rem;/*24px*/
+       white-space: nowrap;
+}
+
+/*Стили для блока с ценой товара*/
+.shape--color__red {
+       background-color: #91171D;
+}
+
+.shape--pos__bottom {
+       width: 19.62%;/*72px*/
+       height: 0.0625rem;/*1px*/
+}
+
+/*Стили для блока с переключателем слайдера*/
+.wrapper__toggle {
+       position: absolute;
+       left: 50%;/*140px*/
+       bottom: -10%;/*5px*/
+       z-index: 1;
+       transform: translateX(-50%);
+       border: 2px solid red;
+}
+
+.toggle {
+       min-width: 18.87%;/*114px*/
+       height: auto;
+}
+
+.left,
+.cur,
+.right {
+       font-family: "Cormorant-M", serif;
+       color: #91171D;
+}
+
+.left,
+.right {
+       font-size: 1.25rem;/*20px*/
+}
+
+.cur {
+       padding-left: 10%;
+       font-size: 2.25rem;
+}
+
+.toggle__total {
+       position: relative;
+       top: 0.3125rem;/*5px*/
+}
+
+.total {
+       padding-right: 10%;
+       font-family: "Cormorant-R",serif;
+       font-size: 1.25rem;/*20px*/
+       color: #342B2B;
+}
+
+/*Стили для блока со ссылкой на весь каталог*/
+.wrapper__link-more {
+       position: absolute;
+       right: 0;
+       bottom: -7%;/*27px*/
+       z-index: 1;
+}
+
+.link-more {
+       font-family: "Cormorant-l", serif;
+       font-size: 1.125rem;/*18px*/
+       color: #342B2B;
 }

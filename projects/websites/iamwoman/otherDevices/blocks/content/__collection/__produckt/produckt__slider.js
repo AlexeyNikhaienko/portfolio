@@ -1,54 +1,73 @@
-//Объявление переменых, которые содержат все слайды и кнопки управления
-let prodSlidesArray = document.querySelectorAll(".slider__item");
-let prodLeftArrow = document.querySelector(".slider__prev");
-let prodRightArrow = document.querySelector(".slider__next");
+//Объявление переменых
+//Родительский блок для слайдера
+const collectionArea = document.querySelector(".collection .produckt");
+//Массив со слайдами
+const sliderCollectionArr = document.querySelectorAll(".wrapper .prod");
+//Элементы переключения слайдов
+const collectionLeftArrow = document.querySelector(".wrapper .left");
+const collectionRightArrow = document.querySelector(".wrapper .right");
 
-//Объявление переменной, служащей для хранения индекса текущего слайда
+//Переменная, которая будет хранить значение текущего индекса слайда
 let curIndexSlide = 0;
 
-//Чтобы показывался первый слайдер при запуске сайта + чтобы слайдер срабатывал при первом же клике на кнопку управления
-prodShowSlider();
-//setTimeout(prodShowSlider, 3000);
-//Переменная для хранения номера текущего слайдера, т.е. имеет вид 01, 02 и т.д.
-let counterSlide = 1;
-//Чтобы корректно показывался номер первого слайдера при запуске сайта
-showNumberSlide();
+//Автослайдер
+//Через сколько времени (мс) показывается новый слайд
+const collectionIntervalTime = 5000;
+let collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
 
-//Установка "слушателей" на кнопки навигации
-prodLeftArrow.addEventListener("click", function() {
-       if (curIndexSlide - 1 < 0) {
-              curIndexSlide = prodSlidesArray.length - 1;
-              counterSlide = prodSlidesArray.length;
-       } else {
-              curIndexSlide--;
-              counterSlide = curIndexSlide + 1;
-       }
-       prodShowSlider();
-       showNumberSlide();
-});
-prodRightArrow.addEventListener("click", function() {
-       if (curIndexSlide + 1 > prodSlidesArray.length - 1) {
-              curIndexSlide = 0;
-              counterSlide = 1;
-       } else {
-              curIndexSlide++;
-              counterSlide = curIndexSlide + 1;
-       }
-       prodShowSlider();
-       showNumberSlide();
-});
+//На кнопки устанавливаются слушатели событий, чтобы переключать слайды
+collectionLeftArrow.addEventListener("click", prevСollectionSlide);
 
-//Функция, которая показывает слайды
-function prodShowSlider() {
-       //Цикл для скрытия ВСЕХ слайдов массива
-       for (let i = 0; i < prodSlidesArray.length; i++) {
-              prodSlidesArray[i].style.display = "none";
+collectionRightArrow.addEventListener("click", nextСollectionSlide);
+
+//Функция, которая показывает слайды,
+//а также устанавливает их как фоновое изображение для всего блока
+function showСollectionSlides() {
+       for (let i = 0; i < sliderCollectionArr.length; i++) {
+              sliderCollectionArr[i].classList.remove("prod--current");
        }
-       prodSlidesArray[curIndexSlide].style.display = "block";//Для отображения слайда с определённым индексом i
+       sliderCollectionArr[curIndexSlide].classList.add("prod--current");
+
+       if (curIndexSlide === 0) {
+              collectionArea.style.backgroundImage = "url(./blocks/content/__collection/__produckt/img/prod-bcg1.jpg)";
+       } else if (curIndexSlide === sliderCollectionArr.length - 1) {
+              collectionArea.style.backgroundImage = "url(./blocks/content/__collection/__produckt/img/prod-bcg2.jpg)";
+       } else {
+              collectionArea.style.backgroundImage = `url(${sliderCollectionArr[curIndexSlide].firstElementChild.getAttribute("src")})`;
+       }
+       setCurrIndex();
+}
+showСollectionSlides();
+
+//Функция устанавливает текстовые значения текущего индекса и общего количества слайдов
+function setCurrIndex() {
+       const curIndex = document.querySelector(".wrapper__toggle .cur");
+       const totalNumber = document.querySelector(".wrapper__toggle .total");
+       curIndex.textContent = `0${curIndexSlide + 1}/`;
+       totalNumber.textContent = sliderCollectionArr.length;
 }
 
-//Функция для показа номера текущего слайда
-function showNumberSlide() {
-       let numberSlide = document.querySelector(".slider__current");
-       numberSlide.textContent = "0" + counterSlide;
+//Функции для показа предыдущего/следующего слайда
+function nextСollectionSlide() {
+       if (curIndexSlide === sliderCollectionArr.length - 1) {
+              curIndexSlide = 0;
+       } else {
+              curIndexSlide++;
+       }
+       showСollectionSlides();
+       //сброс автослайдера, чтобы он корректно работал в случае пролистывания слайда пользователем
+       clearInterval(collectionInterval);
+       collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
+}
+
+function prevСollectionSlide() {
+       if (curIndexSlide === 0) {
+              curIndexSlide = sliderCollectionArr.length - 1;
+       } else {
+              curIndexSlide--;
+       }
+       showСollectionSlides();
+       //сброс автослайдера, чтобы он корректно работал в случае пролистывания слайда пользователем
+       clearInterval(collectionInterval);
+       collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
 }

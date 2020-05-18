@@ -54,11 +54,13 @@ const productsData = [
 ];
 
 //Объявление переменных
-const btnVisibleSearchForm = document.querySelector(".header .search");//Кнопка для показа блока поиска
-const btnHideSearchForm = document.querySelector(".header .close-search");//Кнопка для скрытия блока поиска
-const searchBlock = document.querySelector(".header .search-block");//Блок поиска в целом
-const inputFieldBlock = document.querySelector(".header .search-form");//блок с формой
-const request = document.querySelector(".header .request");//Поисковая строка
+//Кнопки для показа/скрытия блока поиска
+const btnVisibleSearchForm = document.querySelector(".header .search");
+const btnHideSearchForm = document.querySelector(".header .close-search");
+//Блок поиска в целом, блок с формой, поисковая строка
+const searchBlock = document.querySelector(".header .search-block");
+const inputFieldBlock = document.querySelectorAll(".header .search-form")[1];
+const request = document.querySelectorAll(".header .request")[1];
 
 //Установка обработчиков событий на кнопки; при нажатии на кнопки форма поиска появляется/ скрывается
 btnVisibleSearchForm.addEventListener("click", () => {
@@ -72,6 +74,7 @@ btnHideSearchForm.addEventListener("click", () => {
 
   //Очиста поиска
   request.value = "";
+
   if (inputFieldBlock.childElementCount > 1) {
     inputFieldBlock.removeChild(inputFieldBlock.lastChild);
   }
@@ -89,16 +92,15 @@ request.addEventListener("input", e => {
   let target = e.target;
   //Перевод запроса в нижний регистр с удалением пробелов до и после него
   let req = target.value.toLowerCase().trim();
-
-  const clearBtn = document.createElement("span");//кнопка очистки поля ввода
-
+  //кнопка очистки поля ввода
+  const clearBtn = document.createElement("span");
   //На кнопку "очистить" устанавливается событие по полной очистке поля поиска
   clearBtn.addEventListener("click", () => {
     //Обнуление ввода
     target.value = "";
     //Удаление кнопки "очистить", блока с результатом поиска из DOM
     removeChildElement(inputFieldBlock);
-    removeChildElement(searchBlock);
+     removeChildElement(searchBlock);
     //Автоматический фокус на поле поиска после очистки (для случая последующего ввода)
     request.focus();
   });
@@ -155,11 +157,15 @@ function createResultBlock(desiredItem) {
         //Чтобы на экран выводились только первые пять найденных элементов
         arrFirstElements.length = 5;
       }
-      //Создание элементов в блоке с классом "search-field"
-      const section = document.createElement("section");//родительский блок
-      const resultTitle = document.createElement("h2");;//заголовок "Лучшие совпадения"
-      const ul = document.createElement("ul");//список, куда будут добавляться найденные элементы
-      const ref = document.createElement("a");//ссылка на каталог, содержащий все результаты запроса
+      //Создание элементов в блоке с классом "search-field" в следующем порядке:
+      //родительский блок;
+      //заголовок "Лучшие совпадения";
+      //список, куда будут добавляться найденные элементы;
+      //ссылка на каталог, содержащий все результаты запроса
+      const section = document.createElement("section");
+      const resultTitle = document.createElement("h2");
+      const ul = document.createElement("ul");
+      const ref = document.createElement("a");
 
       //Добавление классов к элементам
       section.classList.add("result");
@@ -169,7 +175,8 @@ function createResultBlock(desiredItem) {
 
       //Текстовое содержимое
       resultTitle.textContent = "Лучшие совпадения";
-      ref.href = "#";//чтобы ссылка была "рабочей"
+      //чтобы ссылка была "рабочей"
+      ref.href = "#";
       //Выводится ссылка с общим количеством найденных товаров
       ref.textContent = `Смотреть все (${arrFoundItems.length})`;
 
@@ -181,8 +188,9 @@ function createResultBlock(desiredItem) {
       arrFirstElements.forEach(item => {
         //Аналогично выше приведённому
         const li = document.createElement("li");
-        const innerRef = document.createElement("a");//ссылка на сам товар
-        const span = document.createElement("span");//цена товара
+        //ссылка на сам товар, цена товара
+        const innerRef = document.createElement("a");
+        const span = document.createElement("span");
 
         li.classList.add("list-output__item", "item");
         innerRef.classList.add("link", "link--color__grey");

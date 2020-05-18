@@ -1,0 +1,82 @@
+/*Общие стили для блока поиска*/
+.header__search-block {
+  position: absolute;
+  top: 100%;
+  right: -50%;
+  z-index: 2;
+  transition: all 0.5s ease-out;
+}
+
+.search-block {
+  width: 50%;/*720px*/
+  height: auto;
+  max-height: 100vh;/*840px*/
+  padding: 2.08% 5.56%;/*t/b 30px l/r 80px*/
+  background-color: #f9f9f9;
+  font-family: "Cormorant-R", serif;
+  line-height: 1.12;
+  color: #342B2B;
+}
+
+/*Стили для кнопки, закрывающей блок с поиском*/
+.search-block__close-search {
+  position: absolute;
+  right: 2%;
+  top: -2%;
+}
+
+.close-search {
+  font-size: 3rem;
+}
+
+/*Стили для блока с поиском*/
+.search-block__search-form {
+  position: relative;
+}
+
+/*Стили для поисковой строки*/
+.request--size__s {
+  padding: 0 2%;
+}
+
+/*Общие стили для блока с выводимым товаром*/
+.result {
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  padding-top: 5%;
+}
+
+/*Стили для списка с товаром*/
+.result__list-output {
+  margin: 5% auto;
+}
+
+.list-output {
+  width: 100%;
+  height: auto;
+}
+
+/*Стили для элементов списка*/
+.list-output__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price--size__m {
+  font-size: 1rem;/*16px*/
+}
+
+.price--size__m::after {
+  content: " \20BD";
+}
+
+/*Стили для элементов в случае, если по запросу ничего не найдено*/
+.search-block__par {
+  margin-top: 13%;
+}
+
+.par--align-content {
+  font-size: 1.125rem;/*18px*/
+  text-align: center;
+}

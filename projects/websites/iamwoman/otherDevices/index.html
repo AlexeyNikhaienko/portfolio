@@ -4,516 +4,534 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-       <link rel="stylesheet" href="../common__files/css/normalize.css">
-      <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="./../common__files/css/normalize.css">
+       <link rel="stylesheet" href="./style.css">
        <title>I'm woman</title>
 </head>
 <body>
 <!--Общий блок меню в шапке сайта-->
-       <header class="header">
-<!--Наивгация с иконками для меню-->
-              <nav class="header__menu--display">
-                     <div class="menu__burg">
-                            <span class="burg__line"></span>
-                            <span class="burg__line burg__line--short--right"></span>
-                            <span class="burg__line burg__line--short--left"></span>
+       <header class="navigation__header header">
+<!--Навигация с иконками для меню-->
+              <nav class="header__nav nav">
+                     <div class="nav__burg burg">
+                            <span class="burg__line line"></span>
+                            <span class="burg__line line line--short__right"></span>
+                            <span class="burg__line line line--short__left"></span>
                      </div>
-                     <div class="collection__logo hide">
-                            <p class="logo__heading">I AM WOMAN</p>
-                            <p class="logo__descript">MOSCOW</p>
-                     </div>
-                     <div class="menu-icon">
-                            <a class="menu__link search" href="#"><img src="blocks/header/img/head-img1.png" alt="Поиск"></a>
-                            <a class="menu__link user" href="#"><img src="blocks/header/img/head-img2.png" alt="Личный кабинет"></a>
-                            <a class="menu__link shop" href="#"><img src="blocks/header/img/head-img3.png" alt="Корзина"></a>
+                     <div class="nav__wrap wrap">
+                            <a class="icon search" href="#" title="Найти на сайте"><img src="./blocks/header/img/head-img1.png" alt="Поиск"></a>
+                            <a class="icon user" href="#" title="Войти в личный кабинет"><img src="./blocks/header/img/head-img2.png" alt="Личный кабинет"></a>
+                            <a class="icon shop" href="#" title="Корзина"><img src="./blocks/header/img/head-img3.png" alt="Корзина"></a>
                      </div>
               </nav>
+       <!--Меню, которое появляется при нажатии на "burg". По умолчанию скрыто-->
+              <nav class="header__menu-main menu-main">
+                     <div class="menu-main__inner inner">
+                            <div class="inner__btn btn">
+                                   <span class="btn__stripe stripe stripe--rtt__lft"></span>
+                                   <span class="btn__stripe stripe stripe--rtt__rgt"></span>
+                            </div>
+                            <h2 class="inner__catalog catalog">Каталог</h2>
+                            <div class="inner__box box">
+                                   <ul class="list">
+                                          <li class="item"><a class="link link--color__grey" href="#">Пальто</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Жилеты и жакеты</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Костюмы</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Трикотаж</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Платья</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Блузы и топы</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Футболки</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Юбки и брюки</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Аксессуары</a></li>
+                                   </ul>
+                                   <ul class="list">
+                                          <li class="item"><a class="link link--color__grey" href="#">О бренде</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Оферта</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Оплата и доставка</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Возврат</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Контакты</a></li>
+                                   </ul>
+                                   <ul class="list">
+                                          <li class="item"><a class="link link--color__grey" href="#">Sale</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">New</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Looks</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Блог</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Streetstyle</a></li>
+                                   </ul>
+                                   <ul class="list list--size__m">
+                                          <li class="list__item item item--pe">
+                                                 <form class="item__search-form search-form" action="/search" method="POST">
+                                                        <input class="request request--size__m" type="text" placeholder="Найти на сайте">
+                                                 </form>
+                                          </li>
+                                          <li class="item user"><a class="link link--color__grey" href="#">Войти в личный кабинет</a></li>
+                                          <li class="item"><a class="link link--color__grey" href="#">Отзывы</a></li>
+                                   </ul>
+                            </div>
+                     </div>
+              </nav>
+              <!--Поисковая строка, которая появляется при нажатии на "search". По умолчанию скрыта-->
+              <div class="header__search-block search-block">
+                     <span class="search-block__close-search close-search">&times;</span>
+                     <form class="search-block__search-form search-form" action="/search" method="POST">
+                            <input class="request request--size__s" type="text" placeholder="Найти на сайте">
+                     </form>
+              </div>
        </header>
-<!--Меню, которое появляется при нажатии на "burg". По умолчанию скрыто-->
-              <nav class="menu">
-                     <div class="menu--hide">
-                            <div class="menu__btn--close">
-                                   <span class="btn__line btn__line--rtt__lft"></span>
-                                   <span class="btn__line btn__line--rtt__rgt"></span>
+<!--Общий блок, который содержит весь контент (за исключением подвала)-->
+       <main class="content">
+       <!--Форма регистрации на сайте, которая появляется при нажатии на "user"/ "shop". По умолчанию скрыта-->
+              <div class="content__modal modal">
+                     <form class="modal__login-form login-form" action="/login" id="user" method="POST">
+                            <div class="login-form__logo logo">
+                                   <p class="name">I AM WOMAN</p>
+                                   <p class="subname">MOSCOW</p>
                             </div>
-                            <h2 class="menu__heading">Каталог</h2>
-                            <div class="menu__list-wrap">
-                                   <ul class="menu__list">
-                                          <li class="menu__item"><a class="menu__link" href="#">Пальто</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Жилеты и жакеты</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Костюмы</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Трикотаж</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Платья</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Блузы и топы</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Футболки</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Юбки и брюки</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Аксессуары</a></li>
-                                   </ul>
-                                   <ul class="menu__list">
-                                          <li class="menu__item"><a class="menu__link" href="#">О бренде</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Оферта</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Оплата и доставка</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Возврат</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
-                                          <li class="menu__item menu__item--hide item--hide"><a class="menu__link" href="#">Sale</a></li>
-                                          <li class="menu__item menu__item--hide item--hide"><a class="menu__link" href="#">New</a></li>
-                                   </ul>
-                                   <ul class="menu__list hide">
-                                          <li class="menu__item"><a class="menu__link" href="#">Sale</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">New</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Looks</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Блог</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Streetsyle</a></li>
-                                          <li class="menu__item hide menu__item--hide"><a class="menu__link" href="#">Найти на сайте</a></li>
-                                          <li class="menu__item hide menu__item--hide"><a class="menu__link" href="#">Войти в личный кабинет</a></li>
-                                   </ul>
-                                   <ul class="menu__list hide item--hide">
-                                          <li class="menu__item"><a class="menu__link" href="#">Найти на сайте</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Войти в личный кабинет</a></li>
-                                          <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
-                                   </ul>
+                            <span class="login-form__close-form close-form">&times;</span>
+                            <input class="login-form__field-form field-form" type="email" autocomplete="on" name="email" placeholder="Ваш E-mail или ID">
+                            <input class="field-form" type="password" autocomplete="on" name="password" placeholder="Пароль">
+                            <a class="login-form__remind remind" href="#">Забыли пароль?</a>
+                            <button class="login-form__button button button--size__l" type="submit" form="user">
+                                   <span class="submit">Войти</span>
+                            </button>
+                            <a class="login-form__link link link--color__grey" href="#">Зарегистрироваться</a>
+                     </form>
+              </div>
+              <!--Блок с коллекцией товара, распродажей-->
+              <div class="content__collection collection" id="collection">
+                     <aside class="collection__extra-info extra-info">
+                            <div class="extra-info__sale sale">
+                                   <span class="shape shape--color__grey shape--pos__upright"></span>
+                                   <span class="sale__text text">Распродажа SS’18</span>
+                            </div>
+                     </aside>
+                     <div class="collection__description description">
+                            <div class="description__logo logo">
+                                   <p class="name">I AM WOMAN</p>
+                                   <p class="subname">MOSCOW</p>
+                            </div>
+                            <div class="title">
+                                   <h2 class="title__head head head--color__grey">Новая<br> круизная<br> коллекция ‘19</h2>
+                                   <div class="contain">
+                                          <a class="link link--color__red" href="#">Перейти в каталог</a>
+                                          <span class="decoration decoration--short"></span>
+                                   </div>
+                            </div>
+                            <div class="description__social-link social-link">
+                                   <a href="#" class="link-soc link-soc--size__m">Facebook</a>
+                                   <span class="social-link__shape shape--color__grey shape shape--pos__middle"></span>
+                                   <a href="#" class="link-soc link-soc--size__m">YouTube</a>
+                                   <span class="social-link__shape shape shape--color__grey shape--pos__middle"></span>
+                                   <a href="#" class="link-soc link-soc--size__m">VKontakte</a>
                             </div>
                      </div>
-              </nav>
-
-              <main class="content">
-                     <div class="collection" id="collection__id">
-                            <aside class="collection__sale hide">
-                                   <div class="sale__cnt">
-                                          <span class="cnt__item cnt__text">Распродажа SS’18</span>
-                                          <span class="cnt__item cnt__line"></span>
+              <!--Обёртка для слайдера-->
+                     <div class= "collection__produckt produckt">
+                            <div class="produckt__wrapper wrapper">
+                                   <figure class="wrapper__prod prod">
+                                          <img class="prod__img img" src="./blocks/content/__collection/__produckt/img/prod-img1.jpg" alt="Хлопковое платье в полоску">
+                                          <figcaption class="prod__caption caption caption--size__m">
+                                                 <h3 class="heading--size__m">Хлопковое платье в полоску</h3>
+                                                 <div class="container">
+                                                        <span class="shape shape--color__red shape--pos__bottom"></span>
+                                                        <span class="price--size__s">9 900 рублей</span>
+                                                 </div>
+                                          </figcaption>
+                                   </figure>
+                                   <figure class="wrapper__prod prod">
+                                          <img class="prod__img img" src="./blocks/content/__collection/__produckt/img/prod-img2.jpg" alt="Спортивный желтый костюм">
+                                          <figcaption class="prod__caption caption caption--size__m">
+                                                 <h3 class="heading--size__m">Спортивный желтый костюм</h3>
+                                                 <div class="container">
+                                                        <span class="shape shape--color__red shape--pos__bottom"></span>
+                                                        <span class="price--size__s">9 900 рублей</span>
+                                                 </div>
+                                          </figcaption>
+                                   </figure>
+                                   <figure class="wrapper__prod prod">
+                                          <img class="prod__img img" src="./blocks/content/__collection/__produckt/img/prod-img3.jpg" alt="Платье-халат со стразами">
+                                          <figcaption class="prod__caption caption caption--size__m">
+                                                 <h3 class="heading--size__m">Платье — халат со стразами</h3>
+                                                 <div class="container">
+                                                        <span class="shape shape--color__red shape--pos__bottom"></span>
+                                                        <span class="price--size__s">9 900 рублей</span>
+                                                 </div>
+                                          </figcaption>
+                                   </figure>
+                                   <div class="wrapper__toggle toggle">
+                                          <span class="left">&#x276C;</span>
+                                          <span class="cur"></span>
+                                          <span class="toggle__total total"></span>
+                                          <span class="right">&#x276D;</span>
                                    </div>
-                            </aside>
-                            <div class="collection__content">
-                                   <div class="collection__descript">
-                                          <h2 class="collection__title">Новая круизная коллекция ‘19</h2>
-                                          <div class="collection__link-wrap">
-                                                 <a class="collection__link" href="#">Перейти в каталог</a>
-                                                 <span class="collection__line"></span>
-                                          </div>
-                                   </div>
-                                   <nav class="collection__soc-nwk hide">
-                                          <span><a class="soc-nwk__link" href="#">Facebook</a></span>
-                                          <span class="soc-nwk__line"></span>
-                                          <span><a class="soc-nwk__link" href="#">YouTube</a></span>
-                                          <span class="soc-nwk__line"></span>
-                                          <span><a class="soc-nwk__link" href="#">Vkontakte</a></span>
-                                   </nav>
+                                   <a class="wrapper__link-more link-more" href="#">Смотреть все</a>
                             </div>
-                            <!--Обёртка для контента-->
-                            <div class="collection__produckt">
-                                   <!--Обёртка для слайдера-->
-                                   <div class="produckt__slider">
-                                   <!--"slider__item" обёртка для каждой картинки с продукцией-->
-                                          <div class="slider__item">
-                                                 <figure class="slider__img">
-                                                        <img class="produckt__img" src="blocks/content/__collection/__produckt/img/prod-img1.jpg" alt="Хлопковое платье в полоску">
-                                                        <figcaption class="produckt__descript hide">
-                                                               <p class="produckt__name">Хлопковое платье в полоску</p>
-                                                               <div class="produckt__elem-wrap">
-                                                                      <span class="produckt__line"></span>
-                                                                      <span class="produckt__price">9 900 рублей</span>
-                                                               </div>
-                                                        </figcaption>
-                                                 </figure>
-                                          </div>
-                                          <div class="slider__item">
-                                                 <figure class="slider__img">
-                                                        <img class="produckt__img" src="blocks/content/__collection/__produckt/img/prod-img2.jpg" alt="Спортивный желтый костюм">
-                                                        <figcaption class="produckt__descript hide">
-                                                               <p class="produckt__name">Спортивный желтый костюм</p>
-                                                               <div class="produckt__elem-wrap">
-                                                                      <span class="produckt__line"></span>
-                                                                      <span class="produckt__price">9 900 рублей</span>
-                                                               </div>
-                                                        </figcaption>
-                                                 </figure>
-                                          </div>
-                                          <div class="slider__item">
-                                                 <figure class="slider__img">
-                                                        <img class="produckt__img" src="blocks/content/__collection/__produckt/img/prod-img3.jpg" alt="Платье-халат со стразами">
-                                                        <figcaption class="produckt__descript hide">
-                                                               <p class="produckt__name">Платье — халат со стразами</p>
-                                                               <div class="produckt__elem-wrap">
-                                                                      <span class="produckt__line"></span>
-                                                                      <span class="produckt__price">9 900 рублей</span>
-                                                               </div>
-                                                        </figcaption>
-                                                 </figure>
-                                          </div>
-                                   </div>
-                                   <p class="slider__number hide">
-                                          <span class="slider__prev">&lt;</span>
-                                          <span class="slider__current"></span>
-                                          <span class="slider__slash">/</span>
-                                          <sub class="slider__total">3</sub>
-                                          <span class="slider__next">&gt;</span>
-                                   </p>
-                            </div>
-                            <a class="produckt__link hide" href="#">Смотреть все</a>
-                            <nav class="content__pagination collection__pagination hide">
-                                   <span class="pagination__link--current">01</span>
-                                   <span class="pagination__link--line"></span>
-                                   <a href="#new__id" class="pagination__link--other">02</a>
-                                   <a href="#about__id" class="pagination__link--other">03</a>
-                                   <a href="#blog__id" class="pagination__link--other">04</a>
-                                   <a href="#subscribe" class="pagination__link--other">05</a>
-                                   <a href="#footer" class="pagination__link--other">06</a>
-                            </nav>
                      </div>
-                     <section class="new">
-                            <h2 class="new__title" id="new__id">Новое поступление</h2>
-                            <div class="new__produckt-wrap">
-                                         <input type="radio" class="tabs__item" name="tab" id="dress" checked>
-                                          <label class="tabs__title" for="dress">Платья</label>
-                                          <input type="radio" class="tabs__item" name="tab" id="blouse" >
-                                          <label class="tabs__title" for="blouse">Блузы и топы</label>
-                                          <input type="radio" class="tabs__item" name="tab" id="skirts" >
-                                          <label class="tabs__title" for="skirts">Брюки и юбки</label>
-                                   <!--Общая обёртка для всех слайдеров со всех вкладок-->
-                                   <div class="new__tabs-content">
-                                          <!--Общая обёртка для слайдеров, расположенных на вкладке "Платья"-->
-                                         <div class="new__slider-wrap new__slider-dress">
-                                          <!--Обёртка для отдельного слайдера-->
-                                                <div class="new__slider-produckt slider-produckt__dress">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img1.jpg" alt="Платье-боди">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Платье - боди</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">11 700</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__dress">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img2.jpg" alt="Этническое платье">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Этническое платье</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">7 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__dress">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img3.jpg" alt="Шелковое платье с принтом">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Шелковое платье с принтом</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">4 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                          </div>
-                                          <!--Общая обёртка для слайдеров, расположенных на вкладке "Блузы и топы"-->
-                                          <div class="new__slider-wrap new__slider-blouse">
-                                                 <div class="new__slider-produckt slider-produckt__blouse">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img4.jpg" alt="Платье-боди">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Платье - боди</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">11 700</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__blouse">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img5.jpg" alt="Этническое платье">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Этническое платье</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">7 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__blouse">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img6.jpg" alt="Шелковое платье с принтом">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Шелковое платье с принтом</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">4 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                          </div>
-                                          <!--Общая обёртка для слайдеров, расположенных на вкладке "Брюки и юбки"-->
-                                          <div class="new__slider-wrap new__slider-skirts">
-                                                 <div class="new__slider-produckt slider-produckt__skirts">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img7.jpg" alt="Платье-боди">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Платье - боди</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">11 700</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__skirts">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img8.jpg" alt="Этническое платье">
-                                                               <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Этническое платье</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">7 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                                 <div class="new__slider-produckt slider-produckt__skirts">
-                                                        <figure class="new__slider-item">
-                                                               <img class="new__slider-img" src="blocks/content/__new/img/new-img9.jpg" alt="Шелковое платье с принтом">
-                                                                <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
-                                                               <figcaption class="new__slider-descript">
-                                                                      <h3 class="new__slider-title">Шелковое платье с принтом</h3>
-                                                                      <div class="new__price-wrap">
-                                                                             <span class="new__slider-line"></span>
-                                                                             <span class="new__slider-price">4 800</span>
-                                                                      </div>
-                                                               </figcaption>
-                                                        </figure>
-                                                        <div class="new__slider-toggle">
-                                                               <span class="new__slider-prev">&#60;</span>
-                                                               <span class="new__slider-cur">&#8739;</span>
-                                                               <span class="new__slider-next">&#62;</span>
-                                                        </div>
-                                                 </div>
-                                          </div>
-                                          <span class="new__mobile-slider new__mobile-slider__prev">&lang;</span>
-                                          <span class="new__mobile-slider new__mobile-slider__next">&rang;</span>
-                                   </div>
-                            </div>
-                            <a class="new__link" href="#">Смотреть все</a>
-                            <nav class="content__pagination hide">
-                                   <span class="pagination__link--current">02</span>
-                                   <span class="pagination__link--line"></span>
-                                   <a href="#collection__id" class="pagination__link--other">01</a>
-                                   <a href="#about__id" class="pagination__link--other">03</a>
-                                   <a href="#blog__id" class="pagination__link--other">04</a>
-                                   <a href="#subscribe" class="pagination__link--other">05</a>
-                                   <a href="#footer" class="pagination__link--other">06</a>
-                            </nav>
-                     </section>
+                     <div class="content__pagination">
+                            <span class="link-page link-page--current">01</span>
+                            <span class="pagination__shape shape shape--color__grey shape--pos__upright"></span>
+                            <a href="#new" class="pagination__link-page link-page--other" title="New">02</a>
+                            <a href="#about" class="pagination__link-page link-page--other" title="История брэнда">03</a>
+                            <a href="#blog" class="pagination__link-page link-page--other" title="Блог">04</a>
+                            <a href="#subscribe" class="pagination__link-page link-page--other" title="Подписаться на рассылку">05</a>
+                            <a href="#footer" class="pagination__link-page link-page--other" title="Дополнительная информация">06</a>
+                     </div>
+              </div>
+       </main>
 
-                     <section class="about">
-                            <h2 class="about__title" id="about__id">О бренде</h2>
-                            <figure class="about__info about__info--left">
-                                   <img class="about__image hide" src="blocks/content/__about/img/about-img1.jpg" alt="Концепция">
-                                   <figcaption class="about__descript about__descript--right">
-                                          <p class="about__par hide">Концепция «свободной женщины» была придумана и создана основателем и дизайнером Кристиной Беккер на начальном этапе воплощения ее в реальность.<br>
-                                          Идея разработки свободных кроем моделей с яркими дизайнерскими акцентами составляет основу бренда, которая получила настоящий успех и имиджевую популярность.</p>
-                                          <p class="about__par desctop--hide">Концепция «свободной женщины» была придумана и создана основателем и дизайнером Кристиной Беккер на начальном этапе воплощения ее в реальность.<br>
-                                          Идея разработки свободных кроем моделей с яркими дизайнерскими акцентами составляет основу бренда, которая получила настоящий успех и имиджевую популярность.<br>
-                                          Ключевыми моделями бренда I AM WOMEN стали рубашки и брюки с безупречной посадкой, а также платья, подчеркивающие женственные формы и жилеты, вписывающиеся в любой гардероб современой женщины. Каждая модель сохраняет свою актуальность в течение нескольких сезонов.<p>
+       <!--<main class="content">
+              <section class="new">
+                     <h2 class="new__title" id="new__id">Новое поступление</h2>
+                     <div class="new__produckt-wrap">
+                            <input type="radio" class="tabs__item" name="tab" id="dress" checked>
+                            <label class="tabs__title" for="dress">Платья</label>
+                            <input type="radio" class="tabs__item" name="tab" id="blouse" >
+                            <label class="tabs__title" for="blouse">Блузы и топы</label>
+                            <input type="radio" class="tabs__item" name="tab" id="skirts" >
+                            <label class="tabs__title" for="skirts">Брюки и юбки</label> -->
+              <!--Общая обёртка для всех слайдеров со всех вкладок-->
+                            <!-- <div class="new__tabs-content"> -->
+              <!--Общая обёртка для слайдеров, расположенных на вкладке "Платья"-->
+                                   <!-- <div class="new__slider-wrap new__slider-dress"> -->
+              <!--Обёртка для отдельного слайдера-->
+                                          <!-- <div class="new__slider-produckt slider-produckt__dress">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img1.jpg" alt="Платье-боди">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Платье - боди</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">11 700</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                          <div class="new__slider-produckt slider-produckt__dress">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img2.jpg" alt="Этническое платье">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Этническое платье</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">7 800</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                          <div class="new__slider-produckt slider-produckt__dress">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img3.jpg" alt="Шелковое платье с принтом">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Шелковое платье с принтом</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">4 800</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                   </div> -->
+              <!--Общая обёртка для слайдеров, расположенных на вкладке "Блузы и топы"-->
+                                   <!-- <div class="new__slider-wrap new__slider-blouse">
+                                          <div class="new__slider-produckt slider-produckt__blouse">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img4.jpg" alt="Платье-боди">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Платье - боди</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">11 700</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                          <div class="new__slider-produckt slider-produckt__blouse">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img5.jpg" alt="Этническое платье">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Этническое платье</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">7 800</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                          <div class="new__slider-produckt slider-produckt__blouse">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img6.jpg" alt="Шелковое платье с принтом">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Шелковое платье с принтом</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">4 800</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                   </div> -->
+              <!--Общая обёртка для слайдеров, расположенных на вкладке "Брюки и юбки"-->
+                                   <!-- <div class="new__slider-wrap new__slider-skirts">
+                                          <div class="new__slider-produckt slider-produckt__skirts">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img7.jpg" alt="Платье-боди">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Платье - боди</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">11 700</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                          <div class="new__slider-produckt slider-produckt__skirts">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img8.jpg" alt="Этническое платье">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Этническое платье</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">7 800</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                          <div class="new__slider-produckt slider-produckt__skirts">
+                                                 <figure class="new__slider-item">
+                                                        <img class="new__slider-img" src="blocks/content/__new/img/new-img9.jpg" alt="Шелковое платье с принтом">
+                                                        <img class="new__img-like" src="blocks/content/__new/img/new-like.png" alt="like">
+                                                        <figcaption class="new__slider-descript">
+                                                               <h3 class="new__slider-title">Шелковое платье с принтом</h3>
+                                                               <div class="new__price-wrap">
+                                                                      <span class="new__slider-line"></span>
+                                                                      <span class="new__slider-price">4 800</span>
+                                                               </div>
+                                                        </figcaption>
+                                                 </figure>
+                                                 <div class="new__slider-toggle">
+                                                        <span class="new__slider-prev">&#60;</span>
+                                                        <span class="new__slider-cur">&#8739;</span>
+                                                        <span class="new__slider-next">&#62;</span>
+                                                 </div>
+                                          </div>
+                                   </div>
+                                   <span class="new__mobile-slider new__mobile-slider__prev">&lang;</span>
+                                   <span class="new__mobile-slider new__mobile-slider__next">&rang;</span>
+                            </div>
+                     </div>
+                     <a class="new__link" href="#">Смотреть все</a>
+                     <nav class="content__pagination hide">
+                            <span class="pagination__link--current">02</span>
+                            <span class="pagination__link--line"></span>
+                            <a href="#collection__id" class="pagination__link--other">01</a>
+                            <a href="#about__id" class="pagination__link--other">03</a>
+                            <a href="#blog__id" class="pagination__link--other">04</a>
+                            <a href="#subscribe" class="pagination__link--other">05</a>
+                            <a href="#footer" class="pagination__link--other">06</a>
+                     </nav>
+              </section> -->
+
+              <!-- <section class="about">
+                     <h2 class="about__title" id="about__id">О бренде</h2>
+                     <figure class="about__info about__info--left">
+                            <img class="about__image hide" src="blocks/content/__about/img/about-img1.jpg" alt="Концепция">
+                            <figcaption class="about__descript about__descript--right">
+                                   <p class="about__par hide">Концепция «свободной женщины» была придумана и создана основателем и дизайнером Кристиной Беккер на начальном этапе воплощения ее в реальность.<br>
+                                   Идея разработки свободных кроем моделей с яркими дизайнерскими акцентами составляет основу бренда, которая получила настоящий успех и имиджевую популярность.</p>
+                                   <p class="about__par desctop--hide">Концепция «свободной женщины» была придумана и создана основателем и дизайнером Кристиной Беккер на начальном этапе воплощения ее в реальность.<br>
+                                   Идея разработки свободных кроем моделей с яркими дизайнерскими акцентами составляет основу бренда, которая получила настоящий успех и имиджевую популярность.<br>
+                                   Ключевыми моделями бренда I AM WOMEN стали рубашки и брюки с безупречной посадкой, а также платья, подчеркивающие женственные формы и жилеты, вписывающиеся в любой гардероб современой женщины. Каждая модель сохраняет свою актуальность в течение нескольких сезонов.<p>
+                            </figcaption>
+                     </figure>
+                     <figure class="about__info about__info--right hide">
+                            <img class="about__image" src="blocks/content/__about/img/about-img2.jpg" alt="Ключевые модели">
+                            <figcaption class="about__descript about__descript--left">
+                                   <p class="about__par">Ключевыми моделями бренда I AM WOMEN стали рубашки и брюки с безупречной посадкой, а также платья, подчеркивающие женственные формы и жилеты, вписывающиеся в любой гардероб современой женщины. Каждая модель сохраняет свою актуальность в течение нескольких сезонов.</p>
+                            </figcaption>
+                     </figure>
+                     <nav class="content__pagination about__pagination hide">
+                            <span class="pagination__link--current">03</span>
+                            <span class="pagination__link--line"></span>
+                            <a href="#new__id" class="pagination__link--other">02</a>
+                            <a href="#collection__id" class="pagination__link--other">01</a>
+                            <a href="#blog__id" class="pagination__link--other">04</a>
+                            <a href="#subscribe" class="pagination__link--other">05</a>
+                            <a href="#footer" class="pagination__link--other">06</a>
+                     </nav>
+              </section> -->
+
+              <!-- <section class="blog">
+                     <h2 class="blog__title" id="blog__id">Блог</h2>
+                     <div class="blog__slider">
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#лучшее</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img1.jpg" alt="Лучший выбор">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">Лучший выбор: костюмы’18</h3>
+                                          <p class="blog__slider-par">Проще говоря, выбирайте более светлые и более темные оттенки одного цвета, в конкретном случае — родственные фиолетовому. Такой образ может легко вписаться в рамки повседневной жизни</p>
                                    </figcaption>
                             </figure>
-                            <figure class="about__info about__info--right hide">
-                                   <img class="about__image" src="blocks/content/__about/img/about-img2.jpg" alt="Ключевые модели">
-                                   <figcaption class="about__descript about__descript--left">
-                                          <p class="about__par">Ключевыми моделями бренда I AM WOMEN стали рубашки и брюки с безупречной посадкой, а также платья, подчеркивающие женственные формы и жилеты, вписывающиеся в любой гардероб современой женщины. Каждая модель сохраняет свою актуальность в течение нескольких сезонов.</p>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#новости</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img2.jpg" alt="Аксессуары">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">Аксессуары осень — зима ‘18</h3>
+                                          <p class="blog__slider-par">Аксессуары являются важнейшей частью для создания целостного образа. Правильно подобранные украшения помогут сделать лук более гармоничным и стильным, ну а неправильно — испортят</p>
                                    </figcaption>
                             </figure>
-                            <nav class="content__pagination about__pagination hide">
-                                   <span class="pagination__link--current">03</span>
-                                   <span class="pagination__link--line"></span>
-                                   <a href="#new__id" class="pagination__link--other">02</a>
-                                   <a href="#collection__id" class="pagination__link--other">01</a>
-                                   <a href="#blog__id" class="pagination__link--other">04</a>
-                                   <a href="#subscribe" class="pagination__link--other">05</a>
-                                   <a href="#footer" class="pagination__link--other">06</a>
-                            </nav>
-                     </section>
-
-                     <section class="blog">
-                            <h2 class="blog__title" id="blog__id">Блог</h2>
-                            <div class="blog__slider">
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#лучшее</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img1.jpg" alt="Лучший выбор">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">Лучший выбор: костюмы’18</h3>
-                                                 <p class="blog__slider-par">Проще говоря, выбирайте более светлые и более темные оттенки одного цвета, в конкретном случае — родственные фиолетовому. Такой образ может легко вписаться в рамки повседневной жизни</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#новости</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img2.jpg" alt="Аксессуары">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">Аксессуары осень — зима ‘18</h3>
-                                                 <p class="blog__slider-par">Аксессуары являются важнейшей частью для создания целостного образа. Правильно подобранные украшения помогут сделать лук более гармоничным и стильным, ну а неправильно — испортят</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#советы</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img3.jpg" alt="Советы">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">3 отличных образа для офиса</h3>
-                                                 <p class="blog__slider-par">Кому-то нравится строгий стиль в одежде, а кому-то приходится его придерживаться из-за офисного дресс-кода. Так или иначе, не стоит превращать деловой стиль в скучный и консервативный</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#тенденции</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img4.jpg" alt="Тенденции">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">С чем носить ультрафиолет?</h3>
-                                                 <p class="blog__slider-par">Уже не первый сезон монохромные образы являются одной из главных тенденций. Дизайнеры и стилисты призывают подбирать вещи в рамках одного сектора цветового круга</p>
-                                          </figcaption>
-                                    </figure>
-                                    <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#лучшее</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img1.jpg" alt="Лучшее">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">Лучший выбор: костюмы’18</h3>
-                                                 <p class="blog__slider-par">Проще говоря, выбирайте более светлые и более темные оттенки одного цвета, в конкретном случае — родственные фиолетовому. Такой образ может легко вписаться в рамки повседневной жизни</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#новости</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img2.jpg" alt="Аксессуары">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">Аксессуары осень — зима ‘18</h3>
-                                                 <p class="blog__slider-par">Аксессуары являются важнейшей частью для создания целостного образа. Правильно подобранные украшения помогут сделать лук более гармоничным и стильным, ну а неправильно — испортят</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#советы</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img3.jpg" alt="Советы">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">3 отличных образа для офиса</h3>
-                                                 <p class="blog__slider-par">Кому-то нравится строгий стиль в одежде, а кому-то приходится его придерживаться из-за офисного дресс-кода. Так или иначе, не стоит превращать деловой стиль в скучный и консервативный</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#тенденции</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img4.jpg" alt="Тенденции">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">С чем носить ультрафиолет?</h3>
-                                                 <p class="blog__slider-par">Уже не первый сезон монохромные образы являются одной из главных тенденций. Дизайнеры и стилисты призывают подбирать вещи в рамках одного сектора цветового круга</p>
-                                          </figcaption>
-                                    </figure>
-                                    <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#лучшее</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img1.jpg" alt="Лучшее">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">Лучший выбор: костюмы’18</h3>
-                                                 <p class="blog__slider-par">Проще говоря, выбирайте более светлые и более темные оттенки одного цвета, в конкретном случае — родственные фиолетовому. Такой образ может легко вписаться в рамки повседневной жизни</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#новости</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img2.jpg" alt="Аксессуары">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">Аксессуары осень — зима ‘18</h3>
-                                                 <p class="blog__slider-par">Аксессуары являются важнейшей частью для создания целостного образа. Правильно подобранные украшения помогут сделать лук более гармоничным и стильным, ну а неправильно — испортят</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#советы</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img3.jpg" alt="Советы">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">3 отличных образа для офиса</h3>
-                                                 <p class="blog__slider-par">Кому-то нравится строгий стиль в одежде, а кому-то приходится его придерживаться из-за офисного дресс-кода. Так или иначе, не стоит превращать деловой стиль в скучный и консервативный</p>
-                                          </figcaption>
-                                   </figure>
-                                   <figure class="blog__slider-item">
-                                          <a class="blog__slider-hashtag" href="#">#тенденции</a>
-                                          <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img4.jpg" alt="Тенденции">
-                                          <figcaption class="blog__slider-descript">
-                                                 <h3 class="blog__slider-title">С чем носить ультрафиолет?</h3>
-                                                 <p class="blog__slider-par">Уже не первый сезон монохромные образы являются одной из главных тенденций. Дизайнеры и стилисты призывают подбирать вещи в рамках одного сектора цветового круга</p>
-                                          </figcaption>
-                                    </figure>
-                            </div>
-                            <div class="blog__toggle-slide">
-                                   <p class="blog__number-slide">
-                                          <span class="blog__current-number">03<span class="blog__total-number">12</span></span>
-                                   </p>
-                            </div>
-                            <div class="blog__link-wrap">
-                                   <a class="blog__link" href="#">Перейти в блог</a>
-                                   <span class="blog__line"></span>
-                            </div>
-                     </section>
-                     <div class="subscribe" id="subscribe">
-                            <div class="subscribe-wrap">
-                                   <form class="subscribe__form" action="/subscribe" method="POST">
-                                          <p class="subscribe__descript hide">Подпишись на новости I AM WOMEN и получи скидку 5% на следующую покупку</p>
-                                          <p class="subscribe__descript desctop--hide">Подпишись на новости<br>I AM WOMEN<br>и получи скидку 5% на следующую покупку</p>
-                                          <input class="subscribe__email" type="email" name="emailaddress" placeholder="Ваш E-mail">
-                                          <input class="subscribe__btn" type="submit" value="Подписаться">
-                                          <p class="subscribe__info">Подписываясь на новости, Вы даёте согласие на обработку персональных данных</p>
-                                   </form>
-                            </div>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#советы</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img3.jpg" alt="Советы">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">3 отличных образа для офиса</h3>
+                                          <p class="blog__slider-par">Кому-то нравится строгий стиль в одежде, а кому-то приходится его придерживаться из-за офисного дресс-кода. Так или иначе, не стоит превращать деловой стиль в скучный и консервативный</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#тенденции</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img4.jpg" alt="Тенденции">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">С чем носить ультрафиолет?</h3>
+                                          <p class="blog__slider-par">Уже не первый сезон монохромные образы являются одной из главных тенденций. Дизайнеры и стилисты призывают подбирать вещи в рамках одного сектора цветового круга</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#лучшее</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img1.jpg" alt="Лучшее">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">Лучший выбор: костюмы’18</h3>
+                                          <p class="blog__slider-par">Проще говоря, выбирайте более светлые и более темные оттенки одного цвета, в конкретном случае — родственные фиолетовому. Такой образ может легко вписаться в рамки повседневной жизни</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#новости</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img2.jpg" alt="Аксессуары">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">Аксессуары осень — зима ‘18</h3>
+                                          <p class="blog__slider-par">Аксессуары являются важнейшей частью для создания целостного образа. Правильно подобранные украшения помогут сделать лук более гармоничным и стильным, ну а неправильно — испортят</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#советы</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img3.jpg" alt="Советы">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">3 отличных образа для офиса</h3>
+                                          <p class="blog__slider-par">Кому-то нравится строгий стиль в одежде, а кому-то приходится его придерживаться из-за офисного дресс-кода. Так или иначе, не стоит превращать деловой стиль в скучный и консервативный</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#тенденции</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img4.jpg" alt="Тенденции">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">С чем носить ультрафиолет?</h3>
+                                          <p class="blog__slider-par">Уже не первый сезон монохромные образы являются одной из главных тенденций. Дизайнеры и стилисты призывают подбирать вещи в рамках одного сектора цветового круга</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#лучшее</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img1.jpg" alt="Лучшее">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">Лучший выбор: костюмы’18</h3>
+                                          <p class="blog__slider-par">Проще говоря, выбирайте более светлые и более темные оттенки одного цвета, в конкретном случае — родственные фиолетовому. Такой образ может легко вписаться в рамки повседневной жизни</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#новости</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img2.jpg" alt="Аксессуары">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">Аксессуары осень — зима ‘18</h3>
+                                          <p class="blog__slider-par">Аксессуары являются важнейшей частью для создания целостного образа. Правильно подобранные украшения помогут сделать лук более гармоничным и стильным, ну а неправильно — испортят</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#советы</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img3.jpg" alt="Советы">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">3 отличных образа для офиса</h3>
+                                          <p class="blog__slider-par">Кому-то нравится строгий стиль в одежде, а кому-то приходится его придерживаться из-за офисного дресс-кода. Так или иначе, не стоит превращать деловой стиль в скучный и консервативный</p>
+                                   </figcaption>
+                            </figure>
+                            <figure class="blog__slider-item">
+                                   <a class="blog__slider-hashtag" href="#">#тенденции</a>
+                                   <img class="blog__slider-img" src="blocks/content/__blog/img/blog-img4.jpg" alt="Тенденции">
+                                   <figcaption class="blog__slider-descript">
+                                          <h3 class="blog__slider-title">С чем носить ультрафиолет?</h3>
+                                          <p class="blog__slider-par">Уже не первый сезон монохромные образы являются одной из главных тенденций. Дизайнеры и стилисты призывают подбирать вещи в рамках одного сектора цветового круга</p>
+                                   </figcaption>
+                            </figure>
                      </div>
-              </main>
+                     <div class="blog__toggle-slide">
+                            <p class="blog__number-slide">
+                                   <span class="blog__current-number">03<span class="blog__total-number">12</span></span>
+                            </p>
+                     </div>
+                     <div class="blog__link-wrap">
+                            <a class="blog__link" href="#">Перейти в блог</a>
+                            <span class="blog__line"></span>
+                     </div>
+              </section>
+              <div class="subscribe" id="subscribe">
+                     <div class="subscribe-wrap">
+                            <form class="subscribe__form" action="/subscribe" method="POST">
+                                   <p class="subscribe__descript hide">Подпишись на новости I AM WOMEN и получи скидку 5% на следующую покупку</p>
+                                   <p class="subscribe__descript desctop--hide">Подпишись на новости<br>I AM WOMEN<br>и получи скидку 5% на следующую покупку</p>
+                                   <input class="subscribe__email" type="email" name="emailaddress" placeholder="Ваш E-mail">
+                                   <input class="subscribe__btn" type="submit" value="Подписаться">
+                                   <p class="subscribe__info">Подписываясь на новости, Вы даёте согласие на обработку персональных данных</p>
+                            </form>
+                     </div>
+              </div>
+       </main> -->
 
-      <footer class="footer" id="footer">
+      <!-- <footer class="footer" id="footer">
               <nav class="footer__menu-wrap hide">
                      <ul class="footer__menu-list">
                             <li class="footer__list-item"><a class="footer__menu-link" href="#">Каталог</a></li>
@@ -573,10 +591,14 @@
                             <p class="footer__cprt"><span>&copy;</span>2008–2018 I AM WOMEN</p>
                      </div>
               </div>
-       </footer>
-       <script src="blocks/menu--hide/menu.js" defer></script>
-       <script src="blocks/content/__collection/__produckt/produckt__slider.js" defer></script>
-       <script src="blocks/content/__blog/blog__slider.js" defer></script>
-      <!--<script src="blocks/content/__new/new__slider.js" defer></script>-->
+       </footer> -->
+
+       <!--Подключение скриптов-->
+       <script src="blocks/header/menu/header__menu.js" defer></script>
+       <script src="blocks/content/__login/content__login.js" defer></script>
+       <script src="blocks/header/search/header__search.js" defer></script>
+       <script src="./blocks/content/__collection/__produckt/produckt__slider.js" defer></script>
+       <!-- <script src="blocks/content/__new/new__slider.js" defer></script>
+       <script src="blocks/content/__blog/blog__slider.js" defer></script> -->
 </body>
 </html>

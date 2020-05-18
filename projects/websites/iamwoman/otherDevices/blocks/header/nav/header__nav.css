@@ -1,0 +1,66 @@
+/*Общие стили для блока с иконками, "бургером"*/
+.header__nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  width: 100%;
+  height: auto;
+  border: 1px solid blue;
+}
+
+/*Стили для "бургера" меню*/
+.nav__burg {
+  position: relative;
+  left: 1.53%;/*22px*/
+  display: flex;
+  flex-direction: column;
+}
+
+.burg {
+  width: 2rem;/*32px*/
+  height: 100%;/*16px*/
+  border: 1px solid green;
+}
+
+.burg__line:not(:last-of-type) {
+  margin-bottom: 0.3125rem;
+}
+
+.line {
+  width: 100%;/*33px*/
+  height: 0.125rem;
+  background-color: white;
+}
+
+.line--short__right {
+  align-self: flex-end;
+  width: 54.55%;/*18px*/
+}
+
+.line--short__left {
+  align-self: flex-start;
+  width: 54.55%;/*18px*/
+}
+
+/*Стили для блока с иконками*/
+.nav__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap {
+  width: 50%;/*720px*/
+  height: 100%;/*16px*/
+  padding: 0 14.93%;/*0 215px*/
+  border: 1px solid green;
+}
+
+.icon {
+  width: auto;
+  height: 100%;
+}

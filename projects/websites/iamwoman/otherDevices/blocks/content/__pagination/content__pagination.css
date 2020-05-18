@@ -1,43 +1,31 @@
+/*Общие стили для блока с панинацией*/
 .content__pagination {
        position: absolute;
-       top: 50%;
-       -webkit-transform: translate(0, -50%);
-       transform: translate(0, -50%);
-       right: 2.5%;
-       height: 57vh;
-       width: 1.5%;
-       display: -webkit-box;
-       display: -ms-flexbox;
+       top: 50%;/*264px*/
+       right: 4.17%;/*60px*/
+       transform: translateY(-50%);
        display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-       -ms-flex-direction: column;
        flex-direction: column;
-       -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-       justify-content: space-between;
-       -webkit-box-align: center;
-       -ms-flex-align: center;
        align-items: center;
 }
-.pagination__link--current,
-.pagination__link--other {
-       text-decoration: none;
-}
-.pagination__link--current {
+
+/*Стили для номеров страниц*/
+/*Текущая страница*/
+.link-page--current {
        font-family: "OS-SB", sans-serif;
-       font-size: 1rem;
+       font-size: 1rem;/*16px*/
        color: #91171D;
 }
-.pagination__link--line {
-       height: 1px;
-       width: 80px; /*400%;*/
-       background-color: #342B2B;
-       -webkit-transform: rotate(90deg);
-       transform: rotate(90deg);
+
+/*Остальные страницы*/
+.pagination__link-page,
+.pagination__shape {
+       margin: 72.95% 0;/*t/b 15px*/
 }
-.pagination__link--other {
+
+.link-page--other {
        font-family: "OS-R", sans-serif;
-       font-size: 0.75rem;
+       font-size: 0.75rem;/*12px*/
+       text-decoration: none;
        color: #342B2B;
 }

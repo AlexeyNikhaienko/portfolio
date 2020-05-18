@@ -1,31 +1,36 @@
-/*Import fonts*/
-@import url("../common__files/css/_fonts.css");
+/*Импорт стилей*/
+/*Шрифты*/
+@import url("./../common__files/css/_fonts.css");
 
-/*Import styles for block "Header"*/
-@import url("blocks/header/header.css");
+/*Блок "Header"*/
+@import url("./blocks/header/header.css");
 
-/*Import styles for block "Menu"*/
-@import url("blocks/menu--hide/menu--hide.css");
-
-/*Import styles for block "Content":
-1) for block "Pagination"*/
+/*Стили для блока "Content":
+Блок "Pagination"*/
 @import url("blocks/content/__pagination/content__pagination.css");
-/*2) for block "Collection"*/
-@import url("blocks/content/__collection/content__collection.css");
-/*3) for block "New"*/
-@import url("blocks/content/__new/content__new.css");
-/*4) for block "About"*/
-@import url("blocks/content/__about/content__about.css");
-/*5) for block "Blog"*/
-@import url("blocks/content/__blog/content__blog.css");
 
-/*Import styles for block "Subscribe"*/
-@import url("blocks/content/__subscribe/content__subscribe.css");
+/*Форма регистрации*/
+@import url("./blocks/content/__login/content__login.css");
 
-/*Import styles for block "Footer"*/
-@import url("blocks/footer/footer.css");
+/*Блок "Collection"*/
+@import url("./blocks/content/__collection/content__collection.css");
 
-/*Common styles*/
+/*Блок"New"*/
+/* @import url("blocks/content/__new/content__new.css"); */
+
+/*Блок"About"*/
+/* @import url("blocks/content/__about/content__about.css"); */
+
+/*Блок"Blog"*/
+/* @import url("blocks/content/__blog/content__blog.css"); */
+
+/*Блок "Subscribe"*/
+/* @import url("blocks/content/__subscribe/content__subscribe.css"); */
+
+/*Стили для блока "Footer"*/
+/* @import url("blocks/footer/footer.css"); */
+
+/*Общие стили*/
 * {
        margin: 0;
        padding: 0;
@@ -34,10 +39,5 @@
 body {
        overflow-x: hidden;
        font-size: 16px;
-}
-
-@media screen and (max-width: 450px) {
-       .hide {
-              display: none;
-       }
+       line-height: 1.12;
 }

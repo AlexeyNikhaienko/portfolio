@@ -1,55 +1,53 @@
-.collection__sale {
-       position: relative;
-       bottom: 10vh;
-       left: 0;
-       width: 6%;
-       height: 90vh;
-       background-color: #ECE5E1;
-       font-family: "Cormorant-l", serif;
-       font-size: 1.125rem;
-       color: #342B2B;
-       -webkit-transition: 1s ease-out;
-       transition: 1s ease-out; 
-}
-.sale__cnt {
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       width: 100%;
-       height: 50%;
-       display: -webkit-box;
-       display: -ms-flexbox;
+/*Общие стили для блока "Распродажа"*/
+.collection__extra-info {
        display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-       -ms-flex-direction: column;
        flex-direction: column;
-       -ms-flex-pack: distribute;
-       justify-content: space-around;
-       -webkit-box-align: center;
-       -ms-flex-align: center;
+       justify-content: flex-end;
        align-items: center;
+       transition: all 0.7s ease-out;
 }
-.cnt__item {
-       white-space: nowrap;
-       -webkit-transform: rotate(-90deg);
-       transform: rotate(-90deg);
+
+.extra-info {
+       width: 5.28%;/*76px*/
+       height: 90.48%;/*760px*/
+       padding: 2.08% 1.53%;/*30px 22px*/
+       background-color: #DECEC5;
+       border: 1px solid blue;
 }
-.cnt__line {
-       width: 130%;
-       height: 1px;
+
+/*Стили для блока "sale"*/
+.extra-info__sale {
+       transform: scale(-1);
+       -webkit-writing-mode: vertical-rl;
+           -ms-writing-mode: tb-rl;
+               writing-mode: vertical-rl;
+}
+
+.sale {
+       width: auto;
+       height: auto;
+       border: 1px solid green;
+}
+
+.shape {
+       display: inline-block;
+}
+
+.shape--color__grey {
        background-color: #342B2B;
 }
 
-@media screen and (min-width: 501px) and (max-width: 1023px) {
-       .collection__sale {
-              height: 100vh;
-       }
-       .sale__cnt {
-              height: 30%;
-              bottom: 5%;
-       }
-       .cnt__line {
-              width: 200%;
-       }
+.shape--pos__upright {
+       width: 0.0625rem;
+       height: 5.875rem;/*94px*/
+}
+
+.sale__text {
+       margin-top: 1.875rem;/*30px*/
+}
+
+.text {
+       font-family: "Cormorant-l", serif;
+       font-size: 1.125rem;/*18px*/
+       color: #342B2B;
 }

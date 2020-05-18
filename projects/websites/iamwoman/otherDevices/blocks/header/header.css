@@ -1,126 +1,19 @@
-/*Styles for the visible part of the menu (стили для видимой части меню, расположенного в шапке сайта)*/
-.header {
-       width: 100%;
-       height: 10%;
+/*Импорт стилей блоков, входящих в состав "header"*/
+@import url("./nav/header__nav.css");
+@import url("./menu/header__menu.css");
+@import url("./search/header__search.css");
+
+/*Общие стили для навигации, расположенной в шапке сайта)*/
+.navigation__header {
        position: absolute;
-       top: 0;
        left: 0;
-       z-index: 1;
+       top: 0;
+       z-index: 5;
 }
-.header__menu--display {
-       position: relative;
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-       justify-content: space-between;
-       -webkit-box-align: center;
-       -ms-flex-align: center;
-       align-items: center;
-       width: 100%;
-       height: 100%;
-}
-.menu__burg {
-       position: absolute;
-       left: 3%;
-       -webkit-transform: translate(-50%, 0);
-       transform: translate(-50%, 0);
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-       -ms-flex-direction: column;
-       flex-direction: column;
-       width: 33px;
-       border: none;
-}
-.burg__line {
-       height: 2px;
-       width: 100%;
-       margin-bottom: 7px;
-       background-color: white;
-}
-.burg__line--short--right {
-       -ms-flex-item-align: end;
-       align-self: flex-end;
-       width: 18px;
-}
-.burg__line--short--left {
-       -ms-flex-item-align: start;
-       align-self: flex-start;
-       width: 18px;
-       margin-bottom: 0;
-}
-.collection__logo {
-       position: absolute;
-       left: 28%;
-       top: 20%;
-       -webkit-transform: translate(-50%, 0);
-       transform: translate(-50%, 0);
+
+.header {
+       width: 100%;/*1440px*/
        height: auto;
-       font-family: "Roboto-M", sans-serif;
-       text-align: center;
-       color: #342B2B;
-}
-.logo__heading {
-       font-size: 1.5rem;
-}
-.logo__descript {
-       font-size: 0.75rem;
-}
-.menu-icon {
-       position: absolute;
-       right: 15.6%;
-       width: 20.2%;
-       height: 100%;
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-        justify-content: space-between;
-       -webkit-box-align: center;
-       -ms-flex-align: center;
-       align-items: center;
-}
-
-@media screen and (max-width: 450px) {
-       .menu__burg {
-              left: 10%;
-       }
-       .menu-icon {
-              width: 32.8%;
-              right: 5%;
-       }
-}
-
-@media screen and (min-width: 501px) and (max-width: 1023px) {
-       .header {
-              height: 11%;
-       }
-       .collection__logo {
-              left: 30%;
-              top: 30%;
-       }
-       .logo__heading {
-              font-size: 1.25rem;
-       }
-       .logo__descript {
-              font-size: 0.625rem;
-       }
-       .menu-icon {
-              width: 30%;
-              right: 6%;
-       }
-}
-
-@media screen and (min-width: 1024px) {
-       .menu__burg {
-              cursor: pointer;
-       }
-       .menu-icon {
-              cursor: pointer;
-       }
+       padding: 2.08% 0;/*t/b 30px l/r 0*/
+       border: 2px solid red;
 }

@@ -1,0 +1,95 @@
+/*Общие стили для блока, содержащего логотип, описание и ссылки на соц.сети*/
+.collection__description {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       align-items: center;
+}
+
+.description {
+       width: 44.72%;/*644px*/
+       height: 90.48%;/*760px*/
+       border: 1px solid green;
+}
+
+/*Стили для блока с логотипом*/
+.description__logo {
+       margin-top: 4%;/*30px*/
+}
+
+/*Стили для блока с названием коллекции*/
+.title {
+       width: 82.3%;/*530px*/
+       height: auto;
+       border: 1px solid red;
+}
+
+/*Заголовок*/
+.title__head {
+       margin-bottom: 5.66%;/*30px*/
+}
+
+.head {
+       width: 100%;/*256px*/
+       height: auto;
+       font-family: "Cormorant-SB", serif;
+       font-size: 3rem;/*24px*/
+}
+
+.head--color__grey {
+       color: #342B2B;
+}
+
+/*Стили для блока со ссылкой на каталог*/
+.contain {
+       display: inline-block;
+       width: auto;/*150px*/
+       height: auto;
+}
+
+.link--color__red {
+       font-size: 1.125rem;/*18px*/
+       color: #91171D;
+       text-decoration: none;
+}
+
+.decoration {
+       display: block;
+       height: 0.0625rem;/*1px*/
+}
+
+.decoration--short {
+       width: 90%;/*135px*/
+       background-color: #91171D;
+}
+
+/*Стили для блока со ссылками на соц.сети*/
+.description__social-link {
+       display: flex;
+       align-items: center;
+}
+
+.social-link {
+       width: auto;/*295px*/
+       height: auto;
+       border: 1px solid green;
+}
+
+.link-soc {
+       font-family: "OS-R", sans-serif;
+       color: #342B2B;
+       text-decoration: none;
+}
+
+.link-soc--size__m {
+       font-size: 1rem;/*16px*/
+}
+
+.social-link__shape {
+      margin: 0 1rem;/*t/b 0 l/r 15px*/
+}
+
+.shape--pos__middle {
+       width: 1.5rem;/*24px*/
+       height: 0.0625rem;/*1px*/
+}
