@@ -25,7 +25,7 @@
 /* @import url("blocks/content/__blog/content__blog.css"); */
 
 /*Блок "Subscribe"*/
-/* @import url("blocks/content/__subscribe/content__subscribe.css"); */
+@import url("blocks/content/__subscribe/content__subscribe.css");
 
 /*Стили для блока "Footer"*/
 /* @import url("blocks/footer/footer.css"); */

@@ -24,6 +24,7 @@
                             <a class="icon shop" href="#" title="Корзина"><img src="./blocks/header/img/head-img3.png" alt="Корзина"></a>
                      </div>
               </nav>
+
        <!--Меню, которое появляется при нажатии на "burg". По умолчанию скрыто-->
               <nav class="header__menu-main menu-main">
                      <div class="menu-main__inner inner">
@@ -70,6 +71,7 @@
                             </div>
                      </div>
               </nav>
+
               <!--Поисковая строка, которая появляется при нажатии на "search". По умолчанию скрыта-->
               <div class="header__search-block search-block">
                      <span class="search-block__close-search close-search">&times;</span>
@@ -78,6 +80,7 @@
                      </form>
               </div>
        </header>
+
 <!--Общий блок, который содержит весь контент (за исключением подвала)-->
        <main class="content">
        <!--Форма регистрации на сайте, которая появляется при нажатии на "user"/ "shop". По умолчанию скрыта-->
@@ -92,11 +95,12 @@
                             <input class="field-form" type="password" autocomplete="on" name="password" placeholder="Пароль">
                             <a class="login-form__remind remind" href="#">Забыли пароль?</a>
                             <button class="login-form__button button button--size__l" type="submit" form="user">
-                                   <span class="submit">Войти</span>
+                                   <span class="submit submit--size__m">Войти</span>
                             </button>
                             <a class="login-form__link link link--color__grey" href="#">Зарегистрироваться</a>
                      </form>
               </div>
+
        <!--Блок с коллекцией товара, распродажей-->
               <div class="content__collection collection" id="collection">
                      <aside class="collection__extra-info extra-info">
@@ -111,7 +115,7 @@
                                    <p class="subname">MOSCOW</p>
                             </div>
                             <div class="title">
-                                   <h2 class="title__head head head--color__grey">Новая<br> круизная<br> коллекция ‘19</h2>
+                                   <h2 class="title__head head head--size__l head--color__grey">Новая<br> круизная<br> коллекция ‘19</h2>
                                    <div class="contain">
                                           <a class="link link--color__red" href="#">Перейти в каталог</a>
                                           <span class="decoration decoration--short"></span>
@@ -180,7 +184,7 @@
 
        <!--Блок с новинками-->
               <section class="content__new new" id="new">
-                     <h2 class="head head--color__red">Новое поступление</h2>
+                     <h2 class="head head--size__l head--color__red">Новое поступление</h2>
                      <div class="new__holder holder">
                             <input type="radio" class="input" name="tab" id="dress" checked>
                             <label class="headline" for="dress">Платья</label>
@@ -663,9 +667,10 @@
                             <a href="#footer" class="pagination__link-page link-page--other" title="Дополнительная информация">06</a>
                      </div>
               </section>
+
        <!--Блок с информацией о бренде-->
               <section class="content__about about" id="about">
-                     <h2 class="about__head head head--color__red">О бренде</h2>
+                     <h2 class="about__head head head--size__l head--color__red">О бренде</h2>
                      <div class="about__history history">
                             <figure class="history__slide slide">
                                    <img class="image" src="blocks/content/__about/img/about-img1.jpg" alt="Девушка в полосатых брюках">
@@ -691,6 +696,18 @@
                             <a href="#footer" class="pagination__link-page link-page--other" title="Дополнительная информация">06</a>
                      </div>
               </section>
+
+       <!--Блок подписки на рассылку-->
+              <div class="content__subscribe subscribe" id="subscribe" >
+                     <form class="form" id="subscribe" action="/subscribe" method="POST">
+                            <p class="form__head head head--size__m head--color__red">Подпишись на новости I AM WOMEN<br> и получи скидку 5% на следующую покупку</p>
+                            <input class="form__email email" type="email" autocomplete="on" name="emailaddress" placeholder="Ваш E-mail"><br>
+                            <button class="button button--size__m" type="submit" form="subscribe">
+                                   <span class="submit submit--size__s">Подписаться</span>
+                            </button>
+                            <p class="form__info info">Подписываясь на новости, Вы даёте согласие на обработку персональных данных</p>
+                     </form>
+              </div>
        </main>
 
        <!--<main class="content">
@@ -804,17 +821,6 @@
                             <span class="blog__line"></span>
                      </div>
               </section>
-              <div class="subscribe" id="subscribe">
-                     <div class="subscribe-wrap">
-                            <form class="subscribe__form" action="/subscribe" method="POST">
-                                   <p class="subscribe__descript hide">Подпишись на новости I AM WOMEN и получи скидку 5% на следующую покупку</p>
-                                   <p class="subscribe__descript desctop--hide">Подпишись на новости<br>I AM WOMEN<br>и получи скидку 5% на следующую покупку</p>
-                                   <input class="subscribe__email" type="email" name="emailaddress" placeholder="Ваш E-mail">
-                                   <input class="subscribe__btn" type="submit" value="Подписаться">
-                                   <p class="subscribe__info">Подписываясь на новости, Вы даёте согласие на обработку персональных данных</p>
-                            </form>
-                     </div>
-              </div>
        </main> -->
 
       <!-- <footer class="footer" id="footer">

@@ -114,9 +114,12 @@
 }
 
 .submit {
-  font-size: 1.25rem;/*20px*/
   line-height: 1.12;
   color: #fff;
+}
+
+.submit--size__m {
+  font-size: 1.25rem;/*20px*/
 }
 
 /*Стили для блока "Зарегистрироваться"*/

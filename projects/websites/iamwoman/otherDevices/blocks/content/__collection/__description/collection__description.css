@@ -33,7 +33,10 @@
        width: 100%;/*256px*/
        height: auto;
        font-family: "Cormorant-SB", serif;
-       font-size: 3rem;/*24px*/
+}
+
+.head--size__l {
+       font-size: 3rem;/*48px*/
 }
 
 .head--color__grey {
