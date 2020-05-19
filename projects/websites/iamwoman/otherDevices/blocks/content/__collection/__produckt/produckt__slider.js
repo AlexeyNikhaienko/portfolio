@@ -13,7 +13,7 @@ let curIndexSlide = 0;
 //Автослайдер
 //Через сколько времени (мс) показывается новый слайд
 const collectionIntervalTime = 5000;
-let collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
+//let collectionInterval = setInterval(nextСollectionSlide, collectionIntervalTime);
 
 //На кнопки устанавливаются слушатели событий, чтобы переключать слайды
 collectionLeftArrow.addEventListener("click", prevСollectionSlide);

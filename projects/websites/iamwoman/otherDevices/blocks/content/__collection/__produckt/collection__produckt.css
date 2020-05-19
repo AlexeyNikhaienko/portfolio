@@ -93,6 +93,11 @@
 }
 
 /*Стили для блока с ценой товара*/
+.container {
+       width: auto;
+       height: auto;
+}
+
 .shape--color__red {
        background-color: #91171D;
 }
@@ -100,6 +105,10 @@
 .shape--pos__bottom {
        width: 19.62%;/*72px*/
        height: 0.0625rem;/*1px*/
+}
+
+.price--size__s {
+       font-size: 1.125rem;/*18px*/
 }
 
 /*Стили для блока с переключателем слайдера*/

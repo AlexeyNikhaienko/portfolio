@@ -16,7 +16,7 @@
 @import url("./blocks/content/__collection/content__collection.css");
 
 /*Блок"New"*/
-/* @import url("blocks/content/__new/content__new.css"); */
+@import url("blocks/content/__new/content__new.css");
 
 /*Блок"About"*/
 /* @import url("blocks/content/__about/content__about.css"); */
