@@ -19,7 +19,7 @@
 @import url("blocks/content/__new/content__new.css");
 
 /*Блок"About"*/
-/* @import url("blocks/content/__about/content__about.css"); */
+@import url("blocks/content/__about/content__about.css");
 
 /*Блок"Blog"*/
 /* @import url("blocks/content/__blog/content__blog.css"); */

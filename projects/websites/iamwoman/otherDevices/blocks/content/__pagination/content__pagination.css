@@ -1,6 +1,7 @@
 /*Общие стили для блока с панинацией*/
 .collection__pagination,
-.new__pagination {
+.new__pagination,
+.about__pagination {
        position: absolute;
        top: 50%;/*264px*/
        right: 4.17%;/*60px*/
