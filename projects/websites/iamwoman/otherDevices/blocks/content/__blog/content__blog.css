@@ -1,205 +1,179 @@
-/*styles for block "Blog"*/
-.blog {
+/*Общие стили для блока*/
+.content__blog {
        position: relative;
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-       -webkit-box-orient: vertical;
-       -webkit-box-direction: normal;
-       -ms-flex-direction: column;
-       flex-direction: column;
-       -webkit-box-pack: justify;
-       -ms-flex-pack: justify;
-       justify-content: space-between;
-       -webkit-box-align: center;
-       -ms-flex-align: center;
-       align-items: center;
-       width: 100%;
-       height: 100%;
-       overflow-x: hidden;
+       overflow: hidden;
+       margin: 10.42% auto;/*t/b 150px*/
+}
+
+.blog {
+       width: 100%;/*1440px*/
+       height: auto;/*1093px*/
        border: 2px solid red;
 }
-.blog__title {
-       font-family: "Cormorant-SB", serif;
-       font-size: 3rem;
-       color: #91171D;
-       margin-bottom: 8%;/*110px;*/
+
+/*Стили для элементов блока*/
+/*Заголовок*/
+.blog__head {
+       margin-bottom: 4.72%;/*68px*/
 }
-.blog__toggle-slide {
-       position: absolute;
-       width: 25%;
-       height: 5%;
-       top: 0;
-       right: 0;
-       border: 1px solid red;
-}
-.blog__number-slide {
-       font-family: "Cormorant-R", serif;
-       color: #342B2B;
-}
-.blog__current-number {
-       font-size: 1.875rem;
-}
-.blog__total-number {
-       font-size: 1.125rem;
-}
+/*Слайдер*/
 .blog__slider {
-       display: -webkit-box;
-       display: -ms-flexbox;
        display: flex;
-       -ms-flex-pack: distribute;
-       justify-content: space-around;
-       -webkit-box-align: baseline;
-       -ms-flex-align: baseline;
-       align-items: baseline;
-       width: 100%;
-       min-height: 73%; 
+       transition: transform 0.7s ease-in-out;
+       /* transform: translateX(-10%); */
+}
+
+.slider {
+       width: auto;/*ширина установлена ч/з JS*/
+       height: auto;
+       max-height: 75.07%;/*821px*/
        border: 2px solid blue;
 }
-.blog__slider-item {
-       min-width: 27.3%;
-       min-height: 100%;
-       margin-right: 1%;
+
+/*Стили для элементов слайдера*/
+.element {
+       /*ширина установлена ч/з JS*/
+       width: auto;
+       height: auto;/*588px*/
+       max-height: 100%;
 }
-.blog__slider-hashtag {
-       font-family: "Cormorant-l", serif;
-       font-size: 1rem;
-       text-decoration: none;
+
+/*Хэштэг*/
+.hashtag {
+       font-size: 1rem;/*16px*/
        color: #342B2B;
-       line-height: 1.2;
 }
-.blog__slider-img {
+
+/*Стили для изображений*/
+.element__pic {
+       margin-top: 4%;/*16px*/
+}
+
+.pic {
+       /*ширина установлена ч/з JS*/
+       width: auto;
+       height: auto;
+}
+
+/*Стили для блока с описанием*/
+.descript {
        width: 100%;
-       height: 77.45%;
-}
-.blog__slider-descript {
-       width: 100%;
-}
-.blog__slider-title {
+       height: auto;
        font-family: "Cormorant-M", serif;
-       font-size: 1.875rem;
        color: #342B2B;
+       text-align: center;
 }
-.blog__slider-par {
-       font-family: "Cormorant-l", serif;
-       font-size: 1.125rem;
-       text-align: justify;
-       line-height: 1.35;
-       color: #342B2B;
+
+.descript__heading {
+       margin-top: 2.5%;/*10px*/
+       margin-bottom: 6%;/*24px*/
 }
-.blog__link-wrap {
-       margin-top: 3%;
-       margin-bottom: 1%;
-       min-width: 9%;
+
+.heading--size__xl {
+       font-size: 1.875rem;/*30px*/
 }
-.blog__link {
-       font-family: "Cormorant-R", serif;
-       font-size: 1.125rem;
-       color: #91171D;
-       text-decoration: none;
+
+/*Стили для блока с переключателем слайдера*/
+.blog__toggle {
+       position: absolute;
+       right: 0;
+       top: 0;
 }
-.blog__line {
-       display: block;
+
+.toggle--size__l {
+       width: 24.44%;/*352px*/
+       height: auto;
+}
+
+/*Номер слайда*/
+.toggle__index {
        position: relative;
-       top: 3px;
-       height: 1px;
-       width: 85%;/*:hover*/
-       background-color: #91171D;
+       top: 0.3125rem;/*5px*/
 }
 
-@media screen and (max-width: 450px) {
-       .blog {
-              width: 90%;
-              height: 150%;/*735,5px*/
-              margin: 0 auto;
-       }
-       .blog__title {
-              font-size: 1.5rem;
-              margin-bottom: 0;
-       }
-       .blog__slider {
-              position: relative;
-              height: 80%;/*588,4px*/
-       }
-       .blog__slider-item {
-              /*position: absolute;*/
-              width: 100%;
-              height: 100%;
-              margin-right: 0;
-              text-align: center;
-              border: 1px solid green;
-       }
-       .blog__slider-hashtag {
-              font-size: 0.875rem;
-              line-height: 1.125;
-       }
-       .blog__slider-img {
-              height: 63.1%;
-       }
-       .blog__slider-title {
-              font-size: 1.125rem;
-       }
-       .blog__slider-par {
-              font-size: 1rem;
-       }
-       .blog__toggle-slide {
-              position: relative;
-              width: 71.9%;
-              min-height: 7%;
-              bottom: 0;
-              right: 0;
-              border: 1px solid red;
-       }
-       .blog__current-number {
-              font-size: 1.5rem;
-       }
-       .blog__total-number {
-              font-size: 1rem;
-       }
-       .blog__link {
-              font-size: 0.875rem;
-       }
+.index {
+       width: 26.42%;/*93px*/
+       height: auto;
+       font-family: "Cormorant-R", serif;
+       text-align: center;
+       color: #342B2B;
+       border: 1px solid blue;
 }
 
-@media screen and (min-width: 501px) and (max-width: 1023px) {
-       .blog {
-              width: 95%;
-              height: 109vh;
-              margin-left: auto;
-              margin-right: auto;
-       }
-       .blog__title {
-              font-size: 2.25rem;
-       }
-       .blog__current-number {
-              font-size: 1.5rem;
-       }
-       .blog__total-number {
-              font-size: 1rem;
-       }
-       .blog__slider {
-              height: 81%; 
-       }
-       .blog__slider-item {
-              min-width: 47.5%;
-              margin-right: 3%;
-       }
-       .blog__slider-img {
-              height: 74.2%;
-       }
-       .blog__slider-title {
-              font-size: 1.5rem;
-       }
-       .blog__slider-par {
-              font-size: 1rem;
-       }
-       .blog__link {
-              font-size: 1rem;
-       }
+.current {
+       font-size: 2.25rem;/*36px*/
 }
 
-@media screen and (min-width: 1024px) {
-       .blog__link {
-              cursor: pointer;
-       }
+/*Бегунок, полоса прокрутки*/
+/*Общие стили*/
+.range {
+       -webkit-appearance: none;
+          -moz-appearance: none;
+               appearance: none;
+       width: 100%;/*207px*/
+       height: auto;
+       border: 0;
+       outline: 0;
+       background: transparent;
+}
+
+/*Стили для Chrome, Opera, Safari*/
+.range::-webkit-slider-thumb {
+       -webkit-appearance: none;
+       width: 26.42%;/*93px*/
+       height: 0.1875rem;/*3px*/
+       background-color: #342B2B;
+}
+
+.range::-webkit-slider-runnable-track {
+       width: 100%;/*207px*/
+       height: 0.0625rem;/*1px*/
+       background-color: #342B2B;
+}
+
+/*Стили для Firefox*/
+.range::-moz-range-thumb {
+       -moz-appearance: none;
+       width: 26.42%;/*93px*/
+       height: 0.1875rem;/*3px*/
+       background-color: #342B2B;
+}
+
+.range::-moz-range-track {
+       width: 100%;/*207px*/
+       height: 0.0625rem;/*1rem*/
+       background-color: #342B2B;
+}
+
+/*Стили для IE, Edge*/
+.range::-ms-thumb {
+       width: 26.42%;/*93px*/
+       height: 0.1875rem;/*3px*/
+       background-color: #342B2B;
+}
+
+.range::-ms-track {
+       width: 100%;/*207px*/
+       height: 0.0625rem;/*1rem*/
+       background-color: #342B2B;
+}
+
+.range::-ms-fill-lower {
+       background-color: #342B2B;
+}
+
+.range::-ms-fill-upper {
+       background-color: #342B2B;
+}
+
+.range::-ms-tooltip {
+       display: none;
+}
+
+/*Стили блока блока со ссылкой*/
+.blog__contain {
+       position: relative;
+       left: 50%;
+       transform: translateX(-50%);
+       margin-top: 3.47%;/*50px*/
 }

@@ -150,6 +150,7 @@
 /*Название товара*/
 .heading--size__l {
        font-size: 1.5rem;/*24px*/
+       white-space: nowrap;
 }
 
 /*Цена товара*/

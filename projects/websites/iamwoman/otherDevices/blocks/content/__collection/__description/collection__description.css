@@ -56,6 +56,10 @@
        text-decoration: none;
 }
 
+.contain__decoration {
+       margin-top: 3.75%;/*5px*/
+}
+
 .decoration {
        display: block;
        height: 0.0625rem;/*1px*/

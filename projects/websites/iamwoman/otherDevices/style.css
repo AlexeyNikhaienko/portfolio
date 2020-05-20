@@ -22,7 +22,7 @@
 @import url("blocks/content/__about/content__about.css");
 
 /*Блок"Blog"*/
-/* @import url("blocks/content/__blog/content__blog.css"); */
+@import url("blocks/content/__blog/content__blog.css");
 
 /*Блок "Subscribe"*/
 @import url("blocks/content/__subscribe/content__subscribe.css");
