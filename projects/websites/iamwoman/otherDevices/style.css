@@ -28,7 +28,7 @@
 @import url("blocks/content/__subscribe/content__subscribe.css");
 
 /*Стили для блока "Footer"*/
-/* @import url("blocks/footer/footer.css"); */
+@import url("blocks/footer/footer.css");
 
 /*Общие стили*/
 * {

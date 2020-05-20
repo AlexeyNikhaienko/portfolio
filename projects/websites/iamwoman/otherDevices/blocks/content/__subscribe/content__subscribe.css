@@ -1,6 +1,6 @@
 /*Общие стили для блока*/
 .content__subscribe {
-       margin: 0 auto;
+       margin: 0 auto 10.42%;/*b 150px*/
 }
 
 .subscribe {
@@ -31,7 +31,6 @@
 }
 
 .email {
-       width: 41.95%;/*271px / 646px*/
        height: auto;
        border: 0;
        border-bottom: 0.0625rem solid #342B2B;
@@ -42,27 +41,31 @@
        background-color: transparent;
 }
 
-.email::-webkit-input-placeholder {
+.email--width__m {
+       width: 41.95%;/*271px / 646px*/
+}
+
+.email--width__m::-webkit-input-placeholder {
        font-size: 1rem;/*16px*/
        text-align: center;
 }
 
-.email::-moz-placeholder {
+.email--width__m::-moz-placeholder {
        font-size: 1rem;/*16px*/
        text-align: center;
 }
 
-.email:-ms-input-placeholder {
+.email--width__m:-ms-input-placeholder {
        font-size: 1rem;/*16px*/
        text-align: center;
 }
 
-.email::-ms-input-placeholder {
+.email--width__m::-ms-input-placeholder {
        font-size: 1rem;/*16px*/
        text-align: center;
 }
 
-.email::placeholder {
+.email--width__m::placeholder {
        font-size: 1rem;/*16px*/
        text-align: center;
 }

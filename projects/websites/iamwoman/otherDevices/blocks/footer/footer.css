@@ -1,21 +1,84 @@
-/*Import styles for block "Menu"*/
-@import url("__menu/__menu.css");
-
-/*Import styles for block "Info"*/
-@import url("__info/__info.css");
-
-/*Common styles */
-.footer {
-       display: -webkit-box;
-       display: -ms-flexbox;
+/*Общие стили для блока*/
+.content__footer {
        display: flex;
-       width: 100%;
-       height: 62vh;
-       margin-top: 3.7%;
+       position: relative;
 }
 
-@media screen and (max-width: 1023px) {
-       .footer {
-              height: 40vh;
-       }
+.footer {
+       width: 100%;/*1440px*/
+       height: auto;/*520px*/
+       background-color: #ECE5E1;
+       border: 2px solid red;
+}
+
+/*Стили для блока с меню*/
+.footer__inner {
+       display: flex;
+       justify-content: space-between;
+}
+
+.inner--short {
+       width: 53.68%;/*773px*/
+       height: 100%;/*520px*/
+       padding: 4.03% 9.03%;/*t/b 58px l/r 130px*/
+       background-color: #DECEC5;
+       border: 1px solid blue;
+}
+
+/*Стили для блоков с элементами списка*/
+.inner--short__list {
+       margin-top: 8.75%;/*45px*/
+}
+
+/*Стили для блока с дополнительной информацией*/
+.footer__owner {
+       display: flex;
+       justify-content: space-between;
+}
+
+.owner {
+       width: calc(100% - 53.68%);/*667px*/
+       height: 100%;/*520px*/
+       padding: 4.03% 3.82%;/*t/b 58px r 105px l 52px*/
+       border: 1px solid yellow;
+}
+
+/*Элементы списка*/
+.item--color__grey {
+       font-size: 1.25rem;/*20px*/
+}
+
+/*Список с соц.сетями*/
+.list__item--margin:not(:last-of-type) {
+       margin-right: 7%;
+}
+
+.item__list {
+       display: flex;
+       margin-bottom: 0.1875rem;
+}
+
+.link-soc--size__s {
+       font-size: 0.875rem;/*14px*/
+}
+
+.email--width__s {
+       width: 63.25%;/*194px*/
+}
+
+.extra-method {
+       white-space: normal;
+}
+
+/*Стили для копирайта*/
+.footer__copyright {
+       position: absolute;
+       right: 7.78%;/*112px*/
+       bottom: 4.03%;/*58px*/
+}
+
+.copyright {
+       font-family: "Cormorant-R", serif;
+       font-size: 0.875rem;/*14px*/
+       color: #342B2B;
 }
