@@ -1,94 +1,285 @@
 /*Общие стили для блока*/
 .content__subscribe {
-       margin: 0 auto 10.42%;/*b 150px*/
+       margin: 10.42% auto 0;
 }
 
 .subscribe {
-       width: 77.08%;/*1110px*/
        height: auto;/*500px*/
-       padding: 3.61% 8.125%;/*t/b 52px l/r 117px*/
        background: url(img/subscr-bc.jpg) center center/cover no-repeat;
-       border: 2px solid red;
 }
 
 /*Общие стили для блока с формой*/
 .form {
        width: 100%;/*1110px*/
        height: auto;/*500px*/
-       padding: 5.23% 10.36%;/*58px 115px*/
        text-align: center;
        background-color: rgba(236,229,225, 0.8);
 }
 
-/*Заголовок*/
-.head--size__m {
-       font-size: 2rem;/*32px*/
-}
-
-/*Поле для ввода алреса e-mail*/
-.form__email {
-       margin: 2.7% 0;/*t/b 30px*/
-}
-
+/*Поле для ввода адреса e-mail*/
 .email {
        height: auto;
        border: 0;
        border-bottom: 0.0625rem solid #342B2B;
        outline: 0;
        font-family: "Cormorant-l", serif;
-       font-size: 1rem;/*16px*/
        color: #342B2B;
        background-color: transparent;
-}
-
-.email--width__m {
-       width: 41.95%;/*271px / 646px*/
-}
-
-.email--width__m::-webkit-input-placeholder {
-       font-size: 1rem;/*16px*/
-       text-align: center;
-}
-
-.email--width__m::-moz-placeholder {
-       font-size: 1rem;/*16px*/
-       text-align: center;
-}
-
-.email--width__m:-ms-input-placeholder {
-       font-size: 1rem;/*16px*/
-       text-align: center;
-}
-
-.email--width__m::-ms-input-placeholder {
-       font-size: 1rem;/*16px*/
-       text-align: center;
-}
-
-.email--width__m::placeholder {
-       font-size: 1rem;/*16px*/
-       text-align: center;
 }
 
 /*Стили для кнопки отправки формы*/
 .button--size__m {
        width: auto;/*167px*/
        height: auto;/*36px*/
-       padding: 1% 2.79%;/*10px 31px*/
-}
-
-.submit--size__s {
-       font-size: 1.125rem;/*18px*/
 }
 
 /*Стили для блока с дополнительной информацией*/
 .form__info {
        margin: 1% auto 0;/*t 10px*/
 }
+
 .info {
-       width: 44.27%;/*286px*/
        height: auto;
        font-family: "OS-R", sans-serif;
        font-size: 0.75rem;
        color: #342B2B;
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+       /*Общие стили для блока*/
+       .subscribe {
+              width: 94.14%;/*723px*/
+              padding: 6.77% 10.94%;/*t/b 52px l/r 84px*/
+       }
+
+       /*Общие стили для блока с формой*/
+       .form {
+              padding: 9.13% 3.46%;/*t/b 66px l/r 25px*/
+       }
+
+       /*Заголовок*/
+       .head--size__m {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Поле для ввода адреса e-mail*/
+       .form__email {
+              margin: 5.41% 0;/*t/b 30px / 555px*/
+       }
+
+       .email {
+              font-size: 0.875rem;/*14px*/
+       }
+
+       .email--width__m {
+              width: 35.03%;/*181px*/
+       }
+
+       .email--width__m::-webkit-input-placeholder {
+              font-size: 0.875rem;/*14px*/
+              text-align: center;
+       }
+
+       .email--width__m::-moz-placeholder {
+              font-size: 0.875rem;/*14px*/
+              text-align: center;
+       }
+
+       .email--width__m:-ms-input-placeholder {
+              font-size: 0.875rem;/*14px*/
+              text-align: center;
+       }
+
+       .email--width__m::-ms-input-placeholder {
+              font-size: 0.875rem;/*14px*/
+              text-align: center;
+       }
+
+       .email--width__m::placeholder {
+              font-size: 0.875rem;/*14px*/
+              text-align: center;
+       }
+
+       /*Стили для кнопки отправки формы*/
+       .button--size__m {
+              padding: 1.8% 5.59%;/*t/b 10px l/r 31px*/
+       }
+
+       .submit--size__s {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Стили для блока с дополнительной информацией*/
+       .info {
+              width: 52.53%;/*292px*/
+       }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1280px) {
+       /*Общие стили для блока*/
+       .subscribe {
+              width: 77.08%;/*1110px*/
+              padding: 3.61% 8.125%;/*t/b 52px l/r 117px*/
+       }
+
+       /*Общие стили для блока с формой*/
+       .form {
+              padding: 5.23% 10.36%;/*58px 115px*/
+       }
+
+       /*Заголовок*/
+       .head--size__m {
+              font-size: 2rem;/*32px*/
+       }
+
+       /*Поле для ввода алреса e-mail*/
+       .form__email {
+              margin: 2.7% 0;/*t/b 30px*/
+       }
+
+       .email {
+              font-size: 1rem;/*16px*/
+       }
+
+       .email--width__m {
+              width: 41.95%;/*271px / 646px*/
+       }
+
+       .email--width__m::-webkit-input-placeholder {
+              font-size: 1rem;/*16px*/
+              text-align: center;
+       }
+
+       .email--width__m::-moz-placeholder {
+              font-size: 1rem;/*16px*/
+              text-align: center;
+       }
+
+       .email--width__m:-ms-input-placeholder {
+              font-size: 1rem;/*16px*/
+              text-align: center;
+       }
+
+       .email--width__m::-ms-input-placeholder {
+              font-size: 1rem;/*16px*/
+              text-align: center;
+       }
+
+       .email--width__m::placeholder {
+              font-size: 1rem;/*16px*/
+              text-align: center;
+       }
+
+       /*Стили для кнопки отправки формы*/
+       .button--size__m {
+              padding: 1% 2.79%;/*10px 31px*/
+       }
+
+       .submit--size__s {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       /*Стили для блока с дополнительной информацией*/
+       .info {
+              width: 44.27%;/*286px*/
+       }
+}
+
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       /*Заголовок*/
+       .head--size__m {
+              font-size: 2.25rem;/*36px*/
+       }
+
+       /*Поле для ввода адреса e-mail*/
+       .email {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       .email--width__m::-webkit-input-placeholder {
+              font-size: 1.125rem;/*18px*/
+              text-align: center;
+       }
+
+       .email--width__m::-moz-placeholder {
+              font-size: 1.125rem;/*18px*/
+              text-align: center;
+       }
+
+       .email--width__m:-ms-input-placeholder {
+              font-size: 1.125rem;/*18px*/
+              text-align: center;
+       }
+
+       .email--width__m::-ms-input-placeholder {
+              font-size: 1.125rem;/*18px*/
+              text-align: center;
+       }
+
+       .email--width__m::placeholder {
+              font-size: 1.125rem;/*18px*/
+              text-align: center;
+       }
+
+       /*Стили для кнопки отправки формы*/
+       .submit--size__s {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Стили для блока с дополнительной информацией*/
+       .info {
+              font-size: 0.875rem;/*14px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       /*Заголовок*/
+       .head--size__m {
+              font-size: 2.625rem;/*42px*/
+       }
+
+       /*Поле для ввода адреса e-mail*/
+       .email {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       .email--width__m::-webkit-input-placeholder {
+              font-size: 1.25rem;/*20px*/
+              text-align: center;
+       }
+
+       .email--width__m::-moz-placeholder {
+              font-size: 1.25rem;/*20px*/
+              text-align: center;
+       }
+
+       .email--width__m:-ms-input-placeholder {
+              font-size: 1.25rem;/*20px*/
+              text-align: center;
+       }
+
+       .email--width__m::-ms-input-placeholder {
+              font-size: 1.25rem;/*20px*/
+              text-align: center;
+       }
+
+       .email--width__m::placeholder {
+              font-size: 1.25rem;/*20px*/
+              text-align: center;
+       }
+
+       /*Стили для кнопки отправки формы*/
+       .submit--size__s {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Стили для блока с дополнительной информацией*/
+       .info {
+              font-size: 1rem;/*16px*/
+       }
 }
