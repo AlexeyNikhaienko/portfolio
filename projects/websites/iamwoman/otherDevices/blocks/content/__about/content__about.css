@@ -1,18 +1,12 @@
 /*Общие стили для блока "About"*/
 .content__about {
        position: relative;
+       margin-top: 10.42%;/*150px*/
 }
 
 .about {
        width: auto;/*1440px*/
        height: auto;/*1283px*/
-       border: 2px solid red;
-}
-
-/*Стили для элементов блока*/
-/*Заголовок*/
-.about__head {
-       margin-bottom: 6.94%;/*100px*/
 }
 
 /*Общие стили для блока-обёртки с историей коллекции*/
@@ -21,7 +15,6 @@
 }
 
 .history {
-       width: 77.08%;/*1110px*/
        height: auto;
        border: 2px solid blue;
 }
@@ -29,17 +22,11 @@
 /*Стили для слайдов*/
 .history__slide {
        position: relative;
+       border: 3px solid yellow;
 }
 
 .history__slide--position__right {
-       margin-top: -24.5%;/*272px*/
        text-align: right;
-}
-
-/*Изображения*/
-.image {
-       width: auto;
-       height: auto;
 }
 
 /*Описание*/
@@ -50,25 +37,17 @@
 
 .slide__block--position__right {
        right: 0;
-       top: 9.82%;/*70px*/
 }
 
 .slide__block--position__left {
        left: 0;
-       bottom: 10.43%;/*70px*/
        text-align: left;
 }
 
 .block {
-       width: 59%;/*655px*/
        height: auto;
        max-height: 50%;
-       padding: 2.7% 3.6%;/*t/b 30px l/r 40px*/
        background-color: rgba(236,229,225, 0.8);
-}
-
-.block__par {
-       margin-bottom: 4.58%;/*30px*/
 }
 
 .par {
@@ -78,6 +57,112 @@
        color: #342B2B;
 }
 
-.par--size__m {
-       font-size: 1.25rem;/*20px*/
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+       /*Стили для элементов блока*/
+       /*Заголовок*/
+       .about__head {
+              margin-bottom: 9.375%;/*72px*/
+       }
+
+       /*Общие стили для блока-обёртки с историей коллекции*/
+       .history {
+              width: 94.14%;/*723px*/
+       }
+
+       /*Стили для слайдов*/
+       .history__slide--position__right {
+              margin-top: -25.72%;/*186px*/
+       }
+
+       /*Изображения*/
+       .image {
+              width: 48.7%;/*352px*/
+              height: auto;
+       }
+
+       /*Описание*/
+       .slide__block--position__right {
+              top: 6.8%;/*37px*/
+       }
+
+       .slide__block--position__left {
+              bottom: 6.8%;/*37px*/
+       }
+
+       .block {
+              width: 63.21%;/*457px*/
+              padding: 3.46% 3.87%;/*t/b 25px l/r 28px*/
+       }
+
+       .block__par {
+              margin-bottom: 5.47%;/*25px*/
+       }
+
+       .par--size__m {
+              font-size: 1rem;/*16px*/
+       }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1280px) {
+       /*Стили для элементов блока*/
+       /*Заголовок*/
+       .about__head {
+              margin-bottom: 6.94%;/*100px*/
+       }
+
+       /*Общие стили для блока-обёртки с историей коллекции*/
+       .history {
+              width: 77.08%;/*1110px*/
+       }
+
+       /*Стили для слайдов*/
+       .history__slide--position__right {
+              margin-top: -24.5%;/*272px*/
+       }
+
+       /*Изображения*/
+       .image {
+              width: 48.7%;
+              height: auto;
+       }
+
+       /*Описание*/
+       .slide__block--position__right {
+              top: 9.82%;/*70px*/
+       }
+
+       .slide__block--position__left {
+              bottom: 10.43%;/*70px*/
+       }
+
+       .block {
+              width: 59%;/*655px*/
+              padding: 2.7% 3.6%;/*t/b 30px l/r 40px*/
+       }
+
+       .block__par {
+              margin-bottom: 4.58%;/*30px*/
+       }
+
+       .par--size__m {
+              font-size: 1.25rem;/*20px*/
+       }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       /*Описание*/
+       .par--size__m {
+              font-size: 1.5rem;/*24px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       /*Описание*/
+       .par--size__m {
+              font-size: 2rem;/*32px*/
+       }
 }
