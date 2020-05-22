@@ -1,14 +1,13 @@
 /*Общие стили для блока "New"*/
 .content__new {
        position: relative;
-       margin: 10.42% auto;/*t/b 150px*/
+       margin-top: 10.42%;/*150px*/
 }
 
 .new {
-       width: auto;
+       /*width: 100%;*/
        height: auto;/*min-height = 847px*/
        text-align: center;
-       border: 2px solid red;
 }
 
 /*Стили для элементов блока*/
@@ -16,19 +15,12 @@
 .head--color__red {
        text-align: center;
        color: #91171D;
-       border: 1px solid blue;
 }
 
 /*Стили для блока-обёртки*/
-.new__holder {
-       margin: 2.08% auto;/*t/b 30px 0*/
-}
-
 .holder {
-       width: 77.08%;/*1110px*/
        height: auto;
        text-align: center;
-       border: 1px solid green;
 }
 
 /*Стили для названий вкладок*/
@@ -51,18 +43,12 @@
 
 .headline {
        font-family: "Cormorant-SB", serif;
-       font-size: 1.125rem;/*18px*/
        color: #342B2B;
-}
-
-.headline:not(:last-of-type) {
-       margin-right: 4.5%;/*50px*/
 }
 
 /*Стили для самих вкладок*/
 .holder__tabs {
        display: none;/*Скрытие вкладок*/ 
-       margin-top: 4.32%;/*48px*/
 }
 
 .tabs {
@@ -95,7 +81,6 @@
 .slide {
        width: 100%;/*350px*/
        height: auto;
-       border: 3px solid yellow;
 }
 
 .slide-active {
@@ -106,17 +91,14 @@
 
 /*Слайды*/
 .picture {
-       width: auto;
+       width: 100%;
        height: auto;
-       max-width: 100%;/*350px*/
 }
 
 /*Вывод общего количества лайков*/
 /*Блок-обёртка для элементов*/
 .slide__counter {
        position: absolute;
-       right: 2.86%;/*10px*/
-       top: 1.61%;/*10px*/
 }
 
 .counter {
@@ -135,41 +117,248 @@
 /*Поле для вывода количества лайков*/
 .amount {
        font-family: "Cormorant-M", serif;
-       font-size: 1.25rem;/*20px*/
        color: #342B2B;
 }
 
 /*Стили для блока с названием и ценой товара*/
 .caption--size__l {
        width: 100%;/*350px*/
-       padding: 4.57% 0;/*t/b 16px*/
        font-family: "Cormorant-M", serif;
        color: #342B2B;
 }
 
 /*Название товара*/
 .heading--size__l {
-       font-size: 1.5rem;/*24px*/
        white-space: nowrap;
 }
 
 /*Цена товара*/
 .price--size__l {
        padding-left: 2%;
-       font-size: 1.25rem;/*20px*/
 }
 
 /*Стили для блока с управлением слайдерами*/
 .carousel__switch {
        display: inline;
        position: absolute;
-       left: 2.86%;/*10px*/
-       bottom: 16%;/*10px*/
 }
 
 .switch {
        font-family: "Cormorant-M", serif;
-       font-size: 1.25rem;/*20px*/
        color: #342B2B;
        background-color: rgba(255,255,255,0.5);
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+       /*Общие стили для блока "New"*/
+       .content__new {
+              margin-left: auto;
+              margin-right: auto;
+       }
+
+       .new {
+              width: 94.14%;/*723px*/
+       }
+
+       /*Стили для блока-обёртки*/
+       .new__holder {
+              margin: 3.6% auto;/*t/b 26px 0*/
+       }
+
+       .holder {
+              width: 100%;
+       }
+
+       /*Стили для названий вкладок*/
+       /*Показывает контент выбранной вкладки*/
+       .headline {
+              font-size: 1rem;/*16px*/
+       }
+
+       .headline:not(:last-of-type) {
+              margin-right: 3.6%;/*26px*/
+       }
+
+       /*Стили для самих вкладок*/
+       .holder__tabs {
+              margin-top: 6.64%;/*48px*/
+       }
+
+       /*Вывод общего количества лайков*/
+       /*Блок-обёртка для элементов*/
+       .slide__counter {
+              right: 4.39%;/*10px*/
+              top: 2.06%;/*10px*/
+       }
+
+       /*Поле для вывода количества лайков*/
+       .amount {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Стили для блока с названием и ценой товара*/
+       .caption--size__l {
+              padding: 2.78% 0;/*t/b 8px*/
+       }
+
+       /*Название товара*/
+       .heading--size__l {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Цена товара*/
+       .price--size__l {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Стили для блока с управлением слайдерами*/
+       .carousel__switch {
+              left: 4.39%;/*10px*/
+              bottom: 17%;/*10px*/
+       }
+
+       .switch {
+              font-size: 1rem;/*16px*/
+       }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1024px) {
+       /*Общие стили для кнопки "лайк", управления слайдерами*/
+       .like:hover,
+       .prev:hover,
+       .next:hover {
+              cursor: pointer;
+       }
+}
+
+@media screen and (min-width: 1280px) {
+       /*Общие стили для блока "New"*/
+       .new {
+              width: 100%;/*1440px*/
+       }
+
+       /*Стили для блока-обёртки*/
+       .new__holder {
+              margin: 2.08% auto;/*t/b 30px 0*/
+       }
+
+       .holder {
+              width: 77.08%;/*1110px*/
+       }
+
+       /*Стили для названий вкладок*/
+       /*Показывает контент выбранной вкладки*/
+       .headline {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       .headline:not(:last-of-type) {
+              margin-right: 4.5%;/*50px*/
+       }
+
+       /*Стили для самих вкладок*/
+       .holder__tabs {
+              margin-top: 4.32%;/*48px*/
+       }
+
+       /*Вывод общего количества лайков*/
+       /*Блок-обёртка для элементов*/
+       .slide__counter {
+              right: 2.86%;/*10px*/
+              top: 1.61%;/*10px*/
+       }
+
+       /*Поле для вывода количества лайков*/
+       .amount {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Стили для блока с названием и ценой товара*/
+       .caption--size__l {
+              padding: 4.57% 0;/*t/b 16px*/
+       }
+
+       /*Название товара*/
+       .heading--size__l {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Цена товара*/
+       .price--size__l {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Стили для блока с управлением слайдерами*/
+       .carousel__switch {
+              left: 2.86%;/*10px*/
+              bottom: 16%;/*10px*/
+       }
+
+       .switch {
+              font-size: 1.25rem;/*20px*/
+       }
+}
+
+@media screen and (min-width: 1024px) {
+       /*Кнопка "лайк"*/
+       .like {
+              width: 100%;
+       }
+}
+
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       /*Стили для названий вкладок*/
+       /*Показывает контент выбранной вкладки*/
+       .headline {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Вывод общего количества лайков*/
+       /*Поле для вывода количества лайков*/
+       .amount {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Название товара*/
+       .heading--size__l {
+              font-size: 1.75rem;/*28px*/
+       }
+
+       /*Цена товара*/
+       .price--size__l {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Стили для блока с управлением слайдерами*/
+       .switch {
+              font-size: 1.5rem;/*24px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       /*Стили для названий вкладок*/
+       /*Показывает контент выбранной вкладки*/
+       .headline {
+              font-size: 1.75rem;/*28px*/
+       }
+
+       /*Название товара*/
+       .heading--size__l {
+              font-size: 2rem;/*32px*/
+       }
+
+       /*Цена товара*/
+       .price--size__l {
+              font-size: 1.75rem;/*28px*/
+       }
+
+       /*Стили для блока с управлением слайдерами*/
+       .switch {
+              font-size: 1.75rem;/*28px*/
+       }
 }
