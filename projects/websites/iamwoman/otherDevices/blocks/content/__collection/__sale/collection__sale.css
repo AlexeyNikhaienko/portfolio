@@ -8,9 +8,6 @@
 }
 
 .extra-info {
-       width: 5.28%;/*76px*/
-       height: 90.48%;/*760px*/
-       padding: 2.08% 1.53%;/*30px 22px*/
        background-color: #DECEC5;
        border: 1px solid blue;
 }
@@ -48,6 +45,56 @@
 
 .text {
        font-family: "Cormorant-l", serif;
-       font-size: 1.125rem;/*18px*/
        color: #342B2B;
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+       /*Общие стили для блока "Распродажа"*/
+       .extra-info {
+              width: 6.51%;/*50px*/
+              height: 100%;/*823px*/
+              padding: 4.82% 0;/*t/b 37px 0*/
+       }
+
+       .text {
+              font-size: 0.875rem;/*14px*/
+       }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1280px) {
+       /*Общие стили для блока "Распродажа"*/
+       .extra-info {
+              width: 5.28%;/*76px*/
+              height: 90.48%;/*760px*/
+              padding: 2.08% 0;/*t/b 30px 0*/
+       }
+}
+
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+       .text {
+              font-size: 1rem;/*16px*/
+       }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1499px) {
+       .text {
+              font-size: 1.125rem;/*18px*/
+       }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       .text {
+              font-size: 1.25rem;/*20px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       .text {
+              font-size: 1.5rem;/*24px*/
+       }
 }

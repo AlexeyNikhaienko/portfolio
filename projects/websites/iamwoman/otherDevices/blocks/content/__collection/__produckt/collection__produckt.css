@@ -4,7 +4,6 @@
 }
 
 .produckt {
-       width: 50%;/*720px*/
        height: 100%;/*840px = 100vh*/
        background-color: #F3ECE4;
        background-position: 50% 50%;
@@ -26,8 +25,6 @@
 /*Стили для блока-обёртки*/
 .produckt__wrapper {
        position: relative;
-       left: -14.58%;/*105px*/
-       top: 9.52%;/*80px*/
        z-index: 1;
        display: flex;
        transition: all 0.7s ease-in-out;
@@ -35,8 +32,6 @@
 
 .wrapper {
        width: auto;
-       max-width: 84.03%;/*605px*/
-       height: 80.95%;/*680px*/
        border: 2px solid yellow;
 }
 
@@ -68,7 +63,6 @@
 .prod__caption {
        position: absolute;
        left: 50%;
-       bottom: 13.22%;/*80px*/
        transform: translateX(-50%);
 }
 
@@ -80,7 +74,6 @@
 }
 
 .caption--size__m {
-       padding: 3.31% 4.3%;/*t/b 20px 26px*/
        font-family: "Cormorant-SB", serif;
        color: #91171D;
        background-color: rgba(236,229,225, 0.8);
@@ -94,7 +87,7 @@
 
 /*Стили для блока с ценой товара*/
 .container {
-       width: auto;
+       width: 100%;
        height: auto;
 }
 
@@ -103,26 +96,19 @@
 }
 
 .shape--pos__bottom {
-       width: 19.62%;/*72px*/
        height: 0.0625rem;/*1px*/
-}
-
-.price--size__s {
-       font-size: 1.125rem;/*18px*/
 }
 
 /*Стили для блока с переключателем слайдера*/
 .wrapper__toggle {
        position: absolute;
        left: 50%;/*140px*/
-       bottom: -10%;/*5px*/
        z-index: 1;
        transform: translateX(-50%);
        border: 2px solid red;
 }
 
 .toggle--size__s {
-       min-width: 18.87%;/*114px*/
        height: auto;
 }
 
@@ -133,23 +119,16 @@
        color: #91171D;
 }
 
-.left,
-.right {
-       font-size: 1.25rem;/*20px*/
-}
-
 .cur {
-       padding-left: 10%;
-       font-size: 2.25rem;
+       padding-left: 10%;/*20px*/
 }
 
 .toggle__total {
-       margin-right: 10%;
+       margin-right: 10%;/*20px*/
 }
 
 .total {
-       font-family: "Cormorant-R",serif;
-       font-size: 1.125rem;/*18px*/
+       font-family: "Cormorant-R", serif;
        vertical-align: sub;
        color: #342B2B;
 }
@@ -164,6 +143,221 @@
 
 .link-more {
        font-family: "Cormorant-l", serif;
-       font-size: 1.125rem;/*18px*/
        color: #342B2B;
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+       /*Общие стили для слайдера*/
+       .produckt {
+              width: 39.71%;/*305px*/
+              padding: 11.72% 0;/*t/b 90px*/
+       }
+
+       /*Стили для блока-обёртки*/
+       .produckt__wrapper {
+              left: -48.2%;/*147px*/
+       }
+
+       .wrapper {
+              width: 130.5%;/*398px*/
+              height: 100%;/*760px*/
+       }
+
+       /*Стили для элементов слайдера*/
+       /*Общие стили для блока с названием и ценой товара (на слайде)*/
+       .prod__caption {
+              bottom: 7.73%;/*50px*/
+       }
+
+       .caption--size__m {
+              padding: 5.03% 4.27%;/*t/b 20px 17px*/
+       }
+
+       /*Стили для блока с ценой товара*/
+       .shape--pos__bottom {
+              width: 26%;/*72px*/
+       }
+
+       .price--size__s {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .wrapper__toggle {
+              bottom: -8.19%;/*13px*/
+       }
+
+       .toggle--size__s {
+              min-width: 20.34%;/*71px*/
+       }
+
+       .left,
+       .right {
+              font-size: 1rem;/*16px*/
+       }
+
+       .cur {
+              padding-left: 10%;
+              font-size: 1.5rem;/*24px*/
+       }
+
+       .total {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Стили для блока со ссылкой на весь каталог*/
+       .link-more {
+              font-size: 1rem;/*16px*/
+       }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1024px) {
+       /*Стили для "бургера" меню*/
+       .left:hover,
+       .right:hover {
+              cursor: pointer;
+       }
+}
+
+@media screen and (min-width: 1280px) {
+       /*Общие стили для слайдера*/
+       .produckt {
+              width: 50%;/*720px*/
+              padding: 4.76% 0;/*68px 0*/
+       }
+
+       /*Стили для блока-обёртки*/
+       .produckt__wrapper {
+              left: -14.58%;/*105px*/
+       }
+
+       .wrapper {
+              max-width: 84.03%;/*605px*/
+              height: 100%;/*760px*/
+       }
+
+       /*Стили для элементов слайдера*/
+       /*Общие стили для блока с названием и ценой товара (на слайде)*/
+       .prod__caption {
+              bottom: 13.22%;/*80px*/
+       }
+
+       .caption--size__m {
+              padding: 3.31% 4.3%;/*t/b 20px 26px*/
+       }
+
+       /*Стили для блока с ценой товара*/
+       .shape--pos__bottom {
+              width: 26%;/*72px*/
+       }
+
+       .price--size__s {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .wrapper__toggle {
+              bottom: -10%;/*5px*/
+       }
+
+       .toggle--size__s {
+              min-width: 18.87%;/*114px*/
+       }
+
+       .left,
+       .right {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       .cur {
+              font-size: 2.25rem;/*36px*/
+       }
+
+       .total {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       /*Стили для блока со ссылкой на весь каталог*/
+       .link-more {
+              font-size: 1.125rem;/*18px*/
+       }
+}
+
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       /*Стили для элементов слайдера*/
+       /*Общие стили для блока с названием и ценой товара (на слайде)*/
+       .prod__caption {
+              bottom: 11.9%;/*80px*/
+       }
+
+       /*Стили для блока с названием товара*/
+       .heading--size__m {
+              font-size: 1.75rem;/*28px*/
+       }
+
+       /*Стили для блока с ценой товара*/
+       .price--size__s {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .left,
+       .right {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       .cur {
+              font-size: 2.625rem;/*42px*/
+       }
+
+       .total {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Стили для блока со ссылкой на весь каталог*/
+       .link-more {
+              font-size: 1.25rem;/*20px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       /*Стили для элементов слайдера*/
+       /*Общие стили для блока с названием и ценой товара (на слайде)*/
+       .prod__caption {
+              bottom: 9.92%;/*80px*/
+       }
+
+       /*Стили для блока с названием товара*/
+       .heading--size__m {
+              font-size: 2rem;/*32px*/
+       }
+
+       /*Стили для блока с ценой товара*/
+       .price--size__s {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .left,
+       .right {
+              font-size: 1.75rem;/*28px*/
+       }
+
+       .cur {
+              font-size: 3rem;/*48px*/
+       }
+
+       .total {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Стили для блока со ссылкой на весь каталог*/
+       .link-more {
+              font-size: 1.5rem;/*24px*/
+       }
 }

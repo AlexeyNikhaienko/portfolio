@@ -15,7 +15,6 @@
 /*Текущая страница*/
 .link-page--current {
        font-family: "OS-SB", sans-serif;
-       font-size: 1rem;/*16px*/
        color: #91171D;
 }
 
@@ -27,7 +26,54 @@
 
 .link-page--other {
        font-family: "OS-R", sans-serif;
-       font-size: 0.75rem;/*12px*/
        text-decoration: none;
        color: #342B2B;
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (max-width: 1280px) {
+       .pagination {
+              display: none;
+       }
+}
+
+/*Десктоп*/
+@media screen and (min-width: 1280px) {
+       /*Стили для номеров страниц*/
+       /*Текущая страница*/
+       .link-page--current {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Остальные страницы*/
+       .link-page--other {
+              font-size: 0.75rem;/*12px*/
+       }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       /*Стили для номеров страниц*/
+       /*Текущая страница*/
+       .link-page--current {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       /*Остальные страницы*/
+       .link-page--other {
+              font-size: 0.875rem;/*14px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       /*Стили для номеров страниц*/
+       /*Текущая страница*/
+       .link-page--current {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Остальные страницы*/
+       .link-page--other {
+              font-size: 1rem;/*16px*/
+       }
 }

@@ -7,36 +7,20 @@
 }
 
 .description {
-       width: 44.72%;/*644px*/
-       height: 90.48%;/*760px*/
        border: 1px solid green;
-}
-
-/*Стили для блока с логотипом*/
-.description__logo {
-       margin-top: 4%;/*30px*/
 }
 
 /*Стили для блока с названием коллекции*/
 .title {
-       width: 82.3%;/*530px*/
        height: auto;
        border: 1px solid red;
 }
 
 /*Заголовок*/
-.title__head {
-       margin-bottom: 5.66%;/*30px*/
-}
-
 .head {
-       width: 100%;/*256px*/
+       width: 100%;
        height: auto;
        font-family: "Cormorant-SB", serif;
-}
-
-.head--size__l {
-       font-size: 3rem;/*48px*/
 }
 
 .head--color__grey {
@@ -46,18 +30,12 @@
 /*Стили для блока со ссылкой на каталог*/
 .contain {
        display: inline-block;
-       width: auto;/*150px*/
+       width: auto;
        height: auto;
 }
 
 .link--color__red {
-       font-size: 1.125rem;/*18px*/
        color: #91171D;
-       text-decoration: none;
-}
-
-.contain__decoration {
-       margin-top: 3.75%;/*5px*/
 }
 
 .decoration {
@@ -66,7 +44,7 @@
 }
 
 .decoration--short {
-       width: 90%;/*135px*/
+       width: 90%;
        background-color: #91171D;
 }
 
@@ -77,7 +55,7 @@
 }
 
 .social-link {
-       width: auto;/*295px*/
+       width: auto;
        height: auto;
        border: 1px solid green;
 }
@@ -88,15 +66,156 @@
        text-decoration: none;
 }
 
-.link-soc--size__m {
-       font-size: 1rem;/*16px*/
-}
-
-.social-link__shape {
-      margin: 0 1rem;/*t/b 0 l/r 15px*/
-}
-
 .shape--pos__middle {
-       width: 1.5rem;/*24px*/
        height: 0.0625rem;/*1px*/
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+       /*Общие стили для блока, содержащего логотип, описание и ссылки на соц.сети*/
+       .description {
+              width: 53.78%;/*413px*/
+              height: 100%;/*823px*/
+              padding: 4.82% 0;/*t/b 37px 0*/
+       }
+
+       /*Стили для блока с названием коллекции*/
+       .title {
+              width: 94.67%;/*391px*/
+       }
+
+       /*Заголовок*/
+       .title__head {
+              margin-bottom: 8.23%;/*34px*/
+       }
+
+       .head--size__l {
+              font-size: 2.25rem;/*36px*/
+       }
+
+       /*Стили для блока со ссылкой на каталог*/
+       .link--color__red {
+              font-size: 1rem;/*16px*/
+       }
+
+       .contain__decoration {
+              margin-top: 2.56%;/*10px*/
+       }
+
+       /*Стили для блока со ссылками на соц.сети*/
+       .link-soc--size__m {
+              font-size: 0.75rem;/*12px*/
+       }
+
+       .social-link__shape {
+              margin: 0 0.625rem;/*t/b 0 l/r 10px*/
+       }
+
+       .shape--pos__middle {
+              width: 1.25rem;/*20px*/
+       }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1280px) {
+       /*Общие стили для блока, содержащего логотип, описание и ссылки на соц.сети*/
+       .description {
+              width: 44.72%;/*644px*/
+              height: 90.48%;/*760px*/
+              padding-top: 2.08%;/*30px*/
+       }
+
+       /*Стили для блока с названием коллекции*/
+       .title {
+              width: 82.3%;/*530px*/
+       }
+
+       /*Стили для блока со ссылкой на каталог*/
+       .link--color__red {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       /*Стили для блока со ссылками на соц.сети*/
+       .link-soc--size__m {
+              font-size: 1rem;/*16px*/
+       }
+
+       .social-link__shape {
+              margin: 0 1rem;/*t/b 0 l/r 15px*/
+       }
+
+       .shape--pos__middle {
+              width: 1.5rem;/*24px*/
+       }
+}
+
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1280px) and (max-width: 1439px) {
+       /*Заголовок*/
+       .title__head {
+              margin-bottom: 6.79%;/*32px / 471px*/
+       }
+
+       .head--size__l {
+              font-size: 2.625rem;/*42px*/
+       }
+
+       /*Стили для блока со ссылкой на каталог*/
+       .contain__decoration {
+              margin-top: 2.12%;/*10px / 471px*/
+       }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1499px) {
+       /*Заголовок*/
+       .title__head {
+              margin-bottom: 5.66%;/*30px*/
+       }
+
+       .head--size__l {
+              font-size: 3rem;/*48px*/
+       }
+
+       /*Стили для блока со ссылкой на каталог*/
+       .contain__decoration {
+              margin-top: 1.89%;/*530px / 10px*/
+       }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       /*Заголовок*/
+       .title__head {
+              margin-bottom: 5.09%;/*30px / 589px*/
+       }
+
+       .head--size__l {
+              font-size: 3.375rem;/*54px*/
+       }
+
+       /*Стили для блока со ссылкой на каталог*/
+       .link--color__red {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       .contain__decoration {
+              margin-top: 1.7%;/*10px / 589px*/
+       }
+
+       /*Стили для блока со ссылками на соц.сети*/
+       .link-soc--size__m {
+              font-size: 1.125rem;/*18px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       /*Заголовок*/
+       .title__head {
+              margin-bottom: 4.25%;/*30px / 707px*/
+       }
+
+       .head--size__l {
+              font-size: 3.75rem;/*60px*/
+       }
 }
