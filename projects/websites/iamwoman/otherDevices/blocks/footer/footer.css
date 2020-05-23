@@ -1,84 +1,191 @@
 /*Общие стили для блока*/
 .content__footer {
-       display: flex;
        position: relative;
+       margin-top: 10.42%;/*150px*/
 }
 
 .footer {
        width: 100%;/*1440px*/
        height: auto;/*520px*/
        background-color: #ECE5E1;
-       border: 2px solid red;
-}
-
-/*Стили для блока с меню*/
-.footer__inner {
-       display: flex;
-       justify-content: space-between;
-}
-
-.inner--short {
-       width: 53.68%;/*773px*/
-       height: 100%;/*520px*/
-       padding: 4.03% 9.03%;/*t/b 58px l/r 130px*/
-       background-color: #DECEC5;
-       border: 1px solid blue;
-}
-
-/*Стили для блоков с элементами списка*/
-.inner--short__list {
-       margin-top: 8.75%;/*45px*/
 }
 
 /*Стили для блока с дополнительной информацией*/
 .footer__owner {
        display: flex;
-       justify-content: space-between;
 }
 
 .owner {
-       width: calc(100% - 53.68%);/*667px*/
        height: 100%;/*520px*/
-       padding: 4.03% 3.82%;/*t/b 58px r 105px l 52px*/
-       border: 1px solid yellow;
 }
 
 /*Элементы списка*/
-.item--color__grey {
-       font-size: 1.25rem;/*20px*/
+.item--color__grey,
+.link--ff__csb {
+       font-family: "Cormorant-SB", serif;
+       color: #342B2B;
 }
 
 /*Список с соц.сетями*/
-.list__item--margin:not(:last-of-type) {
-       margin-right: 7%;
-}
-
 .item__list {
        display: flex;
        margin-bottom: 0.1875rem;
 }
 
-.link-soc--size__s {
+.list__item--margin:not(:last-of-type) {
+       margin-right: 7%;
+}
+
+.link--size__s {
        font-size: 0.875rem;/*14px*/
 }
 
+/*Поле для подписки*/
 .email--width__s {
        width: 63.25%;/*194px*/
 }
 
+/*Информация об оплате*/
 .extra-method {
+       font-family: "Cormorant-SB", serif;
+       font-size: 0.875rem;/*14px*/
        white-space: normal;
+       color: #342B2B;
 }
 
 /*Стили для копирайта*/
 .footer__copyright {
        position: absolute;
-       right: 7.78%;/*112px*/
-       bottom: 4.03%;/*58px*/
 }
 
 .copyright {
        font-family: "Cormorant-R", serif;
        font-size: 0.875rem;/*14px*/
        color: #342B2B;
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+       /*Стили для блока с меню*/
+       .footer__inner {
+              display: none;
+       }
+
+       /*Стили для блока с дополнительной информацией*/
+       .owner {
+              width: 100%;/*768px*/
+              padding: 4.56% 2.6% 11.72%;/*t 35px l/r 20px b 90px*/
+       }
+
+       /*Стили для списка*/
+       .owner__list {
+              margin-right: 5.47%;/*42px*/
+       }
+
+       /*Элементы списка*/
+       .item--color__grey {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       /*Список с соц.сетями*/
+       .link--size__s {
+              font-size: 0.875rem;/*14px*/
+       }
+
+       /*Стили для копирайта*/
+       .footer__copyright {
+              right: 1.3%;/*10px*/
+              bottom: 9.93%;/*30px*/
+       }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1280px) {
+       /*Общие стили для блока*/
+       .content__footer {
+              display: flex;
+       }
+
+       /*Стили для блока с меню*/
+       .footer__inner {
+              display: flex;
+              justify-content: space-between;
+       }
+
+       .inner--short {
+              width: 53.68%;/*773px*/
+              height: 100%;/*520px*/
+              padding: 4.03% 9.03%;/*t/b 58px l/r 130px*/
+              background-color: #DECEC5;
+       }
+
+       /*Стили для блоков с элементами списка*/
+       .inner--short__list {
+              margin-top: 8.75%;/*45px*/
+       }
+
+       /*Стили для блока с дополнительной информацией*/
+       .footer__owner {
+              justify-content: space-between;
+       }
+
+       .owner {
+              width: calc(100% - 53.68%);/*667px*/
+              padding: 4.03% 3.82%;/*t/b 58px r 105px l 52px*/
+       }
+
+       /*Элементы списка*/
+       .item--color__grey {
+              font-size: 1.25rem;/*20px*/
+       }
+       
+       /*Список с соц.сетями*/
+       .link--size__s {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Стили для копирайта*/
+       .footer__copyright {
+              right: 7.78%;/*112px*/
+              bottom: 4.03%;/*58px*/
+       }
+}
+
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       /*Элементы списка*/
+       .item--color__grey {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Список с соц.сетями*/
+       .link--size__s {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Стили для блока с информацией об оплате, копирайта*/
+       .extra-method,
+       .copyright {
+              font-size: 1.125rem;/*18px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       /*Элементы списка*/
+       .item--color__grey {
+              font-size: 1.75rem;/*28px*/
+       }
+
+       /*Список с соц.сетями*/
+       .link--size__s {
+              font-size: 1.5rem;/*24px*/
+       }
+
+       /*Стили для блока с информацией об оплате, копирайта*/
+       .extra-method,
+       .copyright {
+              font-size: 1.25rem;/*20px*/
+       }
 }
