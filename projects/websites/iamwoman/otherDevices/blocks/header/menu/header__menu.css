@@ -24,15 +24,12 @@
 .inner {
   width: 100%;/*1440px*/
   height: 100%;/*840px*/
-  padding: 0 12.22%;/*176px*/
   background-color: rgba(236, 229, 225, 0.7);
 }
 
 /*Стили для кнопки, которая закрывает меню*/
 .inner__btn {
   position: absolute;
-  right: 6.25%;/*90px*/
-  top: 5.95%;/*50px*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,14 +63,9 @@
 
 /*Элементы каталога*/
 /*Заголовок*/
-.inner__catalog {
-  margin-bottom: 1.53%;/*22px*/
-}
-
 .catalog {
   height: auto;
   font-family: "Cormorant-SB", serif;
-  font-size: 1.75rem;/*28px*/
   color: #342B2B;
 }
 
@@ -96,43 +88,21 @@
   width: auto;
   height: auto;
   list-style: none;
-  font-family: "Cormorant-R", serif;
-}
-
-.list--size__m {
-  width: 26%;/*283px*/
-  border: 1px solid red;
 }
 
 .item {
   width: auto;
   height: auto;
   white-space: nowrap;
-  border: 1px solid blue;
-}
-
-.list__item{
-  position: relative;
-  margin-bottom: 1rem;/*16px*/
-}
-
-.item--pe {
-  font-family: "Cormorant-R", serif;
-  color: #342B2B;
-}
-
-.item--pe::before {
-  content: url(../img/head-img1.png);
-  position: absolute;
-  top: 38%;
-  transform: translateY(-50%);
 }
 
 .link {
-  font-family: "Cormorant-R", serif;
-  font-size: 1.25rem;/*20px*/
   text-decoration: none;
   white-space: nowrap;
+}
+
+.link--ff__cr {
+  font-family: "Cormorant-R", serif;
 }
 
 .link--color__grey {
@@ -140,13 +110,18 @@
 }
 
 /*Стили для блока с поиском*/
-.item__search-form {
-  position: relative;
+.item__search-form::before {
+  content: url(../img/head-img1.png);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .search-form {
   width: auto;
   height: auto;
+  font-family: "Cormorant-R", serif;
+  color: #342B2B;
 }
 
 /*Стили для поисковой строки*/
@@ -156,50 +131,248 @@
   outline: 0;
   border: 0;
   border-bottom: 1px solid #342B2B;
-  font-size: 1.25rem;/*20px*/
   background-color: transparent;
 }
 
-.request--size__m {
-  padding: 2% 10.6%;/*t/b 6px l/r 30px*/
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  /*Общие стили для блока с меню (изначально скрыто)*/
+  .desktop {
+      display: none;
+  }
+
+  /*Общие стили для блока-обёртки*/
+  .inner {
+    padding-left: 13.93%;/*107px*/
+    padding-right: 7.42%;/*57px*/
+  }
+
+  /*Стили для кнопки, которая закрывает меню*/
+  .inner__btn {
+    right: 5.21%;/*40px*/
+    top: 4.82%;/*37px*/
+  }
+
+  /*Элементы каталога*/
+  /*Заголовок*/
+  .inner__catalog {
+    margin-bottom: 3.9%;/*30px*/
+  }
+
+  .catalog {
+    font-size: 1.5rem;/*24px*/
+  }
+
+  /*Стили для блоков с элементами списка*/
+  .list__item {
+    position: relative;
+    margin-bottom: 1.375rem;/*22px*/
+  }
+
+  .link--size__xl {
+    font-size: 1.125rem;/*18px*/
+  }
+
+  /*Стили для блока с поиском*/
+  .item__search-form {
+    position: absolute;
+    left: 13.93%;
+    bottom: 4.86%;/*40px*/
+  }
+
+  /*Стили для поисковой строки*/
+  .request {
+    font-size: 1.125rem;/*18px*/
+  }
+
+  .request--size__m {
+    padding: 1% 17.66%;/*t/b 6px l/r 50px*/
+  }
+
+  .request::-webkit-input-placeholder {
+    font-size: 1.125rem;/*18px*/
+    color: #342B2B;
+  }
+
+  .request::-moz-placeholder {
+    font-size: 1.125rem;/*18px*/
+    color: #342B2B;
+  }
+
+  .request:-ms-input-placeholder {
+    font-size: 1.125rem;/*18px*/
+    color: #342B2B;
+  }
+
+  .request::-ms-input-placeholder {
+    font-size: 1.125rem;/*18px*/
+    color: #342B2B;
+  }
+
+  .request::placeholder {
+    font-size: 1.125rem;/*18px*/
+    color: #342B2B;
+  }
 }
 
-.request::-webkit-input-placeholder {
-  font-size: 1.25rem;/*20px*/
-  color: #342B2B;
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1280px) {
+  /*Общие стили для блока с меню (изначально скрыто)*/
+  .tablet {
+      display: none;
+  }
+
+  /*Общие стили для блока-обёртки*/
+  .inner {
+    padding: 0 12.22%;/*176px*/
+  }
+
+  /*Стили для кнопки, которая закрывает меню*/
+  .inner__btn {
+    right: 6.25%;/*90px*/
+    top: 5.95%;/*50px*/
+  }
+
+  /*Элементы каталога*/
+  /*Заголовок*/
+  .inner__catalog {
+    margin-bottom: 1.53%;/*22px*/
+  }
+
+  .catalog {
+    font-size: 1.75rem;/*28px*/
+  }
+
+  /*Стили для блоков с элементами списка*/
+  .list--size__m {
+    width: 26%;/*283px*/
+  }
+
+  .list__item {
+    position: relative;
+    margin-bottom: 1rem;/*16px*/
+  }
+
+  .link--size__xl {
+    font-size: 1.25rem;/*20px*/
+  }
+
+  /*Стили для поисковой строки*/
+  .request {
+    font-size: 1.25rem;/*20px*/
+  }
+
+  .request::-webkit-input-placeholder {
+    font-size: 1.25rem;/*20px*/
+    color: #342B2B;
+  }
+
+  .request::-moz-placeholder {
+    font-size: 1.25rem;/*20px*/
+    color: #342B2B;
+  }
+
+  .request:-ms-input-placeholder {
+    font-size: 1.25rem;/*20px*/
+    color: #342B2B;
+  }
+
+  .request::-ms-input-placeholder {
+    font-size: 1.25rem;/*20px*/
+    color: #342B2B;
+  }
+
+  .request::placeholder {
+    font-size: 1.25rem;/*20px*/
+    color: #342B2B;
+  }
 }
 
-.request::-moz-placeholder {
-  font-size: 1.25rem;/*20px*/
-  color: #342B2B;
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+  /*Элементы каталога*/
+  /*Заголовок*/
+  .catalog {
+    font-size: 2rem;/*32px*/
+  }
+
+  /*Стили для блоков с элементами списка*/
+  .link--size__xl {
+    font-size: 1.5rem;/*24px*/
+  }
+
+  /*Стили для поисковой строки*/
+  .request {
+    font-size: 1.5rem;/*24px*/
+  }
+
+  .request::-webkit-input-placeholder {
+    font-size: 1.5rem;/*24px*/
+    color: #342B2B;
+  }
+
+  .request::-moz-placeholder {
+    font-size: 1.5rem;/*24px*/
+    color: #342B2B;
+  }
+
+  .request:-ms-input-placeholder {
+    font-size: 1.5rem;/*24px*/
+    color: #342B2B;
+  }
+
+  .request::-ms-input-placeholder {
+    font-size: 1.5rem;/*24px*/
+    color: #342B2B;
+  }
+
+  .request::placeholder {
+    font-size: 1.5rem;/*24px*/
+    color: #342B2B;
+  }
 }
 
-.request:-ms-input-placeholder {
-  font-size: 1.25rem;/*20px*/
-  color: #342B2B;
-}
+@media screen and (min-width: 1920px) {
+  /*Элементы каталога*/
+  /*Заголовок*/
+  .catalog {
+    font-size: 2.25rem;/*36px*/
+  }
 
-.request::-ms-input-placeholder {
-  font-size: 1.25rem;/*20px*/
-  color: #342B2B;
-}
+  /*Стили для блоков с элементами списка*/
+  .link--size__xl {
+    font-size: 1.75rem;/*28px*/
+  }
 
-.request::placeholder {
-  font-size: 1.25rem;/*20px*/
-  color: #342B2B;
-  border: 1px solid red;
-}
+  /*Стили для поисковой строки*/
+  .request {
+    font-size: 1.75rem;/*28px*/
+  }
 
-.search-form__clear {
-  position: absolute;
-  top: 30%;
-  right: 0;
-  z-index: 2;
-}
+  .request::-webkit-input-placeholder {
+    font-size: 1.75rem;/*28px*/
+    color: #342B2B;
+  }
 
-.clear {
-  font-size: 0.75rem;/*12px*/
-  color: #fff;
-  padding: 0 1%;
-  background-color: #342B2B;
+  .request::-moz-placeholder {
+    font-size: 1.75rem;/*28px*/
+    color: #342B2B;
+  }
+
+  .request:-ms-input-placeholder {
+    font-size: 1.75rem;/*28px*/
+    color: #342B2B;
+  }
+
+  .request::-ms-input-placeholder {
+    font-size: 1.75rem;/*28px*/
+    color: #342B2B;
+  }
+
+  .request::placeholder {
+    font-size: 1.75rem;/*28px*/
+    color: #342B2B;
+  }
 }
