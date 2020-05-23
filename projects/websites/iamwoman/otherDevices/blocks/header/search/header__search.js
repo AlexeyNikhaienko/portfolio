@@ -59,8 +59,8 @@ const btnVisibleSearchForm = document.querySelector(".header .search");
 const btnHideSearchForm = document.querySelector(".header .close-search");
 //Блок поиска в целом, блок с формой, поисковая строка
 const searchBlock = document.querySelector(".header .search-block");
-const inputFieldBlock = document.querySelectorAll(".header .search-form")[1];
-const request = document.querySelectorAll(".header .request")[1];
+const inputFieldBlock = document.querySelectorAll(".header .search-form")[2];
+const request = document.querySelectorAll(".header .request")[2];
 
 //Установка обработчиков событий на кнопки; при нажатии на кнопки форма поиска появляется/ скрывается
 btnVisibleSearchForm.addEventListener("click", () => {
@@ -171,7 +171,7 @@ function createResultBlock(desiredItem) {
       section.classList.add("result");
       resultTitle.classList.add("catalog");
       ul.classList.add("result__list-output", "list-output");
-      ref.classList.add("link", "link--color__red");
+      ref.classList.add("link", "link--ff__cr", "link--size__l", "link--color__red");
 
       //Текстовое содержимое
       resultTitle.textContent = "Лучшие совпадения";
@@ -193,7 +193,7 @@ function createResultBlock(desiredItem) {
         const span = document.createElement("span");
 
         li.classList.add("list-output__item", "item");
-        innerRef.classList.add("link", "link--color__grey");
+        innerRef.classList.add("link", "link--ff__cr", "link--size__xl", "link--color__grey");
         span.classList.add("price--size__m");
 
         innerRef.href = "#";
