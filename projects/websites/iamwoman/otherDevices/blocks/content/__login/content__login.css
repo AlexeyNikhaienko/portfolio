@@ -1,6 +1,6 @@
 /*Общие стили для блока-обёртки с регистрацией*/
 .content__modal {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
@@ -13,13 +13,11 @@
   width: 100%;
   height: 100%;
   background-color: rgba(236,229,225, 0.7);
-  border: 2px solid yellow;
 }
 
 /*Стили для блока формы регистрации*/
 .modal__login-form {
   position: relative;
-  top: 10%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -28,8 +26,6 @@
 }
 
 .login-form {
-  width: 30%;/*432px*/
-  height: 80%;/*672px*/
   padding: 2.08%;/*30px*/
   border-radius: 2%;/*10px*/
   background-color: #f9f9f9;
@@ -49,14 +45,6 @@
   font-family: "Roboto-M", sans-serif;
   text-align: center;
   color: #342B2B;
-}
-
-.name {
-  font-size: 1.5rem;/*24px*/
-}
-
-.subname {
-  font-size: 0.75rem;/*12px*/
 }
 
 /*Стили для кнопки, скрывающей форму регистрации*/
@@ -80,7 +68,6 @@
   border: 1px solid #342B2B;
   border-radius: 0.125rem;/*2px*/
   outline: 0;
-  font-size: 1.25rem;/*20px*/
   text-align: center;
   color: #342B2B;
   background-color: transparent;
@@ -94,7 +81,6 @@
 
 .remind {
   font-size: 0.875rem;/*14px*/
-  line-height: 1.12;
   text-decoration: none;
   color: #342B2B;
 }
@@ -118,10 +104,6 @@
   color: #fff;
 }
 
-.submit--size__m {
-  font-size: 1.25rem;/*20px*/
-}
-
 /*Стили для блока "Зарегистрироваться"*/
 .login-form__link {
   align-self: start;
@@ -143,5 +125,124 @@
   }
   to {
          opacity: 1;
+  }
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  /*Стили для блока формы регистрации*/
+  .modal__login-form {
+    top: 15%;
+  }
+
+  .login-form {
+    width: 50%;
+    height: 70%;
+  }
+
+  /*Стили для блока с логотипом*/
+  .name {
+    font-size: 1.25rem;/*20px*/
+  }
+
+  .subname {
+    font-size: 0.625rem;/*10px*/
+  }
+
+  /*Стили для полей ввода информации*/
+  .field-form {
+    font-size: 1.125rem;/*18px*/
+  }
+
+  /*Стили для кнопки отравки формы*/
+  .submit--size__m {
+    font-size: 1.125rem;/*18px*/
+  }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1280px) {
+  /*Стили для блока формы регистрации*/
+  .modal__login-form {
+    top: 10%;
+  }
+
+  .login-form {
+    width: 30%;
+    height: 80%;
+  }
+
+  /*Стили для блока с логотипом*/
+  .name {
+    font-size: 1.5rem;/*24px*/
+  }
+
+  .subname {
+    font-size: 0.75rem;/*12px*/
+  }
+
+  /*Стили для полей ввода информации*/
+  .field-form {
+    font-size: 1.25rem;/*20px*/
+  }
+
+  /*Стили для кнопки отравки формы*/
+  .submit--size__m {
+    font-size: 1.25rem;/*20px*/
+  }
+}
+
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+  /*Стили для блока с логотипом*/
+  .name {
+    font-size: 1.75rem;/*28px*/
+  }
+
+  .subname {
+    font-size: 0.875rem;/*14px*/
+  }
+
+  /*Стили для полей ввода информации*/
+  .field-form {
+    font-size: 1.5rem;/*24px*/
+  }
+
+  /*Стили для блока "Забыл пароль"*/
+  .remind {
+    font-size: 1.125rem;/*18px*/
+  }
+
+  /*Стили для кнопки отравки формы*/
+  .submit--size__m {
+    font-size: 1.5rem;/*24px*/
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  /*Стили для блока с логотипом*/
+  .name {
+    font-size: 2rem;/*32px*/
+  }
+
+  .subname {
+    font-size: 1rem;/*16px*/
+  }
+
+  /*Стили для полей ввода информации*/
+  .field-form {
+    font-size: 1.75rem;/*28px*/
+  }
+
+  /*Стили для блока "Забыл пароль"*/
+  .remind {
+    font-size: 1.25rem;/*20px*/
+  }
+
+  /*Стили для кнопки отравки формы*/
+  .submit--size__m {
+    font-size: 1.75rem;/*28px*/
   }
 }
