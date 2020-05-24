@@ -12,7 +12,6 @@
 .collection {
        width: 100%;/*1440px*/
        height: 100vh;/*840px*/
-       border: 2px solid red;
 }
 
 @media screen and (min-width: 1024px) {

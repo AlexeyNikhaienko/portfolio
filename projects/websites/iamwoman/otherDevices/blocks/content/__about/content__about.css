@@ -16,13 +16,11 @@
 
 .history {
        height: auto;
-       border: 2px solid blue;
 }
 
 /*Стили для слайдов*/
 .history__slide {
        position: relative;
-       border: 3px solid yellow;
 }
 
 .history__slide--position__right {
@@ -163,6 +161,6 @@
 @media screen and (min-width: 1920px) {
        /*Описание*/
        .par--size__m {
-              font-size: 2rem;/*32px*/
+              font-size: 1.75rem;/*28px*/
        }
 }

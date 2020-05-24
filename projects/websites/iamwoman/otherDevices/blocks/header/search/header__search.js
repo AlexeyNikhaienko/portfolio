@@ -194,7 +194,7 @@ function createResultBlock(desiredItem) {
 
         li.classList.add("list-output__item", "item");
         innerRef.classList.add("link", "link--ff__cr", "link--size__xl", "link--color__grey");
-        span.classList.add("price--size__m");
+        span.classList.add("price--size__xl");
 
         innerRef.href = "#";
         innerRef.textContent = item.name;

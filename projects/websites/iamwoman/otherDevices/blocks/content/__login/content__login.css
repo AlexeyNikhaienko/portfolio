@@ -163,6 +163,14 @@
 
 /*Десктоп*/
 /*Общие стили*/
+@media screen and (min-width: 1024px) {
+  .button:hover {
+    cursor: pointer;
+    background-color: #342B2B;
+    transition: background-color 0.3s ease-in-out;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   /*Стили для блока формы регистрации*/
   .modal__login-form {

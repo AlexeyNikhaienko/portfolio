@@ -5,7 +5,6 @@
 }
 
 .new {
-       /*width: 100%;*/
        height: auto;/*min-height = 847px*/
        text-align: center;
 }
@@ -127,11 +126,6 @@
        color: #342B2B;
 }
 
-/*Название товара*/
-.heading--size__l {
-       white-space: nowrap;
-}
-
 /*Цена товара*/
 .price--size__l {
        padding-left: 2%;
@@ -205,7 +199,7 @@
 
        /*Название товара*/
        .heading--size__l {
-              font-size: 1.25rem;/*20px*/
+              font-size: 1.5rem;/*24px*/
        }
 
        /*Цена товара*/
@@ -227,11 +221,18 @@
 /*Десктоп*/
 /*Общие стили*/
 @media screen and (min-width: 1024px) {
-       /*Общие стили для кнопки "лайк", управления слайдерами*/
+       /*Общие стили для названий вкладок, кнопки "лайк", управления слайдерами*/
+       .headline:hover,
        .like:hover,
        .prev:hover,
        .next:hover {
               cursor: pointer;
+       }
+
+       .input:checked:hover + .headline,
+       .headline:hover {
+              color: #91171D;
+              border-bottom: 0.0625rem solid #91171D;
        }
 }
 
@@ -289,7 +290,7 @@
 
        /*Цена товара*/
        .price--size__l {
-              font-size: 1.25rem;/*20px*/
+              font-size: 1rem;/*16px*/
        }
 
        /*Стили для блока с управлением слайдерами*/
@@ -299,11 +300,11 @@
        }
 
        .switch {
-              font-size: 1.25rem;/*20px*/
+              font-size: 1rem;/*20px*/
        }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
        /*Кнопка "лайк"*/
        .like {
               width: 100%;
@@ -326,17 +327,17 @@
 
        /*Название товара*/
        .heading--size__l {
-              font-size: 1.75rem;/*28px*/
+              font-size: 2rem;/*32px*/
        }
 
        /*Цена товара*/
        .price--size__l {
-              font-size: 1.5rem;/*24px*/
+              font-size: 1.25rem;/*20px*/
        }
 
        /*Стили для блока с управлением слайдерами*/
        .switch {
-              font-size: 1.5rem;/*24px*/
+              font-size: 1.25rem;/*20px*/
        }
 }
 
@@ -349,16 +350,16 @@
 
        /*Название товара*/
        .heading--size__l {
-              font-size: 2rem;/*32px*/
+              font-size: 2.25rem;/*36px*/
        }
 
        /*Цена товара*/
        .price--size__l {
-              font-size: 1.75rem;/*28px*/
+              font-size: 1.5rem;/*24px*/
        }
 
        /*Стили для блока с управлением слайдерами*/
        .switch {
-              font-size: 1.75rem;/*28px*/
+              font-size: 1.5rem;/*24px*/
        }
 }

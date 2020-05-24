@@ -9,13 +9,11 @@
 .nav {
   width: 100%;
   height: auto;
-  border: 1px solid blue;
 }
 
 /*Стили для "бургера" меню*/
 .nav__burg {
   position: relative;
-  left: 1.53%;/*22px*/
   display: flex;
   flex-direction: column;
 }
@@ -23,7 +21,6 @@
 .burg {
   width: 2rem;/*32px*/
   height: 100%;/*16px*/
-  border: 1px solid green;
 }
 
 .burg__line:not(:last-of-type) {
@@ -54,13 +51,50 @@
 }
 
 .wrap {
-  width: 50%;/*720px*/
   height: 100%;/*16px*/
-  padding: 0 14.93%;/*0 215px*/
-  border: 1px solid green;
 }
 
 .icon {
   width: auto;
   height: 100%;
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  /*Стили для "бургера" меню*/
+  .nav__burg {
+    left: 1.17%;/*9px*/
+  }
+
+  /*Стили для блока с иконками*/
+  .wrap {
+    width: 39.71%;/*305px*/
+    padding: 0 5.47%;/*t/b 0 l/r 84px*/
+  }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1024px) {
+  /*Стили для "бургера" меню*/
+  .burg:hover,
+  .icon:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /*Стили для "бургера" меню*/
+  .nav__burg {
+    left: 1.53%;/*22px*/
+  }
+
+  /*Стили для блока с иконками*/
+  .wrap {
+    width: 50%;/*720px*/
+    padding: 0 14.93%;/*t/b 0 l/r 215px*/
+  }
 }

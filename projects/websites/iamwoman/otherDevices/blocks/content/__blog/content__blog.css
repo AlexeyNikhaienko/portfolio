@@ -194,6 +194,12 @@
 
 /*Десктоп*/
 /*Общие стили*/
+@media screen and (min-width: 1024px) {
+       .hashtag:hover {
+              color: #91171D;
+       }
+}
+
 @media screen and (min-width: 1280px) {
        /*Общие стили для блока*/
        .blog {

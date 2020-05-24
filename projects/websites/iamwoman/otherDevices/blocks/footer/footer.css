@@ -102,6 +102,12 @@
 
 /*Десктоп*/
 /*Общие стили*/
+@media screen and (min-width: 1024px) {
+       .payment:hover {
+              cursor: pointer;
+       }
+}
+
 @media screen and (min-width: 1280px) {
        /*Общие стили для блока*/
        .content__footer {
@@ -160,9 +166,13 @@
               font-size: 1.5rem;/*24px*/
        }
 
-       /*Список с соц.сетями*/
-       .link--size__s {
-              font-size: 1.25rem;/*20px*/
+       /*Стили для логотипов*/
+       .item__payment {
+              margin-top: 30%;
+       }
+
+       .payment {
+              width: 120%;
        }
 
        /*Стили для блока с информацией об оплате, копирайта*/
@@ -180,7 +190,16 @@
 
        /*Список с соц.сетями*/
        .link--size__s {
-              font-size: 1.5rem;/*24px*/
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Стили для логотипов*/
+       .item__payment {
+              margin-top: 50%;
+       }
+
+       .payment {
+              width: 120%;
        }
 
        /*Стили для блока с информацией об оплате, копирайта*/

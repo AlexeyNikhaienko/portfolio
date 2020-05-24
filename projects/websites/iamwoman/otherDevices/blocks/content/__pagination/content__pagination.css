@@ -39,6 +39,16 @@
 }
 
 /*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1024px) {
+       .link-page--other:hover {
+              font-family: "OS-SB", sans-serif;
+              color: #91171D;
+              transition: all 0.3s ease-in-out;
+       }
+}
+
+/*Стили для отдельных размеров экранов*/
 @media screen and (min-width: 1280px) {
        /*Стили для номеров страниц*/
        /*Текущая страница*/
@@ -56,12 +66,12 @@
        /*Стили для номеров страниц*/
        /*Текущая страница*/
        .link-page--current {
-              font-size: 1.125rem;/*18px*/
+              font-size: 1.25rem;/*20px*/
        }
 
        /*Остальные страницы*/
        .link-page--other {
-              font-size: 0.875rem;/*14px*/
+              font-size: 1rem;/*16px*/
        }
 }
 
@@ -69,11 +79,11 @@
        /*Стили для номеров страниц*/
        /*Текущая страница*/
        .link-page--current {
-              font-size: 1.25rem;/*20px*/
+              font-size: 1.5rem;/*24px*/
        }
 
        /*Остальные страницы*/
        .link-page--other {
-              font-size: 1rem;/*16px*/
+              font-size: 1.25rem;/*20px*/
        }
 }

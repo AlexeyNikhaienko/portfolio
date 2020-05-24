@@ -9,7 +9,6 @@
 
 .extra-info {
        background-color: #DECEC5;
-       border: 1px solid blue;
 }
 
 /*Стили для блока "sale"*/
@@ -23,7 +22,6 @@
 .sale {
        width: auto;
        height: auto;
-       border: 1px solid green;
 }
 
 .shape {
@@ -81,7 +79,7 @@
        }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1499px) {
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
        .text {
               font-size: 1.125rem;/*18px*/
        }

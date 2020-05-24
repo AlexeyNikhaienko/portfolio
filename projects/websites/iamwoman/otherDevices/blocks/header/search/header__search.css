@@ -80,7 +80,7 @@
   color: #91171D;
 }
 
-.price--size__m::after {
+.price--size__xl::after {
   content: " \20BD";
 }
 
@@ -122,6 +122,14 @@
 
 /*Десктоп*/
 /*Общие стили*/
+@media screen and (min-width: 1024px) {
+  .close-search:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   /*Общие стили для блока поиска*/
   .search-block {

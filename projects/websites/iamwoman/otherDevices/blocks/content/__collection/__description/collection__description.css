@@ -6,14 +6,9 @@
        align-items: center;
 }
 
-.description {
-       border: 1px solid green;
-}
-
 /*Стили для блока с названием коллекции*/
 .title {
        height: auto;
-       border: 1px solid red;
 }
 
 /*Заголовок*/
@@ -32,10 +27,6 @@
        display: inline-block;
        width: auto;
        height: auto;
-}
-
-.link--color__red {
-       color: #91171D;
 }
 
 .decoration {
@@ -57,13 +48,10 @@
 .social-link {
        width: auto;
        height: auto;
-       border: 1px solid green;
 }
 
-.link-soc {
+.link--ff__osr {
        font-family: "OS-R", sans-serif;
-       color: #342B2B;
-       text-decoration: none;
 }
 
 .shape--pos__middle {
@@ -95,7 +83,7 @@
        }
 
        /*Стили для блока со ссылкой на каталог*/
-       .link--color__red {
+       .link--size__l {
               font-size: 1rem;/*16px*/
        }
 
@@ -104,8 +92,8 @@
        }
 
        /*Стили для блока со ссылками на соц.сети*/
-       .link-soc--size__m {
-              font-size: 0.75rem;/*12px*/
+       .link--size__m {
+              font-size: 0.875rem;/*14px*/
        }
 
        .social-link__shape {
@@ -119,12 +107,21 @@
 
 /*Десктоп*/
 /*Общие стили*/
+@media screen and (min-width: 1024px) {
+       .description__social-link > .link--ff__osr:hover {
+              color: #91171D;
+              -webkit-text-decoration: underline #91171D;
+                      text-decoration: underline #91171D;
+              transition: all 0.3s ease-in-out;
+       }
+}
+
 @media screen and (min-width: 1280px) {
        /*Общие стили для блока, содержащего логотип, описание и ссылки на соц.сети*/
        .description {
               width: 44.72%;/*644px*/
               height: 90.48%;/*760px*/
-              padding-top: 2.08%;/*30px*/
+              padding-top: 1.72%;/*30px*/
        }
 
        /*Стили для блока с названием коллекции*/
@@ -133,12 +130,12 @@
        }
 
        /*Стили для блока со ссылкой на каталог*/
-       .link--color__red {
+       .link--size__l {
               font-size: 1.125rem;/*18px*/
        }
 
        /*Стили для блока со ссылками на соц.сети*/
-       .link-soc--size__m {
+       .link--size__m {
               font-size: 1rem;/*16px*/
        }
 
@@ -168,7 +165,7 @@
        }
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1499px) {
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
        /*Заголовок*/
        .title__head {
               margin-bottom: 5.66%;/*30px*/
@@ -179,8 +176,17 @@
        }
 
        /*Стили для блока со ссылкой на каталог*/
+       .link--size__l {
+              font-size: 1.25rem;/*20px*/
+       }
+
        .contain__decoration {
               margin-top: 1.89%;/*530px / 10px*/
+       }
+
+       /*Стили для блока со ссылками на соц.сети*/
+       .link--size__m{
+              font-size: 1.125rem;/*18px*/
        }
 }
 
@@ -195,8 +201,8 @@
        }
 
        /*Стили для блока со ссылкой на каталог*/
-       .link--color__red {
-              font-size: 1.25rem;/*20px*/
+       .link--size__l {
+              font-size: 1.5rem;/*24px*/
        }
 
        .contain__decoration {
@@ -204,8 +210,8 @@
        }
 
        /*Стили для блока со ссылками на соц.сети*/
-       .link-soc--size__m {
-              font-size: 1.125rem;/*18px*/
+       .link--size__m {
+              font-size: 1.25rem;/*20px*/
        }
 }
 
@@ -217,5 +223,15 @@
 
        .head--size__l {
               font-size: 3.75rem;/*60px*/
+       }
+
+       /*Стили для блока со ссылкой на каталог*/
+       .link--size__l {
+              font-size: 1.75rem;/*28px*/
+       }
+
+       /*Стили для блока со ссылками на соц.сети*/
+       .link--size__m {
+              font-size: 1.5rem;/*24px*/
        }
 }

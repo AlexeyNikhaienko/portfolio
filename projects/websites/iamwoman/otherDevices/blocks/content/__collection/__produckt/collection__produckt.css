@@ -9,7 +9,6 @@
        background-position: 50% 50%;
        background-size: 100% 100%;
        background-repeat: no-repeat;
-       border: 2px solid blue;
 }
 
 .produckt::after {
@@ -32,7 +31,6 @@
 
 .wrapper {
        width: auto;
-       border: 2px solid yellow;
 }
 
 /*Общие стили для слайдера*/
@@ -70,7 +68,6 @@
        width: auto;
        height: auto;
        text-align: center;
-       border: 1px solid blue;
 }
 
 .caption--size__m {
@@ -105,7 +102,6 @@
        left: 50%;/*140px*/
        z-index: 1;
        transform: translateX(-50%);
-       border: 2px solid red;
 }
 
 .toggle--size__s {
@@ -134,16 +130,14 @@
 }
 
 /*Стили для блока со ссылкой на весь каталог*/
-.wrapper__link-more {
+.wrapper__link {
        position: absolute;
        right: 0;
-       bottom: -7%;/*27px*/
        z-index: 1;
 }
 
-.link-more {
+.link--ff__cl {
        font-family: "Cormorant-l", serif;
-       color: #342B2B;
 }
 
 /*Медиа-запросы*/
@@ -186,7 +180,7 @@
 
        /*Стили для блока с переключателем слайдера*/
        .wrapper__toggle {
-              bottom: -8.19%;/*13px*/
+              bottom: -9%;/*13px*/
        }
 
        .toggle--size__s {
@@ -208,8 +202,8 @@
        }
 
        /*Стили для блока со ссылкой на весь каталог*/
-       .link-more {
-              font-size: 1rem;/*16px*/
+       .wrapper__link {
+              bottom: -8%;/*27px*/
        }
 }
 
@@ -227,7 +221,7 @@
        /*Общие стили для слайдера*/
        .produckt {
               width: 50%;/*720px*/
-              padding: 4.76% 0;/*68px 0*/
+              padding: 5.56% 0;/*80px 0*/
        }
 
        /*Стили для блока-обёртки*/
@@ -261,7 +255,7 @@
 
        /*Стили для блока с переключателем слайдера*/
        .wrapper__toggle {
-              bottom: -10%;/*5px*/
+              bottom: -8.5%;/*5px*/
        }
 
        .toggle--size__s {
@@ -282,8 +276,8 @@
        }
 
        /*Стили для блока со ссылкой на весь каталог*/
-       .link-more {
-              font-size: 1.125rem;/*18px*/
+       .wrapper__link {
+              bottom: -7%;/*27px*/
        }
 }
 
@@ -318,11 +312,6 @@
        .total {
               font-size: 1.25rem;/*20px*/
        }
-
-       /*Стили для блока со ссылкой на весь каталог*/
-       .link-more {
-              font-size: 1.25rem;/*20px*/
-       }
 }
 
 @media screen and (min-width: 1920px) {
@@ -353,11 +342,6 @@
        }
 
        .total {
-              font-size: 1.5rem;/*24px*/
-       }
-
-       /*Стили для блока со ссылкой на весь каталог*/
-       .link-more {
               font-size: 1.5rem;/*24px*/
        }
 }
