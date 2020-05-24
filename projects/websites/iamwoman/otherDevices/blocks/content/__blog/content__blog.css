@@ -6,28 +6,20 @@
 }
 
 .blog {
-       width: 100%;/*1440px*/
        height: auto;/*1093px*/
-       border: 2px solid red;
 }
 
 /*Стили для элементов блока*/
-/*Заголовок*/
-.blog__head {
-       margin-bottom: 4.72%;/*68px*/
-}
 /*Слайдер*/
 .blog__slider {
        display: flex;
        transition: transform 0.7s ease-in-out;
-       /* transform: translateX(-10%); */
 }
 
 .slider {
-       width: auto;/*ширина установлена ч/з JS*/
+       /*ширина установлена ч/з JS*/
        height: auto;
        max-height: 75.07%;/*821px*/
-       border: 2px solid blue;
 }
 
 /*Стили для элементов слайдера*/
@@ -40,15 +32,11 @@
 
 /*Хэштэг*/
 .hashtag {
-       font-size: 1rem;/*16px*/
+       font-family: "Cormorant-l", serif;
        color: #342B2B;
 }
 
 /*Стили для изображений*/
-.element__pic {
-       margin-top: 4%;/*16px*/
-}
-
 .pic {
        /*ширина установлена ч/з JS*/
        width: auto;
@@ -69,10 +57,6 @@
        margin-bottom: 6%;/*24px*/
 }
 
-.heading--size__xl {
-       font-size: 1.875rem;/*30px*/
-}
-
 /*Стили для блока с переключателем слайдера*/
 .blog__toggle {
        position: absolute;
@@ -81,7 +65,6 @@
 }
 
 .toggle--size__l {
-       width: 24.44%;/*352px*/
        height: auto;
 }
 
@@ -97,11 +80,6 @@
        font-family: "Cormorant-R", serif;
        text-align: center;
        color: #342B2B;
-       border: 1px solid blue;
-}
-
-.current {
-       font-size: 2.25rem;/*36px*/
 }
 
 /*Бегунок, полоса прокрутки*/
@@ -176,4 +154,105 @@
        left: 50%;
        transform: translateX(-50%);
        margin-top: 3.47%;/*50px*/
+}
+
+/*Медиа-запросы*/
+/*Планшеты*/
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+       /*Общие стили для блока*/
+       .blog {
+              width: 94.14%;/*723px*/
+       }
+
+       /*Стили для элементов блока*/
+       /*Заголовок*/
+       .blog__head {
+              margin-bottom: 5.53%;/*40px*/
+       }
+
+       /*Хэштэг*/
+       .hashtag {
+              font-size: 0.875rem;/*14px*/
+       }
+
+       /*Стили для изображений*/
+       .element__pic {
+              margin-top: 4.64%;/*16px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .toggle--size__l {
+              width: 28.63%;/*207px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       /*Номер слайда*/
+       .current {
+              font-size: 1.5rem;/*24px*/
+       }
+}
+
+/*Десктоп*/
+/*Общие стили*/
+@media screen and (min-width: 1280px) {
+       /*Общие стили для блока*/
+       .blog {
+              width: 100%;/*1440px*/
+       }
+
+       /*Стили для элементов блока*/
+       /*Заголовок*/
+       .blog__head {
+              margin-bottom: 4.86%;/*70px*/
+       }
+
+       /*Хэштэг*/
+       .hashtag {
+              font-size: 1rem;/*16px*/
+       }
+
+       /*Стили для изображений*/
+       .element__pic {
+              margin-top: 3.49%;/*14px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       .toggle--size__l {
+              width: 24.44%;/*352px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       /*Номер слайда*/
+       .current {
+              font-size: 1.875rem;/*30px*/
+       }
+}
+
+/*Стили для отдельных размеров экрана*/
+@media screen and (min-width: 1600px) and (max-width: 1919px) {
+       /*Стили для элементов блока*/
+       /*Хэштэг*/
+       .hashtag {
+              font-size: 1.125rem;/*18px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       /*Номер слайда*/
+       .current {
+              font-size: 2.25rem;/*36px*/
+       }
+}
+
+@media screen and (min-width: 1920px) {
+       /*Стили для элементов блока*/
+       /*Хэштэг*/
+       .hashtag {
+              font-size: 1.25rem;/*20px*/
+       }
+
+       /*Стили для блока с переключателем слайдера*/
+       /*Номер слайда*/
+       .current {
+              font-size: 2.625rem;/*42px*/
+       }
 }

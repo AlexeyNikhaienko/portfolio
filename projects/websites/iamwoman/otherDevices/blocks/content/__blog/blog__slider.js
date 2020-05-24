@@ -42,14 +42,15 @@ window.addEventListener("load", () =>{
 //размер отступа в зависимости от текущей ширины экрана
 function detectedWidthScreen() {
   blogBlockWidth = document.querySelector(".blog").offsetWidth;
-  marginRight = blogBlockWidth * 0.028;//0.028 (2.8%) согласно макета
-  if (window.innerWidth >= 768 && window.innerWidth <= 959) {
+  //правый внешний отступ 2% согласно макета
+  marginRight = blogBlockWidth * 0.02;
+  if (window.innerWidth > 767 && window.innerWidth <= 959) {
     items = 2;
-  } else if (window.innerWidth > 960 && window.innerWidth <= 1279) {
+  } else if (window.innerWidth > 959 && window.innerWidth <= 1279) {
     items = 3;
-  } else if (window.innerWidth > 1280 && window.innerWidth <= 1599) {
+  } else if (window.innerWidth > 1279 && window.innerWidth <= 1919) {
     items = 4;
-  } else if (window.innerWidth > 1600) {
+  } else if (window.innerWidth > 1919) {
     items = 5;
   }
   //Вызов функции, которая устанавливает размеры элементов
@@ -89,7 +90,8 @@ function createArray() {
   slidesWidthArr = [0];
   for (let j = 0; j < sliderBlogArr.length; j++) {
     if (j === sliderBlogArr.length - 1 && window.innerWidth > 490) {
-      marginRight = 0;//обнулил отступ у последнего слайда
+      //обнулил отступ у последнего слайда
+      marginRight = 0;
     }
     slidesWidthArr.push(sliderBlogArr[j].offsetWidth + marginRight);
   }
@@ -111,7 +113,6 @@ function shiftSliderToLeft() {
   curIndexBlogSlide++;
   sliderWrap.style.transform = `translateX(-${ shift }px)`;
   bindRangeWithShift();
-  //console.log(`LEFT: ${substrWidth}, ${shift}, ${curIndexBlogSlide}`);
 }
 shiftSliderToLeft();
 
@@ -126,7 +127,6 @@ function shiftSliderToRight() {
   curIndexBlogSlide--;
   sliderWrap.style.transform = `translateX(-${ shift }px)`;
   bindRangeWithShift();
-  //console.log(`toRight(${ substrWidth }, ${shift}, ${curIndexBlogSlide})`);
 }
 
 //Управление бегунком
@@ -153,7 +153,7 @@ function thumbSliderControl() {
       shift = slidesWidthArr[0] + slidesWidthArr[1] + slidesWidthArr[2] + slidesWidthArr[3] + slidesWidthArr[4] + slidesWidthArr[5];
     }
   }
-  //curNumberSlide.textContent = `0${rangeArea.value}/`;//номер текущего сдайда
+
   sliderWrap.style.transform = `translateX(-${ shift }px)`;
   shiftTextAboveThumb();
 }
