@@ -1,11 +1,14 @@
 import React from 'react';
 import "./App.css";
+import Header from './components/Header/Header';
+import Content from './components/Content/Content';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <p>Hello!!!!</p>
-    </div>
+    <React.Fragment>
+      <Header />
+      <Content />
+    </React.Fragment>
   );
 }
 

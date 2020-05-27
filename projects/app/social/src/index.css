@@ -1,0 +1,9 @@
+/*Импорт файла для сброса стилей*/
+@import '~@csstools/normalize.css';
+
+/*Общие стили*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
