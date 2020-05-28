@@ -1,0 +1,15 @@
+/*Импорт шрифтов*/
+@font-face {
+  font-family: "Roboto-R";
+  src: url("../fonts/RobotoSlab-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-SB";
+  src: url("../fonts/RobotoSlab-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-B";
+  src: url("../fonts/RobotoSlab-Bold.ttf");
+}

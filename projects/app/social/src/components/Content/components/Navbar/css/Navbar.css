@@ -1,16 +1,58 @@
 /*Общие стили для блока*/
 .aside {
-  width: 25%;
+  width: 25%;/*343px*/
   height: 100%;
-  border: 2px solid green;
+  border-radius: 1em;/*16px*/
+  background-color: #F3F3F3;
+  box-shadow: 0 0.3125em 0.625em #999999;
 }
 
 .navbar {
   width: 100%;
   height: 100%;
+  padding: 7.29% 7.29% 0;/*t/l/r 25px b 0*/
 }
 
 /*Стили для списка и его элементов*/
 .list {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
   list-style: none;
+}
+
+.list__item {
+  margin-bottom: 7%;
+}
+
+.item {
+  width: 100%;
+  height: auto;
+  padding: 3% 0;
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.item:hover {
+  transform: scale(1.03);
+  border-bottom-color: #E50914;
+}
+
+.item:hover > .link {
+  color: #E50914;
+  text-shadow: 0 0 0.625em #E50914;
+}
+
+.link {
+  font-family: "Roboto-R", serif;
+  font-size: 1.125em;/*18px*/
+  color: #999999;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0 0 0.625em #999999;
+}
+
+/*Стили для активной ссылки*/
+.active {
+  color: #088BC1;
+  text-shadow: 0 0 0.625em #088BC1;
 }

@@ -1,7 +1,39 @@
+/*Общие стили для блока*/
+.body__header {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .header {
-  width: 100%;
-  height: auto;
-  max-height: 10.5%;
-  padding: 1.5%;
-  border: 2px solid red;
+  width: 100%;/*1368px*/
+  height: 10.42%;/*80px*/
+  padding: 0 5.85%;/*l/r 80px*/
+  background-color: #F3F3F3;
+  box-shadow: 0 0.3125em 0.625em #999999;
+}
+
+/*Стили для логотипа*/
+.logo {
+  font-family: "Roboto-SB", serif;
+  font-size: 2.25em;/*36px*/
+}
+
+.upper {
+  text-transform: uppercase;
+  color: #E50914;
+}
+
+.lower {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  color: #088BC1;
+  text-shadow: 0 0 10px #088BC1;
+}
+
+.lower--color__red {
+  font-variant: normal;
+  color: #E50914;
 }

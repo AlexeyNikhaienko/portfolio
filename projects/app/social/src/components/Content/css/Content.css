@@ -1,18 +1,23 @@
 /*Общие стили для блока*/
 .main__content {
   display: inline-flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin-top: 6.94%;/*95px*/
 }
 
 .content {
-  width: 100%;
-  height: 100vh;
-  border: 2px solid blue;
+  width: 100%;/*1368px*/
+  height: 86.97vh;/*668px*/
+  padding: 0 5.85%;/*l/r 80px*/
 }
 
 /*Стили для блока-обёртки (отображает страницы приложения)*/
 .wrap {
-  width: 70%;
+  width: 73.76%;/*1010px*/
   height: 100%;
-  border: 2px solid yellow;
+  padding: 2.07% 2.07% 0;/*t/l/r 25px b 0*/
+  border-radius: 1em;/*16px*/
+  background-color: #F3F3F3;
+  box-shadow: 0 0.3125em 0.625em #999999;
+  overflow-y: auto;
 }

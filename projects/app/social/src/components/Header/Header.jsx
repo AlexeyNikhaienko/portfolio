@@ -1,10 +1,16 @@
-import React from "react";
+//Импорт общих настроек
+import React from 'react';
+
+//Импорт стилей
 import './css/Header.css';
 
-const Header = () => {
+function Header(props) {
   return (
-    <header className="header">
-      <p className="logo">NETWORKIA</p>
+    <header className="body__header header">
+      <p className="logo">
+        <span className="upper">Net</span>
+        <span className="lower">work<span className="lower--color__red">i</span>a</span>
+      </p>
     </header>
   );
 }

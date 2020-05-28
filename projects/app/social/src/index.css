@@ -1,9 +1,16 @@
 /*Импорт файла для сброса стилей*/
 @import '~@csstools/normalize.css';
 
+/*Импорт шрифтов*/
+@import url("common_files/css/_fonts.css");
+
 /*Общие стили*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
 }
