@@ -7,17 +7,19 @@
 
 .content {
   width: 100%;/*1368px*/
-  height: 86.97vh;/*668px*/
+  height: auto;
   padding: 0 5.85%;/*l/r 80px*/
+  border: 2px solid blue;
 }
 
 /*Стили для блока-обёртки (отображает страницы приложения)*/
 .wrap {
-  width: 73.76%;/*1010px*/
-  height: 100%;
-  padding: 2.07% 2.07% 0;/*t/l/r 25px b 0*/
-  border-radius: 1em;/*16px*/
-  background-color: #F3F3F3;
+  width: 57.8%;/*791px*/
+  height: auto;
+  padding: 2.07%;/*25px*/
+  border-radius: 0.5em;/*8px*/
+  background-color: #FDFDFD;
   box-shadow: 0 0.3125em 0.625em #999999;
   overflow-y: auto;
+  border: 2px solid red;
 }
