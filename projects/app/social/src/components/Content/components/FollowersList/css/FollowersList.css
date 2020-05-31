@@ -1,0 +1,41 @@
+/*Общие стили для блока*/
+.content__followersList {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+/*Стили для заголовка*/
+.followersList__heading {
+  display: inline-block;
+  margin-bottom: 7%;/*16px*/
+}
+
+.heading {
+  font-family: "Roboto-SB", serif;
+  font-size: 1em;/*16px*/
+  color: #999999;
+  text-shadow: 0 0 0.625em #999999;
+}
+
+/*Стили для нижней границы*/
+.heading__line {
+  margin-top: 7%;
+}
+
+.line {
+  display: block;
+}
+
+.line--short {
+  width: 80%;
+  height: 0.125em;/*2px*/
+  background-color: #088BC1;
+}
+
+/*Стили для блока-обёртки с подписчиками*/
+.followers {
+  width: 100%;/*224px*/
+  height: auto;
+  max-height: 100%;
+  border: 1px solid red;
+}

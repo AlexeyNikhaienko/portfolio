@@ -1,0 +1,13 @@
+/*Стили для информации о пользователе*/
+.user__userInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo {
+  width: 65%;
+  height: 100%;
+  font-family: "Roboto-R", serif;
+  font-size: 0.75em;
+}
