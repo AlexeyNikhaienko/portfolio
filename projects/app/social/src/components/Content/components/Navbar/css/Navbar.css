@@ -1,32 +1,32 @@
 /*Общие стили для блока*/
 .aside {
-  width: 25%;/*343px*/
-  height: 100%;
-  border-radius: 1em;/*16px*/
-  background-color: #F3F3F3;
+  width: 20%;/*274px*/
+  height: auto;
+  padding: 2.07%;/*25px*/
+  border-radius: 0.5em;/*8px*/
+  background-color: #FDFDFD;
   box-shadow: 0 0.3125em 0.625em #999999;
 }
 
 .navbar {
-  width: 100%;
+  width: 100%;/*274px*/
   height: 100%;
-  padding: 7.29% 7.29% 0;/*t/l/r 25px b 0*/
 }
 
 /*Стили для списка и его элементов*/
 .list {
-  width: 100%;
+  width: 100%;/*224px*/
   height: auto;
   max-height: 100%;
   list-style: none;
 }
 
 .list__item {
-  margin-bottom: 7%;
+  margin-bottom: 7%;/*16px*/
 }
 
 .item {
-  width: 100%;
+  width: 100%;/*224px*/
   height: auto;
   padding: 3% 0;
   border-bottom: 1px solid #E9E9E9;
@@ -44,9 +44,8 @@
 
 .link {
   font-family: "Roboto-R", serif;
-  font-size: 1.125em;/*18px*/
+  font-size: 0.875em;/*14px*/
   color: #999999;
-  text-transform: uppercase;
   text-decoration: none;
   text-shadow: 0 0 0.625em #999999;
 }
