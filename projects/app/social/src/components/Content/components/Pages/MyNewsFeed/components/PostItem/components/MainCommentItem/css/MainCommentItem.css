@@ -1,0 +1,30 @@
+/*Стили для блока с комментарием автора поста*/
+.commentsWrap__mainComment {
+  margin-bottom: 1.9%;/*15px*/;
+}
+
+.mainComment {
+  width: 100%;/*721px*/
+  height: auto;
+}
+
+/*Стили для блока-обёртки*/
+.mainComment__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Стили для блока-обёртки с комментариями*/
+.mainComment__commentsWrap {
+  margin-top: 1.9%;/*15px*/
+}
+
+.commentsWrap {
+  height: auto;
+  list-style: none;
+}
+
+.commentsWrap--width__short {
+  width: 89%;/*642px*/
+  margin-left: 11%;
+}

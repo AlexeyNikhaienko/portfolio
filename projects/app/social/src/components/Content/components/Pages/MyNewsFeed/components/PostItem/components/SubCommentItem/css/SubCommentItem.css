@@ -1,0 +1,5 @@
+/*Стили для блока-обёртки*/
+.commentsWrap__followerComment {
+  display: flex;
+  justify-content: space-between;
+}

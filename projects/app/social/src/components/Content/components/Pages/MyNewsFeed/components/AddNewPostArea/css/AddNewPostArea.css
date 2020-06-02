@@ -1,0 +1,112 @@
+/*Общие стили для блока, создающего новый пост*/
+.newsFeed__newPost {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.16%;/*25px*/
+}
+
+.wrapper {
+  width: 100%;/*791px*/
+  height: auto;
+  max-height: 100%;
+  padding: 3.16% 4.43%;/*t/b 25px l/r 35px*/
+  border-radius: 5px;
+  background-color: #FDFDFD;
+  box-shadow: 0 0.3125em 0.625em #999999;
+  /* border: 1px solid red; */
+}
+
+/*Общие стили для формы отправки сообщения*/
+.newPost__messageForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageForm {
+  width: 87%;/*627px*/
+  height: auto;
+  max-height: 100%;
+  padding: 1.26%;/*10px*/
+  border: 1px solid #F4F2F2;
+  border-radius: 5px;
+}
+
+/*Стилия для элеменнтов формы*/
+/*Поле для сообщения*/
+.inputField {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  font-family: "Roboto-R", serif;
+  font-size: 0.875rem;/*14px*/
+  color: #999999;
+  border: 0;
+  outline: 0;
+  resize: none;
+}
+
+/*Стили для блок-обёртка с кнопками добавления файлов 
+к посту и его отправки*/
+.messageForm__addFiles {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1.6%;/*10px /627px */
+}
+
+.addFiles {
+  width: auto;
+  height: auto;
+}
+
+/*Общие стили для кнопок*/
+.btn {
+  font-family: "Roboto-R", serif;
+  font-size: 0.75rem;/*12px*/
+}
+
+/*Кнопки, добавляющие файлы к посту*/
+.addFiles__addFile {
+  margin-right: 5%;
+}
+
+.addFile {
+  width: auto;
+  height: auto;
+  border: 0;
+  outline: 0;
+  color: #088BC1;
+  text-shadow: 0 0 0.625em #088BC1;
+  background-color: transparent;
+}
+
+.addFile:hover {
+  cursor: pointer;
+  padding: 1% 2%;/*t/b 5px l/r 10px*/
+  background-color: #088BC1;
+  border-radius: 3px;
+  color: white;
+  text-shadow: 0 0 0.625em white;
+  box-shadow: 0 0 0.625em #088BC1;
+}
+
+/*Копка публикации*/
+.submit {
+  width: auto;
+  height: auto;
+  padding: 1% 2%;/*t/b 5px l/r 10px*/
+  border: 2px solid #088BC1;
+  border-radius: 3px;
+  outline: 0;
+  color: #088BC1;
+  text-shadow: 0 0 0.625em #088BC1;
+  background-color: transparent;
+}
+
+.submit:hover {
+  cursor: pointer;
+  color: white;
+  text-shadow: 0 0 0.625em white;
+  background-color: #088BC1;
+  box-shadow: 0 0 0.625em #088BC1;
+}
