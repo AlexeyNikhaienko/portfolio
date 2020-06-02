@@ -16,10 +16,6 @@
 .wrap {
   width: 57.8%;/*791px*/
   height: auto;
-  padding: 2.07%;/*25px*/
-  border-radius: 0.5em;/*8px*/
-  background-color: #FDFDFD;
-  box-shadow: 0 0.3125em 0.625em #999999;
+  background-color: transparent;
   overflow-y: auto;
-  border: 2px solid red;
 }

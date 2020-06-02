@@ -1,22 +1,23 @@
-//Импорт компонентов общих настроек
-import React from "react";
-import {Switch, Route} from "react-router-dom"
+//Импорт общих настроек
+import React from 'react';
+import {Switch, Route} from 'react-router-dom';
 
 //Импорт стилей
-import "./css/Content.css";
+import './css/Content.css';
 
 //Импорт компонентов
-import Navbar from "./components/Navbar/Navbar";
-import MyNewsFeed from "./components/Pages/MyNewsFeed/MyNewsFeed";
-import MyProfile from "./components/Pages/MyProfile/MyProfile";
-import MyFriends from "./components/Pages/MyFriends/MyFriends";
-import MyDialogs from "./components/Pages/MyDialogs/MyDialogs";
-import MyImages from "./components/Pages/MyImages/MyImages";
-import MyVideos from "./components/Pages/MyVideos/MyVideos";
-import MyMusic from "./components/Pages/MyMusic/MyMysic";
-import MySettings from "./components/Pages/MySettings/MySettings";
+import Navbar from './components/Navbar/Navbar';
+import MyNewsFeed from './components/Pages/MyNewsFeed/MyNewsFeed';
+import MyProfile from './components/Pages/MyProfile/MyProfile';
+import MyFriends from './components/Pages/MyFriends/MyFriends';
+import MyDialogs from './components/Pages/MyDialogs/MyDialogs';
+import MyImages from './components/Pages/MyImages/MyImages';
+import MyVideos from './components/Pages/MyVideos/MyVideos';
+import MyMusic from './components/Pages/MyMusic/MyMysic';
+import MySettings from './components/Pages/MySettings/MySettings';
+import FollowersList from './components/FollowersList/FollowersList';
 
-const Content = (props) => {
+function Content(props) {
   return (
     <main className="main__content content">
       <Navbar />
@@ -32,6 +33,7 @@ const Content = (props) => {
           <Route path="/settings" render={() => <MySettings />} />
         </Switch>
       </div>
+      <FollowersList />
     </main>
   );
 }
