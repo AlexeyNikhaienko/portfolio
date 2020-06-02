@@ -18,4 +18,5 @@
   height: auto;
   background-color: transparent;
   overflow-y: auto;
+  border: 2px solid red;
 }
