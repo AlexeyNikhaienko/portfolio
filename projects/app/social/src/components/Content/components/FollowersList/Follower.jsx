@@ -12,15 +12,15 @@ class Follower extends React.Component {
   render() {
     //Дополнительные стили для аватарки
     const extraStyle = {
-      width: "50px",
-      height: "50px"
+      width: '50px',
+      height: '50px'
     }
 
     return (
       <div className="followers__user user">
         <Avatar style={extraStyle} />
         <UserInfo>
-          <p className="userName">{this.props.userName}</p>
+          <p className="userName userName--padding__bot userName--fs__m">{this.props.userName}</p>
           <button className="addFriend">Add Friend</button>
           <span className="userInfo__line line line--full" />
         </UserInfo>
