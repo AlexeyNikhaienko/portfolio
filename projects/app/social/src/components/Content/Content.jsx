@@ -1,6 +1,6 @@
 //Импорт общих настроек
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, Redirect} from 'react-router-dom';
 
 //Импорт стилей
 import './css/Content.css';
@@ -23,6 +23,7 @@ function Content(props) {
       <LeftSidebar />
       <div className="wrap">
         <Switch>
+          <Redirect exact from="/" to="/mynewsfeed" />
           <Route path="/mynewsfeed" render={() => <MyNewsFeed />} />
           <Route path="/profile" render={() => <MyProfile />} />
           <Route path="/friends" render={() => <MyFriends />} />
