@@ -1,6 +1,8 @@
 /*Общие стили для блока*/
 .body__header {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -10,7 +12,7 @@
 .header {
   width: 100%;/*1368px*/
   height: 10.42%;/*80px*/
-  padding: 0 5.85%;/*l/r 80px*/
+  padding: 1.1% 5.85%;/*t/b 15px l/r 80px*/
   background-color: #FDFDFD;
   box-shadow: 0 0.3125em 0.625em #999999;
 }

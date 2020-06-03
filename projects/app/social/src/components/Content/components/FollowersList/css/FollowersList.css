@@ -2,6 +2,14 @@
 .content__followersList {
   position: -webkit-sticky;
   position: sticky;
+  top: 10.83%;
+}
+
+.followersList {
+  padding: 2.07%;/*25px*/
+  border-radius: 8px;
+  box-shadow: 0 0.3125em 0.625em #999999;
+  background-color: #FDFDFD;
 }
 
 /*Стили для заголовка*/
@@ -37,5 +45,4 @@
   width: 100%;/*224px*/
   height: auto;
   max-height: 100%;
-  border: 1px solid red;
 }
