@@ -6,7 +6,7 @@ import {Switch, Route} from 'react-router-dom';
 import './css/Content.css';
 
 //Импорт компонентов
-import Navbar from './components/Navbar/Navbar';
+import LeftSidebar from './components/LeftSidebar/LeftSidebar';
 import MyNewsFeed from './components/Pages/MyNewsFeed/MyNewsFeed';
 import MyProfile from './components/Pages/MyProfile/MyProfile';
 import MyFriends from './components/Pages/MyFriends/MyFriends';
@@ -20,7 +20,7 @@ import FollowersList from './components/FollowersList/FollowersList';
 function Content(props) {
   return (
     <main className="main__content content">
-      <Navbar />
+      <LeftSidebar />
       <div className="wrap">
         <Switch>
           <Route path="/mynewsfeed" render={() => <MyNewsFeed />} />

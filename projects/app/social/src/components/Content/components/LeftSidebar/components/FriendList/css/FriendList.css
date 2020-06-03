@@ -1,0 +1,22 @@
+/*Общие стили для блока*/
+.friendList {
+  width: 100%;/*274px*/
+  height: auto;
+  padding: 9.12%;/*25px*/
+  border-radius: 8px;
+  box-shadow: 0 0.3125em 0.625em #999999;
+  background-color: #FDFDFD;
+}
+
+/*Стили для блока-обёртки*/
+.friendList__container {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,30 @@
+/*Общие стили для блока-обёртки*/
+.content__profileOwner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9.12%;/*25px*/
+}
+
+.profileOwner {
+  width: 100%;/*274px*/
+  min-height: 10vh;
+  max-height: 15vh;
+  padding: 9.12%;/*25px*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: 0 0.3125em 0.625em #999999;
+}
+
+.profileOwner:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.5);
+}

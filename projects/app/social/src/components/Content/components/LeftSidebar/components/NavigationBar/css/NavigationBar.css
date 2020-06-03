@@ -1,16 +1,16 @@
 /*Общие стили для блока*/
-.aside {
-  width: 20%;/*274px*/
-  height: auto;
-  padding: 2.07%;/*25px*/
-  border-radius: 0.5em;/*8px*/
-  background-color: #FDFDFD;
-  box-shadow: 0 0.3125em 0.625em #999999;
+.aside__navbar {
+  margin-bottom: 9.12%;/*25px*/
 }
 
 .navbar {
   width: 100%;/*274px*/
-  height: 100%;
+  height: auto;
+  max-height: 100%;
+  padding: 9.12%;/*25px*/
+  background-color: #FDFDFD;
+  border-radius: 8px;
+  box-shadow: 0 0.3125em 0.625em #999999;
 }
 
 /*Стили для списка и его элементов*/
