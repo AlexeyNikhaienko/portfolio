@@ -1,7 +1,59 @@
-import React from "react";
+//Импорт общих настроек
+import React from 'react';
 
-const MyFriends = (props) => {
-  return <h2>Список друзей</h2>
+//Импорт стилей
+import './css/MyFriends.css';
+
+//Импорт компонентов
+import MyFriendItem from './components/MyFriendItem/MyFriendItem';
+
+function MyFriends(props) {
+  return (
+    <div className="wrapper myFriends">
+      <input type="radio" className="radio" id="myFriends" name="users" defaultChecked />
+      <label className="myFriends__tabTitle tabTitle" htmlFor="myFriends">Мои Друзья</label>
+      <span className="myFriends__totalRequests totalRequests">10</span>
+      <input type="radio" className="radio" id="friendRequests" name="users" />
+      <label className="myFriends__tabTitle tabTitle" htmlFor="friendRequests">Запросы В Друзья</label>
+      <span className="totalRequests">15</span>
+      <div className="wrapper__myFriendsContainer myFriendsContainer">
+        <MyFriendItem
+            friendInfo={{friendName: 'User-2', occupation: 'Студент'}}
+            btnTitle={{remove: 'Удалить', add: 'Добавить'}}
+        />
+        <MyFriendItem
+            friendInfo={{friendName: 'User-3', occupation: 'Повар'}}
+            btnTitle={{remove: 'Удалить', add: 'Добавить'}}
+        />
+        <MyFriendItem
+            friendInfo={{friendName: 'User-4', occupation: 'Инженер'}}
+            btnTitle={{remove: 'Удалить', add: 'Добавить'}}
+        />
+        <MyFriendItem
+            friendInfo={{friendName: 'User-5', occupation: 'Художник и поэт'}}
+            btnTitle={{remove: 'Удалить', add: 'Добавить'}}
+        />
+      </div>
+      <div className="wrapper__friendRequestsContainer friendRequestsContainer">
+        <MyFriendItem
+            friendInfo={{friendName: 'User-2', occupation: 'Студент'}}
+            btnTitle={{remove: 'Отклонить', add: 'Принять'}}
+        />
+        <MyFriendItem
+            friendInfo={{friendName: 'User-3', occupation: 'Повар'}}
+            btnTitle={{remove: 'Отклонить', add: 'Принять'}}
+        />
+        <MyFriendItem
+            friendInfo={{friendName: 'User-4', occupation: 'Инженер'}}
+            btnTitle={{remove: 'Отклонить', add: 'Принять'}}
+        />
+        <MyFriendItem
+            friendInfo={{friendName: 'User-5', occupation: 'Актёр'}}
+            btnTitle={{remove: 'Отклонить', add: 'Принять'}}
+        />
+      </div>
+    </div>
+  )
 }
 
 export default MyFriends;

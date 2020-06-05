@@ -1,0 +1,99 @@
+/*Общие стили для блока*/
+.myFriends__friend {
+  margin-bottom: 1.9%;/*15px*/
+}
+
+.friend {
+  width: 48.42%;/*383px*/
+  height: auto;
+  padding-bottom: 2.53%;/*20px / 791px*/
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 1px solid #F4F2F2;
+  overflow: hidden;
+}
+
+.friend:hover {
+  box-shadow: 0 0.3125rem 0.625rem #999999;
+}
+
+/*Стилия для блока с информацией о пользователе*/
+.friend__friendInfo {
+  margin-top: 2.61%;/*10px*/
+  margin-bottom: 2.61%;/*10px*/
+}
+
+.friendInfo {
+  width: 100%;/*383px*/
+  height: auto;
+  padding-left: 5%;/*20px*/
+}
+
+.friendName,
+.occupation {
+  font-size: 0.875rem;/*14px*/
+}
+
+.userifo__friendName {
+  margin-bottom: 3.52%;/*10px*/
+}
+
+.friendName {
+  color: #088BC1;
+  text-shadow: 0 0 0.625rem #088BC1;
+}
+
+.occupation {
+  color: #999999;
+  text-shadow: 0 0 0.625rem #999999;
+}
+
+/*Стилия для блока-обёртки с кнопками*/
+.friend__btnWrapper {
+  display: inline-block;
+}
+
+.btnWrapper {
+  width: 100%;/*383px*/
+  height: auto;
+  padding-right: 5%;/*20px*/
+  text-align: right;
+}
+
+/*Стилия для кнопок*/
+.btnWrapper__unfriendBtn {
+  margin-right: 2.61%;/*10px*/
+}
+
+.unfriendBtn,
+.addFriendBtn {
+  width: auto;
+  height: auto;
+  padding: 0.3125rem 0.625rem;/*t/b 5px l/r 10px*/
+  color: white;
+  text-shadow: 0 0 0.625rem white;
+  border: 0;
+  outline: 0;
+  border-radius: 3px;
+}
+
+.unfriendBtn {
+  background-color: #999999;
+}
+
+.addFriendBtn {
+  background-color: #088BC1;
+}
+
+.unfriendBtn:hover,
+.addFriendBtn:hover {
+  cursor: pointer;
+}
+
+.unfriendBtn:hover {
+  background-color: #088BC1;
+}
+
+.unfriendBtn:hover ~ .addFriendBtn {
+  background-color: #999999;
+}

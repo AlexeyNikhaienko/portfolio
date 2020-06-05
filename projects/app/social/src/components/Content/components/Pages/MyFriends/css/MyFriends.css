@@ -1,0 +1,68 @@
+/*Общие стили для блока*/
+.myFriends {
+  height: 100%;
+}
+
+/*Стили для радио-кнопок*/
+.radio {
+  display: none;
+}
+
+/*Стили для названий вкладок*/
+.myFriends__tabTitle {
+  margin-right: 1.26%;/*10px / 791px*/
+}
+
+.myFriends__totalRequests {
+  margin-right: 6.32%;/*50px / 791px*/
+}
+
+.tabTitle,
+.totalRequests {
+  font-family: "Roboto-R", serif;
+  font-size: 0.875rem;/*14px*/
+  color: #999999;
+}
+
+.tabTitle {
+  text-shadow: 0 0 0.625em #999999;
+}
+
+/*Нижняя граница, когда вкладка выбрана*/
+.radio:checked + .tabTitle {
+  padding-bottom: 0.4%;/*3px*/
+  color: #088BC1;
+  text-shadow: 0 0 0.625em #088BC1;
+  border-bottom: 2px solid #088BC1;
+  transition: all 0.3s ease-in-out;
+}
+
+.radio:checked + .tabTitle + .totalRequests {
+  padding: 0.3% 0.6%;/*t/b 2px l/r 4px*/
+  color: #088BC1;
+  border: 1px solid #088BC1;
+  border-radius: 30%;
+  box-shadow: 0 0.3125em 0.625em #088BC1;
+  transition: all 0.4s ease-in-out;
+}
+
+/*Отображение контента выбранной вкладки*/
+.radio[id="myFriends"]:checked ~ .myFriendsContainer,
+.radio[id="friendRequests"]:checked ~ .friendRequestsContainer {
+  display: flex;
+}
+
+/*Стили для вкладок*/
+.wrapper__myFriendsContainer,
+.wrapper__friendRequestsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3.16%;/*25px*/
+}
+
+.myFriendsContainer,
+.friendRequestsContainer {
+  display: none;
+}
