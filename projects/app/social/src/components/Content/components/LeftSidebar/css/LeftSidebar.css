@@ -1,5 +1,6 @@
 /*Общие стили для блока*/
 .aside {
+  align-self: flex-start;
   width: 20%;/*274px*/
   height: auto;
 }

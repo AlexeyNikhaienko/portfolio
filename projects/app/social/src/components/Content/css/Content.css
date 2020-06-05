@@ -1,7 +1,6 @@
 /*Общие стили для блока*/
 .main__content {
   display: inline-flex;
-  align-items: flex-start;
   justify-content: space-between;
   margin-top: 1.83%;/*25px*/
 }
