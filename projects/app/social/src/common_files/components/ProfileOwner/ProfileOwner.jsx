@@ -3,7 +3,6 @@ import React from 'react';
 
 //Импорт стилей
 import styles from './css/ProfileOwner.module.css';
-import bcg from './img/bcg1.jpg';
 
 //Импорт компонентов
 import Avatar from '../Avatar/Avatar';
@@ -11,24 +10,25 @@ import Avatar from '../Avatar/Avatar';
 class ProfileOwner extends React.Component {
   render() {
     //Дополнительные стили для аватарки
-    const extraStyle = {
+    const extraStylesAvatar = {
       position: 'absolute',
       left: '5%',
-      top: '-50%',
-      transform: 'translateY(25%)',
       zIndex: 1,
       width: '70px',
-      border: '5px solid #fff'
+      border: '5px solid #fff',
+      ...this.props.extraStylesAvatar
     }
 
-    //Дополнительные стили для блока
-    const extraStyleBlock = {
-      backgroundImage: `url(${bcg})`
-    }
+    //Дополнительные стили, класс для блока
+    let extraClassName = this.props.extraClassName;
+    const extraStylesBlock = this.props.extraStylesBlock
 
     return (
-      <div className={`${styles.content__profileOwner} ${styles.profileOwner}`} style={extraStyleBlock}>
-        <Avatar style={extraStyle} />
+      <div
+          className={`${styles.content__profileOwner} ${styles.profileOwner} ${styles[extraClassName]}`} 
+          style={extraStylesBlock}
+      >
+        <Avatar style={extraStylesAvatar} />
         {this.props.children}
       </div>
     )
