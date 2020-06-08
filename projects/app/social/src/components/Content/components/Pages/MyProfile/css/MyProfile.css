@@ -1,0 +1,103 @@
+/*Общие стили для блока*/
+.wrap__myProfile {
+  position: relative;
+}
+
+.myProfile {
+  width: 100%;/*791px*/
+  height: 100%;
+  padding-bottom: 3.16%;/*25px*/
+  background-color: #FDFDFD;
+  border-radius: 8px;
+  box-shadow: 0 0.3125em 0.625em #999999;
+  overflow: hidden;
+}
+
+/*Стилия для блока с навигацией по профилю*/
+.profileOwner__userNav {
+  position: absolute;
+  left: 0;
+  bottom: 6.97%;/*25px*/
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.userNav {
+  width: 100%;/*791px*/
+  height: auto;
+  padding: 2.02% 0;/*t/b 16px*/
+  color: white;
+  background-color: rgba(0,0,0, 0.7);
+}
+
+/*Стили для блока со ссылками на вкладки*/
+.userNav__list {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.list--width__short {
+  width: 39.19%;/*310px*/
+}
+
+/*Стили для ссылок на вкладки*/
+.link--fs__s {
+  font-size: 0.75rem;/*12px*/
+}
+
+.link--color__white {
+  color: white;
+}
+
+.current {
+  color: #088BC1;
+  text-shadow: 0 0 0.625em white;
+}
+
+/*Стии для блока с количеством подписччиков*/
+.element {
+  font-family: "Roboto-R", serif;
+  font-size: 0.75rem;/*12px*/
+  line-height: 1.3;
+}
+
+.btn--bcg__blue {
+  padding: 0.3125rem 0.625rem;
+  color: white;
+  text-shadow: 0 0 0.625em white;
+  background-color: #088BC1;
+  border: 0;
+  outline: 0;
+  border-radius: 3px;
+}
+
+.btn--bcg__blue:hover {
+  cursor: pointer;
+  background-color: #088BB0;
+  box-shadow: 0 0 0.625em white;
+}
+
+/*Стили для блока со страницами о владельце профиля*/
+.myProfile__aboutMeWrap {
+  margin-top: -5.96%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutMeWrap {
+  width: 100%;/*791px*/
+  height: auto;
+}
+
+/*Боковая панель с именем*/
+.userInfo__userName {
+  margin-bottom: 8.64%;/*16px*/
+}
+
+/*Страницы с информацией о владельце профиля*/
+.aboutMePages {
+  width: 73.42%;/*581px*/
+  padding-right: 2.94%;/*25px*/
+}

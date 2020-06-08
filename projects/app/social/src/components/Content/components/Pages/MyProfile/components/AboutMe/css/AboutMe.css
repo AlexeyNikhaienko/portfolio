@@ -1,0 +1,22 @@
+/*Общие стили для блока, заголовка*/
+.aboutMePages__section,
+.section__heading {
+  margin-bottom: 2.75%;/*16px*/
+}
+
+.section {
+  width: 100%;/*581px*/
+  min-height: 19.53vh;/*150px*/
+  padding-bottom: 2.75%;/*16px*/
+  border-bottom: 1px solid #E9E9E9;
+}
+
+/*Стили для заголовка*/
+.section__heading {
+  display: inline-block;
+}
+
+/*Нижняя линия*/
+.section__line {
+  margin-top: 3%;
+}

@@ -1,0 +1,14 @@
+/*Общие стили для блока*/
+.aboutMePages__myAlbum {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.myAlbum {
+  width: 100%;/*581px*/
+  height: auto;
+  border: 2px solid yellow;
+}
