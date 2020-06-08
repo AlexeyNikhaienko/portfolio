@@ -10,28 +10,28 @@ function NavigationBar(props) {
     <nav className="aside__navbar navbar">
       <ul className="list">
         <li className="list__item item">
-          <NavLink to="/mynewsfeed" activeClassName="active" className="link">Моя Лента</NavLink>
+          <NavLink to="/mynewsfeed" activeClassName="active" className="link link--color__grey">Моя Лента</NavLink>
         </li>
         <li className="list__item item" activeClassName="active">
-          <NavLink to="/profile" activeClassName="active" className="link">Профиль</NavLink>
+          <NavLink to="/profile" activeClassName="active" className="link link--color__grey">Профиль</NavLink>
         </li>
         <li className="list__item item">
-          <NavLink to="/friends" activeClassName="active" className="link">Друзья</NavLink>
+          <NavLink to="/friends" activeClassName="active" className="link link--color__grey">Друзья</NavLink>
         </li>
         <li className="list__item item">
-          <NavLink to="/dialogs" activeClassName="active" className="link">Сообщения</NavLink>
+          <NavLink to="/dialogs" activeClassName="active" className="link link--color__grey">Сообщения</NavLink>
         </li>
         <li className="list__item item">
-          <NavLink to="/images" activeClassName="active" className="link">Изображения</NavLink>
+          <NavLink to="/images" activeClassName="active" className="link link--color__grey">Изображения</NavLink>
         </li>
         <li className="list__item item">
-          <NavLink to="/videos" activeClassName="active" className="link">Видео</NavLink>
+          <NavLink to="/videos" activeClassName="active" className="link link--color__grey">Видео</NavLink>
         </li>
         <li className="list__item item">
-          <NavLink to="/music" activeClassName="active" className="link">Музыка</NavLink>
+          <NavLink to="/music" activeClassName="active" className="link link--color__grey">Музыка</NavLink>
         </li>
         <li className="item">
-          <NavLink to="/settings" activeClassName="active" className="link">Настройки</NavLink>
+          <NavLink to="/settings" activeClassName="active" className="link link--color__grey">Настройки</NavLink>
         </li>
       </ul>
     </nav>
