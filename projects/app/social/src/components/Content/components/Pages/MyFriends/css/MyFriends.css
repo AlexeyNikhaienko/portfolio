@@ -51,18 +51,3 @@
 .radio[id="friendRequests"]:checked ~ .friendRequestsContainer {
   display: flex;
 }
-
-/*Стили для вкладок*/
-.wrapper__myFriendsContainer,
-.wrapper__friendRequestsContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 3.16%;/*25px*/
-}
-
-.myFriendsContainer,
-.friendRequestsContainer {
-  display: none;
-}

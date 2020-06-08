@@ -5,6 +5,8 @@ import React from 'react';
 import './css/MyFriends.css';
 
 //Импорт компонентов
+import MyFriendsContainer from './components/MyFriendsContainer/MyFriendsContainer';
+import FriendRequestsContainer from './components/FriendRequestsContainer/FriendRequestsContainer';
 import MyFriendItem from './components/MyFriendItem/MyFriendItem';
 
 function MyFriends(props) {
@@ -16,7 +18,7 @@ function MyFriends(props) {
       <input type="radio" className="radio" id="friendRequests" name="users" />
       <label className="myFriends__tabTitle tabTitle" htmlFor="friendRequests">Запросы В Друзья</label>
       <span className="totalRequests">15</span>
-      <div className="wrapper__myFriendsContainer myFriendsContainer">
+      <MyFriendsContainer>
         <MyFriendItem
             friendInfo={{friendName: 'User-2', occupation: 'Студент'}}
             btnTitle={{remove: 'Удалить', add: 'Добавить'}}
@@ -33,8 +35,8 @@ function MyFriends(props) {
             friendInfo={{friendName: 'User-5', occupation: 'Художник и поэт'}}
             btnTitle={{remove: 'Удалить', add: 'Добавить'}}
         />
-      </div>
-      <div className="wrapper__friendRequestsContainer friendRequestsContainer">
+      </MyFriendsContainer>
+      <FriendRequestsContainer>
         <MyFriendItem
             friendInfo={{friendName: 'User-2', occupation: 'Студент'}}
             btnTitle={{remove: 'Отклонить', add: 'Принять'}}
@@ -51,7 +53,7 @@ function MyFriends(props) {
             friendInfo={{friendName: 'User-5', occupation: 'Актёр'}}
             btnTitle={{remove: 'Отклонить', add: 'Принять'}}
         />
-      </div>
+      </FriendRequestsContainer>
     </div>
   )
 }

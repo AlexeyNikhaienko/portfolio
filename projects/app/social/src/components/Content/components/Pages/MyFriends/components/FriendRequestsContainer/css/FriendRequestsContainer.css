@@ -1,0 +1,12 @@
+/*Общие стили для блока*/
+.wrapper__friendRequestsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3.16%;/*25px*/
+}
+
+.friendRequestsContainer {
+  display: none;
+}
