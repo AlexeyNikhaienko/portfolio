@@ -9,8 +9,7 @@
 
 .profileOwner {
   width: 100%;/*274px*/
-  min-height: 10vh;
-  max-height: 15vh;
+  height: 12vh;
   padding: 9.12%;/*25px*/
   background-position: center;
   background-size: cover;
