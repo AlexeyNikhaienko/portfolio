@@ -6,8 +6,8 @@
 }
 
 .userInfo {
-  width: 65%;
   height: 100%;
   font-family: "Roboto-R", serif;
+  line-height: 1.3;
   border: 2px solid yellow;
 }

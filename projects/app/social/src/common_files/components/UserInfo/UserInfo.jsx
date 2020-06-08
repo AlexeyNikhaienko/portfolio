@@ -5,8 +5,11 @@ import React from 'react';
 import styles from './css/UserInfo.module.css';
 
 function UserInfo(props) {
+  //Дополнительные стили для компонента
+  const extraStyles = props.extraStyles;
+
   return (
-    <div className={`${styles.user__userInfo} ${styles.userInfo}`}>
+    <div className={`${styles.user__userInfo} ${styles.userInfo}`} style={extraStyles}>
       {props.children}
     </div>
   )

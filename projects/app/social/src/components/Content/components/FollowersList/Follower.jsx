@@ -19,7 +19,7 @@ class Follower extends React.Component {
     return (
       <div className="followers__user user">
         <Avatar style={extraStyle} />
-        <UserInfo>
+        <UserInfo extraStyles={{width: '65%'}}>
           <p className="userName userName--padding__bot userName--fs__m">{this.props.userName}</p>
           <button className="addFriend">Add Friend</button>
           <span className="userInfo__line line line--full" />
