@@ -1,0 +1,68 @@
+/*Стили для отдельного сообщения*/
+.dialogItem__message {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2.84%;/*15px*/
+}
+
+.message {
+  width: 100%;/*529px*/
+  height: auto;
+}
+
+/*Тело сообщения*/
+.message__messageBody {
+  position: relative;
+}
+
+.messageBody {
+  width: 84.5%;/*447px*/
+  height: auto;
+  padding: 1.42% 2.84%;/*t/b7px l/r15px*/
+  border-radius: 0.5rem;/*8px*/
+}
+
+.messageBody--bcg__gray {
+  background-color: #F3F9EB;
+}
+
+/*Заголовок с именем отправителя и временем отправления*/
+.messageBody__messageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.68%;/*8px*/
+}
+
+.messageHeader {
+  width: 100%;
+  height: auto;
+  padding-bottom: 1.68%;/*8px*/
+  border-bottom: 1px solid #E9E9E9;
+}
+
+/*Текст сообщения*/
+.messageText {
+  font-size: 0.875rem;/*14px*/
+  color: #999999;
+}
+
+/*Стили для фигурной стрелки у комментария*/
+.messageBody__shape {
+  position: absolute;
+  top: 0.625rem;/*10px*/
+  z-index: 1;
+}
+
+.shape {
+  width: 0.9375rem;/*15px*/
+  height: 0.9375rem;/*15px*/
+}
+
+.shape--pos__left {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: left top;
+  background-color: #F3F9EB;
+}

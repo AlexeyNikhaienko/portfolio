@@ -1,0 +1,48 @@
+/*Общие стили для блока*/
+.wrap__myDialogs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.myDialogs {
+  height: 100%;
+}
+
+/*Стили для блока-обёртки с собеседниками*/
+.interlocutors {
+  width: 30%;/*237px*/
+  height: auto;
+  padding-right: 2.02%;/*16px*/
+  overflow: auto;
+}
+
+/*Стили для блока-обёртки с перепиской*/
+.dialogs {
+  width: 66.84%;/*529px*/
+  height: auto;
+}
+
+/*Стилия для блока-обёртки, содержащего отдельную переписку*/
+.dialogItem {
+  width: 100%;/*529px*/
+  height: auto;
+  font-family: "Roboto-R", serif;
+  line-height: 1.3;
+}
+
+/*Стили для поля отправки сообщения*/
+.sendMessage {
+  display: flex;
+  width: 100%;/*529px*/
+  height: auto;
+  padding: 3.78%;/*20px*/
+  background-color: #F3F9EB;
+  border-radius: 0.5rem;/*8px*/
+}
+
+.inputField--rounding {
+  padding-left: 3.78%;/*20px*/
+  border-top-left-radius: 0.25rem;/*4px*/
+  border-bottom-left-radius: 0.25rem;/*4px*/
+}

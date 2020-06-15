@@ -1,0 +1,11 @@
+/*Стили для фигурной стрелки у комментария*/
+.messageBody--bcg__blue {
+  background-color: #E9F6FC;
+}
+
+.shape--pos__right {
+  right: 0;
+  transform: rotate(-45deg);
+  transform-origin: right top;
+  background-color: #E9F6FC;
+}

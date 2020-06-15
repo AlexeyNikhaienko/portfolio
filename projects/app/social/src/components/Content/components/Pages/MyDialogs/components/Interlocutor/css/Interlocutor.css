@@ -1,0 +1,54 @@
+/*Стили для отдельного компонента с собеседником*/
+.interlocutors__interlocutor {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 6.75%;/*16px*/
+}
+
+.interlocutor {
+  width: 100%;/*237px*/
+  height: auto;
+  padding-bottom: 6.75%;/*16px*/
+  font-family: "Roboto-R", serif;
+  font-size: 0.875em;/*14px*/
+  line-height: 1.3;
+  border-bottom: 1px solid #E9E9E9;
+  text-decoration: none;
+}
+
+.interlocutor:hover {
+  cursor: pointer;
+  border-bottom: 1px solid #088BC1;
+}
+
+/*Стили для имени собеседника*/
+.interlocutor__name {
+  margin-left: 6.75%;/*16px*/
+}
+
+.name {
+  font-size: 0.875rem;/*14px*/
+  color: #088BC1;
+  text-shadow: 0 0 0.625em #088BC1;
+}
+
+/*Общее количество непрочитанных сообщений*/
+.interlocutor__totalMassages {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.totalMassages {
+  width: auto;
+  height: auto;
+  padding: 0.125rem 0.25rem;/*t/b 2px l/r 4px*/
+  color: white;
+  text-shadow: 0 0 0.625em white;
+  border: 0;
+  border-radius: 30%;
+  background-color: #E50914;
+  box-shadow: 0 0.3125em 0.625em #E50914;
+}
