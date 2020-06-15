@@ -13,7 +13,6 @@
   border-radius: 5px;
   background-color: #FDFDFD;
   box-shadow: 0 0.3125em 0.625em #999999;
-  /* border: 1px solid red; */
 }
 
 /*Общие стили для формы отправки сообщения*/
@@ -94,7 +93,7 @@
 .submit {
   width: auto;
   height: auto;
-  padding: 1% 2%;/*t/b 5px l/r 10px*/
+  padding: 0.3125rem 0.625rem;/*t/b 5px l/r 10px*/
   border: 2px solid #088BC1;
   border-radius: 3px;
   outline: 0;
