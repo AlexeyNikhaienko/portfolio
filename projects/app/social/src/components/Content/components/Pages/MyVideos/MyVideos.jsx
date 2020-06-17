@@ -1,7 +1,15 @@
-import React from "react";
+//Импорт общих настроек
+import React from 'react';
 
-const MyVideos = (props) => {
-  return <h2>Видео</h2>
+//Импорт стилей
+import './css/MyVideos.css';
+
+function MyVideos(props) {
+  return (
+    <div className="myVideos wrapper">
+      <h2>Видео</h2>
+    </div>
+  )
 }
 
 export default MyVideos;
