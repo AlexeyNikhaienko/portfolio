@@ -1,7 +1,81 @@
-import React from "react";
+//Импорт общих настроек
+import React from 'react';
 
-const MyImages = (props) => {
-  return <h2>Изображения</h2>
+//Импорт стилей
+import './css/MyImages.css';
+
+//Импорт изображений
+import img1 from './../MyProfile/components/MyAlbum/img/ma1.jpg';
+import img2 from './../MyNewsFeed/components/PostItem/mediaContent/post1.jpg';
+import img3 from './../MyProfile/components/MyAlbum/img/ma2.jpg';
+import img4 from './../MyProfile/components/MyAlbum/img/ma3.jpg';
+
+//Импорт компонентов
+import LikedImage from './components/LikedImage';
+
+function MyImages(props) {
+  //Дополнительные стили для аватарки
+  const extraStylesAvatar = {
+    width: '50px',
+    height: '50px',
+    marginRight: '3.87%'
+  }
+
+  /*let likedImagesList = props.likedImage.map(image => (
+    <LikedImage
+      imgSrc={image.imgSrc}
+      imgAlt={image.imgAlt}
+      extraStylesAvatar={image.extraStylesAvatar}
+      userName={image.userName}
+      groupTitle={image.groupTitle}
+    />));*/
+
+  return (
+    <div className="wrap__myImages myImages wrapper">
+      <LikedImage
+        imgSrc={img1}
+        imgAlt="Бонсай"
+        extraStylesAvatar={extraStylesAvatar}
+        userName="User-2"
+        groupTitle="Друзья"
+      />
+      <LikedImage
+        imgSrc={img3}
+        imgAlt="Вид на гору"
+        extraStylesAvatar={extraStylesAvatar}
+        userName="User-5"
+        groupTitle="Друзья"
+      />
+      <LikedImage
+        imgSrc={img2}
+        imgAlt="Компас"
+        extraStylesAvatar={extraStylesAvatar}
+        userName="User-5"
+        groupTitle="Друзья"
+      />
+      <LikedImage
+        imgSrc={img4}
+        imgAlt="Неоновая вывеска"
+        extraStylesAvatar={extraStylesAvatar}
+        userName="User-5"
+        groupTitle="Друзья"
+      />
+      <LikedImage
+        imgSrc={img2}
+        imgAlt="Компас"
+        extraStylesAvatar={extraStylesAvatar}
+        userName="User-5"
+        groupTitle="Друзья"
+      />
+      <LikedImage
+        imgSrc={img3}
+        imgAlt="Вид на гору"
+        extraStylesAvatar={extraStylesAvatar}
+        userName="User-5"
+        groupTitle="Друзья"
+      />
+    </div>
+  )
 }
 
 export default MyImages;

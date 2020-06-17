@@ -1,0 +1,57 @@
+/*Общие стили для блока с изображением*/
+.myImages__likedImage {
+  display: inline-block;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  position: relative;
+  margin-bottom: 3.16%;/*25px*/
+}
+
+.likedImage {
+  width: 100%;/*388px*/
+  background-color: #F3F9EB;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.likedImage:hover {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0.3125em 0.625em #999999;
+  cursor: pointer;
+}
+
+/*Стили для картинки*/
+.picture {
+  max-width: 100%;/*388px*/
+}
+
+/*Блок со статистикой, информацией об авторе*/
+.extraInfo {
+  width: 100%;/*388px*/
+  height: auto;
+  padding: 0 3.87% 3.87%;/*15px*/
+}
+
+.extraInfo__statistics {
+  margin-bottom: 2.06%;
+}
+
+.statistics--border__btm {
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.extraInfo__authorInfo {
+  display: flex;
+  align-items: center;
+}
+
+.authorInfo {
+  width: 100%;
+  height: auto;
+}
+
+.group {
+  font-size: 0.75rem;/*12px*/
+  color: #999999;
+  text-shadow: 0 0 0.625em #999999;
+}

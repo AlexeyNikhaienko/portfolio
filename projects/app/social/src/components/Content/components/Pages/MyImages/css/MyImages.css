@@ -1,0 +1,13 @@
+/*Общие стили для блока*/
+.wrap__myImages {
+  -moz-column-width: 49.05%;
+       column-width: 49.05%;/*388px*/
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 1.9%;
+       column-gap: 1.9%;/*15px*/
+}
+
+.myImages {
+  min-height: 100%;
+}
