@@ -3,7 +3,7 @@ import React from 'react';
 
 //Импорт стилей
 import './css/LeftSidebar.css';
-import bcg from '../../../../common_files/components/ProfileOwner/img/bcg1.jpg'
+import bcg from '../../../../common_files/img/bcg1.jpg';
 
 //Импорт компонентов
 import ProfileOwner from '../../../../common_files/components/ProfileOwner/ProfileOwner';

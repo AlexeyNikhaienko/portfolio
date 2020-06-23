@@ -4,7 +4,7 @@ import { NavLink, Switch, Route, Redirect } from 'react-router-dom';
 
 //Импорт стилей
 import './css/MyProfile.css';
-import profileImg from './../../../../../common_files/components/ProfileOwner/img/bcg1.jpg'
+import profileImg from '../../../../../common_files/img/bcg1.jpg';
 
 //Импорт компонентов
 import ProfileOwner from '../../../../../common_files/components/ProfileOwner/ProfileOwner';

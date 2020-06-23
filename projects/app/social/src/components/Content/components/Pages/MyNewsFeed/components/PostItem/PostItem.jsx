@@ -5,7 +5,7 @@ import React from 'react';
 import './css/PostItem.css';
 
 //Импорт медиа-контента
-import post from './mediaContent/post1.jpg';
+import post from '../../../../../../../common_files/img/post1.jpg';
 
 //Импорт компонентов
 import Avatar from '../../../../../../../common_files/components/Avatar/Avatar';

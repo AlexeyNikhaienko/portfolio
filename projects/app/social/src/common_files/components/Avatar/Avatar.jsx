@@ -5,7 +5,7 @@ import React from 'react';
 import styles from './css/Avatar.module.css';
 
 //Импорт аватарки
-import avatar from './img/user.jpg';
+import avatar from '../../img/user.jpg';
 
 function Avatar(props) {
   const extraStyles = props.style;

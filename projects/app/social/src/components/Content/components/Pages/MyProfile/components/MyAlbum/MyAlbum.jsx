@@ -5,9 +5,9 @@ import React from 'react';
 import './css/MyAlbum.css';
 
 //Импорт изображений
-import ma1 from './img/ma1.jpg';
-import ma2 from './img/ma2.jpg';
-import ma3 from './img/ma3.jpg';
+import ma1 from '../../../../../../../common_files/img/ma1.jpg';
+import ma2 from '../../../../../../../common_files/img/ma2.jpg';
+import ma3 from '../../../../../../../common_files/img/ma3.jpg';
 
 //Импорт компонентов
 import MyAlbumItem from './MyAlbumItem';

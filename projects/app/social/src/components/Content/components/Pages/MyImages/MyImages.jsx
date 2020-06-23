@@ -5,10 +5,10 @@ import React from 'react';
 import './css/MyImages.css';
 
 //Импорт изображений
-import img1 from './../MyProfile/components/MyAlbum/img/ma1.jpg';
-import img2 from './../MyNewsFeed/components/PostItem/mediaContent/post1.jpg';
-import img3 from './../MyProfile/components/MyAlbum/img/ma2.jpg';
-import img4 from './../MyProfile/components/MyAlbum/img/ma3.jpg';
+import img1 from '../../../../../common_files/img/ma1.jpg';
+import img2 from '../../../../../common_files/img/post1.jpg';
+import img3 from '../../../../../common_files/img/ma2.jpg';
+import img4 from '../../../../../common_files/img/ma3.jpg';
 
 //Импорт компонентов
 import LikedImage from './components/LikedImage';
