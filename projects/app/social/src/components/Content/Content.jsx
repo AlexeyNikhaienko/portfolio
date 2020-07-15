@@ -7,7 +7,7 @@ import './css/Content.css';
 
 //Импорт компонентов
 import LeftSidebar from './components/LeftSidebar/LeftSidebar';
-import MyNewsFeed from './components/Pages/MyNewsFeed/MyNewsFeed';
+import { MyNewsFeed_c } from './containers/MyNewsFeed_c';
 import MyProfile from './components/Pages/MyProfile/MyProfile';
 import MyFriends from './components/Pages/MyFriends/MyFriends';
 import MyDialogs from './components/Pages/MyDialogs/MyDialogs';
@@ -24,7 +24,7 @@ function Content(props) {
       <div className="wrap">
         <Switch>
           <Redirect exact from="/" to="/mynewsfeed" />
-          <Route path="/mynewsfeed" render={() => <MyNewsFeed />} />
+          <Route path="/mynewsfeed" render={() => <MyNewsFeed_c />} />
           <Route path="/profile" render={() => <MyProfile />} />
           <Route path="/friends" render={() => <MyFriends />} />
           <Route path="/dialogs" render={() => <MyDialogs />} />
