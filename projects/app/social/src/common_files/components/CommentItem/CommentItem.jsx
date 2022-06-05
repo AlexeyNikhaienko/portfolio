@@ -9,11 +9,11 @@ class CommentItem extends React.Component {
     return(
       <div className={`${styles.inner__comment } ${styles.comment}`}>
         <div className={`${styles.comment__commentHeader} ${styles.commentHeader}`}>
-          <p className={`${styles.userName}`}>{this.props.userName}</p>
+          <p className={`${styles.userName}`}>{this.props.data.userName}</p>
           <p className={`${styles.date}`}><time dateTime="2020-06-01 17:00">1 час назад</time></p>
           <span></span>
         </div>
-        <p className={`${styles.descript}`}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum cumque consectetur provident est natus at possimus quo ex similique eaque?</p>
+        <p className={`${styles.descript}`}>{this.props.data.textComment}</p>
         <div className={`${styles.comment__shape} ${styles.shape}`}></div>
       </div>
     )

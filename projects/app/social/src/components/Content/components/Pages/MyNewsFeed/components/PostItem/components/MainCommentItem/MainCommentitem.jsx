@@ -7,9 +7,14 @@ import './css/MainCommentItem.css';
 //Импорт компонентов
 import Avatar from '../../../../../../../../../common_files/components/Avatar/Avatar';
 import CommentItem from '../../../../../../../../../common_files/components/CommentItem/CommentItem';
+import SubCommentItem from '../SubCommentItem/SubCommentItem';
 
 class MainCommentItem extends React.Component {
   render() {
+    //На основе входящих данных автоматически генерируются ответные комментарии
+    let replyCommentsArray = this.props.data.replyComments;
+    let replyCommenstList = replyCommentsArray.map(item => <SubCommentItem key={item.id} data={item} />);
+
     //Дополнительные стили для аватарки
     const extraStyles = {
       width: '50px',
@@ -21,11 +26,16 @@ class MainCommentItem extends React.Component {
         <li className="commentsWrap__mainComment mainComment">
           <div className="mainComment__inner">
             <Avatar style={extraStyles} />
-            <CommentItem userName={this.props.userName} />
+            <CommentItem data={this.props.data} />
           </div>
-          <ol className="mainComment__commentsWrap commentsWrap commentsWrap--width__short">
-            {this.props.children}
-          </ol>
+          
+          {/* В зависимости от наличия комментариев в массиве выполянется отрисовка контента */}
+          {
+            replyCommentsArray.length > 0
+            && <ol className="mainComment__commentsWrap commentsWrap commentsWrap--width__short">
+                    {replyCommenstList}
+                  </ol>
+          }
         </li>
       </>
     )

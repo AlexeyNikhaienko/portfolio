@@ -8,7 +8,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 1.9%;/*15px*/
-  border: 1px solid blue;
 }
 
 .userInfo__date {
@@ -34,13 +33,17 @@
 }
 
 /*Описание к посту*/
-.descript {
+.descript,
+.statistics {
   width: 100%;/*721px*/
-  height: auto;
   font-family: "Roboto-R", serif;
   font-size: 0.875rem;/*14px*/
   line-height: 1.3;
   color: #999999;
+}
+
+.descript {
+  height: auto;
 }
 
 .descript--extraSizes {
@@ -49,8 +52,13 @@
 }
 
 /*Стили для блока-обёртки со статистикой поста*/
+.mediaContent__statistics {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .statistics {
-  width: 100%;
   height: 40px;
   border: 1px solid red;
 }
@@ -62,4 +70,23 @@
 
 .commentsWrap--width__full {
   width: 100%;/*721px*/
+}
+
+/*Стилия для блока отправки комментария*/
+.postWrap__addComment {
+  display: flex;
+  align-items: center;
+}
+
+.addComment {
+  width: 100%;
+  height: auto;
+}
+
+/*Поле ввода комментария*/
+.inputField--padding {
+  padding: 0.3125rem 0.625rem;/*t/b 5px l/r 10px*/
+  border: 1px solid #E9E9E9;
+  border-right: 0;
+  outline: 0;
 }

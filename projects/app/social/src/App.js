@@ -1,9 +1,14 @@
+//Импорт компонентов общих настроек
 import React from 'react';
-import "./App.css";
+
+//Импорт стилей
+import './App.css';
+
+//Импорт компонентов
 import Header from './components/Header/Header';
 import Content from './components/Content/Content';
 
-const App = () => {
+function App() {
   return (
     <React.Fragment>
       <Header />

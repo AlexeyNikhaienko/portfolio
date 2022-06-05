@@ -20,7 +20,7 @@ class SubCommentItem extends React.Component {
       <>
         <li className="commentsWrap__followerComment followerComment">
           <Avatar style={extraStyles} />
-          <CommentItem userName={this.props.userName} />
+          <CommentItem data={this.props.data} />
         </li>
       </>
     )

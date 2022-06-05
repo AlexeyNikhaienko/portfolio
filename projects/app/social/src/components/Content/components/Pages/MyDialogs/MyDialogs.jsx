@@ -94,7 +94,7 @@ function MyDialogs(props) {
           )} />
         </Switch>
         <div className="sendMessage">
-          <textarea className="inputField inputField--rounding" placeholder="Текст сообщения" rows="1" />
+          <textarea className="inputField inputField--rounding inputField--border__none" placeholder="Текст сообщения" rows="1" />
           <button type="button" className="submit btn">Отправить</button>
         </div>
       </div>

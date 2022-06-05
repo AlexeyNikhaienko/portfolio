@@ -39,9 +39,12 @@
   font-family: "Roboto-R", serif;
   font-size: 0.875rem;/*14px*/
   color: #999999;
+  resize: none;
+}
+
+.inputField--border__none {
   border: 0;
   outline: 0;
-  resize: none;
 }
 
 /*Стили для блок-обёртка с кнопками добавления файлов 

@@ -25,7 +25,9 @@ function MyNewsFeed(props) {
       />
       {/* В зависимости от наличия постов в массиве выполянется отрисовка контента */}
       {
-        props.newsFeed.myPosts.length > 0 ? <>{postsList}</> : <p>У пользователя нет активных постов</p>
+        props.newsFeed.myPosts.length > 0
+        ? <>{postsList}</>
+        : <p className="noContent">У пользователя нет активных постов</p>
       }
     </div>
   )

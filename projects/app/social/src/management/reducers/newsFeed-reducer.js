@@ -31,6 +31,7 @@ let initialState = {
       userName: 'User-1',
       postDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero minus voluptates doloribus. Cupiditate eius aliquam, dicta quia dolorum harum, sequi aperiam quidem magni maxime ipsa. Magnam maiores, voluptas fuga atque ipsam qui minus dicta. Similique, at? Eveniet, voluptatem fugit?',
       mediaContent: postImg1,
+      views: 25,
       likesCounter: 17,
       dislikesCounter: 2,
       comments: [
@@ -57,13 +58,15 @@ let initialState = {
           textComment: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit',
           replyComments: []
         }
-      ]
+      ],
+      totalComments: 4
     },
     {
       id: ++idPostsCounter,
       userName: 'User-2',
       postDescription: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero minus voluptates doloribus. Cupiditate eius aliquam, dicta quia dolorum harum, sequi aperiam quidem magni maxime ipsa. Magnam maiores, voluptas fuga atque ipsam qui minus dicta. Similique, at? Eveniet, voluptatem fugit?',
       mediaContent: postImg2,
+      views: 168,
       likesCounter: 127,
       dislikesCounter: 12,
       comments: [
@@ -73,7 +76,8 @@ let initialState = {
           textComment: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum cumque consectetur provident est natus at possimus quo ex similique eaque?',
           replyComments: []
         }
-      ]
+      ],
+      totalComments: 1
     }
   ],
   newPostText: ''
@@ -85,9 +89,17 @@ export const newsFeedReducer = (state = initialState, action) => {
     userName: 'User-156',
     postDescription: state.newPostText,
     mediaContent: postImg1,
+    views: 0,
     likesCounter: 0,
     dislikesCounter: 0,
-    comments: []
+    comments: [],
+    /*totalComments() {
+        let total = 0;
+        this.comments.forEach(c => {
+          return total += c.replyComments.length;
+        });
+        return this.comments.length + total;
+      }*/
   }
 
   switch (action.type) {

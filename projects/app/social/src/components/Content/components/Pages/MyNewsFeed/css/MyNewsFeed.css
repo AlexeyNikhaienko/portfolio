@@ -3,3 +3,13 @@
   width: 100%;/*791px*/
   height: auto;
 }
+
+/*Стили для выводимой надписи в случае отсутствия постов*/
+.noContent {
+  padding: 2.53% 0;/*t/b 20px l/r 0*/
+  font-family: "Roboto-R", serif;
+  font-size: 0.875rem;/*14px*/
+  color: #088BC1;
+  text-shadow: 0 0 0.625em #088BC1;
+  text-align: center;
+}
